@@ -91,7 +91,6 @@ function OnVehicleEnter(player)
     setElementVisibleTo ( marker, player, true )
     setElementVisibleTo ( DesBlip, player, true )
     exports.USGcnr_wanted:givePlayerWantedLevel(player,10)
-    timerCheckWater = setTimer(checkVehicleIsInWater, 2000, 0)
 end
 
 function OnVehicleExit(player)
@@ -158,45 +157,47 @@ function start()
         end
 
         messageCNR("A vehicle has to be delivered from "..getZoneName(startPos[1], startPos[2], startPos[3]).." to an unknown destination", 0, 255, 0)
+        timerCheckWater = setTimer(checkVehicleIsInWater, 5000, 0)
         timerbeforeEnd = setTimer(over,10 * 60 * 1000 , 1)
     end
 end
 
 function over(player)
-    local _, _, z = getElementPosition(vehicle)
-    if (isVehicleBlown (vehicle)) then
-        messageCNR("The hijacked vehicle has blown up! Mission failed.", 0, 255, 0)
+    if (isElement(vehicle)) then
+        if (isVehicleBlown (vehicle)) then
+            messageCNR("The hijacked vehicle has blown up! Mission failed.", 0, 255, 0)
 
-        if (isTimer(timerbeforeEnd)) then
-            killTimer(timerbeforeEnd)
+            if (isTimer(timerbeforeEnd)) then
+                killTimer(timerbeforeEnd)
+            end
+        elseif (isElementInWater(vehicle)) then
+            messageCNR("The hijacked vehicle has been sent into water! Mission failed.", 0, 255, 0)
+        elseif (player) then
+            exports.USGcnr_wanted:givePlayerWantedLevel(player,5)
+            givePlayerMoney(player, 10000)
+
+            if (isTimer(timerbeforeEnd)) then
+                killTimer(timerbeforeEnd)
+            end
+
+    		messageCNR(getPlayerName(player).." delivered the hijacked car in time!", 0, 255, 0)
+        else 
+            messageCNR("No one delivered the hijacked car in time!", 0, 255, 0)
         end
-    elseif (isElementInWater(vehicle)) then
-        messageCNR("The hijacked vehicle has been sent into water! Mission failed.", 0, 255, 0)
-    elseif (player) then
-        exports.USGcnr_wanted:givePlayerWantedLevel(player,5)
-        givePlayerMoney(player, 10000)
 
-        if (isTimer(timerbeforeEnd)) then
-            killTimer(timerbeforeEnd)
+        removeEventHandler ( "onVehicleEnter", vehicle, OnVehicleEnter )
+        removeEventHandler ( "onVehicleExit", vehicle, OnVehicleExit  )
+        removeEventHandler ( "onVehicleExplode", vehicle, OnVehicleExplode )
+        destroyElement(vehicle)
+        destroyElement(CarBlip)
+        destroyElement(DesBlip)
+        destroyElement(marker)
+
+        if (isTimer(timerCheckWater)) then
+            killTimer(timerCheckWater)
         end
-
-		messageCNR(getPlayerName(player).." delivered the hijacked car in time!", 0, 255, 0)
-    else 
-        messageCNR("No one delivered the hijacked car in time!", 0, 255, 0)
+    	GlobalTimer = setTimer ( start,15 * 60 * 1000, 1)
     end
-
-    removeEventHandler ( "onVehicleEnter", vehicle, OnVehicleEnter )
-    removeEventHandler ( "onVehicleExit", vehicle, OnVehicleExit  )
-    removeEventHandler ( "onVehicleExplode", vehicle, OnVehicleExplode )
-    destroyElement(vehicle)
-    destroyElement(CarBlip)
-    destroyElement(DesBlip)
-    destroyElement(marker)
-
-    if (isTimer(timerCheckWater)) then
-        killTimer(timerCheckWater)
-    end
-	GlobalTimer = setTimer ( start,15 * 60 * 1000, 1)
 end
 
 addEventHandler("onResourceStart", root,
