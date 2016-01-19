@@ -79,37 +79,47 @@ end
 
 local function messageCNR(message,r,g,b)
 	for k, player in ipairs(getElementsByType("player")) do
-					if(exports.USGrooms:getPlayerRoom(player) == "cnr")then
-					exports.USGmsg:msg(player, message, r,g,b)
-				end
-			end
+		if(exports.USGrooms:getPlayerRoom(player) == "cnr")then
+			exports.USGmsg:msg(player, message, r,g,b)
+		end
+	end
 end
 
 function OnVehicleEnter(player)
-    messageCNR(getPlayerName(player).." has entered the hijack vehicle", 0, 255, 0)
+    messageCNR(getPlayerName(player).." has entered the hijacked vehicle", 0, 255, 0)
     setElementVisibleTo ( marker, player, true )
     setElementVisibleTo ( DesBlip, player, true )
     exports.USGcnr_wanted:givePlayerWantedLevel(player,10)
+
+    if (isElementInWater(source)) then
+        over()
+    end
 end
 
 function OnVehicleExit(player)
-	messageCNR(getPlayerName(player).." has exited the hijack vehicle", 0, 255, 0)
+	messageCNR(getPlayerName(player).." has exited the hijacked vehicle", 0, 255, 0)
     setElementVisibleTo ( marker, player, false )
     setElementVisibleTo ( DesBlip, player, false )
+
+    if (isElementInWater(source)) then
+        over()
+    end
 end
 
 function OnVehicleExplode()
-over()
+    over()
 end
 
 function OnMarkerHit(hitElement )
-local hitVehicle
-	if(isElement(hitElement))then
+    local hitVehicle
+
+	if (isElement(hitElement))then
 		if (getElementType(hitElement) == "player")then
-		hitVehicle = getPedOccupiedVehicle(hitElement)
-			if(hitVehicle == vehicle)then
-			over(getVehicleOccupant (hitVehicle))
-			end
+    		hitVehicle = getPedOccupiedVehicle(hitElement)
+
+    		if(hitVehicle == vehicle)then
+    			over(getVehicleOccupant (hitVehicle))
+    		end
 		end
 	end
 end
@@ -117,45 +127,54 @@ end
 function start()
     local startPos = positions[math.random(#positions)]
     local destinationPos = positions[math.random(#positions)]
-        if(table.compare( startPos, destinationPos ))then
+
+    if (table.compare( startPos, destinationPos )) then
         start() -- If start and destination are the same get new ones
-        else
+    else
         local randomCar = Car[math.random(#Car)]
-    vehicle = createVehicle ( randomCar, startPos[1], startPos[2], startPos[3] ,0, 0, startPos[4], "Hijack")
-    addEventHandler ( "onVehicleEnter", vehicle, OnVehicleEnter )
-    addEventHandler ( "onVehicleExit", vehicle, OnVehicleExit )
-    addEventHandler ( "onVehicleExplode", vehicle, OnVehicleExplode )
-    CarBlip = createBlipAttachedTo ( vehicle, 12, 1)
+        vehicle = createVehicle ( randomCar, startPos[1], startPos[2], startPos[3] ,0, 0, startPos[4], "Hijack")
+        addEventHandler ( "onVehicleEnter", vehicle, OnVehicleEnter )
+        addEventHandler ( "onVehicleExit", vehicle, OnVehicleExit )
+        addEventHandler ( "onVehicleExplode", vehicle, OnVehicleExplode )
+        CarBlip = createBlipAttachedTo ( vehicle, 12, 1)
+
         for k, player in ipairs(getElementsByType("player")) do
             if(not exports.USGrooms:getPlayerRoom(player) == "cnr") then
-            setElementVisibleTo ( CarBlip, player, false )
+                setElementVisibleTo ( CarBlip, player, false )
             end
         end
-    marker = createMarker ( destinationPos[1], destinationPos[2], destinationPos[3] - 1 ,"cylinder")
-    addEventHandler( "onMarkerHit", marker, OnMarkerHit )
-    DesBlip = createBlipAttachedTo ( marker, 53, 1)
-    clearElementVisibleTo ( marker )
-    clearElementVisibleTo ( DesBlip )
+
+        marker = createMarker ( destinationPos[1], destinationPos[2], destinationPos[3] - 1 ,"cylinder")
+        addEventHandler( "onMarkerHit", marker, OnMarkerHit )
+        DesBlip = createBlipAttachedTo ( marker, 53, 1)
+        clearElementVisibleTo ( marker )
+        clearElementVisibleTo ( DesBlip )
+
         for k, player in ipairs(getElementsByType("player")) do
             setElementVisibleTo ( marker, player, false )
             setElementVisibleTo ( DesBlip, player, false )
         end
-    messageCNR("A vehicle has to be delivered from "..getZoneName(startPos[1], startPos[2], startPos[3]).." to an unknown destination", 0, 255, 0)
-    timerbeforeEnd = setTimer(over,10 * 60 * 1000 , 1)
-        end
+
+        messageCNR("A vehicle has to be delivered from "..getZoneName(startPos[1], startPos[2], startPos[3]).." to an unknown destination", 0, 255, 0)
+        timerbeforeEnd = setTimer(over,10 * 60 * 1000 , 1)
+    end
 end
 
 function over(player)
-    if(isVehicleBlown (vehicle))then
-        messageCNR("The hijack vehicle has blown!", 0, 255, 0)
+    if (isVehicleBlown (vehicle)) then
+        messageCNR("The hijacked vehicle has blown up! Mission failed.", 0, 255, 0)
         killTimer(timerbeforeEnd)
-    elseif(player)then
+    elseif (isElementInWater(vehicle)) then
+        messageCNR("The hijacked vehicle has been sent into water! Mission failed.", 0, 255, 0)
+    elseif (player) then
         exports.USGcnr_wanted:givePlayerWantedLevel(player,5)
         givePlayerMoney(player, 10000)
         killTimer(timerbeforeEnd)
-		messageCNR(getPlayerName(player).." delivered the car in time! ", 0, 255, 0)
-    else messageCNR("No one delivered the car in time!", 0, 255, 0)
+		messageCNR(getPlayerName(player).." delivered the hijacked car in time!", 0, 255, 0)
+    else 
+        messageCNR("No one delivered the hijacked car in time!", 0, 255, 0)
     end
+
     removeEventHandler ( "onVehicleEnter", vehicle, OnVehicleEnter )
     removeEventHandler ( "onVehicleExit", vehicle, OnVehicleExit  )
     removeEventHandler ( "onVehicleExplode", vehicle, OnVehicleExplode )
@@ -171,8 +190,9 @@ addEventHandler("onResourceStart", root,
         if(res == resource or res == getResourceFromName("USGEventsApp")) then
         
         end
+
 		if(res == resource)then
-		start()
+		    start()
 		end
     end
 )
