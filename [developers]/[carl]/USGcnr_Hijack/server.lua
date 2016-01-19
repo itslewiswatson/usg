@@ -98,7 +98,6 @@ function OnVehicleExit(player)
 	messageCNR(getPlayerName(player).." has exited the hijacked vehicle", 0, 255, 0)
     setElementVisibleTo ( marker, player, false )
     setElementVisibleTo ( DesBlip, player, false )
-    checkVehicleIsInWater()
 end
 
 function OnVehicleExplode()
@@ -107,8 +106,7 @@ end
 
 function checkVehicleIsInWater()
     if (isElement(vehicle)) then
-        local _, _, z = getElementPosition(vehicle)
-        if (z <= -1) then
+        if (isElementInWater(vehicle)) then
             over()
         end
     end
@@ -172,7 +170,7 @@ function over(player)
         if (isTimer(timerbeforeEnd)) then
             killTimer(timerbeforeEnd)
         end
-    elseif (z <= -1) then
+    elseif (isElementInWater(vehicle)) then
         messageCNR("The hijacked vehicle has been sent into water! Mission failed.", 0, 255, 0)
     elseif (player) then
         exports.USGcnr_wanted:givePlayerWantedLevel(player,5)
@@ -217,14 +215,3 @@ addEventHandler ( "onResourceStop", resourceRoot,
     function (  )
    end 
 ) 
-
-function checkDepth(player)
-    if (isElement(vehicle)) then
-        local _, _, z = getElementPosition(vehicle)
-
-        outputChatBox(tostring(z), player, 255, 255, 0)
-    else
-        outputChatBox("No vehicle", player)
-    end
-end
-addCommandHandler("depth", checkDepth)
