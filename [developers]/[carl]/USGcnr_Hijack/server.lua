@@ -106,7 +106,8 @@ end
 
 function checkVehicleIsInWater()
     if (isElement(vehicle)) then
-        if (isElementInWater(vehicle)) then
+        local _, _, z = getElementPosition(vehicle)
+        if (z <= -1) then
             over()
         end
     end
@@ -163,13 +164,14 @@ function start()
 end
 
 function over(player)
+    local _, _, z = getElementPosition(vehicle)
     if (isVehicleBlown (vehicle)) then
         messageCNR("The hijacked vehicle has blown up! Mission failed.", 0, 255, 0)
-        
+
         if (isTimer(timerbeforeEnd)) then
             killTimer(timerbeforeEnd)
         end
-    elseif (isElementInWater(vehicle)) then
+    elseif (z <= -1) then
         messageCNR("The hijacked vehicle has been sent into water! Mission failed.", 0, 255, 0)
     elseif (player) then
         exports.USGcnr_wanted:givePlayerWantedLevel(player,5)
