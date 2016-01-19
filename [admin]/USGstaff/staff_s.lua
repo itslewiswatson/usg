@@ -18,7 +18,11 @@ end
 addCommandHandler("USG", 
     function (p, cmd, ...)
         if (exports.USGadmin:isPlayerStaff(p)) then
-            outputStaffChat(getPlayerName(p), table.concat({...}, " "), true)
+            local message = table.concat({...}, " ")
+
+            if (string.match(message, "%w")) then
+                outputStaffChat(getPlayerName(p), message, true)
+            end
         end
     end, false, false
 )
@@ -59,7 +63,10 @@ addCommandHandler("note",
     function (p, cmd, ...)
         if (exports.USGadmin:isPlayerStaff(p)) then
             local message = table.concat({...}," ")
-            outputChatBox("#FF2121[NOTE] "..exports.USG:getPlayerColoredName(p, "#FF2121")..": "..message, root, 255, 0, 0, true)
+
+            if (string.match(message, "%w")) then
+                outputChatBox("#FF2121[NOTE] "..exports.USG:getPlayerColoredName(p, "#FF2121")..": "..message, root, 255, 0, 0, true)
+            end
         end
     end
 )
