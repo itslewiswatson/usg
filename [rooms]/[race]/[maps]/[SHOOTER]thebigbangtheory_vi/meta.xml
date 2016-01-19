@@ -1,0 +1,33 @@
+<meta>
+    <script src="music.lua" type="client" />
+    <script src="bounce.lua" type="client" />
+    <script src="core.lua" type="client" />
+    <file src="shaders/coloration.fx" type="client" />
+    <file src="shaders/mta-helper.fx" type="client" />
+    <script src="ballycolor.lua" type="client" />
+    <file src="gta_tree_palm.txd" />
+    <file src="veg_palm03.dff" />
+    <file src="[SHOOTER]thebigbangtheory__vi.mp3" />
+    <script src="CSM.lua" type="client"></script>
+    <info gamemodes="race" type="map" name=" [SHOOTER] ExXoTicC - The Big Bang Theory -VI-" author="ExXoTicC" version="1.0.0"></info>
+    <map src="[SHOOTER]thebigbangtheory__vi.map" dimension="0"></map>
+    <settings>
+        <setting name="#skins" value='[ &quot;cj&quot; ]'></setting>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#useLODs" value="[ false ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#ghostmode" value='[ &quot;false&quot; ]'></setting>
+        <setting name="#time" value="1:0"></setting>
+        <setting name="#vehicleweapons" value='[ &quot;false&quot; ]'></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#respawntime" value="[ 5 ]"></setting>
+        <setting name="#gravity" value="[ 0.008000 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#weather" value="[ 0 ]"></setting>
+        <setting name="#locked_time" value="[ true ]"></setting>
+        <setting name="#duration" value="[ 1800 ]"></setting>
+        <setting name="#respawn" value='[ &quot;timelimit&quot; ]'></setting>
+    </settings>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+</meta>

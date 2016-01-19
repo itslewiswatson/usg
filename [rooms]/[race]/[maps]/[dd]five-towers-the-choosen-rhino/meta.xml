@@ -1,0 +1,10 @@
+<meta>
+    <info type="map" name='[DD] Five Towers The Chosen Rhino' version="1.0.0"></info>
+    <map src="five-towers-the-choosen-rhino.map" dimension="0"></map>
+    <settings>
+        <setting name="*jumping" value="[ true ]"></setting>
+        <setting name="*shuffle" value="[ true ]"></setting>
+    </settings>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+</meta>

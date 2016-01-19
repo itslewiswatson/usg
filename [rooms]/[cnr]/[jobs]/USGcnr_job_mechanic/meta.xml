@@ -1,0 +1,8 @@
+<meta>
+  <info author="SpriN" name="mechanic" version="1.0" type="script"/>
+  <script src="job_mechanic_vars_shared.lua" type="shared" />
+  <script src="job_mechanic_vars_c.luac" type="client" />
+  <script src="job_mechanic_s.lua" />
+  <script src="job_mechanic_c.lua" type="client" />
+  <min_mta_version client="1.3.5-9.06194" />
+</meta>

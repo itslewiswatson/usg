@@ -1,0 +1,4 @@
+<meta>
+	<script src="countdown_c.lua" type="client" />
+	<export function="startCountdown" type="client"/>
+</meta>

@@ -1,0 +1,22 @@
+<meta>
+  <script src="pBlips_client.lua" type="client" />
+  <script src="pBlips_server.lua" type="server" />
+  <!-- setBlipUserInfo( element blip, int distance ) NOT MATH.HUGE !-->
+  <export function="setBlipVisibleDistance" type="client" />
+  <export function="setBlipVisibleDistance" type="server" />
+  <!-- setBlipUserInfo( element blip, int distance ) NOT MATH.HUGE !-->
+  <export function="setBlipDimension" type="client" />
+  <export function="setBlipDimension" type="server" />
+  <!-- setBlipUserInfo( element blip, string category, string name ) !-->
+  <export function="setBlipUserInfo" type="client" />
+  <export function="setBlipUserInfo" type="server" />
+  <export function="createCustomBlip" type="client" />
+  <!--<script src="customblips\imagelib.lua" type="client" />
+	<script src="customblips\blipstreamer_client.lua" type="client" />
+	<script src="customblips\customblips.lua" type="client" />
+	<script src="customblips\utility.lua" type="client" />	
+	-->
+  <script src="customblips\customblips_c.lua" type="client" />
+  <file src="customblips\overlay.fx" />
+  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000" />
+</meta>

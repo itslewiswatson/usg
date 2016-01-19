@@ -1,0 +1,5 @@
+<meta>
+	<info author="Noki" version="1" name="USGtime" />
+	
+	<script src="server.lua" type="server"/>
+</meta>

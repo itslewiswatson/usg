@@ -1,0 +1,11 @@
+<meta>
+    <info gamemodes="race" type="map" name="[DD] Kamikaze" author="Pio" version="1.0.0"></info>
+    <map src="one-tower-bash.map" dimension="0"></map>
+    <settings>
+        <setting name="*jumping" value="[ true ]"></setting>
+    </settings>
+    <script src="kamikaze-server.lua" type="server"></script>
+    <script src="kamikaze-client.lua" type="client"></script>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+</meta>

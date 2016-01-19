@@ -1,0 +1,5 @@
+<meta>
+    <info type="map" name="Tach" author="Tach" version="1.0.0" description="For FabioCNR"></info>
+    <script src="burgershot.lua" type="client"> </script>
+    <map src="MapFixes.map"> </map>
+</meta>

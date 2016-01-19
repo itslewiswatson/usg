@@ -1,0 +1,43 @@
+<meta>
+    <info author="FabioGNR" name="GNR Custom GUI System" version="0.5" type="misc"/>
+	<script src="client.lua" type="client"/>
+	<script src="client_guiFeatures.lua" type="client"/>
+	<script src="client_createGUI.lua" type="client"/>
+		
+	<export function="createWindow" type="client" />
+	<export function="createButton" type="client" />
+	<export function="createLabel" type="client" />
+	<export function="createEditBox" type="client" />
+	<export function="createGridList" type="client" />
+		<export function="gridlistAddColumn" type="client" />
+		<export function="gridlistAddRow" type="client" />
+		<export function="gridlistSetItemText" type="client" />
+		<export function="gridlistGetItemText" type="client" />	
+		<export function="gridlistSetItemData" type="client" />
+		<export function="gridlistGetItemData" type="client" />
+		<export function="gridlistSetItemColor" type="client" />
+		<export function="gridlistGetItemColor" type="client" />
+		<export function="gridlistGetSelectedItem" type="client" />
+		<export function="gridlistSetSelectionMode" type="client" />
+	<export function="createCheckBox" type="client" />
+		<export function="getCheckBoxState" type="client" />
+	<export function="createSlider" type="client" />
+		<export function="getSliderSelectedOption" type="client" />
+	<export function="createComboBox" type="client" />
+		<export function="comboBoxAddOption" type="client" />
+		<export function="comboBoxRemoveOption" type="client" />	
+		<export function="comboBoxGetCurrentOption" type="client" />
+		<export function="comboBoxSetCurrentOption" type="client" />
+		<export function="comboBoxGetOptions" type="client" />
+	
+	<export function="bringToFront" type="client" />
+	<export function="moveToBack" type="client" />
+	<export function="setVisible" type="client" />
+	<export function="getVisible" type="client" />
+	<export function="moveWithEffect" type="client" />
+	<export function="resizeWithEffect" type="client" />
+	<export function="getText" type="client" />
+	<export function="setText" type="client" />
+	<export function="getTextScale" type="client" />
+	<export function="setTextScale" type="client" />
+</meta>

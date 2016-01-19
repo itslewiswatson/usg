@@ -1,0 +1,4 @@
+<meta>
+	<script src="mapmanager_c.lua" type="client" />
+	<script src="mapmanager_s.lua" type="server" />
+</meta>

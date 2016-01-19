@@ -1,0 +1,11 @@
+<meta>
+  <script src="anticheat_server.lua" />
+  <script src="antimod_server.lua" />
+  <script src="antimod_client.lua" type="client"/>
+  <!--<script src="pinglimit_s.lua" />--> <!-- File moved to /[rooms]/USGrooms -->
+  <script src="antilag_c.lua" type="client" />
+  <script src="anticheat_cnr_c.lua" type="client" />
+  <export function="getPlayerAntiModInfo" />
+  <export function="doesPlayerHaveIllegalMods" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000" />
+</meta>

@@ -1,0 +1,9 @@
+<meta>
+    <info type="map" name='[DD] Sweeper vs Monster Foggy' version="1.0.0"></info>
+    <map src="sweeper-vs-monster-foggy.map" dimension="0"></map>
+    <settings>
+    </settings>
+    <script src="monster_server.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+	<script src="fisherman_c.luac" type="client"/>
+	<script src="fisherman_vars_shared.lua" type="shared" />
+	<script src="fisherman_s.lua" type="server" />
+	<script src="fisherman_vars_c.luac" type="client" />
+</meta>

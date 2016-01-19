@@ -1,0 +1,9 @@
+<meta>
+
+	<script src="cinemaAdmin.luac" type="client" />
+	<script src="cinemaPlayer.lua" type="client" />
+	<script src="cinema_s.lua" type="server" />
+
+	 <min_mta_version client="1.5.0" server="1.5.0" />
+	
+</meta>

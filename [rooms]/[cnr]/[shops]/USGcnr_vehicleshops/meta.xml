@@ -1,0 +1,7 @@
+<meta>
+  <script src="vehicleshops_s.lua" type="server" />
+  <script src="vehicleshops_c.luac" type="client" />
+  <script src="vehicleshops_shared.lua" type="shared" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

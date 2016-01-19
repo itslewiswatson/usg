@@ -1,0 +1,48 @@
+<meta>
+  <script src="mysql_querytool.lua" />
+  <script src="admin_server.lua" />
+  <script src="admin_client.luac" type="client" />
+  <script src="admin_shared.lua" type="server" />
+  <script src="admin_shared.luac" type="client" />
+  <!-- punishments !-->
+  <script src="Punishments\punishments_server.lua" />
+  <script src="Punishments\punishments_client.lua" type="client" />
+  <script src="Punishments\Actions\punishmentactions_server.lua" />
+  <script src="admin_onLogin_client.lua" type="client" />
+  <export function="getPlayerPunishments" />
+  <export function="setPunishmentActive" />
+  <export function="setPunishmentText" />
+  <export function="addPlayerPunishment" />
+  <export function="addOfflinePunishment" />
+  <export function="addPunishment" />
+  <export function="addActivePunishment" />
+  <export function="applyPunishment" />
+  <!-- rules !-->
+  <script src="Punishments\rules.lua" />
+  <script src="Punishments\rules_client.lua" type="client" />
+  <file src="Punishments\rules.xml" />
+  <script src="Punishments\rules_sharedexports.lua" type="server" />
+  <script src="Punishments\rules_sharedexports.lua" type="client" />
+  <export function="showRules" type="client" />
+  <export function="showPlayerRules" type="server" />
+  <export function="getRules" type="server" />
+  <export function="getRules" type="client" />
+  <export function="getPunishmentReasons" type="server" />
+  <export function="getPunishmentReasons" type="client" />
+  <!-- staff exports !-->
+  <export function="isPlayerStaff" type="server" />
+  <export function="isPlayerEventManager" type="server" />
+  <export function="isPlayerMapManager" type="server" />
+  <export function="isPlayerBaseMod" type="server" />
+  <export function="getPlayerStaffLevel" type="server" />
+  <export function="getOnlineStaff" type="server" />
+  <export function="isPlayerStaff" type="client" />
+  <export function="isPlayerEventManager" type="client" />
+  <export function="isPlayerMapManager" type="client" />
+  <export function="isPlayerBaseMod" type="client" />
+  <export function="getPlayerStaffLevel" type="client" />
+  <export function="getOnlineStaff" type="client" />
+  <export function="getPlayerMute" type="server" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

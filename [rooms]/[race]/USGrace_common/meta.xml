@@ -1,0 +1,4 @@
+<meta>
+	<script src="race_common_s.lua" type="server" />
+	<script src="race_common_c.lua" type="client" />
+</meta>

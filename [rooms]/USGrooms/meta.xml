@@ -1,0 +1,28 @@
+<meta>
+  <script src="rooms_shared.lua" />
+  <script src="rooms_ping.lua" />
+  <script src="rooms_shared.lua" type="client" />
+  <script src="rooms_s.lua" />
+  <script src="rooms_exports_s.lua" />
+  <script src="rooms_c.lua" type="client" />
+  <script src="rooms_exports_c.lua" type="client" />
+  <export function="getPlayerRoom" />
+  <export function="getPlayerRoom" type="client" />
+  <export function="getPlayerRoomFriendly" />
+  <export function="getPlayerRoomFriendly" type="client" />
+  <export function="getRoomDimension" />
+  <export function="getRoomDimension" type="client" />
+  <export function="getRooms" />
+  <export function="getRooms" type="client" />
+  <export function="getPlayersInRoom" />
+  <export function="getPlayersInRoom" type="client" />
+  <export function="getRoomName" />
+  <export function="getRoomName" type="client" />
+  <export function="removePlayerFromRoom" type="server" />
+  <file src="images/dd.png" />
+  <file src="images/dm.png" />
+  <file src="images/str.png" />
+  <file src="images/cnr.png" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

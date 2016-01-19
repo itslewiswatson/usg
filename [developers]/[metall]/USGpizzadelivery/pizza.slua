@@ -1,0 +1,67 @@
+-- *** initializing and unloading ***
+function initJob()
+	if(getResourceFromName("USGcnr_jobs") and getResourceState(getResourceFromName("USGcnr_jobs")) == "running") then
+		exports.USGcnr_jobs:addJob(jobID, jobType, occupation)
+	end
+end
+
+addEventHandler("onResourceStart", root,
+	function (res) -- init job if thisResource started, or if USGcnr_jobs (re)started
+		if(res == resource or res == getResourceFromName("USGcnr_jobs")) then
+			initJob()
+		end
+	end
+)
+
+local alreadyGiven = {}
+
+local pizzaDeliverys = {
+	{1972, -1708, 16},
+	{2246, -1393, 24},
+	{2307, -1672, 14},
+	{2460, -1687, 14},
+	{2395, -1651, 14},
+	{1133, -2036, 69},
+	{1283, -1350, 14},
+	{2580, -1222, 53},
+	{2654, -1996, 14},
+	{2320, -1717, 14},
+}
+
+function newDelivery(source)
+	if (pizzaDeliverys) then
+		local rand = math.random(#pizzaDeliverys)
+		local x, y, z = pizzaDeliverys[rand][1], pizzaDeliverys[rand][2], pizzaDeliverys[rand][3]
+		triggerClientEvent(source, "USGpizzadelivery.startDelivery", source, x, y, z - 1)
+		alreadyGiven[source] = true
+	end
+end
+
+function startJob(player, seat)
+	if (seat == 0 and exports.USGcnr_jobs:getPlayerJob(player) == "Pizza Delivery" and getElementModel(source) == 448) then
+		if (exports.USGcnr_jobs:getPlayerJob(player) == "Pizza Delivery" and not alreadyGiven[player]) then
+			local rand = math.random(#pizzaDeliverys)
+			local x, y, z = pizzaDeliverys[rand][1], pizzaDeliverys[rand][2], pizzaDeliverys[rand][3]
+			triggerClientEvent(player, "USGpizzadelivery.startDelivery", player, x, y, z - 1)
+			alreadyGiven[player] = true
+		end
+	end
+end
+addEventHandler("onVehicleEnter", root, startJob)
+
+function do22(player)
+	alreadyGiven[player] = nil
+	newDelivery(player, 1)
+end
+addEvent("USGpizzadelivery.do", true)
+addEventHandler("USGpizzadelivery.do", root, do22)
+
+function givePayment(player)
+	alreadyGiven[player] = nil
+	local pay = math.random(800, 1400)
+	givePlayerMoney(player, pay)
+	exports.USGmsg:msg(player, "You have delivered the pizza, here's your payment $"..pay, 0, 255, 0)
+	newDelivery(player, 1)
+end
+addEvent("USGpizzadelivery.givePayment", true)
+addEventHandler("USGpizzadelivery.givePayment", root, givePayment)

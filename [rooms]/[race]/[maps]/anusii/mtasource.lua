@@ -1,0 +1,1 @@
+outputChatBox ("#00ff00This map was downloaded from - #ffffffwww.#ff6600MTA#ffffffSource.Net", 255, 0, 0, true)

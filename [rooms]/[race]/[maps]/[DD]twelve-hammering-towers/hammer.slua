@@ -1,0 +1,39 @@
+------------------------------------------------------------------------------------
+-- PROJECT: Towers Mania DD
+-- VERSION: 1.0
+-- DATE: July 2013
+-- DEVELOPERS: JR10
+-- RIGHTS: All rights reserved by developers
+------------------------------------------------------------------------------------
+
+local towers = {}
+
+function hammerTower(tower)
+    local x, y = getElementPosition(tower)
+    moveObject(tower, 1000, x, y, 210)
+    setTimer(createExplosion, 1000, 4, x, y, 112, 10)
+    setTimer(createExplosion, 1000, 4, x + 15, y, 112, 10)
+    setTimer(createExplosion, 1000, 4, x - 15, y, 112, 10)
+    setTimer(createExplosion, 1000, 4, x, y, 112, 10)
+    setTimer(createExplosion, 1000, 4, x, y + 15, 112, 10)
+    setTimer(createExplosion, 1000, 4, x, y - 15, 112, 10)
+    setTimer(moveObject, 5000, 1, tower, 1000, x, y, 250)
+end
+
+function hammerTowers()
+    if (#towers == 0) then return end
+    local random = math.random(#towers)
+    local tower = towers[random]
+    hammerTower(tower)
+    setTimer(hammerTowers, 10000, 1)
+end
+
+function onStart()
+    for index, object in pairs(getElementsByType("object", resourceRoot)) do
+        if (getElementModel(object) == 4585 and getElementData(object, "hammer") == "true") then
+            table.insert(towers, object)
+        end
+    end
+    setTimer(hammerTowers, 10000, 1)
+end
+addEventHandler("onResourceStart", resourceRoot, onStart)

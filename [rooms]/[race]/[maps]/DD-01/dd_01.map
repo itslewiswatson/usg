@@ -1,0 +1,28 @@
+<map edf:definitions="race,editor_main">
+    <object id="object (vgshseing28) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="8558" scale="1" dimension="0" posX="2775.7" posY="-2752.4" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgshseing28) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="8558" scale="1" dimension="0" posX="2775.7" posY="-2838.4" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgshseing28) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="8558" scale="1" dimension="0" posX="2758.1" posY="-2775.2" posZ="0" rotX="0" rotY="0" rotZ="270"></object>
+    <object id="object (vgshseing28) (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="8558" scale="1" dimension="0" posX="2758.1" posY="-2815.6" posZ="0" rotX="0" rotY="0" rotZ="270"></object>
+    <object id="object (vgshseing27) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2809.7" posY="-2826" posZ="0" rotX="0" rotY="0" rotZ="40"></object>
+    <object id="object (vgshseing27) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2840.6" posY="-2800.1" posZ="0" rotX="0" rotY="0" rotZ="39.996"></object>
+    <object id="object (vgshseing28) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="8558" scale="1" dimension="0" posX="2815" posY="-2752.4" posZ="6.9" rotX="0" rotY="340" rotZ="0"></object>
+    <object id="object (landjump2) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="2850.1" posY="-2791.9" posZ="2.8" rotX="5.5" rotY="0" rotZ="310.246"></object>
+    <object id="object (vgshseing27) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2878.9" posY="-2762.2" posZ="10.3" rotX="0" rotY="0" rotZ="47.996"></object>
+    <object id="object (vgshseing28) (6)" interior="0" collisions="true" alpha="255" doublesided="false" model="8558" scale="1" dimension="0" posX="2853.6" posY="-2752.4" posZ="13.7" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgshseing28) (7)" interior="0" collisions="true" alpha="255" doublesided="false" model="8558" scale="1" dimension="0" posX="2889.2" posY="-2752.4" posZ="13.7" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgshseing27) (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2905.9" posY="-2732.2" posZ="10.3" rotX="0" rotY="0" rotZ="47.994"></object>
+    <object id="object (vgshseing28) (8)" interior="0" collisions="true" alpha="255" doublesided="false" model="8558" scale="1" dimension="0" posX="2922.6" posY="-2738.3" posZ="11.7" rotX="0" rotY="5.75" rotZ="43"></object>
+    <object id="object (sanpedbeaut) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="4848" scale="1" dimension="0" posX="2930.8" posY="-2720.5" posZ="8.2" rotX="0" rotY="0" rotZ="330"></object>
+    <spawnpoint id="spawnpoint(cheetah(1))" vehicle="415" posX="2778.9" posY="-2752.5" posZ="2.5" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Cheetah) (1)" vehicle="415" posX="2941.3" posY="-2724.7" posZ="12.6" rotX="0" rotY="0" rotZ="80"></spawnpoint>
+    <spawnpoint id="spawnpoint (Cheetah) (2)" vehicle="415" posX="2921.8" posY="-2711.8" posZ="12.7" rotX="0" rotY="0" rotZ="186"></spawnpoint>
+    <object id="object (vgshseing27) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2947" posY="-2714.3" posZ="10.2" rotX="0" rotY="0" rotZ="30"></object>
+    <object id="object (vgshseing27) (6)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2948.5" posY="-2705.9" posZ="10.2" rotX="0" rotY="0" rotZ="29.998"></object>
+    <object id="object (vgshseing27) (7)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2952.6" posY="-2696.4" posZ="10.2" rotX="0" rotY="0" rotZ="29.998"></object>
+    <object id="object (vgshseing27) (8)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2955.9" posY="-2686.9" posZ="10.2" rotX="0" rotY="0" rotZ="29.998"></object>
+    <object id="object (vgshseing27) (9)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2964.7" posY="-2673.8" posZ="10.2" rotX="0" rotY="0" rotZ="29.998"></object>
+    <object id="object (vgshseing27) (10)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2962.2" posY="-2669.4" posZ="10.2" rotX="0" rotY="0" rotZ="29.998"></object>
+    <object id="object (vgshseing27) (11)" interior="0" collisions="true" alpha="255" doublesided="false" model="8557" scale="1" dimension="0" posX="2934.6" posY="-2694.8" posZ="10.3" rotX="0" rotY="0" rotZ="51.998"></object>
+    <racepickup id="racepickup (NRG-500) (1)" type="nitro" vehicle="522" respawn="0" posX="2860.7" posY="-2781.4" posZ="13.7" rotX="0" rotY="0" rotZ="229.32"></racepickup>
+    <racepickup id="racepickup (NRG-500) (2)" type="repair" vehicle="522" respawn="0" alpha="255" interior="0" posX="2860.7" posY="-2781.4" posZ="13.7" rotX="0" rotY="0" rotZ="103.86"></racepickup>
+</map>

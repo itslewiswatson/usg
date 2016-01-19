@@ -1,0 +1,12 @@
+<meta>
+	<script src="job_airsupport_vars_shared.lua" type="shared" />
+	<script src="job_airsupport_vars_c.lua" type="client" />
+	<script src="job_airsupport_s.lua" />
+	<script src="job_airsupport_c.lua" type="client" />
+	<file src="mta-helper.fx" />
+	<file src="thermal-cold.fx" />
+	<file src="thermal-hot_ped.fx" />
+	<file src="thermal-hot_vehicle.fx" /> 
+	<file src="spike.png" /> 
+	<min_mta_version client="1.3.5-9.06194" />
+</meta>

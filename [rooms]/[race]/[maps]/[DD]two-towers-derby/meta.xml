@@ -1,0 +1,9 @@
+<meta>
+    <info gamemodes="race" type="map" name="[DD] Two Towers Derby" version="1.3.3" description="Good Time!"></info>
+    <map src="two-tower-derby.map" dimension="0"></map>
+    <settings>
+        <setting name="*jumping" value="[ true ]"></setting>
+    </settings>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+</meta>

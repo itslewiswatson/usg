@@ -1,0 +1,8 @@
+<meta>
+  <script src="msg_client.luac" type="client" />
+  <script src="msg_server.lua" type="server" />
+  <export function="msg" type="client" />
+  <export function="msg" type="server" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

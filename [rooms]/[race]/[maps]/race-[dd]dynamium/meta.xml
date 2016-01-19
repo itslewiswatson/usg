@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<meta>
+  <info type="map" gamemodes="race" name="[DD] Dynamium" author="|GMC|Zaya &amp; |GMC|pax" description="1st Dynamium-type map. Visit GMC Server. Our site: www.gmc-game.com" />
+  <map src="[DD] Dynamium.map" />
+  <settings>
+    <setting name="#time" value="20:0" />
+    <setting name="#respawn" value="none" />
+    <setting name="#duration" value="900" />
+  </settings>
+</meta>

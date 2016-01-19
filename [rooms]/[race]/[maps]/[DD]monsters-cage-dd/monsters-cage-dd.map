@@ -1,0 +1,66 @@
+<map edf:definitions="race,editor_main">
+    <object id="object (towerlan2) (1)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5005.5" posY="-2761.6001" posZ="14.8" rotX="0" rotY="90" rotZ="0"></object>
+    <object id="object (towerlan2) (2)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5005.5" posY="-2808.5" posZ="14.8" rotX="0" rotY="90" rotZ="0"></object>
+    <object id="object (towerlan2) (3)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5005.5" posY="-2855.3999" posZ="14.8" rotX="0" rotY="90" rotZ="0"></object>
+    <object id="object (towerlan2) (4)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5005.5" posY="-2902.30005" posZ="14.8" rotX="0" rotY="90" rotZ="0"></object>
+    <object id="object (towerlan2) (5)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5123.6001" posY="-3018.69995" posZ="14.8" rotX="0" rotY="90" rotZ="90"></object>
+    <object id="object (towerlan2) (6)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5170.5" posY="-3018.69995" posZ="14.8" rotX="0" rotY="90" rotZ="90"></object>
+    <object id="object (towerlan2) (7)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5217.3999" posY="-3018.69995" posZ="14.8" rotX="0" rotY="90" rotZ="90"></object>
+    <object id="object (towerlan2) (8)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5264.2998" posY="-3018.69995" posZ="14.8" rotX="0" rotY="90" rotZ="90"></object>
+    <object id="object (towerlan2) (9)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5381.2002" posY="-2900.1001" posZ="14.8" rotX="0" rotY="90" rotZ="180"></object>
+    <object id="object (towerlan2) (10)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5381.2002" posY="-2853.30005" posZ="14.8" rotX="0" rotY="90" rotZ="179.995"></object>
+    <object id="object (towerlan2) (11)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5381.2002" posY="-2806.3999" posZ="14.8" rotX="0" rotY="90" rotZ="179.995"></object>
+    <object id="object (towerlan2) (12)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5381.2002" posY="-2760" posZ="14.8" rotX="0" rotY="90" rotZ="179.995"></object>
+    <object id="object (towerlan2) (13)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5124.1001" posY="-2643.8999" posZ="14.8" rotX="0" rotY="90" rotZ="270"></object>
+    <object id="object (towerlan2) (14)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5171" posY="-2643.8999" posZ="14.8" rotX="0" rotY="90" rotZ="269.989"></object>
+    <object id="object (towerlan2) (15)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5217.8999" posY="-2643.8999" posZ="14.8" rotX="0" rotY="90" rotZ="269.989"></object>
+    <object id="object (towerlan2) (16)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5264.7998" posY="-2643.8999" posZ="14.8" rotX="0" rotY="90" rotZ="269.989"></object>
+    <object id="object (towerlan2) (18)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5119.7002" posY="-2899.19995" posZ="-97.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (19)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5119.7002" posY="-2852.30005" posZ="-97.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (20)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5119.7002" posY="-2805.3999" posZ="-97.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (21)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5119.7002" posY="-2758.5" posZ="-97.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (24)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5161.2998" posY="-2787.6001" posZ="-97.9" rotX="0" rotY="0" rotZ="36"></object>
+    <object id="object (towerlan2) (25)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5216.2998" posY="-2801.8999" posZ="-97.9" rotX="0" rotY="0" rotZ="35.997"></object>
+    <object id="object (towerlan2) (26)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5165.2002" posY="-2839.6001" posZ="-97.9" rotX="0" rotY="0" rotZ="129.997"></object>
+    <object id="object (towerlan2) (31)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5271" posY="-2817" posZ="-97.9" rotX="0" rotY="0" rotZ="35.997"></object>
+    <object id="object (towerlan2) (32)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5211" posY="-2855.8999" posZ="-97.9" rotX="0" rotY="0" rotZ="119.996"></object>
+    <object id="object (towerlan2) (33)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5262.7002" posY="-2870.80005" posZ="-97.9" rotX="0" rotY="0" rotZ="119.993"></object>
+    <object id="object (towerlan2) (34)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5242.1001" posY="-2923.30005" posZ="-97.9" rotX="0" rotY="0" rotZ="119.993"></object>
+    <object id="object (towerlan2) (35)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5189.5" posY="-2908.19995" posZ="-97.9" rotX="0" rotY="0" rotZ="119.993"></object>
+    <object id="object (towerlan2) (36)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5139.5" posY="-2885.3999" posZ="-97.9" rotX="0" rotY="0" rotZ="89.993"></object>
+    <spawnpoint id="spawnpoint (Monster 2) (1)" vehicle="556" posX="5109.2002" posY="-2915.19995" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (2)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2910.8999" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (3)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2907" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (4)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2903.1001" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (5)" vehicle="556" alpha="255" interior="0" posX="5109.2998" posY="-2899" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (6)" vehicle="556" alpha="255" interior="0" posX="5109.2998" posY="-2895.1001" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (7)" vehicle="556" alpha="255" interior="0" posX="5109.2998" posY="-2890.8999" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (8)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2886.3999" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (9)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2882.5" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (10)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2878.5" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (11)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2874.80005" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (12)" vehicle="556" alpha="255" interior="0" posX="5109.3999" posY="-2871.1001" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (13)" vehicle="556" alpha="255" interior="0" posX="5109.2998" posY="-2867.30005" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (14)" vehicle="556" alpha="255" interior="0" posX="5109.2998" posY="-2863.5" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (15)" vehicle="556" alpha="255" interior="0" posX="5109.2998" posY="-2859.69995" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (16)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2855.69995" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (17)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2851.8999" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (18)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2848.1001" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (19)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2844.30005" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (20)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2840.5" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (21)" vehicle="556" alpha="255" interior="0" posX="5109.2002" posY="-2836.69995" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (22)" vehicle="556" alpha="255" interior="0" posX="5109.2998" posY="-2832.8999" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (23)" vehicle="556" alpha="255" interior="0" posX="5109.3999" posY="-2829" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (24)" vehicle="556" alpha="255" interior="0" posX="5109.5" posY="-2825.19995" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (25)" vehicle="556" alpha="255" interior="0" posX="5109.5" posY="-2821.3999" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (26)" vehicle="556" alpha="255" interior="0" posX="5109.5" posY="-2817.5" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (27)" vehicle="556" alpha="255" interior="0" posX="5109.6001" posY="-2813.3999" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (28)" vehicle="556" alpha="255" interior="0" posX="5109.7998" posY="-2809.1001" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (29)" vehicle="556" alpha="255" interior="0" posX="5109.7998" posY="-2805" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (30)" vehicle="556" alpha="255" interior="0" posX="5109.8999" posY="-2801" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (31)" vehicle="556" alpha="255" interior="0" posX="5109.8999" posY="-2797.1001" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (32)" vehicle="556" alpha="255" interior="0" posX="5110" posY="-2793.30005" posZ="2.7" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <object id="object (towerlan2) (37)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5219" posY="-2745.69995" posZ="-97.9" rotX="0" rotY="0" rotZ="35.997"></object>
+    <object id="object (towerlan2) (38)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5267.8999" posY="-2764.3999" posZ="-97.9" rotX="0" rotY="0" rotZ="35.997"></object>
+    <object id="object (towerlan2) (39)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5164.8999" posY="-2730.80005" posZ="-97.9" rotX="0" rotY="0" rotZ="35.997"></object>
+</map>

@@ -1,0 +1,7 @@
+<meta>
+	<script src="stats_s.lua" />
+	<script src="stats_c.luac" type="client" />
+	<export function="getStatsPlayer" />
+	<export function="setStatsPlayer" />
+	<export function="incrementPlayerStat" />
+</meta>

@@ -1,0 +1,78 @@
+<map edf:definitions="editor_main,towersedf,race">
+    <object id="Tower (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4543.09961" posY="297.59961" posZ="78.2" rotX="20" rotY="0" rotZ="0"></object>
+    <object id="Tower (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4543.09961" posY="177.59961" posZ="78.2" rotX="340" rotY="0" rotZ="0"></object>
+    <object id="Tower (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4597.09961" posY="237.59961" posZ="78.2" rotX="0" rotY="340" rotZ="0"></object>
+    <object id="Tower (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4491.09961" posY="237.59961" posZ="78.2" rotX="0" rotY="20" rotZ="0"></object>
+    <spawnpoint id="vehicle (Flash) (1)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="TQUT 8GI" posX="4576.7998" posY="220.39999" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (2)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="906Z NTX" posX="4576.8999" posY="226.8" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (3)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="N7QK GCA" posX="4577" posY="231.39999" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (4)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="QLMW 581" posX="4577.1001" posY="236" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (5)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="WQ5G Z2Z" posX="4577.2002" posY="241.39999" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (6)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="TH2F 5XC" posX="4577.2998" posY="244.5" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (7)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="NN7Z D0C" posX="4577.3999" posY="247.60001" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (8)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="7XCI G7A" posX="4577.5" posY="250.89999" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (9)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="J49H GI5" posX="4577.5" posY="250.89941" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (10)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="DGZA 334" posX="4576.8999" posY="223.7" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (12)" vehicle="565" alpha="255" color="102,28,38,102,28,38,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="2MSS IAP" posX="4577.2002" posY="238.60001" posZ="180.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (13)" vehicle="565" alpha="255" color="22,34,72,22,34,72,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="RT4O TUA" posX="4556.5" posY="281.10001" posZ="181.10001" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (14)" vehicle="565" alpha="255" color="22,34,72,22,34,72,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="494U NA0" posX="4554" posY="281.20001" posZ="181.10001" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (15)" vehicle="565" alpha="255" color="22,34,72,22,34,72,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="49I8 BFA" posX="4551.2002" posY="281.39999" posZ="181.10001" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (16)" vehicle="565" alpha="255" color="22,34,72,22,34,72,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="87VZ 0MA" posX="4548.7002" posY="281.5" posZ="181.10001" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (17)" vehicle="565" alpha="255" color="22,34,72,22,34,72,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="YRYF EXX" posX="4545.8999" posY="281.70001" posZ="181.10001" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (18)" vehicle="565" alpha="255" color="22,34,72,22,34,72,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="QWQD LKP" posX="4543.1001" posY="281.89999" posZ="181.10001" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (19)" vehicle="565" alpha="255" color="22,34,72,22,34,72,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="ZZ0F 1H3" posX="4540.2998" posY="282.10001" posZ="181.10001" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (20)" vehicle="565" alpha="255" color="22,34,72,22,34,72,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="CACN K09" posX="4537.2002" posY="282.2998" posZ="181.10001" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (21)" vehicle="565" alpha="255" color="22,34,72,22,34,72,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="Q69Y DST" posX="4534.6001" posY="282.39999" posZ="181.10001" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (22)" vehicle="565" alpha="255" color="22,34,72,22,34,72,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="CO85 K4E" posX="4531.7998" posY="282.60001" posZ="181.10001" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (23)" vehicle="565" alpha="255" color="101,106,121,101,106,121,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="KOVP 1EC" posX="4509.7998" posY="254.2" posZ="180.3" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (24)" vehicle="565" alpha="255" color="101,106,121,101,106,121,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="SV4E 13L" posX="4509.7998" posY="251.60001" posZ="180.3" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (25)" vehicle="565" alpha="255" color="101,106,121,101,106,121,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="8GQD ZUC" posX="4509.7998" posY="248.8" posZ="180.3" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (26)" vehicle="565" alpha="255" color="101,106,121,101,106,121,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="DQ4Y K6E" posX="4509.7998" posY="246.2" posZ="180.3" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (27)" vehicle="565" alpha="255" color="101,106,121,101,106,121,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="QUPG 36B" posX="4509.7998" posY="243.60001" posZ="180.3" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (28)" vehicle="565" alpha="255" color="101,106,121,101,106,121,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="CTHC 28Z" posX="4509.7998" posY="240.3" posZ="180.3" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (29)" vehicle="565" alpha="255" color="101,106,121,101,106,121,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="V0PT YM3" posX="4509.7998" posY="237" posZ="180.3" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (30)" vehicle="565" alpha="255" color="101,106,121,101,106,121,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="ZSI3 PH9" posX="4509.7998" posY="233.39941" posZ="180.3" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (31)" vehicle="565" alpha="255" color="101,106,121,101,106,121,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="55RA TTL" posX="4509.8999" posY="229.60001" posZ="180.3" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (32)" vehicle="565" alpha="255" color="101,106,121,101,106,121,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="6M7Y 57R" posX="4510" posY="225.3" posZ="180.3" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (34)" vehicle="565" alpha="255" color="156,161,163,156,161,163,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="ZC4H 0HP" posX="4528.8999" posY="193.89999" posZ="181.2" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (35)" vehicle="565" alpha="255" color="156,161,163,156,161,163,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="27IC AVH" posX="4531.7002" posY="193.89999" posZ="181.2" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (36)" vehicle="565" alpha="255" color="156,161,163,156,161,163,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="HINU R24" posX="4535" posY="193.89999" posZ="181.2" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (37)" vehicle="565" alpha="255" color="156,161,163,156,161,163,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="1SY1 7UK" posX="4538.2998" posY="193.89999" posZ="181.2" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (38)" vehicle="565" alpha="255" color="156,161,163,156,161,163,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="X3OC Z96" posX="4541.8999" posY="193.89999" posZ="181.2" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (39)" vehicle="565" alpha="255" color="156,161,163,156,161,163,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="MAWI KC3" posX="4544.7002" posY="193.89999" posZ="181.2" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (40)" vehicle="565" alpha="255" color="156,161,163,156,161,163,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="YXSF YH0" posX="4547.2998" posY="193.89999" posZ="181.2" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (41)" vehicle="565" alpha="255" color="156,161,163,156,161,163,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="XMX9 647" posX="4550.1001" posY="193.89999" posZ="181.2" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (42)" vehicle="565" alpha="255" color="156,161,163,156,161,163,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="JTX6 518" posX="4552.7002" posY="193.89999" posZ="181.2" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="vehicle (Flash) (43)" vehicle="565" alpha="255" color="156,161,163,156,161,163,0,0,0,0,0,0" dimension="0" interior="0" paintjob="3" plate="1YQZ O2V" posX="4555.5" posY="193.89999" posZ="181.2" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <racepickup id="racepickup (Patriot)" type="vehiclechange" vehicle="470" respawn="0" posX="4541.6001" posY="237.60001" posZ="200.39999" rotX="0" rotY="0" rotZ="163.438"></racepickup>
+    <switch id="switch (1)" posX="4548.2998" posY="243.5" posZ="166.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (2)" alpha="255" interior="0" posX="4549.5" posY="249.60001" posZ="167.10001" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (3)" alpha="255" interior="0" posX="4551.1001" posY="234.89999" posZ="167.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (4)" alpha="255" interior="0" posX="4560" posY="223.10001" posZ="171" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (5)" alpha="255" interior="0" posX="4563.6001" posY="241.7" posZ="172.2" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (6)" alpha="255" interior="0" posX="4559.2998" posY="226.89999" posZ="170.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (7)" alpha="255" interior="0" posX="4539.5" posY="227.2" posZ="166.89999" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (8)" alpha="255" interior="0" posX="4524.6001" posY="229.8" posZ="172.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (9)" alpha="255" interior="0" posX="4527.5" posY="242.89999" posZ="171.2" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (10)" alpha="255" interior="0" posX="4528.7002" posY="257.5" posZ="170.8" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (11)" alpha="255" interior="0" posX="4535.8999" posY="274.10001" posZ="175.89999" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (12)" alpha="255" interior="0" posX="4554.2002" posY="262" posZ="171.5" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (13)" alpha="255" interior="0" posX="4541.3999" posY="248.2" posZ="166.5" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (14)" alpha="255" interior="0" posX="4540.8999" posY="256.79999" posZ="169.60001" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (15)" alpha="255" interior="0" posX="4535.6001" posY="259.39999" posZ="170.60001" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (16)" alpha="255" interior="0" posX="4541" posY="275.60001" posZ="176.5" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (17)" alpha="255" interior="0" posX="4548.1001" posY="276.5" posZ="176.8" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (18)" alpha="255" interior="0" posX="4555.2998" posY="274.79999" posZ="176.10001" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (19)" alpha="255" interior="0" posX="4519.7998" posY="246.7" posZ="174" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (20)" alpha="255" interior="0" posX="4516.7998" posY="234" posZ="175.10001" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (21)" alpha="255" interior="0" posX="4548.5" posY="268" posZ="173.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (22)" alpha="255" interior="0" posX="4546.7998" posY="261.10001" posZ="171.2" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (23)" alpha="255" interior="0" posX="4529.5" posY="227.89999" posZ="170.5" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (24)" alpha="255" interior="0" posX="4548.2002" posY="210.3" posZ="172.60001" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (25)" alpha="255" interior="0" posX="4547.6001" posY="197.60001" posZ="177.2" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (26)" alpha="255" interior="0" posX="4545.3999" posY="235.39999" posZ="167.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (27)" alpha="255" interior="0" posX="4540.1001" posY="234.2" posZ="167.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (28)" alpha="255" interior="0" posX="4533.7998" posY="233.89999" posZ="167.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (29)" alpha="255" interior="0" posX="4539.2002" posY="219.10001" posZ="167.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (30)" alpha="255" interior="0" posX="4536.8999" posY="213" posZ="167.7" rotX="0" rotY="0" rotZ="0"></switch>
+</map>

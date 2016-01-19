@@ -1,0 +1,49 @@
+<map edf:definitions="race,editor_main">
+    <object id="object (towerlan2) (2)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5218.6001" posY="-2832.30005" posZ="-84.9" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (3)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5255.3999" posY="-2789.69995" posZ="-84.9" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (4)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5255.7002" posY="-2875.19995" posZ="-84.9" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (5)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5181.7998" posY="-2874.80005" posZ="-84.9" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (6)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5181.7002" posY="-2789.69995" posZ="-84.9" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (7)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5218.5" posY="-2746.5" posZ="-84.9" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (8)" breakable="true" interior="0" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5218.6001" posY="-2918" posZ="-84.9" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Turismo) (1)" vehicle="451" posX="5232.8999" posY="-2938.80005" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (2)" vehicle="451" alpha="255" interior="0" posX="5230.2998" posY="-2938.80005" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (3)" vehicle="451" alpha="255" interior="0" posX="5227.7002" posY="-2938.80005" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (4)" vehicle="451" alpha="255" interior="0" posX="5225.1001" posY="-2938.80005" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (5)" vehicle="451" alpha="255" interior="0" posX="5222.3999" posY="-2938.80005" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (6)" vehicle="451" alpha="255" interior="0" posX="5219.7002" posY="-2938.69995" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (7)" vehicle="451" alpha="255" interior="0" posX="5217.1001" posY="-2938.6001" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (8)" vehicle="451" alpha="255" interior="0" posX="5214.5" posY="-2938.5" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (9)" vehicle="451" alpha="255" interior="0" posX="5211.8999" posY="-2938.5" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (10)" vehicle="451" alpha="255" interior="0" posX="5209.2998" posY="-2938.3999" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (11)" vehicle="451" alpha="255" interior="0" posX="5206.7002" posY="-2938.30005" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (12)" vehicle="451" alpha="255" interior="0" posX="5204" posY="-2938.30005" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (13)" vehicle="451" alpha="255" interior="0" posX="5201.5" posY="-2936.80005" posZ="15.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (14)" vehicle="451" alpha="255" interior="0" posX="5232.5" posY="-2725.6001" posZ="15.7" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (15)" vehicle="451" alpha="255" interior="0" posX="5230" posY="-2725.69995" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (16)" vehicle="451" alpha="255" interior="0" posX="5227.3999" posY="-2725.69995" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (17)" vehicle="451" alpha="255" interior="0" posX="5224.7998" posY="-2725.69995" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (18)" vehicle="451" alpha="255" interior="0" posX="5222" posY="-2725.69995" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (19)" vehicle="451" alpha="255" interior="0" posX="5219" posY="-2725.80005" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (20)" vehicle="451" alpha="255" interior="0" posX="5216" posY="-2725.8999" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (21)" vehicle="451" alpha="255" interior="0" posX="5213.2002" posY="-2726" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (22)" vehicle="451" alpha="255" interior="0" posX="5210.3999" posY="-2726" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (23)" vehicle="451" alpha="255" interior="0" posX="5207.7002" posY="-2726.1001" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (24)" vehicle="451" alpha="255" interior="0" posX="5205" posY="-2726.19995" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (25)" vehicle="451" alpha="255" interior="0" posX="5202.3999" posY="-2726.30005" posZ="15.7" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (26)" vehicle="451" alpha="255" interior="0" posX="5272.7998" posY="-2798.19995" posZ="15.7" rotX="0" rotY="0" rotZ="89.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (27)" vehicle="451" alpha="255" interior="0" posX="5272.7998" posY="-2795.19995" posZ="15.7" rotX="0" rotY="0" rotZ="89.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (28)" vehicle="451" alpha="255" interior="0" posX="5272.7998" posY="-2791.8999" posZ="15.7" rotX="0" rotY="0" rotZ="89.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (29)" vehicle="451" alpha="255" interior="0" posX="5272.7998" posY="-2788.8999" posZ="15.7" rotX="0" rotY="0" rotZ="89.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (30)" vehicle="451" alpha="255" interior="0" posX="5272.6001" posY="-2785.69995" posZ="15.7" rotX="0" rotY="0" rotZ="89.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (31)" vehicle="451" alpha="255" interior="0" posX="5164.2998" posY="-2778.1001" posZ="15.7" rotX="0" rotY="0" rotZ="269.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (32)" vehicle="451" alpha="255" interior="0" posX="5164.2998" posY="-2780.6001" posZ="15.7" rotX="0" rotY="0" rotZ="269.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (33)" vehicle="451" alpha="255" interior="0" posX="5164.3999" posY="-2783.30005" posZ="15.7" rotX="0" rotY="0" rotZ="269.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (34)" vehicle="451" alpha="255" interior="0" posX="5164.3999" posY="-2786" posZ="15.7" rotX="0" rotY="0" rotZ="269.989"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (35)" vehicle="451" alpha="255" interior="0" posX="5164.5" posY="-2788.80005" posZ="15.7" rotX="0" rotY="0" rotZ="269.989"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (36)" vehicle="451" alpha="255" interior="0" posX="5164.5" posY="-2794.3999" posZ="15.7" rotX="0" rotY="0" rotZ="269.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (37)" vehicle="451" alpha="255" interior="0" posX="5164.5" posY="-2797" posZ="15.7" rotX="0" rotY="0" rotZ="269.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (38)" vehicle="451" alpha="255" interior="0" posX="5164.5" posY="-2799.8999" posZ="15.7" rotX="0" rotY="0" rotZ="269.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (39)" vehicle="451" alpha="255" interior="0" posX="5164.5" posY="-2802.3999" posZ="15.7" rotX="0" rotY="0" rotZ="269.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Turismo) (40)" vehicle="451" alpha="255" interior="0" posX="5164.5" posY="-2805.1001" posZ="15.7" rotX="0" rotY="0" rotZ="269.995"></spawnpoint>
+</map>

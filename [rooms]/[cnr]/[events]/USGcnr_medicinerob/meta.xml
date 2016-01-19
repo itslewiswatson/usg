@@ -1,0 +1,5 @@
+<meta>
+	<script src="server.lua" />
+	<script src="digitpanel.luac" type="client" />
+	<script src="map.lua" type="server" />
+</meta>

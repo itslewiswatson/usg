@@ -1,0 +1,11 @@
+<meta>
+	<script src="inventory_c.lua" type="client"/>
+	<script src="inventory_s.lua" type="server"/>
+	<export function="create" type="client"/>
+
+	<export function="create" />
+	<export function="add" />
+	<export function="take" />
+	<export function="get" />
+	<file src="inventory-slot.png" />
+</meta>

@@ -1,0 +1,14 @@
+<meta>
+  <script src="job_police_vars_shared.lua" type="shared" />
+  <script src="job_police_vars_c.lua" type="client" />
+  <script src="job_police_s.lua" />
+  <script src="job_police_c.lua" type="client" />
+  <script src="job_police_follow_c.lua" type="client" />
+  <script src="job_police_tazer_c.lua" type="client" />
+  <script src="job_police_panel_c.lua" type="client" />
+  <export function="isPlayerArrested" />
+  <export function="releasePlayer" />
+  <export function="jailArrestedPlayer" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

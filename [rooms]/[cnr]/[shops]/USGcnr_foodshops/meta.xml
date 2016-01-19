@@ -1,0 +1,17 @@
+<meta>
+  <script src="food_prices.lua" type="shared" />
+  <script src="food_s.lua" />
+  <script src="food_c.lua" type="client" />
+  <file src="images/burger_small.png" />
+  <file src="images/burger_medium.png" />
+  <file src="images/burger_large.png" />
+  <file src="images/cluckin_small.png" />
+  <file src="images/cluckin_medium.png" />
+  <file src="images/cluckin_large.png" />
+  <file src="images/pizza_small.png" />
+  <file src="images/pizza_medium.png" />
+  <file src="images/pizza_large.png" />
+  <file src="images/sprunk.png" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

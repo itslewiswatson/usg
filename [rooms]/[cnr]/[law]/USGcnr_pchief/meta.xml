@@ -1,0 +1,4 @@
+<meta>
+	<script src="pchief_c.luac" type="client" />
+	<script src="pchief_s.lua" type="server" />
+</meta>

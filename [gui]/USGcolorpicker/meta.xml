@@ -1,0 +1,7 @@
+<meta>
+  <script src="colorpicker_c.luac" type="client" />
+  <export function="openPicker" type="client" />
+  <export function="closePicker" type="client" />
+  <file src="colorpicker.png" />
+  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000" />
+</meta>

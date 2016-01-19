@@ -1,0 +1,7 @@
+<meta>
+  <script src="cnr_hud_c.lua" type="client" />
+  <file src="wanted-star.png" />
+  <!-- <file src="font.ttf" /> -->
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

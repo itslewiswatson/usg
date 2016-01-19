@@ -1,0 +1,9 @@
+<meta>
+    <info gamemodes="race" type="map" name="[DD] Four Towers Ring Of Death" version="0.0.1"></info>
+    <map src="four-ring-towers.map" dimension="0"></map>
+    <settings>
+        <setting name="*jumping" value="[ true ]"></setting>
+    </settings>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+</meta>

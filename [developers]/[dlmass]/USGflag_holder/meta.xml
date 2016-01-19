@@ -1,0 +1,10 @@
+<meta>
+    <info author="DLmass" version="0.5" name="USGflag_holder" />
+	
+    <script src="client.lua" type="client" cached="false"/>
+
+    <file src="flag_holder.txd" />
+	<file src="flag_holder.dff" />
+    <file src="flag_holder.col" />
+	
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+	<script src="firework.lua" type="client" />
+	<script src="firework.slua" type="server" />
+	<file src="quad.dff" />
+	<file src="quad.txd"/>
+</meta>

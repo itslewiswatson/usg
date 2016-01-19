@@ -1,0 +1,7 @@
+<meta>
+	<script src="ranklist_c.lua" type="client" />
+	<export function="init" type="client" />
+	<export function="add" type="client" />
+	<export function="clear" type="client" />
+	<export function="close" type="client" />
+</meta>

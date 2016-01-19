@@ -1,0 +1,15 @@
+<meta>
+  <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000" />
+  <script src="race_pickups_s.lua" type="server" />
+  <script src="race_pickups_c.lua" type="client" />
+  <export function="createPickup" />
+  <export function="clearPickups" />
+  <export function="createPickup" type="client" />
+  <export function="clearPickups" type="client" />
+  <file src="mods/change.dff" />
+  <file src="mods/change.txd" />
+  <file src="mods/repair.dff" />
+  <file src="mods/repair.txd" />
+  <file src="mods/nitro.dff" />
+  <file src="mods/nitro.txd" />
+</meta>

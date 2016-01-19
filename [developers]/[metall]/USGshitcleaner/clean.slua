@@ -1,0 +1,84 @@
+-- *** initializing and unloading ***
+function initJob()
+	if(getResourceFromName("USGcnr_jobs") and getResourceState(getResourceFromName("USGcnr_jobs")) == "running") then
+		exports.USGcnr_jobs:addJob(jobID, jobType, occupation)
+	end
+end
+
+addEventHandler("onResourceStart", root,
+	function (res) -- init job if thisResource started, or if USGcnr_jobs (re)started
+		if(res == resource or res == getResourceFromName("USGcnr_jobs")) then
+			initJob()
+		end
+	end
+)
+
+local garbageSpots = {
+	[0] = {1599.826171875, -1866.4833984375, 13.263166427612},
+	[1] = {1576.6376953125, -1778.52734375, 13.13272857666},
+	[2] = {1560.3125, -1741.4541015625, 13.270064353943},
+	[3] = {1675.0390625, -1754.37890625, 13.268988609314},
+	[4] = {1696.7490234375, -1864.474609375, 13.278124809265},
+	[5] = {1711.8740234375, -1943.23828125, 13.289611816406},
+	[6] = {1617.62890625, -1890.6240234375, 13.272612571716},
+	[7] = {1837.47265625, -1863.642578125, 13.107822418213},
+	[8] = {1780.888671875, -1897.1630859375, 13.11515712738},
+	[9] = {1538.6923828125, -1880.099609375, 13.272199630737},
+	[10] = {1395.73046875, -1858.140625, 13.2720212936},
+	[11] = {1418.68359375, -1719.513671875, 13.27199268341},
+	[12] = {1740.8134765625, -1717.240234375, 13.267758369446},
+	[13] = {1627.2890625, -1643.3916015625, 13.440558433533},
+	[14] = {1718.9326171875, -1714.724609375, 13.231056213379},
+	[15] = {1640.02734375, -1900.8486328125, 13.27677154541},
+}
+
+function newGarbage(source)
+	if (garbageSpots) then
+		local rand = math.random(0, 15)
+		local x, y, z = garbageSpots[rand][1], garbageSpots[rand][2], garbageSpots[rand][3]
+		triggerClientEvent(source, "USGstreetcleaner.setPoints", source, x, y, z)
+	end
+end
+
+function startRoute(hitElement)
+	if (exports.USGcnr_jobs:getPlayerJob(hitElement) == "Street Cleaner") then
+		if (not getPedOccupiedVehicle(hitElement)) then return end
+		if inVeh(hitElement) then
+			setElementData(hitElement, "garbageUnits", 1)
+			newGarbage(hitElement)
+			exports.USGmsg:msg(hitElement, "Sweep over the green blips to get paid", 0, 200, 0)
+		end
+	end
+end
+addEventHandler("onVehicleEnter", root, startRoute)
+
+function inVeh(element)
+	if (element and isElement(element)) then
+		local veh = getPedOccupiedVehicle(element)
+		local state = getElementModel(veh)
+		if (state == 574) then
+			return true
+		else
+			return false
+		end
+		return false
+	end
+end
+
+function onExit(element)
+	if (exports.USGcnr_jobs:getPlayerJob(element) == "Street Cleaner") then
+		triggerClientEvent(element, "USGshitcleaner.deleteCrap", element)
+		exports.USGmsg:msg(element, "Due to exiting your vehicle, your blips have been removed", 200, 0, 0)
+	end
+end
+addEventHandler("onVehicleExit", root, onExit)
+
+function payme()
+	givePlayerMoney(source, 1000)
+	if (#garbageSpots == tonumber(getElementData(source, "garbageUnits"))) then
+		setElementData(source, "garbageUnits", tonumber(getElementData(source, "garbageUnits")) + 1)
+	end
+	newGarbage(source)
+end
+addEvent("USGstreetcleaner.payMe", true)
+addEventHandler("USGstreetcleaner.payMe", root, payme)

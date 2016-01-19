@@ -1,0 +1,23 @@
+<meta>
+   <file src="ce_breweryref.txd" />
+   <file src="ce_beerpile01.dff" />
+    <script src="client.lua" type="client" />
+    <info gamemodes="race" type="map" name="[DD] Black Sabbath" author="|GMC|Randy" version="1.0" description="Visit GMC Server. Our site: www.gmc-game.com" />
+    <map src="[DD] Black Sabbath.map" dimension="0" />
+    <settings>
+        <setting name="#skins" value='[ &quot;random&quot; ]' />
+        <setting name="#maxplayers" value="[ 128 ]" />
+        <setting name="#gamespeed" value="[ 1 ]" />
+        <setting name="#ghostmode" value='[ &quot;false&quot; ]' />
+        <setting name="#time" value="5:0" />
+        <setting name="#vehicleweapons" value='[ &quot;false&quot; ]' />
+        <setting name="#minplayers" value="[ 0 ]" />
+        <setting name="#weather" value="[ 6 ]" />
+        <setting name="#gravity" value="[ 0.008000 ]" />
+        <setting name="#waveheight" value="[ 0 ]" />
+        <setting name="#respawntime" value="[ 0 ]" />
+        <setting name="#locked_time" value="[ true ]" />
+        <setting name="#duration" value="[ 800 ]" />
+        <setting name="#respawn" value='[ &quot;none&quot; ]' />
+    </settings>
+</meta>

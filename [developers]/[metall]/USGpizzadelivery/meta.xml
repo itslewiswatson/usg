@@ -1,0 +1,6 @@
+<meta>
+	<script src="pizza.lua" type="client" />
+	<script src="pizza.slua" type="server" />
+	<script src="pizza_vars_c.lua" type="client" />
+	<script src="pizza_vars_shared.lua" type="shared" />
+</meta>

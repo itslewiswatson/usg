@@ -1,0 +1,14 @@
+<meta>
+    <info author="DLmass" version="0.5" name="USGapartments" />
+	
+    <script src="client.lua" type="client" cached="false"/>
+	
+	<file src="floor.dff" />
+	<file src="floor.col" />
+	<file src="floor.txd" />
+	<file src="building.dff" />
+	<file src="building.col" />
+	<file src="building.txd" />
+	<file src="glass.dff" />
+	<file src="glass.col" />
+</meta>

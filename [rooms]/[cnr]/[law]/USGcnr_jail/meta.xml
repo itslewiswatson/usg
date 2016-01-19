@@ -1,0 +1,14 @@
+<meta>
+  <script src="jail_s.lua" />
+  <script src="jail_c.luac" type="client" />
+  <map src="map/jail.map" />
+  <export function="jailPlayer" />
+  <export function="unjailPlayer" />
+  <export function="unjailPlayerOpenDoor" />
+  <export function="isPlayerJailed" />
+  <export function="jailAccount" />
+  <export function="toggleJailDoor" />
+  <export function="isJailOpen" />
+  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

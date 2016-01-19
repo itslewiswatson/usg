@@ -1,0 +1,12 @@
+<meta>
+    <info type="map" name="[DD] One Moving Tower" author="JR10 + Dude + Darwish" version="1.0.0"></info>
+    <map src="one-moving-tower.map" dimension="0"></map>
+
+    <script src="move.slua" type="server"/>
+    
+    <sync_map_element_data>false</sync_map_element_data>
+    
+    <settings>
+        <setting name="*jumping" value="[true]"/>
+    </settings>
+</meta>

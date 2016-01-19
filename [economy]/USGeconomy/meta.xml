@@ -1,0 +1,6 @@
+<meta>
+	<info author="Noki" version="0.1" name="USGeconomy" />
+	
+	<script src="eco_s.lua" type="server"/>
+	<script src="eco_c.luac" type="client"/>
+</meta>

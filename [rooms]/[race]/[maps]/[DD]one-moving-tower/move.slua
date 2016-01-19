@@ -1,0 +1,14 @@
+------------------------------------------------------------------------------------
+-- PROJECT: Towers Mania DD
+-- VERSION: 1.0
+-- DATE: July 2013
+-- DEVELOPERS: JR10
+-- RIGHTS: All rights reserved by developers
+------------------------------------------------------------------------------------
+
+local movingTower = getElementByID("movingTower")
+
+function onStart()
+    setTimer(moveObject, 8000, 1, movingTower, 400000, 1919.39941, -3062.19922, 0)
+end
+addEventHandler("onResourceStart", resourceRoot, onStart)

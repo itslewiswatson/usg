@@ -1,0 +1,5 @@
+<meta>
+<script src="LSammu.lua" type="client" />
+<script src="LVammu.lua" type="client" />
+<script src="LSPD.lua" type="client" />
+</meta>

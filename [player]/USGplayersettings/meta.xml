@@ -1,0 +1,10 @@
+<meta>
+  <script src="settings_client.luac" type="client" />
+  <script src="settings_panel_client.luac" type="client" />
+  <script src="settings_general.luac" type="client" />
+  <export function="addSetting" type="client" />
+  <export function="setSetting" type="client" />
+  <export function="getSetting" type="client" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

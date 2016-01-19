@@ -1,0 +1,6 @@
+<meta>
+	<script src="c.lua" type="client"/>
+	
+	<file src="AsunaSAO.dff"/>
+	<file src="AsunaSAO.txd"/>
+</meta>

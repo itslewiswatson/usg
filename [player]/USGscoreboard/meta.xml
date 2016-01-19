@@ -1,0 +1,10 @@
+<meta>
+  <script src="scoreboard_c.luac" type="client" />
+  <script src="scoreboard_cnr_c.luac" type="client" />
+  <script src="scoreboard_lobby_c.luac" type="client" />
+  <script src="scoreboard_tct_c.lua" type="client" />
+  <script src="scoreboard_s.lua" type="server" />
+  <script src="scoreboard_cnr_s.lua" type="server" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

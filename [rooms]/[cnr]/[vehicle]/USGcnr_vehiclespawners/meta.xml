@@ -1,0 +1,10 @@
+<meta>
+  <script src="spawners_c.lua" type="client" />
+  <script src="spawners_s.lua" />
+  <export function="addSpawner" type="client" />
+  <export function="removeSpawner" type="client" />
+  <export function="getPlayerSpawnedVehicle" type="server" />
+  <export function="getPlayerVehicleSpawner" type="server" />
+  <export function="removePlayerVehicle" type="server" />
+  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000" />
+</meta>

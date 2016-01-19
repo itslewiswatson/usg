@@ -1,0 +1,6 @@
+<meta>
+	<script src="music_c.luac" type="client" />
+	<export function="getLibrary" type="client" />
+	<export function="addToLibrary" type="client" />
+	<export function="removeFromLibrary" type="client" />
+</meta>

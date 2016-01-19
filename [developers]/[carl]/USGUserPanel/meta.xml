@@ -1,0 +1,30 @@
+<meta>
+ <script src = "UP_client.luac" type = "client" />
+ 
+ <script src = "app/MessageApp.lua" type = "client" />
+ 
+  <script src = "app/AccountApp_client.lua" type = "client" />
+  <script src = "app/AccountApp_server.lua" type = "server" />
+  
+  <script src = "app/MoneyApp_client.lua" type = "client" />
+  <script src = "app/MoneyApp_server.lua" type = "server" />
+  
+  <script src = "app/CallApp_client.lua" type = "client" />
+  <script src = "app/CallApp_server.lua" type = "server" />
+  
+  <script src = "app/GpsApp.lua" type = "client" />
+  
+  <script src = "app/WeaponApp.lua" type = "client" />
+  
+  <script src = "app/MusicApp.lua" type = "client" />
+ 
+
+ <file src = "account_icon.png" />
+  <file src = "call_icon.png" />
+   <file src = "gps_icon.png" />
+    <file src = "messages_icon.png" />
+	 <file src = "money_icon.png" />
+	  <file src = "music_icon.png" />
+	   <file src = "account_icon.png" />
+	   <file src = "weapons_icon.png" />
+</meta>

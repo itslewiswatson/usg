@@ -1,0 +1,23 @@
+<meta>
+  <script src="medicines_shared.lua" type="shared" />
+  <script src="medicines_s.lua" type="server" />
+  <script src="medicines_hits_s.lua" type="server" />
+  <script src="medicines_c.lua" type="client" />
+  <script src="medicines_hits_c.lua" type="client" />
+  <script src="medicines_exports_c.lua" type="client" />
+  <export function="getMedicineTypes" />
+  <export function="getPlayerMedicineAmount" />
+  <export function="getMedicineTypes" type="client" />
+  <export function="getPlayerMedicineAmount" type="client" />
+  <export function="givePlayerMedicines" />
+  <export function="takePlayerMedicines" />
+
+
+  <file src="steroid.png" />
+  <file src="aspirin.png" />
+
+
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+    
+  </min_mta_version>
+</meta>

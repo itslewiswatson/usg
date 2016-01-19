@@ -1,0 +1,5 @@
+<meta>
+	<script src="client.lua" type="client"/>
+	<export function="isElementWithinSafeZone" type="client"/>
+	<oop>true</oop>
+</meta>

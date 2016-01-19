@@ -1,0 +1,27 @@
+categories = {
+	-- slot = { ammo = ammoWhenBuying, weaponID1, weaponID2, ...}
+	[2] = { name = "Pistols", ammo = 32, ammoPrice = 165, ammoShared = false, -- pistol 2000, deagle 5000, silenced 4000
+			{id=22, price = 2000},{id=23, price = 4000},{id=24, price=5000},
+		},
+	[3] = { name = "Shotguns", ammo = 16, ammoPrice = 450, ammoShared = true,
+			{id=25, price = 7000},{id=26, price = 10000},{id=27, price = 15000},
+		},
+	[4] = { name = "SMGs", ammo = 50, ammoPrice = 450, ammoShared = true,
+			{id=28, price = 10000},{id=29, price = 10000},{id=32, price = 9000},
+		},
+	[5] = { name = "Assault rifles", ammo = 30, ammoPrice = 575, ammoShared = true,
+			{id=30, price = 12000},{id=31, price = 14000},
+		},
+	[6] = { name = "Rifles", ammo = 12, ammoPrice = 450, ammoShared = false,
+			{id=33, price = 8000},{id=34, price = 18000},
+		},
+	[8] = { name = "Projectiles", ammo = 1, ammoPrice = 2500, ammoShared = false,
+			{id=16, price = 2500},{id=17, price = 2500},{id=18, price = 2500},{id=39, price = 2500},
+		},
+	[9] = { name = "Special", ammo = 1, ammoPrice = 2000, ammoShared = false,
+			{id=44, price = 2000},{id=45, price = 2000},{id=46, price = 2000},
+	},
+	[10] = { name = "Special", ammo = 1, ammoPrice = 2000, ammoShared = false,
+		{id=10, price = 2000},{id=11, price = 2000},{id=12, price = 2000},{id=14, price = 2000},{id=15, price = 2000},
+	},
+}

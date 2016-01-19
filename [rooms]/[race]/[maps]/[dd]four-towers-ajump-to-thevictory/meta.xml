@@ -1,0 +1,10 @@
+<meta>
+    <info type="map" name='[DD] Four Towers Jump To Victory' version="1.0.0"></info>
+    <map src="four-towers-ajump-to-thevictory.map" dimension="0"></map>
+    <settings>
+        <setting name="*jumping" value="[ true ]"></setting>
+        <setting name="*shuffle" value="[ true ]"></setting>
+    </settings>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+</meta>

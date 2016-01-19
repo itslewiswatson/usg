@@ -1,0 +1,7 @@
+<meta>
+	<script src="miscClient.lua" type="client"/>
+	<script src="miscServer.lua" type="server"/>
+	
+	<export function="bool" type="client" />
+	<export function="bool" type="server" />
+</meta>

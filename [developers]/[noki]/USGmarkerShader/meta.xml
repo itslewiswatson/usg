@@ -1,0 +1,6 @@
+<meta>
+	<file src="overlay.fx" />
+	<script src="client.luac" type="client" />
+	<file src="marker.png" />
+	<oop>true</oop>
+</meta>

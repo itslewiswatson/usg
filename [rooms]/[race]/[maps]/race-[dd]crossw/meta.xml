@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<meta>
+  <info type="map" gamemodes="race" name="[DD] Cross W" author="[BFT]Eclipse" description="Visit GMC Server. Our site: www.gmc-game.com" />
+  <map src="[DD] Cross W.map" />
+  <settings>
+    <setting name="#time" value="1:0" />
+    <setting name="#respawn" value="none" />
+    <setting name="#respawntime" value="255" />
+  </settings>
+</meta>

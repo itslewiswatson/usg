@@ -1,0 +1,5 @@
+<meta>
+  <script src="respawn_server.lua" />
+  <script src="respawn_client.lua" type="client" />
+  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000" />
+</meta>

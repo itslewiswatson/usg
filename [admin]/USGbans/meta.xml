@@ -1,0 +1,12 @@
+<meta>
+  <script src="bans_s.lua" />
+  <export function="isSerialBanned" />
+  <export function="isAccountBanned" />
+  <export function="getSerialBan" />
+  <export function="getAccountBan" />
+  <export function="getSerialBans" />
+  <export function="getAccountBans" />
+  <export function="getBans" />
+  <export function="removeBan" />
+  <export function="addBan" />
+</meta>

@@ -1,0 +1,7 @@
+<meta>
+    <info name="[str] Four Towers No Jumping" type="map" version="1.0.0"></info>
+    <map src="4-towers-rockets.map" dimension="0"></map>
+    <settings>
+        <setting name="*rockets" value="[true]"/>
+    </settings>
+</meta>

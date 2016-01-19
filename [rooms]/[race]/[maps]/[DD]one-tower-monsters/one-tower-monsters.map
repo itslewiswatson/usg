@@ -1,0 +1,102 @@
+<map edf:definitions="race,editor_main">
+    <object id="object (TwrCrane_M_04) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="1383" scale="1" dimension="0" posX="4134" posY="-1717" posZ="0.8" rotX="0" rotY="0" rotZ="45.961"></object>
+    <object id="object (Beach1_LAs0fhy) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4153.92285" posY="-1782.93164" posZ="78.36996" rotX="0" rotY="197.864" rotZ="0"></object>
+    <object id="object (Beach1_LAs0fhy) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4103.46582" posY="-1725.69238" posZ="12.27327" rotX="0" rotY="114.487" rotZ="358.012"></object>
+    <object id="object (Beach1_LAs0fhy) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4156.12695" posY="-1806.79126" posZ="26.39879" rotX="0" rotY="265.35" rotZ="268.69"></object>
+    <object id="object (Beach1_LAs0fhy) (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4153.02734" posY="-1801.79297" posZ="26.39879" rotX="0" rotY="265.347" rotZ="246.847"></object>
+    <object id="object (Beach1_LAs0fhy) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4181.89258" posY="-1755.43652" posZ="67.76942" rotX="0" rotY="259.393" rotZ="0"></object>
+    <object id="object (Beach1_LAs0fhy) (6)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4190.17822" posY="-1778.73315" posZ="26.39879" rotX="0" rotY="259.393" rotZ="322.285"></object>
+    <object id="object (Beach1_LAs0fhy) (7)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4150.82422" posY="-1688.87793" posZ="26.39879" rotX="0" rotY="259.387" rotZ="79.398"></object>
+    <object id="object (Beach1_LAs0fhy) (8)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4147.52051" posY="-1691.55469" posZ="26.39879" rotX="0" rotY="265.336" rotZ="115.126"></object>
+    <object id="object (Beach1_LAs0fhy) (9)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4147.47217" posY="-1762.19812" posZ="78.36996" rotX="0" rotY="201.834" rotZ="31.76"></object>
+    <object id="object (Beach1_LAs0fhy) (11)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4190.17773" posY="-1778.73242" posZ="26.39879" rotX="0" rotY="259.387" rotZ="322.284"></object>
+    <object id="object (Beach1_LAs0fhy) (12)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4000.45752" posY="-1704.92676" posZ="12.27327" rotX="0" rotY="138.307" rotZ="352.057"></object>
+    <object id="object (Beach1_LAs0fhy) (13)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4195.01904" posY="-1715.9939" posZ="37.7089" rotX="0" rotY="259.393" rotZ="25.805"></object>
+    <object id="object (TwrCrane_M_04) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="1383" scale="1" dimension="0" posX="4171.1001" posY="-1763.19995" posZ="0.8" rotX="0" rotY="0" rotZ="33.512"></object>
+    <object id="object (TwrCrane_M_04) (6)" interior="0" collisions="true" alpha="255" doublesided="false" model="1383" scale="1" dimension="0" posX="4173.1001" posY="-1718.09998" posZ="0.8" rotX="0" rotY="0" rotZ="35.881"></object>
+    <object id="object (TwrCrane_M_04) (7)" interior="0" collisions="true" alpha="255" doublesided="false" model="1383" scale="1" dimension="0" posX="4133.6001" posY="-1761.69995" posZ="0.8" rotX="0" rotY="0" rotZ="131.183"></object>
+    <marker id="marker (corona) (1)" type="corona" color="#FF0000FD" size="5" interior="0" dimension="0" posX="4136.3999" posY="-1718" posZ="17" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (2)" type="corona" color="#01FD1FFF" size="4" interior="0" dimension="0" posX="4167.15576" posY="-1756.45593" posZ="4.8262" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (3)" type="corona" color="#00E3FEFF" size="4" interior="0" dimension="0" posX="4141.72266" posY="-1756.62341" posZ="4.80298" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (4)" type="corona" color="#FB03A0FF" size="5" interior="0" dimension="0" posX="4166.16162" posY="-1716.39856" posZ="14.51465" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (5)" type="corona" color="#FB03A0FF" size="5" interior="0" dimension="0" posX="4142.3877" posY="-1717.40723" posZ="15.92905" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (6)" type="corona" color="#00E3FEFF" size="4" interior="0" dimension="0" posX="4166.69141" posY="-1757.0459" posZ="13.13946" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (7)" type="corona" color="#DCFC02FF" size="5" interior="0" dimension="0" posX="4142.7793" posY="-1756.29395" posZ="9.74711" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (8)" type="corona" color="#F4940AFF" size="5" interior="0" dimension="0" posX="4165.79248" posY="-1757.72815" posZ="28.57583" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (9)" type="corona" color="#F4940AFF" size="5" interior="0" dimension="0" posX="4166.42139" posY="-1717.44934" posZ="27.19711" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (10)" type="corona" color="#01FD1FFF" size="4" interior="0" dimension="0" posX="4168.8999" posY="-1719.19995" posZ="17.6" rotX="0" rotY="0" rotZ="0"></marker>
+    <object id="object (Beach1_LAs0fhy) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4108.83057" posY="-1736.87964" posZ="62.05539" rotX="0" rotY="114.483" rotZ="358.011"></object>
+    <marker id="marker (corona) (11)" type="corona" color="#38C663FF" size="6" interior="0" dimension="0" posX="4135.1001" posY="-1759.19995" posZ="19.1" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (12)" type="corona" color="#6A40BEFF" size="6" interior="0" dimension="0" posX="4170.5" posY="-1715.90002" posZ="-12" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (13)" type="corona" color="#E71779FF" size="4" interior="0" dimension="0" posX="4167.53271" posY="-1757.20129" posZ="22.05231" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (14)" type="corona" color="#B18C4DFF" size="5" interior="0" dimension="0" posX="4149.7002" posY="-1722" posZ="30.7" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (15)" type="corona" color="#01D6FDFF" size="80" interior="0" dimension="0" posX="4159.79395" posY="-1747.16785" posZ="75.38562" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (16)" type="corona" color="#19FD01FF" size="30" interior="0" dimension="0" posX="4107.00586" posY="-1740.78198" posZ="27.84568" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (17)" type="corona" color="#FFFC00FF" size="30" interior="0" dimension="0" posX="4154.11914" posY="-1688.70508" posZ="21.53434" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (18)" type="corona" color="#FA01FDFF" size="20" interior="0" dimension="0" posX="4203.03613" posY="-1737.89551" posZ="21.36298" rotX="0" rotY="0" rotZ="0"></marker>
+    <object id="object (Beach1_LAs0fhy) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="4843" scale="1" dimension="0" posX="4194.6333" posY="-1735.52527" posZ="35.82791" rotX="0" rotY="251.453" rotZ="3.97"></object>
+    <marker id="marker (corona) (19)" type="corona" color="#00FEE3FF" size="20" interior="0" dimension="0" posX="4154.46924" posY="-1804.21179" posZ="19.89171" rotX="0" rotY="0" rotZ="0"></marker>
+    <object id="object (luxorpillar01_lvs) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4196.56445" posY="-1755.56543" posZ="-29.15606" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (luxorpillar01_lvs) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4157.41211" posY="-1790.12109" posZ="-29.15606" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (luxorpillar01_lvs) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4157.41211" posY="-1790.12109" posZ="-29.15606" rotX="0" rotY="342.135" rotZ="0"></object>
+    <object id="object (luxorpillar01_lvs) (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4157.41211" posY="-1790.12109" posZ="-29.15606" rotX="0" rotY="350.071" rotZ="0"></object>
+    <object id="object (luxorpillar01_lvs) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4157.41211" posY="-1790.12109" posZ="-29.15606" rotX="0" rotY="17.853" rotZ="0"></object>
+    <object id="object (luxorpillar01_lvs) (6)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4157.41211" posY="-1790.12109" posZ="-29.15606" rotX="0" rotY="7.933" rotZ="0"></object>
+    <object id="object (luxorpillar01_lvs) (7)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4114.74219" posY="-1736.85315" posZ="-29.15606" rotX="0" rotY="350.068" rotZ="266.705"></object>
+    <object id="object (luxorpillar01_lvs) (8)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4110.65234" posY="-1734.03809" posZ="-29.15606" rotX="0" rotY="23.808" rotZ="266.704"></object>
+    <object id="object (luxorpillar01_lvs) (9)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4109.40576" posY="-1728.42566" posZ="-29.15606" rotX="0" rotY="15.867" rotZ="302.429"></object>
+    <object id="object (luxorpillar01_lvs) (10)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4189.63916" posY="-1705.74658" posZ="-29.15606" rotX="0" rotY="350.063" rotZ="346.329"></object>
+    <object id="object (luxorpillar01_lvs) (11)" interior="0" collisions="true" alpha="255" doublesided="false" model="8397" scale="1" dimension="0" posX="4186.58154" posY="-1703.24512" posZ="-29.15606" rotX="0" rotY="5.937" rotZ="284.793"></object>
+    <object id="object (towerlan2) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4153.2002" posY="-1739.59961" posZ="-82.1" rotX="0" rotY="0" rotZ="0"></object>
+    <marker id="marker (corona) (5)" type="corona" color="#FB03A0FF" size="5" interior="0" dimension="0" posX="4168.2002" posY="-1760.09998" posZ="15.9" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (14)" type="corona" color="#B18C4DFF" size="5" interior="0" dimension="0" posX="4152" posY="-1759.40002" posZ="17.7" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (14)" type="corona" color="#B18C4DFF" size="5" interior="0" dimension="0" posX="4151.7998" posY="-1718.30005" posZ="30.7" rotX="0" rotY="0" rotZ="0"></marker>
+    <marker id="marker (corona) (14)" type="corona" color="#B18C4DFF" size="5" interior="0" dimension="0" posX="4153.1001" posY="-1718.09998" posZ="17.2" rotX="0" rotY="0" rotZ="0"></marker>
+    <spawnpoint id="spawnpoint (Caddy) (1)" vehicle="457" posX="4138.2998" posY="-1719.5" posZ="18.4" rotX="0" rotY="0" rotZ="178"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (2)" vehicle="457" alpha="255" interior="0" posX="4141.2998" posY="-1719.40002" posZ="18.4" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (3)" vehicle="457" alpha="255" interior="0" posX="4145.7998" posY="-1719.19995" posZ="18.4" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (4)" vehicle="457" alpha="255" interior="0" posX="4150.3999" posY="-1719.19995" posZ="18.4" rotX="0" rotY="0" rotZ="178"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (5)" vehicle="457" alpha="255" interior="0" posX="4153.8999" posY="-1719.30005" posZ="18.4" rotX="0" rotY="0" rotZ="178"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (6)" vehicle="457" alpha="255" interior="0" posX="4158.2002" posY="-1719.19995" posZ="18.4" rotX="0" rotY="0" rotZ="178"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (7)" vehicle="457" alpha="255" interior="0" posX="4160.2002" posY="-1719.09998" posZ="18.4" rotX="0" rotY="0" rotZ="178"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (8)" vehicle="457" alpha="255" interior="0" posX="4162.5" posY="-1719.09998" posZ="18.4" rotX="0" rotY="0" rotZ="178"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (9)" vehicle="457" alpha="255" interior="0" posX="4164.7002" posY="-1719" posZ="18.4" rotX="0" rotY="0" rotZ="178"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (10)" vehicle="457" alpha="255" interior="0" posX="4167.2998" posY="-1719.09998" posZ="18.4" rotX="0" rotY="0" rotZ="178"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (11)" vehicle="457" alpha="255" interior="0" posX="4155.89941" posY="-1719.19922" posZ="18.4" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (12)" vehicle="457" alpha="255" interior="0" posX="4152.1001" posY="-1719.30005" posZ="18.4" rotX="0" rotY="0" rotZ="178"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (13)" vehicle="457" alpha="255" interior="0" posX="4148" posY="-1719.19995" posZ="18.4" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (14)" vehicle="457" alpha="255" interior="0" posX="4143.5" posY="-1719.09998" posZ="18.4" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (16)" vehicle="457" alpha="255" interior="0" posX="4170.6001" posY="-1724.19995" posZ="18.4" rotX="0" rotY="0" rotZ="88.745"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (17)" vehicle="457" alpha="255" interior="0" posX="4170.6001" posY="-1726.19995" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (18)" vehicle="457" alpha="255" interior="0" posX="4170.6001" posY="-1728.19995" posZ="18.4" rotX="0" rotY="0" rotZ="88.745"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (20)" vehicle="457" alpha="255" interior="0" posX="4170.59961" posY="-1730.2998" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (22)" vehicle="457" alpha="255" interior="0" posX="5839.7998" posY="74450" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (25)" vehicle="457" alpha="255" interior="0" posX="4170.7998" posY="-1732.59998" posZ="18.4" rotX="0" rotY="0" rotZ="88.745"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (26)" vehicle="457" alpha="255" interior="0" posX="4170.7002" posY="-1734.90002" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (27)" vehicle="457" alpha="255" interior="0" posX="4170.7998" posY="-1736.90002" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (28)" vehicle="457" alpha="255" interior="0" posX="4170.8999" posY="-1739.09998" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (29)" vehicle="457" alpha="255" interior="0" posX="4171" posY="-1741.30005" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (30)" vehicle="457" alpha="255" interior="0" posX="4170.8999" posY="-1743.80005" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (31)" vehicle="457" alpha="255" interior="0" posX="4170.7998" posY="-1746.30005" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (32)" vehicle="457" alpha="255" interior="0" posX="4170.7002" posY="-1748.59998" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (33)" vehicle="457" alpha="255" interior="0" posX="4170.6001" posY="-1751.40002" posZ="18.4" rotX="0" rotY="0" rotZ="88.745"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (35)" vehicle="457" alpha="255" interior="0" posX="5843.2002" posY="-1861.19995" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (36)" vehicle="457" alpha="255" interior="0" posX="4170.2998" posY="-1754.19995" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (37)" vehicle="457" alpha="255" interior="0" posX="4170.5" posY="-1756.90002" posZ="18.4" rotX="0" rotY="0" rotZ="88.742"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4170.2998" posY="-1759.89941" posZ="18.4" rotX="0" rotY="0" rotZ="88.737"></spawnpoint>
+    <racepickup id="racepickup (NRG-500) (1)" type="nitro" vehicle="522" respawn="0" posX="4153.6001" posY="-1740" posZ="19.1" rotX="0" rotY="0" rotZ="119.523"></racepickup>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4165.3999" posY="-1761.09998" posZ="18.4" rotX="0" rotY="0" rotZ="359.737"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4163.1001" posY="-1761.09998" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4160.7002" posY="-1761" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4158.2998" posY="-1761" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4155.8999" posY="-1761" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4153.7002" posY="-1761" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4151.2998" posY="-1761" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4149.2002" posY="-1761" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4147.2002" posY="-1761" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4145" posY="-1761" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4142.6001" posY="-1761" posZ="18.4" rotX="0" rotY="0" rotZ="359.737"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4140.2998" posY="-1761" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="5780.6001" posY="6137.2998" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+    <spawnpoint id="spawnpoint (Caddy) (38)" vehicle="457" alpha="255" interior="0" posX="4137.3999" posY="-1760.5" posZ="18.4" rotX="0" rotY="0" rotZ="359.736"></spawnpoint>
+</map>

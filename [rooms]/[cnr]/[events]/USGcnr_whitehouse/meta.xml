@@ -1,0 +1,6 @@
+<meta>
+  
+	<script src="server.lua" />
+	
+	<export function="isJailClosed" type="server"/>
+</meta>

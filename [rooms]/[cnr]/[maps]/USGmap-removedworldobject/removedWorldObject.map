@@ -1,0 +1,24 @@
+<map edf:definitions="editor_main">
+--------------LS ammu--------------------
+    <removeWorldObject id="removeWorldObject (Gen_doorEXT12) (1)" radius="3.4983802" interior="0" model="1533" lodModel="0" posX="1369.3508" posY="-1279.1" posZ="13.68801" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (Gen_doorEXT16) (1)" radius="3.4595208" interior="0" model="1537" lodModel="0" posX="1369.3984" posY="-1281.2969" posZ="12.53906" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+---------------LS PD --------------------
+   <removeWorldObject id="removeWorldObject (Gen_doorEXT15) (1)" radius="3.458308" interior="0" model="1536" lodModel="0" posX="1555.9641" posY="-1675.5676" posZ="16.02473" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+---------------NG base-------------------
+    <removeWorldObject id="removeWorldObject (des_a51infenc) (1)" radius="120.60289001465" interior="0" model="16094" lodModel="0" posX="191.14063" posY="1870.03906" posZ="21.47656" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+     <removeWorldObject id="removeWorldObject (sand_josh2) (1)" radius="4.1892938613892" interior="0" model="858" lodModel="0" posX="76.54481" posY="1892.36743" posZ="18.16349" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (sand_josh2) (2)" radius="4.1892938613892" interior="0" model="858" lodModel="0" posX="76.52341" posY="1892.40393" posZ="17.59964" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (sand_josh2) (3)" radius="4.1892938613892" interior="0" model="858" lodModel="0" posX="76.51525" posY="1892.41785" posZ="17.96054" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (sand_josh2) (4)" radius="4.1892938613892" interior="0" model="858" lodModel="0" posX="76.5684" posY="1892.32703" posZ="18.09132" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (DYN_MESH_1) (1)" radius="5.38907289505" interior="0" model="1411" lodModel="0" posX="346.54468" posY="1798.72205" posZ="20.13308" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+     <removeWorldObject id="removeWorldObject (cen_bit_11) (1)" radius="171.04086303711" interior="0" model="16203" lodModel="16590" posX="199.34375" posY="1943.78906" posZ="18.20313" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+     <removeWorldObject id="removeWorldObject (mil_hangar1_) (1)" radius="27.481317520142" interior="0" model="3268" lodModel="3366" posX="276.65625" posY="2023.75781" posZ="16.63281" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (mil_hangar1_) (2)" radius="27.481317520142" interior="0" model="3268" lodModel="3366" posX="276.65625" posY="1989.54688" posZ="16.63281" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (mil_hangar1_) (3)" radius="27.481317520142" interior="0" model="3268" lodModel="3366" posX="276.65625" posY="1955.76563" posZ="16.63281" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+  <removeWorldObject id="removeWorldObject (a51_spottower) (2)" radius="13.529054641724" interior="0" model="3279" lodModel="0" posX="113.38281" posY="1814.45313" posZ="16.82031" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+       <removeWorldObject id="removeWorldObject (a51_spottower) (3)" radius="13.529055" interior="0" model="3279" lodModel="0" posX="165.95313" posY="1849.9922" posZ="16.82031" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (a51_ventcover) (1)" radius="3.5160918" interior="0" model="16732" lodModel="0" posX="226.45393" posY="1859.5616" posZ="14.43" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+     <removeWorldObject id="removeWorldObject (a51_spottower) (1)" radius="13.529054641724" interior="0" model="3279" lodModel="0" posX="267.0625" posY="1895.29688" posZ="16.82031" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <removeWorldObject id="removeWorldObject (a51_spottower) (4)" radius="13.529055" interior="0" model="3279" lodModel="0" posX="262.09375" posY="1807.6719" posZ="16.82031" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+ 
+  </map>

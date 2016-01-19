@@ -1,0 +1,22 @@
+<meta>
+  <script src="houses_sys_s.lua" type="server" />
+  <script src="houses_sys_exports_s.lua" type="server" />
+  <script src="houses_sys_c.lua" type="client" />
+  <export function="getHouseName" />
+  <export function="getHouseSellPrice" />
+  <export function="isHouseForSale" />
+  <export function="getHouseInterior" />
+  <export function="getHousePosition" />
+  <export function="getHouseOwner" />
+  <export function="setHouseSellPrice" />
+  <export function="setHouseForSale" />
+  <export function="setHouseOwner" />
+  <export function="getHousePermissions" />
+  <export function="getHouseDrugStorage" />
+  <export function="getHouseWeaponStorage" />
+  <export function="setHousePermissions" />
+  <export function="setHouseDrugStorage" />
+  <export function="setHouseWeaponStorage" />
+  <min_mta_version server="1.3.4-0.00000" client="1.3.5-9.06194">
+  </min_mta_version>
+</meta>

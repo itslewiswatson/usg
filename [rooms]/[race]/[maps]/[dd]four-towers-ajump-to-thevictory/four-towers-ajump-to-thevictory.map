@@ -1,0 +1,57 @@
+<map edf:definitions="race,editor_main">
+    <object id="object (towerlan2) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="4272.2002" posY="17.2" posZ="66.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (3)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="4162.7998" posY="19.7998" posZ="62.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (landjump2) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="1634" doublesided="false" scale="1" dimension="0" posX="156.8" posY="112.4" posZ="472.20001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (landjump2) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="1634" doublesided="false" scale="1" dimension="0" posX="4208.1001" posY="16.8" posZ="167.7" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (vgncarshade1) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="4232.8999" posY="21.4" posZ="165.10001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgncarshade1) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="4232.8999" posY="16.3" posZ="165.10001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (landjump2) (4)" breakable="true" interior="0" collisions="true" alpha="255" model="1634" doublesided="false" scale="1" dimension="0" posX="4208.1001" posY="20.9" posZ="167.7" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (towerlan2) (8)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="4162.7998" posY="-27.1" posZ="62.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (9)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="4162.7998" posY="66.7" posZ="62.3" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Monster 2) (1)" vehicle="556" posX="4288.2002" posY="16.8" posZ="167.39999" rotX="0" rotY="0" rotZ="89.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (2)" vehicle="556" alpha="255" interior="0" posX="4288.2998" posY="24.5" posZ="167.39999" rotX="0" rotY="0" rotZ="89.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (3)" vehicle="556" alpha="255" interior="0" posX="4288.2002" posY="7.4" posZ="167.39999" rotX="0" rotY="0" rotZ="89.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (1)" vehicle="545" posX="4177" posY="87.6" posZ="163.2" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (2)" vehicle="545" alpha="255" interior="0" posX="4174.3999" posY="87.5" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (3)" vehicle="545" alpha="255" interior="0" posX="4171.7002" posY="87.5" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (4)" vehicle="545" alpha="255" interior="0" posX="4169.2002" posY="87.5" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (5)" vehicle="545" alpha="255" interior="0" posX="4166.6001" posY="87.5" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (6)" vehicle="545" alpha="255" interior="0" posX="4164.1001" posY="87.5" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (7)" vehicle="545" alpha="255" interior="0" posX="4161.6001" posY="87.5" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (8)" vehicle="545" alpha="255" interior="0" posX="4159.1001" posY="87.5" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (9)" vehicle="545" alpha="255" interior="0" posX="4156.5" posY="87.5" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (10)" vehicle="545" alpha="255" interior="0" posX="4154" posY="87.6" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (11)" vehicle="545" alpha="255" interior="0" posX="4151.3999" posY="87.6" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (12)" vehicle="545" alpha="255" interior="0" posX="4148.7002" posY="87.6" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (13)" vehicle="545" alpha="255" interior="0" posX="4145.6001" posY="86.4" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (14)" vehicle="545" alpha="255" interior="0" posX="4179.3999" posY="40" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (15)" vehicle="545" alpha="255" interior="0" posX="4176.3999" posY="41" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (16)" vehicle="545" alpha="255" interior="0" posX="4173.7002" posY="41.1" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (17)" vehicle="545" alpha="255" interior="0" posX="4170.8999" posY="41.1" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (18)" vehicle="545" alpha="255" interior="0" posX="4168.2998" posY="41.1" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (19)" vehicle="545" alpha="255" interior="0" posX="4165.7998" posY="41.1" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (20)" vehicle="545" alpha="255" interior="0" posX="4163.2998" posY="41.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (21)" vehicle="545" alpha="255" interior="0" posX="4160.7002" posY="41.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (22)" vehicle="545" alpha="255" interior="0" posX="4158.2002" posY="41.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (23)" vehicle="545" alpha="255" interior="0" posX="4155.8999" posY="41.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (24)" vehicle="545" alpha="255" interior="0" posX="4153.3999" posY="41.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (25)" vehicle="545" alpha="255" interior="0" posX="4151.1001" posY="41.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (26)" vehicle="545" alpha="255" interior="0" posX="4148.7002" posY="41.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (27)" vehicle="545" alpha="255" interior="0" posX="4146.2998" posY="40.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (28)" vehicle="545" alpha="255" interior="0" posX="4144.8999" posY="-8" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (29)" vehicle="545" alpha="255" interior="0" posX="4147.1001" posY="-6.6" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (30)" vehicle="545" alpha="255" interior="0" posX="4149.3999" posY="-6.5" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (31)" vehicle="545" alpha="255" interior="0" posX="4151.7002" posY="-6.4" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (32)" vehicle="545" alpha="255" interior="0" posX="4154" posY="-6.4" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (33)" vehicle="545" alpha="255" interior="0" posX="4156.2998" posY="-6.4" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (34)" vehicle="545" alpha="255" interior="0" posX="4158.5" posY="-6.3" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (35)" vehicle="545" alpha="255" interior="0" posX="4160.7998" posY="-6.3" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (36)" vehicle="545" alpha="255" interior="0" posX="4163" posY="-6.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (37)" vehicle="545" alpha="255" interior="0" posX="4165.2002" posY="-6.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (38)" vehicle="545" alpha="255" interior="0" posX="4167.7002" posY="-6.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (39)" vehicle="545" alpha="255" interior="0" posX="4170.1001" posY="-6.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (40)" vehicle="545" alpha="255" interior="0" posX="4172.6001" posY="-6.2" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (41)" vehicle="545" alpha="255" interior="0" posX="4175" posY="-6.1" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (42)" vehicle="545" alpha="255" interior="0" posX="4177.2998" posY="-6.1" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hustler) (43)" vehicle="545" alpha="255" interior="0" posX="4179.7998" posY="-7.7" posZ="163.2" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+</map>

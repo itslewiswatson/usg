@@ -1,0 +1,192 @@
+<map edf:definitions="editor_main,towersedf,race">
+    <object id="object (towerlan2) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4423.8999" posY="204" posZ="-15.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4387.3999" posY="160.8" posZ="-15.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4425.7998" posY="119.7998" posZ="-15.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4461.7998" posY="162.7998" posZ="-15.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4440.7002" posY="179.89999" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4436.7002" posY="179.89999" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4432.7002" posY="179.89999" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4428.7002" posY="179.89999" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4424.7002" posY="179.8" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (6)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4420.7998" posY="179.8" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (7)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4417" posY="179.8" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (8)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4413" posY="179.7" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (9)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4409.1001" posY="179.7" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (10)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4407.1001" posY="179.89999" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (11)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4408.2002" posY="176" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (12)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4412.1001" posY="176" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (13)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4440.7998" posY="176.89999" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (14)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4440.8999" posY="173" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (15)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4416" posY="176" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (16)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4419.8999" posY="176" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (17)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4423.7998" posY="176" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (18)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4427.69971" posY="176" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (19)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4431.59961" posY="176" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (19)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4435.6001" posY="176" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (19)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4437.1001" posY="176" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (19)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4436.8999" posY="173" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (23)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4432.8999" posY="173" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (24)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4428.8999" posY="173" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (25)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4424.8999" posY="173" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (26)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4420.8999" posY="173" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (27)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4416.8999" posY="173" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (28)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4412.8999" posY="173" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (28)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4408.8999" posY="173" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (28)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4405.2002" posY="172.89999" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (28)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4408.1001" posY="169" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (28)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4412.1001" posY="169" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (28)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4416" posY="169" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (1)" vehicle="411" posX="4478.7998" posY="144" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <object id="AMT 3374 (34)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4416.1001" posY="169" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (35)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4420.1001" posY="169" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (36)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4424.1001" posY="169" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (37)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4428.1001" posY="169" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (38)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4432.1001" posY="169" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (39)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4436.1001" posY="169" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (40)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4440.1001" posY="169" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (40)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4440.1001" posY="165" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (40)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4436.1001" posY="165" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (2)" vehicle="411" alpha="255" interior="0" posX="4478.7002" posY="146.7" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (3)" vehicle="411" alpha="255" interior="0" posX="4478.7002" posY="149.5" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (4)" vehicle="411" alpha="255" interior="0" posX="4478.7002" posY="152.39999" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (5)" vehicle="411" alpha="255" interior="0" posX="4478.7998" posY="155.2" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (6)" vehicle="411" alpha="255" interior="0" posX="4478.8999" posY="158.10001" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <object id="AMT 3374 (43)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4432.1001" posY="165" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (44)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4428.1001" posY="165" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (45)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4424.1001" posY="165" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (46)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4420.1001" posY="165" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (47)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4416.1001" posY="165" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (48)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4412.09961" posY="165" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (49)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4408.09961" posY="165" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (7)" vehicle="411" alpha="255" interior="0" posX="4478.8999" posY="160.7" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (8)" vehicle="411" alpha="255" interior="0" posX="4478.8999" posY="163.39999" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (9)" vehicle="411" alpha="255" interior="0" posX="4478.7998" posY="166.10001" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4478.8999" posY="171.7" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4478.7998" posY="168.8" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <object id="AMT 3374 (49)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4408.1001" posY="161" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (49)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4411.8999" posY="161" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4479" posY="174.60001" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4479" posY="177.3" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4479.1001" posY="179.89999" posZ="85.2" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4439.5" posY="223.8" posZ="85.2" rotX="0" rotY="0" rotZ="178"></spawnpoint>
+    <object id="AMT 3374 (52)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4415.69971" posY="161" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (53)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4419.49951" posY="161" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (54)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4423.29932" posY="161" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (55)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4427.09912" posY="161" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (56)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4430.89893" posY="161" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (57)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4434.69873" posY="161" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (58)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4438.49854" posY="161" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (58)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4442.3999" posY="161" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4436.7002" posY="223.8" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4433.8999" posY="223.8" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <object id="AMT 3374 (49)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4408.2002" posY="157" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4431.2998" posY="223.8" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <object id="AMT 3374 (49)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4411.8999" posY="157" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4428.6001" posY="224" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4425.7998" posY="224.10001" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <object id="AMT 3374 (62)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4415.59961" posY="157" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (63)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4419.29932" posY="157" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (64)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4422.99902" posY="157" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (65)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4426.69873" posY="157" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (66)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4430.39844" posY="157" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (67)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4434.09814" posY="157" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4437.79785" posY="157" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4441.7002" posY="157" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4423.1001" posY="224.2" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4440.2002" posY="153.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4420.3999" posY="224.3" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4440.2002" posY="149.2" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4417.6001" posY="224.39999" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4440.2002" posY="145.5" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4414.8999" posY="224.5" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4412.2002" posY="224.5" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4440.2002" posY="144" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4409.6001" posY="224.60001" posZ="85.2" rotX="0" rotY="0" rotZ="177.995"></spawnpoint>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4436.3999" posY="153.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4370" posY="179.2" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <object id="AMT 3374 (75)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4432.59961" posY="153.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (76)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4428.79932" posY="153.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (77)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4424.99902" posY="153.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (78)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4421.19873" posY="153.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (79)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4417.39844" posY="153.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (80)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4413.59814" posY="153.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (81)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4409.79785" posY="153.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.8999" posY="176.5" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4436.2998" posY="149.60001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.8999" posY="173.89999" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.7998" posY="171.3" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.7998" posY="168.60001" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.7002" posY="165.89999" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <object id="AMT 3374 (83)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4432.7998" posY="149.2" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (84)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4428.7002" posY="149.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (85)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4424.99902" posY="148.40001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (86)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4421.19873" posY="148.20001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (87)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4417.39844" posY="148.00002" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (88)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4413.59814" posY="147.80002" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (89)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4409.79785" posY="147.60002" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (90)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4405.99756" posY="147.40002" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.6001" posY="163.10001" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4436.5" posY="145.60001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.6001" posY="160.5" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.6001" posY="157.7" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.6001" posY="154.89999" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.6001" posY="152.10001" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.6001" posY="149.39999" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.6001" posY="146.7" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.6001" posY="144" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <object id="AMT 3374 (92)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4432.7998" posY="145.79999" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (93)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4429.09961" posY="146.69998" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (94)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4425.1001" posY="149.60001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (95)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4421.7002" posY="149.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (96)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4417.99902" posY="149.39996" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (97)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4414.29883" posY="150.29996" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (98)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4410.59863" posY="151.19995" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (99)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4406.89844" posY="152.09995" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4369.59961" posY="144" posZ="85.2" rotX="0" rotY="0" rotZ="267.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4410.2998" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4412.8999" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4415.6001" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4418.2998" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4421" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4423.7002" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4426.3999" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4429" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4431.6001" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4436.6001" posY="143.39999" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4434.2002" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4436.7002" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4439.3999" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4432.8999" posY="142.8" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4442.2002" posY="100.2" posZ="85.2" rotX="0" rotY="0" rotZ="359.995"></spawnpoint>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4429.1001" posY="143" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4425.2002" posY="144.8" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4425.3999" posY="144" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4421.8999" posY="143.3" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4421.3999" posY="145.7" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4418.5" posY="145.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4418.8999" posY="142.89999" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4420.3999" posY="143.2" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4415.8999" posY="144" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4412.5" posY="144.5" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4408.7002" posY="144.5" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4407.5" posY="144.3" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (68)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4407.3999" posY="149.60001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="AMT 3374 (49)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4408.1001" posY="155.10001" posZ="50.8" rotX="0" rotY="0" rotZ="0"></object>
+    <switch id="switch (1)" posX="4438.8999" posY="145.5" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (2)" alpha="255" interior="0" posX="4439.2998" posY="153" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (3)" alpha="255" interior="0" posX="4438.2998" posY="162.10001" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (4)" alpha="255" interior="0" posX="4438.7002" posY="169.3" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (5)" alpha="255" interior="0" posX="4432.5" posY="175.10001" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (6)" alpha="255" interior="0" posX="4425" posY="175.5" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (7)" alpha="255" interior="0" posX="4416.5" posY="176" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (8)" alpha="255" interior="0" posX="4410.6001" posY="169.60001" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (9)" alpha="255" interior="0" posX="4412.1001" posY="161" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (10)" alpha="255" interior="0" posX="4413.3999" posY="152.39999" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (11)" alpha="255" interior="0" posX="4422.2998" posY="149.89999" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (12)" alpha="255" interior="0" posX="4425.3999" posY="156.7" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (13)" alpha="255" interior="0" posX="4418.6001" posY="164.3" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (14)" alpha="255" interior="0" posX="4427.5" posY="166.10001" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (15)" alpha="255" interior="0" posX="4433.2002" posY="147.8" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (16)" alpha="255" interior="0" posX="4418" posY="156.39999" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (18)" alpha="255" interior="0" posX="4410.1001" posY="147.60001" posZ="52.3" rotX="0" rotY="0" rotZ="0"></switch>
+</map>

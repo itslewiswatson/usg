@@ -1,0 +1,9 @@
+<meta>
+    <script src="client.lua" type="client" cached="false"/>
+
+	<file src="flags.txd" />
+	<file src="us_flag.dff" />
+	<file src="ru_flag.dff" />
+    <file src="flags.col" />
+	
+</meta>

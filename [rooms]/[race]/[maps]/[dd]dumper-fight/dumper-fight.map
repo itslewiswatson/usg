@@ -1,0 +1,60 @@
+<map edf:definitions="race,editor_main">
+    <object id="object (towerlan2) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="true" scale="1" dimension="0" posX="366.89999" posY="-3498.30005" posZ="-99.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="true" scale="1" dimension="0" posX="267.89999" posY="-3503.8999" posZ="15" rotX="0" rotY="90" rotZ="0"></object>
+    <object id="object (towerlan2) (4)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="true" scale="1" dimension="0" posX="467.19922" posY="-3503.89941" posZ="15" rotX="0" rotY="90" rotZ="179.995"></object>
+    <object id="object (towerlan2) (8)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="366.89941" posY="-3545.19922" posZ="-99.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (9)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="366.89999" posY="-3592.1001" posZ="-99.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (10)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="406.89999" posY="-3545.30005" posZ="-100.1" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (11)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="406.89999" posY="-3592.19995" posZ="-100.1" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (12)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="326.89999" posY="-3545.30005" posZ="-99.9" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (13)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="326.89999" posY="-3592.19995" posZ="-100" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (14)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="326.89999" posY="-3639.1001" posZ="-99.9" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (15)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="366.89999" posY="-3639" posZ="-99.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (16)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="406.89999" posY="-3639.1001" posZ="-100.1" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (17)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="true" scale="1" dimension="0" posX="288.70001" posY="-3566.80005" posZ="15" rotX="0" rotY="90" rotZ="270"></object>
+    <object id="object (towerlan2) (18)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="true" scale="1" dimension="0" posX="442.39941" posY="-3563.7998" posZ="15" rotX="0" rotY="90" rotZ="270"></object>
+    <object id="object (towerlan2) (19)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="true" scale="1" dimension="0" posX="366" posY="-3678.7998" posZ="15" rotX="0" rotY="90" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="3374" doublesided="false" scale="1" dimension="0" posX="386.89999" posY="-3568.80005" posZ="-1.5" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="3374" doublesided="false" scale="1" dimension="0" posX="347" posY="-3568.69995" posZ="-1.5" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (3)" breakable="true" interior="0" collisions="true" alpha="255" model="3374" doublesided="false" scale="1" dimension="0" posX="347" posY="-3615.69995" posZ="-1.5" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (4)" breakable="true" interior="0" collisions="true" alpha="255" model="3374" doublesided="false" scale="1" dimension="0" posX="386.79999" posY="-3615.3999" posZ="-1.5" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Dumper) (1)" vehicle="406" posX="412.59961" posY="-3529.89941" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (2)" vehicle="406" alpha="255" interior="0" posX="412.59961" posY="-3535.2998" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="412.59961" posY="-3540.89941" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="412.60001" posY="-3546.3999" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="412.5" posY="-3552.5" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="412.5" posY="-3558" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="412.60001" posY="-3563.5" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="412.5" posY="-3569" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="412.39999" posY="-3574.5" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="412.39941" posY="-3580" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="412.10001" posY="-3585.69995" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="412" posY="-3591.3999" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="411.79999" posY="-3597" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="411.70001" posY="-3602.69995" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="411.70001" posY="-3608.19995" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="411.70001" posY="-3613.8999" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="411.70001" posY="-3619.5" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="411.70001" posY="-3624.80005" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="411.70001" posY="-3630.30005" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="411.70001" posY="-3635.80005" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="411.70001" posY="-3641.69995" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="411.70001" posY="-3647.5" posZ="2.6" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="320.20001" posY="-3652.19995" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="320" posY="-3644.6001" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.79999" posY="-3636.5" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.60001" posY="-3629.30005" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.5" posY="-3622.5" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.39999" posY="-3616" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.29999" posY="-3609.5" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.29999" posY="-3603" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.39999" posY="-3596.3999" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.39999" posY="-3589.6001" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.20001" posY="-3583.5" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.10001" posY="-3576.80005" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319" posY="-3570" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.10001" posY="-3563.30005" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.39999" posY="-3556.5" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.60001" posY="-3549.69995" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Dumper) (3)" vehicle="406" alpha="255" interior="0" posX="319.79999" posY="-3543.3999" posZ="2.6" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+</map>

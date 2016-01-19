@@ -1,0 +1,25 @@
+<meta>
+  <script src="client.lua" type="client" />
+ <script src="server.lua" type="server" />
+
+
+
+    <file src="files/shop.png"/>
+    <file src="files/cash.mp3"/>
+    <file src="files/hover.mp3"/>
+    <file src="files/click.mp3"/>
+    <file src="files/color.png"/>
+    <file src="files/map.png"/>
+    <file src="files/rainbow.png"/>
+    <file src="files/flip.png"/>
+    <file src="files/inv.png"/>
+    <file src="files/spikes.png"/>
+    <file src="files/missiles.png"/>
+    <file src="files/laser.png"/>
+    <file src="files/selfex.png"/>
+    <file src="files/nitrous.png"/>
+    <file src="files/kimbreg.ttf"/>
+    <file src="files/nilb.ttf"/>
+    <file src="files/freshman.ttf"/>
+
+</meta>

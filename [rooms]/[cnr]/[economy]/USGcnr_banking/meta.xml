@@ -1,0 +1,11 @@
+<meta>
+  <script src="banking_s.lua" type="server" />
+  <script src="banking_atm_s.lua" type="server" />
+  <script src="banking_atm_list_c.lua" type="client" />
+  <script src="banking_atm_c.luac" type="client" />
+  <export function="getPlayerBankBalance" type="server" />
+  <export function="takePlayerBankBalance" type="server" />
+  <export function="deposit" type="server" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

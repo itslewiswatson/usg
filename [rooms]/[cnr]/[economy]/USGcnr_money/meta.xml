@@ -1,0 +1,7 @@
+<meta>
+  <info author="FabioGNR" version="0.1" name="Money" />
+  <script src="cnr_money_s.lua" type="server" />
+  <export function="buyItem" />
+  <export function="getPlayerTransactions" />
+  <export function="logTransaction" />
+</meta>

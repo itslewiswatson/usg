@@ -1,0 +1,5 @@
+<meta>
+	<info author="Mega9" type="script" name="Multi Trailers" version="1.0.0" />
+
+	<script src="main.lua" type="server" />
+</meta>

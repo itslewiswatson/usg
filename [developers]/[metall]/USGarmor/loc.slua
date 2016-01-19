@@ -1,0 +1,8 @@
+function setStuff(player)
+	if (exports.USGcnr_wanted:getPlayerWantedLevel(player) > 1) then return false end
+	if (not exports.USGcnr_groups:getPlayerGroup(player) == "nationalguard") then return false end
+	setElementHealth(player, 200)
+	setPedArmor(player, 100)
+end
+addEvent("USGarmor.setStuff", true)
+addEventHandler("USGarmor.setStuff", root, setStuff)

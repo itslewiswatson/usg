@@ -1,0 +1,27 @@
+local stinger = {}
+
+function createStinger(x, y, z, rx, ry, rz)
+	if (not stinger[source]) then
+		local obj = createObject(2899, x, y, z + 0.1, rx, ry, rz)
+		stinger[source] = obj
+		setElementData(obj, "stinger", true)
+		plantStinger(source)
+	else
+		destroyElement(stinger[source])
+	end
+end
+addEvent("USGpoliceUtils.createStinger", true)
+addEventHandler("USGpoliceUtils.createStinger", root, createStinger)
+
+function plantStinger(player)
+	setPedAnimation(player, "BOMBER", "BOM_plant", 3000, false, false, false)
+	setTimer(setPedAnimation, 2000, 1, player)
+end
+
+function onQuit(player)
+	if (stinger[player]) then
+		destroyElement(stinger[player])
+		stinger[player] = false
+	end
+end
+addEventHandler("onPlayerQuit", root, onQuit)

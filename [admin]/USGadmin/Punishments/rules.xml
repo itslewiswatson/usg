@@ -1,0 +1,68 @@
+<rules>
+	<rule punish="Deathmatching">
+		Deathmatching is not allowed outside the city of Las Venturas. Criminals are allowed to attack Law agents IF they are wanted and being chased by them. 
+		Also, killing other players in ANY interior is not allowed, even if it's in Las Venturas;
+	</rule>
+	
+	<rule punish="Cheating">
+		The use of trainers and bugs is strictly forbidden and will result in a ban from the server;
+	</rule>
+	
+	<rule punish="Insulting\Flaming">
+		Heavy insulting and being racist towards other players will result in a permanent server ban;
+		<info>Only offensive flame is forbidden;</info>
+		<info>Insulting any religion is forbidden as well;</info>
+		<info>We have zero tolerance to racism;</info>
+	</rule>	
+	<rule punish="Annoying staff">
+		Annoying the Server Staff is not allowed and will result in a punishment;
+		<info>Don't PM admins requesting for removing Slaps, Freezes, reconnects and kicks, we wont delete it;</info>
+		<info>Don't use Support or SMS admins for Events cause it will only result in a mute;</info>
+		<info>Requesting unfair advantages will result in a mute;</info>
+	</rule>	
+	<rule punish="Avoiding punishments">
+		Any attempt to avoid punishment by the server staff will only result in a larger punishment to be applied;
+	</rule>	
+	<rule punish="Advertising">
+		Advertising or just speaking about other servers/commercial products will result in a permanent server ban;
+		<info>This includes EVERY chat: mainchat, localchat, support chat, SMS, teamchat, carchat, etc;</info>
+		<info>We can check logs, you have been warned;</info>
+	</rule>
+	<rule>
+		It is not allowed to share hacks, cracks or illegal downloads on the server;
+	</rule>
+	<rule punish="Bug abusing">
+		It is not allowed to abuse any kind of bugs that give you an unfair advantage or spoil the fun of other players;
+	</rule>
+	<rule punish="Blackmailing">
+		Do not force/blackmail other players to do something they don't want to;
+	</rule>
+	<rule punish="Non-english">
+		The only language allowed in public channels is English (Main chat, team chat and support);
+		<info>In the Local chat, Personal Messaging and Group chat, any language can be spoken;</info>
+	</rule>
+	<rule punish="Camping/spawn-arrest/kill">
+		Camping at the hospital, Spawn-killing and Spawn arresting are forbidden;
+	</rule>
+	<rule punish="Interfering with events">
+		Arresting in a event is not allowed unless the event organizer says it's allowed;
+	</rule>
+	<rule punish="Advertising in main chat">
+		Do not use the mainchat for advertising your group or other services, use the /advert chat instead;
+	</rule>
+	<rule punish="Spamming">
+		Spamming chats is not allowed. Also, misusing the Support Channel will be punished with a mute;
+	</rule>
+	<rule punish="Selling ingame content">
+		Selling accounts or other in-game contents is not allowed;
+	</rule>
+	<rule punish="Inappropiate name">
+		You must use normal names. Names with spam, advertisement and inappropriate things are not allowed;
+	</rule>
+	<rule punish="Trolling">
+		Trolling other players is not allowed and is severely punished;
+	</rule>
+	<rule punish="Ignoring server staff">
+		Always listen to server staff;
+	</rule>
+</rules>

@@ -1,0 +1,9 @@
+<map edf:definitions="editor_main">
+    <object id="object (CJ_CHRIS_CRATE_LD) (1)" breakable="true" interior="10" collisions="true" alpha="255" model="2678" doublesided="false" scale="1" dimension="0" posX="365.10001" posY="-63.2" posZ="1003.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (CJ_CHRIS_CRATE_RD) (1)" breakable="true" interior="10" collisions="true" alpha="255" model="2679" doublesided="false" scale="1" dimension="0" posX="365.10001" posY="-61.7" posZ="1003.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (CJ_CHRIS_CRATE_RD) (2)" breakable="true" interior="10" collisions="true" alpha="255" model="2679" doublesided="false" scale="1" dimension="0" posX="365.09961" posY="-61.70019" posZ="1005.5" rotX="0" rotY="0" rotZ="92"></object>
+    <object id="object (CJ_CHRIS_CRATE_LD) (2)" breakable="true" interior="10" collisions="true" alpha="255" model="2678" doublesided="false" scale="1" dimension="0" posX="365.10001" posY="-63.2" posZ="1005.5" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (acbox3_SFS) (1)" breakable="true" interior="10" collisions="true" alpha="255" model="3798" doublesided="false" scale="1" dimension="0" posX="364.60001" posY="-62.5" posZ="1005.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (acbox3_SFS) (2)" breakable="true" interior="10" collisions="true" alpha="255" model="3798" doublesided="false" scale="1" dimension="0" posX="366.09961" posY="-62.5" posZ="1005.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (CARRIER_LIFT1_SFSE) (1)" breakable="true" interior="10" alpha="255" model="3115" doublesided="false" scale="1" dimension="0" posX="372.60001" posY="-65.8" posZ="1005.6" rotX="0" rotY="0" rotZ="0"></object>
+</map>

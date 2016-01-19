@@ -1,0 +1,48 @@
+<map edf:definitions="race,editor_main">
+    <object id="object (towerlan2) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5221.7998" posY="-2886.69995" posZ="-98.1" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (cs_landbit_21) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="18310" doublesided="true" scale="1" dimension="0" posX="5081.7998" posY="-2945.19995" posZ="2.6" rotX="0" rotY="0" rotZ="177"></object>
+    <object id="object (cs_landbit_20) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="18309" doublesided="true" scale="1" dimension="0" posX="5229" posY="-2964.1001" posZ="24.9" rotX="0" rotY="0" rotZ="190"></object>
+    <object id="object (cs_landbit_20) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="18309" doublesided="true" scale="1" dimension="0" posX="5192.7998" posY="-2844.80005" posZ="24.9" rotX="0" rotY="0" rotZ="314.248"></object>
+    <object id="object (cs_landbit_21) (4)" breakable="true" interior="0" collisions="true" alpha="255" model="18310" doublesided="true" scale="1" dimension="0" posX="5085.1001" posY="-2905.5" posZ="2.8" rotX="0" rotY="0" rotZ="294.995"></object>
+    <object id="object (towerlan2) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5221.7998" posY="-2933.59961" posZ="-98.1" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (3)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5181.7998" posY="-2933.59961" posZ="-98.1" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (4)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5181.7998" posY="-2886.69995" posZ="-98.1" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (5)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="5202.3999" posY="-2905.8999" posZ="-98.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (WS_floodlight) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="3864" doublesided="false" scale="1" dimension="0" posX="5165" posY="-2866.1001" posZ="6.7" rotX="0" rotY="0" rotZ="136"></object>
+    <object id="object (WS_floodlight) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="3864" doublesided="false" scale="1" dimension="0" posX="5238.3999" posY="-2866.6001" posZ="6.7" rotX="0" rotY="0" rotZ="41.75"></object>
+    <object id="object (WS_floodlight) (3)" breakable="true" interior="0" collisions="true" alpha="255" model="3864" doublesided="false" scale="1" dimension="0" posX="5164.8999" posY="-2954.1001" posZ="6.7" rotX="0" rotY="0" rotZ="223.498"></object>
+    <object id="object (WS_floodlight) (4)" breakable="true" interior="0" collisions="true" alpha="255" model="3864" doublesided="false" scale="1" dimension="0" posX="5238.2998" posY="-2954.1001" posZ="6.7" rotX="0" rotY="0" rotZ="313.495"></object>
+    <spawnpoint id="spawnpoint (Sweeper) (1)" vehicle="574" posX="5163.3999" posY="-2868.1001" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (2)" vehicle="574" alpha="255" interior="0" posX="5163.3999" posY="-2869.69995" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (3)" vehicle="574" alpha="255" interior="0" posX="5163.3999" posY="-2871.30005" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (4)" vehicle="574" alpha="255" interior="0" posX="5163.3999" posY="-2873.1001" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (5)" vehicle="574" alpha="255" interior="0" posX="5163.3999" posY="-2874.8999" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (6)" vehicle="574" alpha="255" interior="0" posX="5163.3999" posY="-2876.69995" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (7)" vehicle="574" alpha="255" interior="0" posX="5163.3999" posY="-2878.6001" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (8)" vehicle="574" alpha="255" interior="0" posX="5163.3999" posY="-2880.5" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (9)" vehicle="574" alpha="255" interior="0" posX="5163.3999" posY="-2882.3999" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (10)" vehicle="574" alpha="255" interior="0" posX="5163.3999" posY="-2884.30005" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (11)" vehicle="574" alpha="255" interior="0" posX="5163.3999" posY="-2886.19995" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (12)" vehicle="574" alpha="255" interior="0" posX="5163.2998" posY="-2888.1001" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (13)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2890" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (14)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2892" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (15)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2894" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (16)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2896.1001" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (17)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2898.30005" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (18)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2900.3999" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (19)" vehicle="574" alpha="255" interior="0" posX="5163.1001" posY="-2902.3999" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (20)" vehicle="574" alpha="255" interior="0" posX="5163.1001" posY="-2904.3999" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (21)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2915.5" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (22)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2917.5" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (23)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2919.5" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (24)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2921.6001" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (25)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2923.6001" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (26)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2925.6001" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (27)" vehicle="574" alpha="255" interior="0" posX="5163.2002" posY="-2927.69995" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (28)" vehicle="574" alpha="255" interior="0" posX="5163.1001" posY="-2930" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (29)" vehicle="574" alpha="255" interior="0" posX="5163" posY="-2932.30005" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (30)" vehicle="574" alpha="255" interior="0" posX="5162.8999" posY="-2934.5" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (31)" vehicle="574" alpha="255" interior="0" posX="5162.7998" posY="-2936.8999" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (32)" vehicle="574" alpha="255" interior="0" posX="5162.8999" posY="-2939.30005" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+    <spawnpoint id="spawnpoint (Sweeper) (33)" vehicle="574" alpha="255" interior="0" posX="5162.8999" posY="-2941.80005" posZ="2.5" rotX="0" rotY="0" rotZ="270"></spawnpoint>
+</map>

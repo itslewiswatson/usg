@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<meta>
+  <info type="map" gamemodes="race" name="[DD] Cross Y" author="[FOTL]Andrushka" description="Russian CW Map" />
+  <map src="[DD] Cross Y.map" />
+  <settings>
+    <setting name="#time" value="0:0" />
+    <setting name="#respawn" value="none" />
+    <setting name="#duration" value="320" />
+  </settings>
+</meta>

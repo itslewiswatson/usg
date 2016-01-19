@@ -1,0 +1,9 @@
+<meta>
+    <info author="DLmass" version="0.5" name="USGgarage" />
+
+    <script src="client.lua" type="client" cached="false"/>
+
+    <file src="garage.txd" />
+	<file src="garage.dff" />
+    <file src="garage.col" />
+</meta>

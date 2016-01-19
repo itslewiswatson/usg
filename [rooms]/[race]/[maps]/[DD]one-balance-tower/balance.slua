@@ -1,0 +1,45 @@
+------------------------------------------------------------------------------------
+-- PROJECT: Towers Mania DD
+-- VERSION: 1.0
+-- DATE: July 2013
+-- DEVELOPERS: JR10
+-- RIGHTS: All rights reserved by developers
+------------------------------------------------------------------------------------
+
+local tower = getElementByID("balanceTower")
+local rightSideColShape = createColCuboid(-763.373046875, -4371.4228515625, 60, 38, 45, 40)
+local leftSideColShape = createColCuboid(-761.85412597656, -4251.787109375, 60, 38, 45, 40)
+
+function balanceTower(hitElement)
+    --if (not isElement(hitElement)) then return end
+    if (not isElement(rightSideColShape) or not isElement(leftSideColShape)) then return end
+    if (#getElementsWithinColShape(rightSideColShape) > #getElementsWithinColShape(leftSideColShape)) then
+        stopObject(tower)
+        local rx = getElementRotation(tower)
+        moveObject(tower, 5000, -744.40002, -4281, 55.7, 100 - rx, 0, 0)
+    elseif (#getElementsWithinColShape(leftSideColShape) > #getElementsWithinColShape(rightSideColShape)) then
+        stopObject(tower)
+        local rx = getElementRotation(tower)
+        moveObject(tower, 5000, -744.40002, -4281, 55.7, 80 - rx, 0, 0)
+    elseif (#getElementsWithinColShape(leftSideColShape) == #getElementsWithinColShape(rightSideColShape)) then
+        stopObject(tower)
+        local rx = getElementRotation(tower)
+        moveObject(tower, 5000, -744.40002, -4281, 55.7, 90 - rx, 0, 0)
+    end
+end
+
+function onStart()
+    local function add()
+        --addEventHandler("onColShapeHit", rightSideColShape, balanceTower)
+        --addEventHandler("onColShapeHit", leftSideColShape, balanceTower)
+        balanceTimer = setTimer(balanceTower, 3000, 0)
+    end
+    setTimer(add, 6000, 1)
+end
+addEventHandler("onResourceStart", resourceRoot, onStart)
+
+function onMapStop()
+    if (isTimer(balanceTimer)) then killTimer(balanceTimer) end
+end
+addEvent("onMapStop")
+addEventHandler("onMapStop", root, onMapStop)

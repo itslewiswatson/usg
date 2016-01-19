@@ -1,0 +1,4 @@
+<meta>
+	<script src="protectpresident_s.lua" />
+	<script src="protectpresident_c.lua" type="client" />
+</meta>

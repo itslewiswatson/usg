@@ -1,0 +1,36 @@
+<meta>
+    <info gamemodes="race" type="map" name="[DM]CityDrift_v1.0_by_Grace_and_Tails" author="G&amp;T" version="1.0.0"></info>
+    <map src="jumpdm22.map" dimension="0"></map>
+    <settings>
+        <setting name="#skins" value='[ &quot;cj&quot; ]'></setting>
+        <setting name="#maxplayers" value="[ 32 ]"></setting>
+        <setting name="#useLODs" value="[ false ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#ghostmode" value='[ &quot;true&quot; ]'></setting>
+        <setting name="#time" value="0:0"></setting>
+        <setting name="#vehicleweapons" value='[ &quot;true&quot; ]'></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#weather" value="[ 12 ]"></setting>
+        <setting name="#gravity" value="[ 0.008000 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#respawntime" value="[ 5 ]"></setting>
+        <setting name="#locked_time" value="[ true ]"></setting>
+        <setting name="#duration" value="[ 1500 ]"></setting>
+        <setting name="#respawn" value='[ &quot;timelimit&quot; ]'></setting>
+    </settings>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+	
+		<script src="texture.lua" type="client" />
+	<file src="texture.txd" />
+	
+		<script src="client.lua" type="client" />
+	<script src="client1.lua" type="client" />
+	<file src="621.txd" />
+	<file src="621.dff" />
+	<file src="gta_tree_palm.txd" />
+	<file src="veg_palm03.dff" />
+
+	
+
+</meta>

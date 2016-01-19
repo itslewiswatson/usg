@@ -1,0 +1,4 @@
+function testFireworks(plr)
+	triggerClientEvent("USGchristmas.spawnFireworks", root)
+end
+addCommandHandler("fireworkstartmetall", testFireworks)

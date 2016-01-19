@@ -1,0 +1,5 @@
+<meta>
+	<script src="score_s.lua" />
+	<export function="givePlayerScore" />
+	<export function="takePlayerScore" />
+</meta>

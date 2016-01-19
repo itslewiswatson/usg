@@ -1,0 +1,8 @@
+<meta>
+	<script src="clean.luac" type="client" />
+	<script src="clean.slua" type="server" />
+	<script src="clean_vars_shared.lua" type="shared" />
+	<script src="clean_vars_c.lua" type="client" />
+	
+	<file src="Pickup_Coin9.wav" />
+</meta>

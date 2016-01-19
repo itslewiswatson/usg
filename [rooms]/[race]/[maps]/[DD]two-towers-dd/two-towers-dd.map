@@ -1,0 +1,94 @@
+<map edf:definitions="race,editor_main">
+    <removeWorldObject id="removeWorldObject (Hotelexterior1_LAn) (1)" radius="39.628517150879" interior="0" model="4141" lodModel="4181" posX="1721.75" posY="-1657.92969" posZ="30.1875" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <object id="object (lasblastde_LAS) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="3664" doublesided="false" scale="1" dimension="0" posX="1966.09998" posY="-2237.5" posZ="22.7" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (VineSign1_cunte01) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="13831" doublesided="false" scale="1" dimension="0" posX="1413.41406" posY="-804.74219" posZ="83.4375" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (VineSign1_cunte01) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="13831" doublesided="false" scale="1" dimension="0" posX="1413.41406" posY="-804.74219" posZ="83.4375" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (drydock1_SFSe) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="10828" doublesided="false" scale="2" dimension="0" posX="2504.6001" posY="1623.69995" posZ="30.6" rotX="0" rotY="0" rotZ="1.038"></object>
+    <object id="object (drydock1_SFSe) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="10828" doublesided="false" scale="2" dimension="0" posX="2537.19995" posY="1659.5" posZ="28.9" rotX="0" rotY="0" rotZ="91.038"></object>
+    <object id="object (vgncarshade1) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="1636" posY="2099.80005" posZ="44.6" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgncarshade1) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3633.69922" posY="304.89941" posZ="98.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="3664.19995" posY="318.5" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (3)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="3606.19995" posY="319.10001" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (6)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="3724.69995" posY="732.09998" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgncarshade1) (4)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3688.30005" posY="731.90002" posZ="98.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (7)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="3653.1001" posY="733" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgncarshade1) (6)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3652.8999" posY="763.29999" posZ="98.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (vgncarshade1) (7)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3673.6001" posY="780.90002" posZ="98.3" rotX="0" rotY="0" rotZ="180"></object>
+    <object id="object (vgncarshade1) (8)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3707.3999" posY="780.90002" posZ="98.3" rotX="0" rotY="0" rotZ="179.995"></object>
+    <object id="object (vgncarshade1) (9)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3724.8999" posY="763" posZ="98.3" rotX="0" rotY="0" rotZ="269.995"></object>
+    <removeWorldObject id="removeWorldObject (vgsEcoast04) (1)" radius="188.13897705078" interior="0" model="8585" lodModel="8733" posX="2855.72656" posY="959.0625" posZ="17.74219" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <object id="object (vgncarshade1) (10)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3725.80005" posY="699.59998" posZ="98.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (vgncarshade1) (11)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3707.30005" posY="682.29999" posZ="98.3" rotX="0" rotY="0" rotZ="180"></object>
+    <object id="object (vgncarshade1) (12)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3674.69995" posY="682.20001" posZ="98.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgncarshade1) (13)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3654" posY="700.09998" posZ="98.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (vgncarshade1) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="3634.30005" posY="333.60001" posZ="98.3" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (1)" vehicle="503" posX="3678.80005" posY="298.20001" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (2)" vehicle="503" alpha="255" interior="0" posX="3676.19995" posY="298.20001" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (3)" vehicle="503" alpha="255" interior="0" posX="3673.69995" posY="298.29999" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (4)" vehicle="503" alpha="255" interior="0" posX="3671.19995" posY="298.39999" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (5)" vehicle="503" alpha="255" interior="0" posX="3668.6001" posY="298.39999" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (6)" vehicle="503" alpha="255" interior="0" posX="3666" posY="298.5" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (7)" vehicle="503" alpha="255" interior="0" posX="3663.30005" posY="298.60001" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (8)" vehicle="503" alpha="255" interior="0" posX="3660.69995" posY="298.60001" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (9)" vehicle="503" alpha="255" interior="0" posX="3658.1001" posY="298.5" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (10)" vehicle="503" alpha="255" interior="0" posX="3655.6001" posY="298.5" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (11)" vehicle="503" alpha="255" interior="0" posX="3653.09961" posY="298.39941" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (12)" vehicle="503" alpha="255" interior="0" posX="3650.5" posY="298.39999" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (13)" vehicle="503" alpha="255" interior="0" posX="3647.8999" posY="299.20001" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (14)" vehicle="503" alpha="255" interior="0" posX="3681.30005" posY="299.5" posZ="100.8" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (15)" vehicle="503" alpha="255" interior="0" posX="3680.8999" posY="303.79999" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (16)" vehicle="503" alpha="255" interior="0" posX="3680.8999" posY="306.10001" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (17)" vehicle="503" alpha="255" interior="0" posX="3681" posY="308.5" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (18)" vehicle="503" alpha="255" interior="0" posX="3681" posY="310.89999" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (19)" vehicle="503" alpha="255" interior="0" posX="3681" posY="313.29999" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (20)" vehicle="503" alpha="255" interior="0" posX="3681" posY="315.70001" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (21)" vehicle="503" alpha="255" interior="0" posX="3680.8999" posY="318.20001" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (22)" vehicle="503" alpha="255" interior="0" posX="3680.8999" posY="320.79999" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (23)" vehicle="503" alpha="255" interior="0" posX="3680.8999" posY="323.5" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (24)" vehicle="503" alpha="255" interior="0" posX="3680.8999" posY="326.29999" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (25)" vehicle="503" alpha="255" interior="0" posX="3680.8999" posY="329.20001" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (26)" vehicle="503" alpha="255" interior="0" posX="3680.80005" posY="332" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (27)" vehicle="503" alpha="255" interior="0" posX="3680.80005" posY="334.79999" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (28)" vehicle="503" alpha="255" interior="0" posX="3680.69995" posY="337.5" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (29)" vehicle="503" alpha="255" interior="0" posX="3678.1001" posY="340" posZ="100.8" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (30)" vehicle="503" alpha="255" interior="0" posX="3673.3999" posY="338.79999" posZ="100.8" rotX="0" rotY="0" rotZ="178.25"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (31)" vehicle="503" alpha="255" interior="0" posX="3671" posY="338.79999" posZ="100.8" rotX="0" rotY="0" rotZ="178.248"></spawnpoint>
+    <spawnpoint id="spawnpoint (Hotring Racer 2) (32)" vehicle="503" alpha="255" interior="0" posX="3668.30005" posY="338.79999" posZ="100.8" rotX="0" rotY="0" rotZ="178.248"></spawnpoint>
+    <switch id="switch (1)" posX="3657.3999" posY="316.39999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (2)" alpha="255" interior="0" posX="3674.1001" posY="319.5" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (3)" alpha="255" interior="0" posX="3661.80005" posY="316.20001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (5)" alpha="255" interior="0" posX="3676.5" posY="312.10001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (6)" alpha="255" interior="0" posX="3669" posY="313.89999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (7)" alpha="255" interior="0" posX="3659" posY="310.29999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (8)" alpha="255" interior="0" posX="3651.1001" posY="308.79999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (9)" alpha="255" interior="0" posX="3649.5" posY="322.70001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (10)" alpha="255" interior="0" posX="3658.3999" posY="324.39999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (11)" alpha="255" interior="0" posX="3668.19995" posY="326.20001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (12)" alpha="255" interior="0" posX="3666.8999" posY="333" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (13)" alpha="255" interior="0" posX="3662.69995" posY="332.20001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (14)" alpha="255" interior="0" posX="3647" posY="329.29999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (15)" alpha="255" interior="0" posX="3646.3999" posY="338.79999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (16)" alpha="255" interior="0" posX="3654.1001" posY="340.89999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (17)" alpha="255" interior="0" posX="3664.30005" posY="341" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (18)" alpha="255" interior="0" posX="3638.1001" posY="333.20001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (19)" alpha="255" interior="0" posX="3637.1001" posY="304.89999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (20)" alpha="255" interior="0" posX="3611.69995" posY="304.70001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (21)" alpha="255" interior="0" posX="3606.5" posY="308.29999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (22)" alpha="255" interior="0" posX="3601.80005" posY="328.20001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (23)" alpha="255" interior="0" posX="3618.6001" posY="332.20001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (24)" alpha="255" interior="0" posX="3621.8999" posY="318.5" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (25)" alpha="255" interior="0" posX="3608.19995" posY="315.20001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (26)" alpha="255" interior="0" posX="3604.5" posY="330.70001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (27)" alpha="255" interior="0" posX="3612.1001" posY="334.79999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (28)" alpha="255" interior="0" posX="3623.8999" posY="339.39999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (29)" alpha="255" interior="0" posX="3610.6001" posY="341.60001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (30)" alpha="255" interior="0" posX="3589.5" posY="340.89999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (31)" alpha="255" interior="0" posX="3588.69995" posY="298.79999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (32)" alpha="255" interior="0" posX="3588" posY="315.89999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (33)" alpha="255" interior="0" posX="3587.69995" posY="306.60001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (34)" alpha="255" interior="0" posX="3593.3999" posY="330.70001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (35)" alpha="255" interior="0" posX="3595.80005" posY="320.60001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (36)" alpha="255" interior="0" posX="3600.3999" posY="312.10001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (37)" alpha="255" interior="0" posX="3595.19995" posY="310.89999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (38)" alpha="255" interior="0" posX="3601.3999" posY="302.20001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+</map>

@@ -1,0 +1,10 @@
+<meta>
+    <info gamemodes="race" type="map" name="[DD] Three Slippery Towers" author="Towers Mania Team" version="1.0.0"></info>
+    <map src="three-slippery-towers.map" dimension="0"></map>
+	
+	<sync_map_element_data>false</sync_map_element_data>
+	
+    <settings>
+		<setting name="*jumping" value="[true]"/>
+    </settings>
+</meta>

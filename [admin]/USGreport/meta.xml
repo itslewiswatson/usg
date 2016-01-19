@@ -1,0 +1,4 @@
+<meta>
+  <script src="report_c.luac" type="client" cache="false" />
+  <script src="report_s.lua" type="server" />
+</meta>

@@ -1,0 +1,136 @@
+<map edf:definitions="editor_main,towersedf,race">
+    <object id="object (towerlan2) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4478.2002" posY="250.3" posZ="80.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4478.2002" posY="203.39999" posZ="80.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4438.2002" posY="250.2998" posZ="80.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4518.2002" posY="250.3" posZ="80.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (6)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4518.2002" posY="203.39999" posZ="80.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (1)" vehicle="411" posX="4422.2002" posY="184" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (2)" vehicle="411" alpha="255" interior="0" posX="4424.7998" posY="184" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (3)" vehicle="411" alpha="255" interior="0" posX="4427.5" posY="184" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <object id="object (towerlan2) (9)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="4438.2998" posY="203.39941" posZ="80.8" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Infernus) (4)" vehicle="411" alpha="255" interior="0" posX="4430.2002" posY="184" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (5)" vehicle="411" alpha="255" interior="0" posX="4432.8999" posY="184.10001" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (6)" vehicle="411" alpha="255" interior="0" posX="4435.6001" posY="184.2" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (7)" vehicle="411" alpha="255" interior="0" posX="4438.2002" posY="184.3" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (8)" vehicle="411" alpha="255" interior="0" posX="4440.8999" posY="184.5" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (9)" vehicle="411" alpha="255" interior="0" posX="4443.59961" posY="184.69922" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="4446.5" posY="184.7" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (11)" vehicle="411" alpha="255" interior="0" posX="4449.2998" posY="184.7" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (12)" vehicle="411" alpha="255" interior="0" posX="4451.8999" posY="184.8" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (13)" vehicle="411" alpha="255" interior="0" posX="4454.7998" posY="184.7998" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (14)" vehicle="411" alpha="255" interior="0" posX="4500.7998" posY="185.5" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (15)" vehicle="411" alpha="255" interior="0" posX="4503.3999" posY="185.7" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (16)" vehicle="411" alpha="255" interior="0" posX="4506" posY="185.7" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (17)" vehicle="411" alpha="255" interior="0" posX="4508.7002" posY="185.8" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (18)" vehicle="411" alpha="255" interior="0" posX="4511.2002" posY="185.89999" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (19)" vehicle="411" alpha="255" interior="0" posX="4513.7998" posY="186" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (20)" vehicle="411" alpha="255" interior="0" posX="4516.6001" posY="186.10001" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (21)" vehicle="411" alpha="255" interior="0" posX="4519.2998" posY="186.10001" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (22)" vehicle="411" alpha="255" interior="0" posX="4522" posY="186.2" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (23)" vehicle="411" alpha="255" interior="0" posX="4524.7002" posY="186.10001" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (24)" vehicle="411" alpha="255" interior="0" posX="4527.5" posY="186" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (25)" vehicle="411" alpha="255" interior="0" posX="4530.2998" posY="186.10001" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (26)" vehicle="411" alpha="255" interior="0" posX="4533" posY="185.89999" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (27)" vehicle="411" alpha="255" interior="0" posX="4535.7998" posY="185.89999" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (30)" vehicle="411" alpha="255" interior="0" posX="4464.7998" posY="270.29999" posZ="181.3" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (29)" vehicle="411" alpha="255" interior="0" posX="4467.3999" posY="270.39999" posZ="181.3" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (31)" vehicle="411" alpha="255" interior="0" posX="4470" posY="270.39999" posZ="181.3" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (32)" vehicle="411" alpha="255" interior="0" posX="4472.6001" posY="270.39999" posZ="181.3" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (33)" vehicle="411" alpha="255" interior="0" posX="4475.3999" posY="270.60001" posZ="181.3" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (34)" vehicle="411" alpha="255" interior="0" posX="4478.2002" posY="270.60001" posZ="181.3" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (35)" vehicle="411" alpha="255" interior="0" posX="4480.7998" posY="270.60001" posZ="181.3" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (36)" vehicle="411" alpha="255" interior="0" posX="4483.3999" posY="270.60001" posZ="181.3" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (37)" vehicle="411" alpha="255" interior="0" posX="4486" posY="270.70001" posZ="181.3" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (38)" vehicle="411" alpha="255" interior="0" posX="4488.7998" posY="270.70001" posZ="181.3" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (39)" vehicle="411" alpha="255" interior="0" posX="4491.3999" posY="270.79999" posZ="181.3" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (41)" vehicle="411" alpha="255" interior="0" posX="4495.2002" posY="269.39999" posZ="181.3" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <object id="object (SW_haybreak02) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4497.7998" posY="229.39999" posZ="179.10001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4494.2998" posY="226.10001" posZ="179.10001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4497.7002" posY="224.10001" posZ="179.10001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4501.7002" posY="226.39999" posZ="179.10001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4497.7002" posY="227.10001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4498.3999" posY="227.10001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4499" posY="227.10001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (6)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4499.5" posY="227.10001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (7)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4499.5" posY="226.5" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (8)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4499" posY="226.5" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (9)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4498.5" posY="226.5" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (10)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4497.7998" posY="226.5" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4460.7998" posY="226.7" posZ="179.10001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (6)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4455" posY="226.60001" posZ="179.10001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (7)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4458.2998" posY="230.60001" posZ="179.10001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (SW_haybreak02) (8)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="4458.7998" posY="222.8" posZ="179.10001" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (12)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.2002" posY="225.10001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (13)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.7002" posY="225.10001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (14)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4458.3999" posY="225.10001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (15)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4458.3999" posY="225.7" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (16)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4458.3999" posY="226.3" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (17)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4458.3999" posY="227" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (18)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4458.3999" posY="227.60001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (19)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4458.3999" posY="228.3" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (20)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.8999" posY="228.39999" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (21)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.3999" posY="228.39999" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (22)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.2998" posY="228" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (23)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.2998" posY="227.39999" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (24)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.2998" posY="226.89999" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (25)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.2998" posY="226.3" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (26)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.5" posY="226" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (27)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.2002" posY="225.60001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (28)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.8999" posY="225.8" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (29)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.8999" posY="226.5" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (30)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.8999" posY="227.10001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (31)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4457.8999" posY="227.8" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4497.1001" posY="227.10001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4496.6001" posY="227.10001" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4496.6001" posY="226.5" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel4) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="1225" scale="1" dimension="0" posX="4497.2002" posY="226.5" posZ="180.2" rotX="0" rotY="0" rotZ="0"></object>
+    <switch id="switch (1)" posX="4422.5" posY="190.89999" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (2)" alpha="255" interior="0" posX="4422.8999" posY="194.39999" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (3)" alpha="255" interior="0" posX="4423.3999" posY="198.39999" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (4)" alpha="255" interior="0" posX="4423.7998" posY="201.60001" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (5)" alpha="255" interior="0" posX="4440.2998" posY="199.60001" posZ="180.7" rotX="0" rotY="0" rotZ="340"></switch>
+    <switch id="switch (6)" alpha="255" interior="0" posX="4442.2002" posY="215.2" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (7)" alpha="255" interior="0" posX="4487.5" posY="236.5" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (8)" alpha="255" interior="0" posX="4475.3999" posY="245.10001" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (9)" alpha="255" interior="0" posX="4469.7002" posY="230.2" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (10)" alpha="255" interior="0" posX="4477.7998" posY="211.89999" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (11)" alpha="255" interior="0" posX="4461.2002" posY="208.2" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (12)" alpha="255" interior="0" posX="4451.1001" posY="225.60001" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (13)" alpha="255" interior="0" posX="4453.2998" posY="239.89999" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (14)" posX="4453.3999" posY="248" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (15)" alpha="255" interior="0" posX="4485.7998" posY="254.3" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (17)" alpha="255" interior="0" posX="4499.1001" posY="249.7" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (18)" alpha="255" interior="0" posX="4513" posY="247.10001" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (19)" alpha="255" interior="0" posX="4534.2002" posY="242.10001" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (21)" alpha="255" interior="0" posX="4532.7002" posY="248.7" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (22)" alpha="255" interior="0" posX="4531.6001" posY="255.8" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (23)" alpha="255" interior="0" posX="4531" posY="262.39999" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (24)" alpha="255" interior="0" posX="4529.3999" posY="268.70001" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (25)" posX="4425.7002" posY="257.89999" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (26)" alpha="255" interior="0" posX="4520.1001" posY="244.3" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (27)" posX="4425.2998" posY="239.89999" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (28)" alpha="255" interior="0" posX="4505.8999" posY="236.60001" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (29)" alpha="255" interior="0" posX="4514.3999" posY="229.39999" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (30)" posX="4438.2998" posY="262.29999" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (31)" alpha="255" interior="0" posX="4527.8999" posY="230.2" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (32)" alpha="255" interior="0" posX="4532.2998" posY="220.2" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (33)" posX="4440.1001" posY="244.89999" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (34)" alpha="255" interior="0" posX="4532.2998" posY="215.5" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (35)" alpha="255" interior="0" posX="4533.2998" posY="210.10001" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (36)" alpha="255" interior="0" posX="4532.7998" posY="203.3" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (37)" alpha="255" interior="0" posX="4529.6001" posY="198.8" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (38)" posX="4454.8999" posY="260.5" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (39)" alpha="255" interior="0" posX="4525.7002" posY="200.10001" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (40)" alpha="255" interior="0" posX="4498.5" posY="221.8" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (41)" posX="4467.8999" posY="189.89999" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (42)" posX="4475.5" posY="197" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (43)" alpha="255" interior="0" posX="4462.8999" posY="226.8" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (44)" posX="4453.3999" posY="197.7" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (45)" alpha="255" interior="0" posX="4458.6001" posY="232.8" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (46)" alpha="255" interior="0" posX="4456.6001" posY="215.2" posZ="180.7" rotX="0" rotY="0" rotZ="339.999"></switch>
+    <switch id="switch (47)" posX="4469.2998" posY="210.39999" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (48)" posX="4485.6001" posY="223.89999" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (50)" posX="4440.2002" posY="240.8" posZ="180.7" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (13)" vehicle="411" alpha="255" interior="0" posX="4464.3999" posY="182.89999" posZ="181.3" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <racepickup id="racepickup (NRG-500) (1)" type="nitro" vehicle="522" respawn="0" posX="4477.7002" posY="225.2" posZ="182" rotX="0" rotY="0" rotZ="237.594"></racepickup>
+</map>

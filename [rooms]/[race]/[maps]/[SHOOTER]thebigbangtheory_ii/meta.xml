@@ -1,0 +1,28 @@
+<meta>
+    <file src="gta_tree_palm.txd"></file>
+    <file src="veg_palm03.dff"></file>
+	<file src="song.ogg"></file>
+    
+    <script src="clientCore.lua" type="client"></script>
+    <script src="clientShooting.lua" type="client"></script>
+    <script src="clientJumping.lua" type="client"></script>
+    
+    <info gamemodes="race" type="map" name="[SHOOTER] ExXoTicC ft. MegaDreams - The Big Bang Theory II" author="ExXoTicC &amp; MegaDreams" version="1.0.0"></info>
+    <map src="[FUN]ExXoTicCFTMegaDreams.map" dimension="0"></map>
+    <settings>
+        <setting name="#skins" value='[ &quot;cj&quot; ]'></setting>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#ghostmode" value='[ &quot;false&quot; ]'></setting>
+        <setting name="#time" value="6:10"></setting>
+        <setting name="#vehicleweapons" value='[ &quot;true&quot; ]'></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#weather" value="[ 18 ]"></setting>
+        <setting name="#gravity" value="[ 0.008000 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#respawntime" value="[ 5 ]"></setting>
+        <setting name="#locked_time" value="[ true ]"></setting>
+        <setting name="#duration" value="[ 1800 ]"></setting>
+        <setting name="#respawn" value='[ &quot;none&quot; ]'></setting>
+    </settings>
+</meta>

@@ -1,0 +1,4 @@
+<meta>
+	<script src="loc.lua" type="client" />
+	<script src="loc.slua" type="server" />
+</meta>

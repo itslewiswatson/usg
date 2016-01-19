@@ -1,0 +1,15 @@
+<meta>
+  <script src="room_cnr_s.lua" />
+  <script src="room_cnr_caching_s.lua" />
+  <script src="room_cnr_misc_s.lua" />
+  <script src="room_cnr_misc_c.lua" type="client" />
+  <script src="room_cnr_c.lua" type="client" />
+  
+  <file src="logo.png"/>
+  
+  <export function="setPlayerDataCache" />
+  <export function="clearPlayerCache" />
+  <export function="getPlayerAccountData" />
+  <export function="updatePlayerAccountData" />
+  <min_mta_version client="1.3.5-9.06194" />
+</meta>

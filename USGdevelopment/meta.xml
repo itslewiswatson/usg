@@ -1,0 +1,6 @@
+<meta>
+  <script src="dev_s.lua" />
+  <script src="dev_c.lua" type="client" />
+  <export function="convertNumber" type="client"/>
+  <export function="convertNumber" type="server"/>"
+</meta>

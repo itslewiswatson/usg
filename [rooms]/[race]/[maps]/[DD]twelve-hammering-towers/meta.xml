@@ -1,0 +1,13 @@
+<meta>
+    <info type="map" name="[DD] Twelve Hammering Towers" author="Keksii + JR10" version="1.0.0"></info>
+    <map src="twelve-hammering-towers.map" dimension="0"></map>
+
+    <script src="hammer.slua" type="server"/>
+
+    <sync_map_element_data>false</sync_map_element_data>
+    
+    <settings>
+        <setting name="*jumping" value="[true]"/>
+        <setting name="*nospecial" value="[true]"/>
+    </settings>
+</meta>

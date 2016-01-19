@@ -1,0 +1,126 @@
+<map edf:definitions="editor_main,towersedf,race">
+    <object id="object (towerlan2) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="1924" posY="-4070.5" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (landjump) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="1633" scale="1" dimension="0" posX="1925.19922" posY="-4044.19922" posZ="100.4" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (landjump2) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="1925.2998" posY="-4024.2998" posZ="98" rotX="350" rotY="0" rotZ="179.995"></object>
+    <object id="object (landjump2) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="1925.5" posY="-4014.5" posZ="98" rotX="350" rotY="0" rotZ="357.99"></object>
+    <object id="object (towerlan2) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="1925.59961" posY="-3967.2998" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (landjump) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="1633" scale="1" dimension="0" posX="1925.69922" posY="-3993.7998" posZ="100.4" rotX="0" rotY="0" rotZ="177.995"></object>
+    <object id="object (landjump2) (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="1980.59998" posY="-4004.3999" posZ="100.7" rotX="0" rotY="0" rotZ="137.995"></object>
+    <object id="object (towerlan2) (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="2013.39941" posY="-3964.69922" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="4585" scale="1" dimension="0" posX="2013.69995" posY="-4068.69995" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (landjump2) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="1956.30005" posY="-4032.1001" posZ="100.4" rotX="0" rotY="0" rotZ="318"></object>
+    <object id="object (vgEhshade01_lvs) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="8838" scale="1" dimension="0" posX="1943" posY="-4046.80005" posZ="98.3" rotX="0" rotY="0" rotZ="48"></object>
+    <object id="object (vgEhshade01_lvs) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="8838" scale="1" dimension="0" posX="1994.40002" posY="-3988.69995" posZ="98.2" rotX="0" rotY="0" rotZ="47.999"></object>
+    <object id="object (SW_haybreak02) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="1958.40002" posY="-4029.69995" posZ="99.5" rotX="0" rotY="0" rotZ="318.25"></object>
+    <object id="object (SW_haybreak02) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="1961" posY="-4026.80005" posZ="99.5" rotX="0" rotY="0" rotZ="318.249"></object>
+    <object id="object (SW_haybreak02) (3)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="1963.59998" posY="-4023.8999" posZ="99.5" rotX="0" rotY="0" rotZ="318.249"></object>
+    <object id="object (SW_haybreak02) (4)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="1966.19922" posY="-4021" posZ="99.5" rotX="0" rotY="0" rotZ="317.994"></object>
+    <object id="object (SW_haybreak02) (5)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="1968.80005" posY="-4018.1001" posZ="99.5" rotX="0" rotY="0" rotZ="318.499"></object>
+    <object id="object (SW_haybreak02) (6)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="1971.40002" posY="-4015.19995" posZ="99.5" rotX="0" rotY="0" rotZ="318.499"></object>
+    <object id="object (SW_haybreak02) (7)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="1974" posY="-4012.19995" posZ="99.5" rotX="0" rotY="0" rotZ="318.749"></object>
+    <object id="object (SW_haybreak02) (8)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="1976.5" posY="-4009.30005" posZ="99.5" rotX="0" rotY="0" rotZ="318.499"></object>
+    <object id="object (SW_haybreak02) (9)" interior="0" collisions="true" alpha="255" doublesided="false" model="3374" scale="1" dimension="0" posX="1979" posY="-4006.30005" posZ="99.5" rotX="0" rotY="0" rotZ="318.999"></object>
+    <object id="object (landjump) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="1633" scale="1" dimension="0" posX="1947.09998" posY="-4070.8999" posZ="100.4" rotX="0" rotY="0" rotZ="270"></object>
+    <object id="object (landjump) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="1633" scale="1" dimension="0" posX="1990.80005" posY="-4071.1001" posZ="100.4" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (landjump2) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="1973.5" posY="-4071.19995" posZ="98" rotX="350" rotY="0" rotZ="269.995"></object>
+    <object id="object (landjump2) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="2013.59998" posY="-4021.80005" posZ="98" rotX="350" rotY="0" rotZ="179.989"></object>
+    <object id="object (landjump) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="1633" scale="1" dimension="0" posX="2013.69995" posY="-4042.30005" posZ="100.4" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (landjump2) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="2013.59998" posY="-4012.69995" posZ="98" rotX="349.997" rotY="0" rotZ="359.989"></object>
+    <object id="object (landjump2) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="1964.5" posY="-4071.19995" posZ="98" rotX="349.997" rotY="0" rotZ="89.989"></object>
+    <object id="object (landjump) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="1633" scale="1" dimension="0" posX="2013.69995" posY="-3991.19995" posZ="100.4" rotX="0" rotY="0" rotZ="180"></object>
+    <object id="object (landjump) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="1633" scale="1" dimension="0" posX="1948.59998" posY="-3966" posZ="100.4" rotX="0" rotY="0" rotZ="269.495"></object>
+    <object id="object (landjump) (1)" interior="0" collisions="true" alpha="255" doublesided="false" model="1633" scale="1" dimension="0" posX="1990" posY="-3966.5" posZ="100.4" rotX="0" rotY="0" rotZ="89.995"></object>
+    <object id="object (landjump2) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="1965.09998" posY="-3966.1001" posZ="98" rotX="349.997" rotY="0" rotZ="89.984"></object>
+    <object id="object (landjump2) (2)" interior="0" collisions="true" alpha="255" doublesided="false" model="1634" scale="1" dimension="0" posX="1974.19995" posY="-3966.30005" posZ="98" rotX="349.991" rotY="0" rotZ="267.984"></object>
+    <switch id="switch (1)" posX="1925.90002" posY="-3957.8999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (2)" alpha="255" interior="0" posX="1924.40002" posY="-3973.30005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (3)" alpha="255" interior="0" posX="1928.80005" posY="-3969.30005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (4)" alpha="255" interior="0" posX="1931.5" posY="-3962.30005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (1)" vehicle="411" posX="2030.5" posY="-3982.69995" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <switch id="switch (5)" alpha="255" interior="0" posX="1932.59998" posY="-3951.19995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (6)" alpha="255" interior="0" posX="1918.69995" posY="-3951.3999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (7)" alpha="255" interior="0" posX="1917.90002" posY="-3959.6001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (8)" alpha="255" interior="0" posX="1917" posY="-3969.19995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (9)" alpha="255" interior="0" posX="1915.80005" posY="-3981.1001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (10)" alpha="255" interior="0" posX="1923" posY="-3981.80005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (11)" alpha="255" interior="0" posX="1934.59998" posY="-3982.8999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (12)" alpha="255" interior="0" posX="1935.09961" posY="-3975.5" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (13)" alpha="255" interior="0" posX="1916.19995" posY="-3975.3999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (14)" alpha="255" interior="0" posX="1911" posY="-3968.5" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (15)" alpha="255" interior="0" posX="1957.59998" posY="-3966.3999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (16)" alpha="255" interior="0" posX="1982.69995" posY="-3966.69995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (17)" alpha="255" interior="0" posX="1962.40002" posY="-4024.8999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (18)" alpha="255" interior="0" posX="1975.80005" posY="-4009.8999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (2)" vehicle="411" alpha="255" interior="0" posX="2030.40002" posY="-3979.80005" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (3)" vehicle="411" alpha="255" interior="0" posX="2030.40002" posY="-3976.8999" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <switch id="switch (19)" alpha="255" interior="0" posX="2001.19995" posY="-3962.8999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (20)" alpha="255" interior="0" posX="2006.69995" posY="-3980.8999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (21)" alpha="255" interior="0" posX="2021.30005" posY="-3974.8999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (22)" alpha="255" interior="0" posX="2015.80005" posY="-3956.8999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (23)" alpha="255" interior="0" posX="2010.30005" posY="-3966.3999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (4)" vehicle="411" alpha="255" interior="0" posX="2030.30005" posY="-3973.80005" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <switch id="switch (24)" alpha="255" interior="0" posX="2006.19995" posY="-3952.8999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (25)" alpha="255" interior="0" posX="2013.5" posY="-3977" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (5)" vehicle="411" alpha="255" interior="0" posX="2030.30005" posY="-3970.80005" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <switch id="switch (26)" alpha="255" interior="0" posX="2021.90002" posY="-3979.69995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (27)" alpha="255" interior="0" posX="2027.90002" posY="-3965.19995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (28)" alpha="255" interior="0" posX="2026.5" posY="-3952.80005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (29)" alpha="255" interior="0" posX="2014" posY="-4001.3999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (6)" vehicle="411" alpha="255" interior="0" posX="2030.19995" posY="-3967.8999" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (7)" vehicle="411" alpha="255" interior="0" posX="2030.09998" posY="-3964.8999" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <switch id="switch (30)" alpha="255" interior="0" posX="2014.09998" posY="-4031.6001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (8)" vehicle="411" alpha="255" interior="0" posX="2030.09998" posY="-3961.8999" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <switch id="switch (31)" alpha="255" interior="0" posX="2019.69995" posY="-4050.69995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (9)" vehicle="411" alpha="255" interior="0" posX="2030" posY="-3958.80005" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <switch id="switch (32)" alpha="255" interior="0" posX="2020.69995" posY="-4057.80005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (33)" alpha="255" interior="0" posX="2022" posY="-4070.69995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (34)" alpha="255" interior="0" posX="2013.90002" posY="-4074.30005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (35)" alpha="255" interior="0" posX="2022.69995" posY="-4081.19995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (10)" vehicle="411" alpha="255" interior="0" posX="2030" posY="-3955.69995" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <switch id="switch (36)" alpha="255" interior="0" posX="2012.69995" posY="-4060.8999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (37)" alpha="255" interior="0" posX="2026" posY="-4064.3999" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (11)" vehicle="411" alpha="255" interior="0" posX="2029.90002" posY="-3952.80005" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <switch id="switch (38)" alpha="255" interior="0" posX="2028" posY="-4078.80005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (39)" alpha="255" interior="0" posX="2027.40002" posY="-4054.19995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (40)" alpha="255" interior="0" posX="2004" posY="-4052.6001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (41)" alpha="255" interior="0" posX="2006.19995" posY="-4068.6001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (42)" alpha="255" interior="0" posX="2007.59998" posY="-4080.80005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (43)" alpha="255" interior="0" posX="1981.30005" posY="-4071" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (12)" vehicle="411" alpha="255" interior="0" posX="2029.90002" posY="-3949.8999" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (13)" vehicle="411" alpha="255" interior="0" posX="2029.90002" posY="-3947" posZ="100.5" rotX="0" rotY="0" rotZ="91.5"></spawnpoint>
+    <switch id="switch (44)" alpha="255" interior="0" posX="1955.59998" posY="-4072" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (45)" alpha="255" interior="0" posX="1930.69995" posY="-4069.80005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (46)" alpha="255" interior="0" posX="1923.90002" posY="-4061" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (47)" alpha="255" interior="0" posX="1921.30005" posY="-4078.69995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (49)" alpha="255" interior="0" posX="1913.90002" posY="-4086.30005" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (14)" vehicle="411" alpha="255" interior="0" posX="1909" posY="-3948.3999" posZ="100.5" rotX="0" rotY="0" rotZ="269.5"></spawnpoint>
+    <switch id="switch (50)" alpha="255" interior="0" posX="1924.5" posY="-4034.6001" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <switch id="switch (51)" alpha="255" interior="0" posX="1925.30005" posY="-4006.19995" posZ="99.9" rotX="0" rotY="0" rotZ="0"></switch>
+    <spawnpoint id="spawnpoint (Infernus) (15)" vehicle="411" alpha="255" interior="0" posX="1909" posY="-3951" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (16)" vehicle="411" alpha="255" interior="0" posX="1909" posY="-3953.80005" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (17)" vehicle="411" alpha="255" interior="0" posX="1909" posY="-3956.69995" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (18)" vehicle="411" alpha="255" interior="0" posX="1909" posY="-3959.5" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (19)" vehicle="411" alpha="255" interior="0" posX="1909" posY="-3962.30005" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (20)" vehicle="411" alpha="255" interior="0" posX="1909" posY="-3965.1001" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (21)" vehicle="411" alpha="255" interior="0" posX="1909.09998" posY="-3967.8999" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (22)" vehicle="411" alpha="255" interior="0" posX="1909.09998" posY="-3970.6001" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (23)" vehicle="411" alpha="255" interior="0" posX="1909" posY="-3973.5" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (24)" vehicle="411" alpha="255" interior="0" posX="1908.90002" posY="-3976.19995" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (25)" vehicle="411" alpha="255" interior="0" posX="1908.90002" posY="-3979" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (26)" vehicle="411" alpha="255" interior="0" posX="1908.90002" posY="-3981.8999" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (27)" vehicle="411" alpha="255" interior="0" posX="1908.90002" posY="-3984.6001" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (28)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4050.80005" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (29)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4053.6001" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (30)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4056.3999" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (31)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4059.19995" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (32)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4062" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (33)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4064.69995" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (34)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4067.5" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (35)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4070.5" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (36)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4073.3999" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (37)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4076.5" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (38)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4079.3999" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (39)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4082.5" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (40)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4085.30005" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+    <spawnpoint id="spawnpoint (Infernus) (41)" vehicle="411" alpha="255" interior="0" posX="1907.90002" posY="-4088.30005" posZ="100.5" rotX="0" rotY="0" rotZ="269.495"></spawnpoint>
+</map>

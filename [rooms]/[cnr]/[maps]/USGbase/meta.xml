@@ -1,0 +1,16 @@
+<meta>
+	<script src="Maps/NG.lua" type="server" />
+	<script src="Maps/C.lua" type="server" />
+	<script src="Maps/H.lua" type="server" />
+		
+	<script src="Teleporters/teleporters.lua" type="server" />
+	<script src="Teleporters/server.lua" type="server" />
+	
+	
+	
+	<script src="Gates/gates.lua" type="server" /> 
+	
+	
+</meta>
+
+

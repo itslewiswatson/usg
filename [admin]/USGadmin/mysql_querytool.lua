@@ -1,0 +1,1 @@
+loadstring(exports.mysql:getQueryTool())() -- load mysql query tool into the environment

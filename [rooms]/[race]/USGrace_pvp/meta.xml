@@ -1,0 +1,4 @@
+<meta>
+	<script src="pvp_s.lua" />
+	<script src="pvp_c.lua" type="client"/>
+</meta>

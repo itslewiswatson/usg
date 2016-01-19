@@ -1,0 +1,11 @@
+<meta>
+  <script src="s.lua" />
+  <script src="c.lua" type="client" />
+  
+  <export function="convertNumber" type="client"/>
+  <export function="convertNumber" type="server"/>"
+  
+  <export function="isPlayerInRange" type="client"/>"
+  <export function="isPlayerInRange" type="server"/>"
+  
+</meta>

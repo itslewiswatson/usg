@@ -1,0 +1,5 @@
+<meta>
+    <script src="fuel_s.lua" type="server" />
+    <script src="fuel_c.lua" type="client" cache="false" />
+    <script src="fuel_pumps_c.lua" type="client" />
+</meta>

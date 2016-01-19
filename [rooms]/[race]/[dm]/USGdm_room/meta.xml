@@ -1,0 +1,6 @@
+<meta>
+  <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000" />
+  <script src="dm_room_s.lua" type="server" />
+  <script src="dm_game_s.lua" type="server" />
+  <script src="dm_game_c.lua" type="client" />
+</meta>

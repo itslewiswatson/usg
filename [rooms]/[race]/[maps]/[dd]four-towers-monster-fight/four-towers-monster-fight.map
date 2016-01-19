@@ -1,0 +1,47 @@
+<map edf:definitions="race,editor_main">
+    <object id="object (vgncarshade1) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="4519.3999" posY="268.10001" posZ="98.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="4492.8999" posY="275.10001" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgncarshade1) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="4517.7998" posY="281.10001" posZ="98.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="4557.7998" posY="275.09961" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgncarshade1) (4)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="4563.7998" posY="304.29999" posZ="98.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (vgncarshade1) (5)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="4551" posY="304.39999" posZ="98.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (towerlan2) (3)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="4558.1001" posY="344.10001" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (towerlan2) (4)" breakable="true" interior="0" collisions="true" alpha="255" model="4585" doublesided="false" scale="1" dimension="0" posX="4492.6001" posY="341.70001" posZ="0" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgncarshade1) (6)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="4498.8999" posY="306.79999" posZ="98.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (vgncarshade1) (7)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="4486.1001" posY="307.39999" posZ="98.3" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (vgncarshade1) (8)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="4525.8999" posY="337.79999" posZ="98.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (vgncarshade1) (9)" breakable="true" interior="0" collisions="true" alpha="255" model="3458" doublesided="false" scale="1" dimension="0" posX="4525.6001" posY="351.70001" posZ="98.3" rotX="0" rotY="0" rotZ="0"></object>
+    <spawnpoint id="spawnpoint (Monster 2) (1)" vehicle="556" posX="4573.7998" posY="256.89999" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (2)" vehicle="556" alpha="255" interior="0" posX="4569.7998" posY="256.89999" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (3)" vehicle="556" alpha="255" interior="0" posX="4565.7998" posY="256.89999" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (4)" vehicle="556" alpha="255" interior="0" posX="4561.8999" posY="256.89999" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (5)" vehicle="556" alpha="255" interior="0" posX="4557.8999" posY="256.89999" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (6)" vehicle="556" alpha="255" interior="0" posX="4554" posY="257" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (7)" vehicle="556" alpha="255" interior="0" posX="4550.2002" posY="257" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (8)" vehicle="556" alpha="255" interior="0" posX="4546.2002" posY="257" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (9)" vehicle="556" alpha="255" interior="0" posX="4542.2002" posY="257" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (10)" vehicle="556" alpha="255" interior="0" posX="4510.3999" posY="257.39999" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (11)" vehicle="556" alpha="255" interior="0" posX="4506.3999" posY="255.3" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (12)" vehicle="556" alpha="255" interior="0" posX="4502.2998" posY="255.3" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (13)" vehicle="556" alpha="255" interior="0" posX="4498.2002" posY="255.3" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (14)" vehicle="556" alpha="255" interior="0" posX="4494.2002" posY="255.2" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (15)" vehicle="556" alpha="255" interior="0" posX="4490.1001" posY="255.2" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (16)" vehicle="556" alpha="255" interior="0" posX="4486.2002" posY="255.19922" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (17)" vehicle="556" alpha="255" interior="0" posX="4482.2002" posY="255.2" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (18)" vehicle="556" alpha="255" interior="0" posX="4478.1001" posY="255.2" posZ="101.4" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (19)" vehicle="556" alpha="255" interior="0" posX="4476.6001" posY="361.70001" posZ="101.4" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (20)" vehicle="556" alpha="255" interior="0" posX="4480.7998" posY="362.29999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (21)" vehicle="556" alpha="255" interior="0" posX="4484.7998" posY="362.29999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (22)" vehicle="556" alpha="255" interior="0" posX="4489" posY="362.29999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (23)" vehicle="556" alpha="255" interior="0" posX="4492.7998" posY="362.29999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (24)" vehicle="556" alpha="255" interior="0" posX="4496.7002" posY="362.29999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (25)" vehicle="556" alpha="255" interior="0" posX="4500.7002" posY="362.20001" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (26)" vehicle="556" alpha="255" interior="0" posX="4504.7002" posY="362.20001" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (27)" vehicle="556" alpha="255" interior="0" posX="4508.5" posY="360.79999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (28)" vehicle="556" alpha="255" interior="0" posX="4540.2002" posY="360.60001" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (29)" vehicle="556" alpha="255" interior="0" posX="4544" posY="364.29999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (30)" vehicle="556" alpha="255" interior="0" posX="4547.8999" posY="364.29999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (31)" vehicle="556" alpha="255" interior="0" posX="4551.8999" posY="364.29999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (32)" vehicle="556" alpha="255" interior="0" posX="4555.7998" posY="364.29999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+    <spawnpoint id="spawnpoint (Monster 2) (33)" vehicle="556" alpha="255" interior="0" posX="4559.7002" posY="364.29999" posZ="101.4" rotX="0" rotY="0" rotZ="179.995"></spawnpoint>
+</map>

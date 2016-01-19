@@ -1,0 +1,16 @@
+<meta>
+  <info author="arc_" />
+  <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000" />
+  <!-- <script src="vehiclenodes_.lua" type="client"/> -->
+  <script src="gps_util.lua" type="client" />
+  <script src="gps_util.lua" type="server" />
+  <script src="gps_linedrawer_c.lua" type="client" />
+  <script src="gps_c.lua" type="client" />
+  <file src="overlay.fx" />
+  <script src="gps_nodes.lua" type="server" />
+  <script src="gps_minHeap.lua" type="server" />
+  <script src="gps_s.lua" type="server" />
+  <export function="getDestination" type="client" />
+  <export function="setDestination" type="client" />
+  <export function="removeDestination" type="client" />
+</meta>

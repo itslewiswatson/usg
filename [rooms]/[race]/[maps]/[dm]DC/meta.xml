@@ -1,0 +1,27 @@
+<meta>
+    <script src="music.lua" type="client" />
+    <file src="music.mp3" />
+    <script src="palm.lua" type="client" />
+    <file src="gta_tree_palm.txd" />
+    <file src="veg_palm03.dff" />
+    <script src="pulo.lua" type="client" />
+    <script src="corceu.lua" type="client" />
+    <info gamemodes="race" type="map" name="[DM] DC v.13 - Set Fire To Everybody" author="DC" version="1.0.0" description="My v.13 :D"></info>
+    <map src="race-dm-dc-v13.map" dimension="0"></map>
+    <settings>
+        <setting name="#skins" value='[ &quot;cj&quot; ]'></setting>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#ghostmode" value='[ &quot;false&quot; ]'></setting>
+        <setting name="#time" value="0:0"></setting>
+        <setting name="#vehicleweapons" value='[ &quot;true&quot; ]'></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#weather" value="[ 17 ]"></setting>
+        <setting name="#gravity" value="[ 0.008000 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#respawntime" value="[ 5 ]"></setting>
+        <setting name="#locked_time" value="[ true ]"></setting>
+        <setting name="#duration" value="[ 600 ]"></setting>
+        <setting name="#respawn" value='[ &quot;none&quot; ]'></setting>
+    </settings>
+</meta>

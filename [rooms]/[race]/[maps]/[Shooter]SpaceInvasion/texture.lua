@@ -1,0 +1,23 @@
+﻿addEventHandler('onClientResourceStart', resourceRoot,
+function() 
+		txd2 = engineLoadTXD ( "texture2.txd" )
+		txd = engineLoadTXD ( "texture.txd" )
+		txd3 = engineLoadTXD ( "texture3.txd" )
+		engineImportTXD ( txd2, 8171 )
+		engineImportTXD ( txd2, 8355 )
+		engineImportTXD ( txd2, 7017 )
+		engineImportTXD ( txd2, 8394 )
+		engineImportTXD ( txd, 1378 )
+		engineImportTXD ( txd, 1383 )
+		engineImportTXD ( txd, 12857 )
+		engineImportTXD ( txd, 4828 )
+		engineImportTXD ( txd, 3458 )
+		engineImportTXD ( txd, 1633 )
+		engineImportTXD ( txd2, 8550 )
+		engineImportTXD ( txd2, 17036 )
+		engineImportTXD ( txd2, 17015 )
+		engineImportTXD ( txd3, 7584 )
+		engineImportTXD ( txd3, 8421 )
+
+end 
+)

@@ -1,0 +1,14 @@
+<meta>
+  <info author="FabioGNR" version="1.0" type="script" />
+  <script src="playervehicles_c.lua" type="client" />
+  <script src="playervehicles_s.lua" type="server" />
+  <script src="playervehicles_parking_s.lua" type="server" />
+  <export function="onPlayerPurchaseVehicle" type="server" />
+  <script src="playervehicles_getVehicleSellPrice.lua" type="shared" />
+  <!-- for both exports -->
+  <export function="getVehicleSellPrice" type="server" />
+  <export function="getVehicleOwner" type="server" />
+  <export function="getVehicleSellPrice" type="client" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

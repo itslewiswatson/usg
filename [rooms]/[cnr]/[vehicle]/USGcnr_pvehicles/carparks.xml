@@ -1,0 +1,22 @@
+<carparks>
+	<carpark posX="2788.94" posY="-1480.68" posZ="15" width="34" depth="54" height="29">
+		<noparkzone posX="2798.2646484375" posY="-1475.626953125" posZ="17.995748519897" radius="15" />
+		<noparkzone posX="2798.2646484375" posY="-1475.626953125" posZ="26.995748519897" radius="15" />
+		<noparkzone posX="2798.2646484375" posY="-1475.626953125" posZ="35.995748519897" radius="15" />
+		<noparkzone posX="2818.2646484375" posY="-1478.626953125" posZ="15.095748519897" radius="10" />
+		<noparkzone posX="2813.9646484375" posY="-1469.686953125" posZ="16.095748519897" radius="10" />
+	</carpark>
+	<carpark posX="1631.3" posY="-1721.4" posZ="13" width="44" depth="29" height="9">
+		<noparkzone posX="1641.73" posY="-1715.12" posZ="15.3" radius="12" />
+		<noparkzone posX="1645.73" posY="-1714.12" posZ="20.5" radius="10" />
+		<noparkzone posX="1646.73" posY="-1695.12" posZ="20.5" radius="10" />
+		<noparkzone posX="1634.3" posY="-1704.85" posZ="17.7" radius="14" />
+	</carpark>
+	<carpark posX="732.6171875" posY="-1385.4296875" posZ="12" width="55" depth="55" height="9"></carpark>
+	<carpark posX="308.509765625" posY="-1813.072265625" posZ="2" width="51" depth="27" height="9"></carpark>
+	<carpark posX="1304.6201171875" posY="-876.6181640625" posZ="36" width="30" depth="27" height="9"></carpark>
+	<carpark posX="2144.3720703125" posY="-1206.252929687" posZ="21" width="21" depth="75" height="9"></carpark>
+	<carpark posX="1638.50390625" posY="1284.333984375" posZ="7" width="77" depth="35" height="9"></carpark>
+	<carpark posX="1578.2451171875" posY="1838.5126953125" posZ="7" width="59" depth="23" height="9"></carpark>
+	<carpark posX="2497.4921875" posY=" 2351.8837890625" posZ="2" width="20" depth="50" height="15"></carpark>
+</carparks>

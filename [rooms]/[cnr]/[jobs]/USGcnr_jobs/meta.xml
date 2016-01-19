@@ -1,0 +1,23 @@
+<meta>
+  <script src="jobs_s.lua" type="server" />
+  <script src="jobs_c.lua" type="client" />
+  <script src="jobs_exports_c.lua" type="client" />
+  <script src="jobs_picker_c.lua" type="client" />
+  <script src="jobs_menu_c.lua" type="client" />
+  <export function="addJob" type="server" />
+  <export function="addJob" type="client" />
+  <export function="setPlayerJob" type="server" />
+  <export function="getPlayerJob" type="server" />
+  <export function="getPlayerJob" type="client" />
+  <export function="getPlayerJobType" type="server" />
+  <export function="getPlayerJobType" type="client" />
+  <export function="getPlayerOccupation" type="client" />
+  <export function="doesPlayerHaveJobSkin" type="server" />
+  <export function="getJobType" type="server" />
+  <file src="blips/circle_orange.png" />
+  <file src="blips/circle_red.png" />
+  <file src="blips/circle_yellow.png" />
+  <file src="blips/circle_green.png" />
+  <file src="blips/circle_blue.png" />
+  <min_mta_version client="1.3.5-9.06194" server="1.3.5-9.04570" />
+</meta>

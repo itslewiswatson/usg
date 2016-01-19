@@ -1,0 +1,44 @@
+<meta>
+  <script src="teleport.lua" type="client">
+  </script>
+  <script src="jump.lua" type="client">
+  </script>
+  <script src="jump2.lua" type="client">
+  </script>
+  <script src="jump3.lua" type="client">
+  </script>
+  <info gamemodes="race" type="map" name="[DM] Mower v1 - Gate of Hell" author="Mower" version="1.0.0">
+  </info>
+  <map src="map.map" dimension="0">
+  </map>
+  <settings>
+    <setting name="#skins" value="[ &quot;cj&quot; ]">
+    </setting>
+    <setting name="#maxplayers" value="[ 128 ]">
+    </setting>
+    <setting name="#gamespeed" value="[ 1 ]">
+    </setting>
+    <setting name="#ghostmode" value="[ &quot;true&quot; ]">
+    </setting>
+    <setting name="#time" value="1:0">
+    </setting>
+    <setting name="#vehicleweapons" value="[ &quot;true&quot; ]">
+    </setting>
+    <setting name="#minplayers" value="[ 0 ]">
+    </setting>
+    <setting name="#weather" value="[ 0 ]">
+    </setting>
+    <setting name="#gravity" value="[ 0.008000 ]">
+    </setting>
+    <setting name="#waveheight" value="[ 0 ]">
+    </setting>
+    <setting name="#respawntime" value="[ 5 ]">
+    </setting>
+    <setting name="#locked_time" value="[ true ]">
+    </setting>
+    <setting name="#duration" value="[ 1800 ]">
+    </setting>
+    <setting name="#respawn" value="[ &quot;none&quot; ]">
+    </setting>
+  </settings>
+</meta>

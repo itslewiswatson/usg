@@ -1,0 +1,11 @@
+<meta>
+    <info gamemodes="race" type="map" name="[DD] One Tower Monsters" author="Towers Mania Team" version="1.0.0"></info>
+    <map src="one-tower-monsters.map" dimension="0"></map>
+	<script src="monster_server.lua" type="server"></script>
+	
+	<sync_map_element_data>false</sync_map_element_data>
+	
+    <settings>
+		<setting name="*jumping" value="[true]"/>
+    </settings>
+</meta>

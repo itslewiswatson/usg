@@ -1,0 +1,18 @@
+<meta>
+  <script src="maps_s.lua" />
+  <script src="maps_filedownloads_s.lua" />
+  <script src="maps_c.lua" type="client" />
+  <script src="maps_shared.lua" type="shared" />
+  <script src="maps_sandbox_c.lua" type="client" />
+  <export function="getRandomMap" />
+  <export function="setRoomNextMap" />
+  <export function="getMapTitle" />
+  <export function="getMapAuthor" />
+  <export function="getMapSpawns" />
+  <export function="startMap" />
+  <export function="reloadMap" />
+  <export function="loadMap" />
+  <export function="unloadMap" />
+  <export function="addMap" />
+  <min_mta_version server="1.3.4-0.00000" client="1.3.5" />
+</meta>

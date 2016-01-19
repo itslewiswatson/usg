@@ -1,0 +1,12 @@
+<meta>
+  <script src="OOP.lua" />
+  <script src="OOP.lua" type="client" />
+  <script src="turfs_class_turf_s.lua" />
+  <script src="turfs_class_turfplayer_s.lua" />
+  <script src="turfs_s.lua" />
+  <script src="turfs_c.lua" type="client" />
+  <export function="getSpawnLocation" />
+  <export function="getCurrentTurfPlayer" />
+  <export function="getTurfbyID" />
+  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000" />
+</meta>

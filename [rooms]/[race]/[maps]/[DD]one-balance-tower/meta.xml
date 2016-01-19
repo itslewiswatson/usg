@@ -1,0 +1,13 @@
+<meta>
+    <info type="map" name="[DD] One Balance Tower" author="Keksii + TheGame + Darwish" version="1.0.0"></info>
+    <map src="one-balance-tower.map" dimension="0"></map>
+
+    <script src="balance.slua" type="server"/>
+
+    <sync_map_element_data>false</sync_map_element_data>
+    
+    <settings>
+        <setting name="*jumping" value="[true]"/>
+        <setting name="*nospecial" value="[true]"/>
+    </settings>
+</meta>

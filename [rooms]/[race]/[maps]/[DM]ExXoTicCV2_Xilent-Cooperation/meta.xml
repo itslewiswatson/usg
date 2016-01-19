@@ -1,0 +1,27 @@
+<meta>
+    <file src="gta_tree_palm.txd" />
+    <file src="veg_palm03.dff" />
+    <file src="airportrminl_sfse.txd" />
+    <file src="cranes_dyn2.txd" />
+    <script src="palm.lua" type="client"></script>
+    <script src="client.lua" type="client"></script>
+    <script src="CSM.lua" type="client"></script>
+    <info gamemodes="race" type="map" name="[DM] ExXoTicC V2 - Xilent Cooperation.!" author="ExXoTicC" version="1.3" description="Description"></info>
+    <map src="V2.map" dimension="0"></map>
+    <settings>
+        <setting name="#skins" value='[ &quot;cj&quot; ]'></setting>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#ghostmode" value='[ &quot;false&quot; ]'></setting>
+        <setting name="#time" value="21:0"></setting>
+        <setting name="#vehicleweapons" value='[ &quot;false&quot; ]'></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#weather" value="[ 2 ]"></setting>
+        <setting name="#gravity" value="[ 0.008000 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#respawntime" value="[ 5 ]"></setting>
+        <setting name="#locked_time" value="[ false ]"></setting>
+        <setting name="#duration" value="[ 1800 ]"></setting>
+        <setting name="#respawn" value='[ &quot;timelimit&quot; ]'></setting>
+    </settings>
+</meta>

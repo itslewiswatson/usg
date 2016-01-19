@@ -1,0 +1,4 @@
+<meta>
+	<script src="npc.lua" type="client" />
+	<script src="npc.slua" type="server" />
+</meta>

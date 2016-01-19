@@ -1,0 +1,7 @@
+<meta>
+    <info name="[DD] Six Towers Visage" type="map" version="1.0.0"></info>
+    <map src="6tower-visage-DD.map" dimension="0"></map>
+    <settings>
+        <setting name="*jumping" value="[true]"/>
+    </settings>
+</meta>

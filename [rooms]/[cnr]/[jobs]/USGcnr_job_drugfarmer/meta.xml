@@ -1,0 +1,8 @@
+<meta>
+  <script src="job_drugfarmer_vars_shared.lua" type="shared" />
+  <script src="job_drugfarmer_vars_c.lua" type="client" />
+  <script src="job_drugfarmer_s.lua" />
+  <script src="job_drugfarmer_c.lua" type="client" />
+  <file src="blip.png" />
+  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000" />
+</meta>

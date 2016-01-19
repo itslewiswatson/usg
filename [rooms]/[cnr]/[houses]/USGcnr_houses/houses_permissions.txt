@@ -1,0 +1,5 @@
+PERMISSIONS
+
+[1] = enter
+[2] = { withdraw drugs, deposit drugs, view drugs }
+[3] = { withdraw weapons, deposit weapons, view weapons }

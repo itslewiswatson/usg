@@ -1,0 +1,6 @@
+<meta>
+	<script src="lookup_s.lua" />
+
+	<export function="getAccountNick" />
+	<export function="getAccountLastSeen" />
+</meta>

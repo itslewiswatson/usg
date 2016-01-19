@@ -1,0 +1,9 @@
+<meta>
+    <info gamemodes="race" type="map" name="[DD] Two Towers Cross" version="1.0.0"></info>
+    <map src="tow-towers-cross-DD.map" dimension="0"></map>
+    <settings>
+        <setting name="*jumping" value="[ 16 ]"></setting>
+    </settings>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+</meta>

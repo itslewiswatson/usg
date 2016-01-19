@@ -1,0 +1,10 @@
+<meta>
+    <info type="map" name="[DD] Four Towers Hay" author="TheGame + Darwish + JR10" version="1.0.0"></info>
+    <map src="four-towers-hay.map" dimension="0"></map>
+
+    <sync_map_element_data>false</sync_map_element_data>
+    
+    <settings>
+        <setting name="*jumping" value="[true]"/>
+    </settings>
+</meta>
