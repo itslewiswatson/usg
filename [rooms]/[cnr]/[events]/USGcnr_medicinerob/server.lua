@@ -25,7 +25,7 @@ local Digit1,Digit2,Digit3,Digit4
 local function messageCNR(message, r, g, b)
     for k, player in ipairs(getElementsByType("player")) do
         if (exports.USGrooms:getPlayerRoom(player) == "cnr") then
-            exports.USGmsg:msg(player, message, r, g, b)
+            exports.USGmsg:msg(player, message, r, g, b, 5000)
         end
     end
 end
@@ -34,7 +34,7 @@ local function messageMedics(message, r, g, b)
 	for k, medics in pairs(getElementsByType("player")) do
 		if (exports.USGrooms:getPlayerRoom(medics) == "cnr") then
 			if (exports.USGcnr_jobs:getPlayerJob(medics) == "medic") then
-				exports.USGmsg:msg(medics, message, r, g, b)
+				exports.USGmsg:msg(medics, message, r, g, b, 5000)
 			end
 		end
 	end
@@ -117,7 +117,7 @@ function start()
 	       		waypoint = createMarker( -2026.4521484375, -986.3203125, 32,"cylinder", 10, 255, 255, 255, 50,p)
 	        	waypointBlip = createBlipAttachedTo ( waypoint, 41, _, _, _,_ ,_, _, _,p )
 	        	messageCNR("A paramedic entered the transport helicopter and is heading toward San Fierro complex.",255,255,255)
-	        	exports.USGmsg:msg(p, "Fly to the red blip marked on your map (South San Fierro).", r,g,b)
+	        	exports.USGmsg:msg(p, "Fly to the red blip marked on your map (South San Fierro).", r, g, b, 5000)
 	            setElementFrozen(helicopter,false)
 	            driver = p
 	            addEventHandler ( "onPlayerWasted", driver, onDeathLoose)
@@ -147,7 +147,7 @@ function start()
 		                                	destroyWaypoint()
 		                                	waypoint = createMarker(-1949, -1033.517578125, 31.5,"cylinder", 1, 255, 255, 255, 50,p)
 		                                	waypointBlip = createBlipAttachedTo ( waypoint, 41, _, _, _,_ ,_, _, _,p )
-		                                	exports.USGmsg:msg(p, "Go to the yellow marker outside.", r,g,b)
+		                                	exports.USGmsg:msg(p, "Go to the yellow marker outside.", r, g, b, 5000)
 
 		                                    addEventHandler( "onMarkerHit", waypoint, 
 		                                    	function(p)
@@ -162,7 +162,7 @@ function start()
 			                                            	messageCNR("The medicine has been unloaded and the hangar has been sealed!",255,255,255)
 														    exports.USGcnr_medicines:givePlayerMedicines(driver,"Steroid",drugsPrize)
 															exports.USGcnr_medicines:givePlayerMedicines(driver,"Aspirin",drugsPrize)
-															exports.USGmsg:msg(driver,"You have received "..tostring(drugsPrize).." of each medicine",255,255,255)
+															exports.USGmsg:msg(driver,"You have received "..tostring(drugsPrize).." of each medicine",255,255,255, 5000)
 			                                            end,Time,1)
 			                                        end
 		                                    	end
@@ -203,7 +203,7 @@ function activateEvent()
 			        if (exports.USGcnr_jobs:getPlayerJob(player) == "police" or exports.USGcnr_jobs:getPlayerJob(player) == "medic") then
 			        	exports.USGcnr_medicines:givePlayerMedicines(player,"Steroid",drugsPrize)
 			        	exports.USGcnr_medicines:givePlayerMedicines(player,"Aspirin",drugsPrize)
-			        	exports.USGmsg:msg(player,"You have received "..tostring(drugsPrize).." of each medicine for successfully defending the medicines",255,255,255)
+			        	exports.USGmsg:msg(player,"You have received "..tostring(drugsPrize).." of each medicine for successfully defending the medicines",255,255,255, 5000)
 			        end
 			    end 
 			end
@@ -362,7 +362,7 @@ function copReward(ammo,killer)
         if (exports.USGcnr_jobs:getPlayerJob(killer) == "police" and exports.USGcnr_wanted:getPlayerWantedLevel(source) > 0) then
             exports.USGcnr_medicines:givePlayerMedicines(killer,"Steroid",drugPrizePerKill)
             exports.USGcnr_medicines:givePlayerMedicines(killer,"Aspirin",drugPrizePerKill)
-            exports.USGmsg:msg(killer,"You received "..tostring(drugPrizePerKill).." of each medicine for killing "..getPlayerName(source),255,255,255)
+            exports.USGmsg:msg(killer,"You received "..tostring(drugPrizePerKill).." of each medicine for killing "..getPlayerName(source),255,255,255, 5000)
         end
     end
 end
