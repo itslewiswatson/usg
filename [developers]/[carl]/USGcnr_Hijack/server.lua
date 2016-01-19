@@ -18,6 +18,7 @@ local DesBlip
 local marker
 
 local timerbeforeEnd 
+local timerCheckWater
 
 local GlobalTimer
 local ID = 5
@@ -90,24 +91,25 @@ function OnVehicleEnter(player)
     setElementVisibleTo ( marker, player, true )
     setElementVisibleTo ( DesBlip, player, true )
     exports.USGcnr_wanted:givePlayerWantedLevel(player,10)
-
-    if (isElementInWater(source)) then
-        over()
-    end
+    timerCheckWater = setTimer(checkVehicleIsInWater, 2000, 0)
 end
 
 function OnVehicleExit(player)
 	messageCNR(getPlayerName(player).." has exited the hijacked vehicle", 0, 255, 0)
     setElementVisibleTo ( marker, player, false )
     setElementVisibleTo ( DesBlip, player, false )
-
-    if (isElementInWater(source)) then
-        over()
-    end
 end
 
 function OnVehicleExplode()
     over()
+end
+
+function checkVehicleIsInWater()
+    if (isElement(vehicle)) then
+        if (isElementInWater(vehicle)) then
+            over()
+        end
+    end
 end
 
 function OnMarkerHit(hitElement )
@@ -163,13 +165,20 @@ end
 function over(player)
     if (isVehicleBlown (vehicle)) then
         messageCNR("The hijacked vehicle has blown up! Mission failed.", 0, 255, 0)
-        killTimer(timerbeforeEnd)
+        
+        if (isTimer(timerbeforeEnd)) then
+            killTimer(timerbeforeEnd)
+        end
     elseif (isElementInWater(vehicle)) then
         messageCNR("The hijacked vehicle has been sent into water! Mission failed.", 0, 255, 0)
     elseif (player) then
         exports.USGcnr_wanted:givePlayerWantedLevel(player,5)
         givePlayerMoney(player, 10000)
-        killTimer(timerbeforeEnd)
+
+        if (isTimer(timerbeforeEnd)) then
+            killTimer(timerbeforeEnd)
+        end
+
 		messageCNR(getPlayerName(player).." delivered the hijacked car in time!", 0, 255, 0)
     else 
         messageCNR("No one delivered the hijacked car in time!", 0, 255, 0)
@@ -182,6 +191,10 @@ function over(player)
     destroyElement(CarBlip)
     destroyElement(DesBlip)
     destroyElement(marker)
+
+    if (isTimer(timerCheckWater)) then
+        killTimer(timerCheckWater)
+    end
 	GlobalTimer = setTimer ( start,15 * 60 * 1000, 1)
 end
 
