@@ -22,12 +22,22 @@ local ID = 1
 
 local Digit1,Digit2,Digit3,Digit4
 
-local function messageCNR(message,r,g,b)
+local function messageCNR(message, r, g, b)
     for k, player in ipairs(getElementsByType("player")) do
         if (exports.USGrooms:getPlayerRoom(player) == "cnr") then
-            exports.USGmsg:msg(player, message, r,g,b)
+            exports.USGmsg:msg(player, message, r, g, b)
         end
     end
+end
+
+local function messageMedics(message, r, g, b)
+	for k, medics in pairs(getElementsByType("player")) do
+		if (exports.USGrooms:getPlayerRoom(medics) == "cnr") then
+			if (exports.USGcnr_jobs:getPlayerJob(medics) == "medic") then
+				exports.USGmsg:msg(medics, message, r, g, b)
+			end
+		end
+	end
 end
 
 
@@ -88,7 +98,8 @@ function start()
     end
 
     local x,y,z = getElementPosition(helicopter)
-    messageCNR("Some medicines need transporting from ".. getZoneName(x,y,z) .." to San Fierro complex!",255,255,255)
+    messageCNR("A delivery of medicine needs transporting from ".. getZoneName(x,y,z) .." by a Paramedic to San Fierro complex!",255,255,255)
+    messageMedics("Get to the helicopter located in ".. getZoneName(x,y,z) .. " (marked with a red blip in the Desert)",255,255,255)
     
     addEventHandler ( "onVehicleStartEnter", helicopter, 
     	function(player)
@@ -106,6 +117,7 @@ function start()
 	       		waypoint = createMarker( -2026.4521484375, -986.3203125, 32,"cylinder", 10, 255, 255, 255, 50,p)
 	        	waypointBlip = createBlipAttachedTo ( waypoint, 41, _, _, _,_ ,_, _, _,p )
 	        	messageCNR("A paramedic entered the transport helicopter and is heading toward San Fierro complex.",255,255,255)
+	        	exports.USGmsg:msg(p, "Fly to the red blip marked on your map (South San Fierro).", r,g,b)
 	            setElementFrozen(helicopter,false)
 	            driver = p
 	            addEventHandler ( "onPlayerWasted", driver, onDeathLoose)
@@ -114,7 +126,8 @@ function start()
 	            	function(p,seat)
 		                if (seat == 0) then
 		                    if (isElementWithinMarker(helicopter,waypoint) and isVehicleOnGround ( helicopter )) then
-		                    	messageCNR("The paramedic delivered the medicines to SF complex and is now unloading them!",255,255,255)
+		                    	messageCNR("The paramedic delivered the medicine to SF complex and is now unloading them!",255,255,255)
+		                    	exports.USGmsg:msg(p, "Head into the open building and enter the marker.", r,g,b)
 		                        destroyWaypoint()
 
 		                        addEventHandler ( "onVehicleStartEnter", helicopter, 
@@ -134,6 +147,7 @@ function start()
 		                                	destroyWaypoint()
 		                                	waypoint = createMarker(-1949, -1033.517578125, 31.5,"cylinder", 1, 255, 255, 255, 50,p)
 		                                	waypointBlip = createBlipAttachedTo ( waypoint, 41, _, _, _,_ ,_, _, _,p )
+		                                	exports.USGmsg:msg(p, "Go to the yellow marker outside.", r,g,b)
 
 		                                    addEventHandler( "onMarkerHit", waypoint, 
 		                                    	function(p)
@@ -145,7 +159,7 @@ function start()
 			                                            	setElementFrozen(driver,false)
 			                                            	activateEvent()
 			                                            	removeEventHandler ( "onPlayerWasted", driver, onDeathLoose)
-			                                            	messageCNR("The medicines have been unloaded and the hangar has been sealed!",255,255,255)
+			                                            	messageCNR("The medicine has been unloaded and the hangar has been sealed!",255,255,255)
 														    exports.USGcnr_medicines:givePlayerMedicines(driver,"Steroid",drugsPrize)
 															exports.USGcnr_medicines:givePlayerMedicines(driver,"Aspirin",drugsPrize)
 															exports.USGmsg:msg(driver,"You have received "..tostring(drugsPrize).." of each medicine",255,255,255)
@@ -157,7 +171,7 @@ function start()
 		                            end
 		                        )
 		                    else 
-								messageCNR("The paramedic no longer wants to deliver the medicines!",255,255,255)
+								messageCNR("The paramedic exited the helicopter before getting to the destination!",255,255,255)
 								loose()
 		                    end
 		                end
@@ -169,7 +183,7 @@ function start()
 
     addEventHandler("onVehicleExplode", helicopter, 
     	function()
-			messageCNR("The helicopter transporting the medicines has blown up!",255,255,255)
+			messageCNR("The helicopter transporting the medicine has blown up!",255,255,255)
 			loose()
 		end
 	)
