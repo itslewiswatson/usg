@@ -137,10 +137,10 @@ function onClientKey(key,pressed)
     if(not pressed) then return false end
     if(key == "mouse_wheel_down" or key == "arrow_l") then
         local max = #categories[currentCategory]
-        selectedWeapon = math.max(1, selectedWeapon-1)
+        selectedWeapon = math.min(max, selectedWeapon+1)
     elseif(key == "mouse_wheel_up" or key == "arrow_r") then
         local max = #categories[currentCategory]
-        selectedWeapon = math.min(max, selectedWeapon+1)
+        selectedWeapon = math.max(1, selectedWeapon-1)
     end
 end
 

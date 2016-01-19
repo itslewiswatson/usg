@@ -21,7 +21,7 @@ categories = {
 	[9] = { name = "Special", ammo = 1, ammoPrice = 2000, ammoShared = false,
 			{id=44, name = "Night-vision Goggles", price = 2000},{id=45, name = "Infared Goggles", price = 2000},{id=46, name = "Parachute", price = 2000},
 	},
-	[10] = { name = "Special", ammo = 1, ammoPrice = 2000, ammoShared = false,
+	[10] = { name = "Melee", ammo = 1, ammoPrice = 2000, ammoShared = false,
 		{id=10, name = "Long Purple Dildo", price = 2000},{id=11, name = "Short Tan Dildo", price = 2000},{id=12, name = "Vibrator", price = 2000},{id=14, name = "Flowers", price = 2000},{id=15, name = "Cane", price = 2000},
 	},
 }
