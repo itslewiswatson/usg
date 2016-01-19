@@ -157,104 +157,119 @@ local canDJV = {}
 local function replaceVehicle(theColShape)
     if(theColShape == spawnedVehs[source].spawner[6])then
         placeVehicle(spawnedVehs[source].spawner)
-        removeEventHandler( "onElementColShapeLeave", source,replaceVehicle)
+        removeEventHandler("onElementColShapeLeave", source,replaceVehicle)
     end
 end
 
 function placeVehicle(spawner)
-local carId = spawner[5]
-    if(not isElement(spawner[6]))then
-    spawner[6] = createColSphere ( spawner[1],spawner[2],spawner[3],cars[carId] or 6 )
-    end
+	local carId = spawner[5]
+	if (not isElement(spawner[6])) then
+		spawner[6] = createColSphere(spawner[1], spawner[2], spawner[3], cars[carId] or 6)
+	end
 
-local vehicle = createVehicle(carId,spawner[1],spawner[2],spawner[3],0,0,spawner[4])
-spawnedVehs[vehicle] = {}
-spawnedVehs[vehicle].spawner = spawner
-setVehicleColor(vehicle,1,1,1,1)
-setElementFrozen(vehicle,true)
---setElementCollisionsEnabled(vehicle,false)
-setVehicleDamageProof(vehicle,true)
-addEventHandler( "onElementColShapeLeave", vehicle,replaceVehicle)
+	local vehicle = createVehicle(carId, spawner[1], spawner[2], spawner[3], 0, 0, spawner[4])
+	spawnedVehs[vehicle] = {}
+	spawnedVehs[vehicle].spawner = spawner
+	setVehicleColor(vehicle, 1, 1, 1, 1)
+	setElementFrozen(vehicle, true)
+	--setElementCollisionsEnabled(vehicle,false)
+	setVehicleDamageProof(vehicle, true)
+	addEventHandler("onElementColShapeLeave", vehicle, replaceVehicle)
 
-addEventHandler( "onElementColShapeHit", vehicle, function(col)
-    if(col == spawnedVehs[source].spawner[6])then
-        canDJV[source] = false
-    end
-end )
-
-addEventHandler( "onElementColShapeLeave", vehicle, function(col)
-    if(col == spawnedVehs[source].spawner[6])then
-        canDJV[source] = true
-    end
-end )
-
-addEventHandler ( "onVehicleStartEnter", vehicle, function(enteringPlayer,seat)
-        if(exports.USGcnr_wanted:getPlayerWantedLevel(enteringPlayer) > 0 )then
-        exports.USGmsg:msg(enteringPlayer,"You cannot take free vehicle if you are wanted!", 255, 255,255)
-        cancelEvent()
-        end
-end )
-
-addEventHandler ( "onVehicleEnter", vehicle, function(player,seat)
-    if(seat == 0)then
-        if(isElement(vehicles[player]) and vehicles[player] ~= source)then
-        destroyElement(vehicles[player])
-        end
-    vehicles[player] = source
-    local r,g,b = getTeamColor(getPlayerTeam(player))
-        if(isElement(vehicle))then
-        setVehicleColor(vehicle,r,g,b)
-        setElementFrozen(vehicle,false)
-        --setElementCollisionsEnabled(vehicle,true)
-        setVehicleDamageProof(vehicle,false)
-        end
-    end
-
-    
-end )
-
-addEventHandler("onElementDestroy", vehicle, function()
-    if(isElementWithinColShape ( source, spawnedVehs[source].spawner[6] ))then
-    placeVehicle(spawner)
-    end
-end) 
-    if(spawner.job)then
-        addEventHandler ( "onVehicleStartEnter", vehicle, function(enteringPlayer,seat)
-            if(spawner.job ~= exports.USGcnr_jobs:getPlayerJob(enteringPlayer) and seat == 0 and exports.USGcnr_jobs:getPlayerJobType(enteringPlayer) ~= "staff")then
-            exports.USGmsg:msg(enteringPlayer,"You need to be a "..spawner.job.." to use this vehicle", 255, 255,255)
-            cancelEvent()
-            end
-        end )
-    end
-    addEventHandler ( "onVehicleStartExit", vehicle, function(exitingPlayer,seat)
-        if(isElementWithinColShape ( source, spawner[6] ) and seat == 0)then
-        cancelEvent()
-        exports.USGmsg:msg(exitingPlayer,"You need to leave the area to get out of the vehicle", 255, 255,255)
-        end
-    end )
-return vehicle
+	addEventHandler("onElementColShapeHit", vehicle, 
+		function (col)
+			if (col == spawnedVehs[source].spawner[6]) then
+				canDJV[source] = false
+			end
+		end
+	)
+	addEventHandler("onElementColShapeLeave", vehicle, 
+		function (col)
+			if (col == spawnedVehs[source].spawner[6]) then
+				canDJV[source] = true
+			end
+		end
+	)
+	addEventHandler("onVehicleExplode", vehicle,
+		function ()
+			source:destroy()
+		end
+	)
+	addEventHandler("onVehicleStartEnter", vehicle, 
+		function (enteringPlayer, seat)
+			if (exports.USGcnr_wanted:getPlayerWantedLevel(enteringPlayer) > 0 and seat == 0) then
+				exports.USGmsg:msg(enteringPlayer, "You cannot take free a vehicle if you are wanted!", 255, 255, 255)
+				cancelEvent()
+			end
+		end
+	)
+	addEventHandler("onVehicleEnter", vehicle, 
+		function (player, seat)
+			if(seat == 0)then
+				if (isElement(vehicles[player]) and vehicles[player] ~= source) then
+					destroyElement(vehicles[player])
+				end
+				vehicles[player] = source
+				local r, g, b = player.team:getColor()
+				if (isElement(vehicle)) then
+					setVehicleColor(vehicle, r, g, b)
+					setElementFrozen(vehicle, false)
+					--setElementCollisionsEnabled(vehicle, true)
+					setVehicleDamageProof(vehicle, false)
+				end
+			end	
+		end
+	)
+	addEventHandler("onElementDestroy", vehicle, 
+		function ()
+			if (isElementWithinColShape(source, spawnedVehs[source].spawner[6])) then
+				placeVehicle(spawner)
+			end
+		end
+	)
+	if (spawner.job) then
+		addEventHandler("onVehicleStartEnter", vehicle, 
+			function (enteringPlayer, seat)
+				if (spawner.job ~= exports.USGcnr_jobs:getPlayerJob(enteringPlayer) and seat == 0 and exports.USGcnr_jobs:getPlayerJobType(enteringPlayer) ~= "staff") then
+					exports.USGmsg:msg(enteringPlayer, "You need to be a "..spawner.job.." to use this vehicle", 255, 255, 255)
+					cancelEvent()
+				end
+			end
+		)
+	end
+	addEventHandler("onVehicleStartExit", vehicle, 
+		function (exitingPlayer, seat)
+			if (isElementWithinColShape(source, spawner[6]) and seat == 0) then
+				cancelEvent()
+				exports.USGmsg:msg(exitingPlayer, "You need to leave the area to get out of the vehicle", 255, 255, 255)
+			end
+		end
+	)
+	return vehicle
 end
 
-for k,v in pairs(spawners)do
-    local vehicle = placeVehicle(v)
+for _, v in ipairs(spawners) do
+    placeVehicle(v)
 end
 
 function destroyVehicle()
-    if(isElement(vehicles[source]))then
+    if (isElement(vehicles[source]))then
         destroyElement(vehicles[source])
-        removeEventHandler ( "onPlayerWasted",source, destroyVehicle )
+        removeEventHandler("onPlayerWasted", source, destroyVehicle)
     end
 end
-addEventHandler ( "onPlayerWasted",root, destroyVehicle )
-addEventHandler ( "onPlayerQuit", root, destroyVehicle )
-addEventHandler ( "onPlayerExitRoom", root, destroyVehicle )
+addEventHandler("onPlayerWasted",root, destroyVehicle)
+addEventHandler("onPlayerQuit", root, destroyVehicle)
+addEventHandler("onPlayerExitRoom", root, destroyVehicle)
 
 
-addCommandHandler("djv",function(player)
-    if(isElement(vehicles[player]) and canDJV[vehicles[player]])then 
-        destroyElement(vehicles[player])
-        removeEventHandler ( "onPlayerWasted",player, destroyVehicle )
-        exports.USGmsg:msg(player,"Here is 10$ for keeping the server clean :D !", 255, 255,255)
-        givePlayerMoney(player,10 )
-    end
-end)
+addCommandHandler("djv",
+	function (player)
+		if (isElement(vehicles[player]) and canDJV[vehicles[player]])then 
+			destroyElement(vehicles[player])
+			removeEventHandler("onPlayerWasted", player, destroyVehicle)
+			exports.USGmsg:msg(player, "Here is $10 for keeping the server clean! :)", 255, 255, 255)
+			player:giveMoney(10)
+		end
+	end
+)
