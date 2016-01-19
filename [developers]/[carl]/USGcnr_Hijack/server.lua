@@ -170,14 +170,30 @@ function over(player)
             if (isTimer(timerbeforeEnd)) then
                 killTimer(timerbeforeEnd)
             end
+
+            if (isTimer(timerCheckWater)) then
+                killTimer(timerCheckWater)
+            end
         elseif (isElementInWater(vehicle)) then
             messageCNR("The hijacked vehicle has been sent into water! Mission failed.", 0, 255, 0)
+
+            if (isTimer(timerbeforeEnd)) then
+                killTimer(timerbeforeEnd)
+            end
+
+            if (isTimer(timerCheckWater)) then
+                killTimer(timerCheckWater)
+            end
         elseif (player) then
             exports.USGcnr_wanted:givePlayerWantedLevel(player,5)
             givePlayerMoney(player, 10000)
 
             if (isTimer(timerbeforeEnd)) then
                 killTimer(timerbeforeEnd)
+            end
+
+            if (isTimer(timerCheckWater)) then
+                killtimer(timerCheckWater)
             end
 
     		messageCNR(getPlayerName(player).." delivered the hijacked car in time!", 0, 255, 0)
