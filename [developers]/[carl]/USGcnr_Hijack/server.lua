@@ -98,6 +98,7 @@ function OnVehicleExit(player)
 	messageCNR(getPlayerName(player).." has exited the hijacked vehicle", 0, 255, 0)
     setElementVisibleTo ( marker, player, false )
     setElementVisibleTo ( DesBlip, player, false )
+    checkVehicleIsInWater()
 end
 
 function OnVehicleExplode()
@@ -216,3 +217,14 @@ addEventHandler ( "onResourceStop", resourceRoot,
     function (  )
    end 
 ) 
+
+function checkDepth(player)
+    if (isElement(vehicle)) then
+        local _, _, z = getElementPosition(vehicle)
+
+        outputChatBox(tostring(z), player, 255, 255, 0)
+    else
+        outputChatBox("No vehicle", player)
+    end
+end
+addCommandHandler("depth", checkDepth)
