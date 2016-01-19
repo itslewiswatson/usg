@@ -4,9 +4,9 @@ local isStreaming = false
 local music = false
 
 -- GUI Code
-local DENStreamWindow = guiCreateWindow( 618, 250, 319, 306, "MP3/Radio/YouTube Streamer", false )
+local DENStreamWindow = guiCreateWindow( 618, 250, 319, 306, "MP3/Radio Streamer", false )
 guiWindowSetSizable( DENStreamWindow, false )
-local DENStreamLabel = guiCreateLabel( 10, 23, 293, 16, "Enter a MP3/Radio/YouTube URL or select one:", false, DENStreamWindow )
+local DENStreamLabel = guiCreateLabel( 10, 23, 293, 16, "Enter a MP3/Radio or select one:", false, DENStreamWindow )
 guiSetFont( DENStreamLabel, "default-bold-small" )
 local DENStreamEdit = guiCreateEdit( 9, 41, 300, 22, "", false, DENStreamWindow )
 local DENStreamGrid = guiCreateGridList( 10, 67, 297, 201, false, DENStreamWindow )
@@ -26,28 +26,15 @@ guiSetVisible ( DENStreamWindow, false )
 
 -- Default Stations
 local radioStations = {
-	[ "NEG Hitradio" ] = "http://negmta.net:8000/listen.pls",
 	[ "Hitradio 181" ] = "http://www.181.fm/winamp.pls?station=181-power&style=mp3&description=Power%20181%20(Top%2040)&file=181-power.pls",
 	[ "Hardstyle Nu" ] = "http://listen.hardstyle.nu/listen.pls",
 	[ "Hardbase" ] = "http://listen.hardbase.fm/aacplus.pls",
-	[ "Slam!FM" ] = "http://82.201.100.23/slamfm.m3u",
-	[ "Dance FM" ] = "http://true.nl/streams/dancetunes.asx",
-	[ "Best blues" ] = "http://64.62.252.130:9032/listen.pls",
-	[ "Classic music" ] = "http://sc1.abacast.com:8220/listen.pls",
-	[ "Country" ] = "http://shoutcast.internet-radio.org.uk:10656/listen.pls",
 	[ "Electro, dance, house" ] = "http://stream.electroradio.ch:26630/listen.pls",
 	[ "90s grunge rock" ] = "http://173.193.14.170:8006/listen.pls",
-	[ "Rock, metal and alternative" ] = "http://screlay-dtc0l-1.shoutcast.com:8012/listen.pls",
-	[ "60s 70s 80s 90s rock" ] = "http://cp.internet-radio.org.uk:15476/listen.pls",
-	[ "Pop, dance, trance" ] = "http://cp.internet-radio.org.uk:15114/listen.pls",
-	[ "Psychodelic, Progressive rock" ] = "http://krautrock.pop-stream.de:7592/listen.pls",
 	[ "Hip hop, rap, rnb" ] = "http://mp3uplink.duplexfx.com:8054/listen.pls",
-	[ "Filth FM" ] = "http://lemon.citrus3.com/castcontrol/playlist.php?id=51&type=pls",
 	[ "Reggae and Dancehall music" ] = "http://www.raggakings.net/listen.wax",
 	[ "Dirty South FM" ] = "http://www.dirtysouthradioonline.com/broadband-128.asx",
-	[ "Smooth Beats" ] = "http://www.smoothbeats.com/hiphop.asx",
 	[ "Smooth Jazz" ] = "http://www.1.fm/go/baysmoothjazz128k.asx",
-	[ "Rock Web" ] = "http://100xr.redirectme.net/100xr.asx",
 	[ "Dubstep" ] = "http://dubstep.fm/listen.pls",
 }
 
