@@ -90,13 +90,14 @@ function renderShop()
     end
     -- draw selected weapon
     local weapon = categories[currentCategory][selectedWeapon].id
+    local weaponName = categories[currentCategory][selectedWeapon].name
     local weaponOwned = weaponBought[weapon] == true or getPedWeapon(localPlayer, currentCategory) == weapon
 
     dxDrawRectangle(WEP_LIST_X+1, WEP_LIST_Y, WEP_ITEM_SIZE, WEP_ITEM_SIZE, tocolor(0,0,0,140))
     if(fileExists("images/weapon_id_"..weapon..".png")) then
         dxDrawImage(WEP_LIST_X, WEP_LIST_Y, WEP_ITEM_SIZE, WEP_ITEM_SIZE, "images/weapon_id_"..weapon..".png")
     end
-    dxDrawText(getWeaponNameFromID(weapon), WEP_LIST_X+1, WEP_LIST_Y+WEP_ITEM_SIZE-60, WEP_LIST_X+1+WEP_ITEM_SIZE, WEP_LIST_Y+WEP_ITEM_SIZE-25, tocolor(255,255,255), 1.75, "default", "center", "center")
+    dxDrawText(weaponName, WEP_LIST_X+1, WEP_LIST_Y+WEP_ITEM_SIZE-60, WEP_LIST_X+1+WEP_ITEM_SIZE, WEP_LIST_Y+WEP_ITEM_SIZE-25, tocolor(255,255,255), 1.75, "default", "center", "center")
     local wepInfoText
     if(weaponOwned) then
         local ammoShared = categories[currentCategory].ammoShared
