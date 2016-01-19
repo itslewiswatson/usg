@@ -127,7 +127,7 @@ function start()
 		                if (seat == 0) then
 		                    if (isElementWithinMarker(helicopter,waypoint) and isVehicleOnGround ( helicopter )) then
 		                    	messageCNR("The paramedic delivered the medicine to SF complex and is now unloading them!",255,255,255)
-		                    	exports.USGmsg:msg(p, "Head into the open building and enter the marker.", r,g,b)
+		                    	exports.USGmsg:msg(p, "Head into the building marked with a red blip and enter the white marker.", r,g,b, 5000)
 		                        destroyWaypoint()
 
 		                        addEventHandler ( "onVehicleStartEnter", helicopter, 
@@ -147,7 +147,7 @@ function start()
 		                                	destroyWaypoint()
 		                                	waypoint = createMarker(-1949, -1033.517578125, 31.5,"cylinder", 1, 255, 255, 255, 50,p)
 		                                	waypointBlip = createBlipAttachedTo ( waypoint, 41, _, _, _,_ ,_, _, _,p )
-		                                	exports.USGmsg:msg(p, "Go to the yellow marker outside.", r, g, b, 5000)
+		                                	exports.USGmsg:msg(p, "Go to the white marker outside.", r, g, b, 5000)
 
 		                                    addEventHandler( "onMarkerHit", waypoint, 
 		                                    	function(p)
