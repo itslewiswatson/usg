@@ -142,7 +142,7 @@ function getJobBonus(player, jobName, newRank)
 	end
 end
 
-------------------------------------------------------------
+------------------------------------------------------------ 
 --Handles giving player job experience for a given job.
 ------------------------------------------------------------
 function givePlayerJobExp(player, jobName, expToGive)
