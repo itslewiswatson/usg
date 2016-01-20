@@ -183,8 +183,10 @@ function getPlayerJobExp(player, jobName)
 		local jobExp = getAccountData(plrAcc, dataName)
 
 		if (jobExp) then
+			outputChatBox("1", player)
 			return jobExp
 		else
+			outputChatBox("2", player)
 			setAccountData(plrAcc, dataName, 0)
 			return 0
 		end
