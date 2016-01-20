@@ -28,6 +28,24 @@ local allowedAircraftModels = {
 	[511] = true,
 }
 
+--Money bonuses due to rank
+local bonusBasedOnRank = {
+	["Junior Flight Officer"] = 0,
+	["Flight Officer"] = 50,
+	["First Officer"] = 100,
+	["Captain"] = 150,
+	["Senior Captain"] = 200,
+	["Commercial First Officer"] = 250,
+	["Commercial Captain"] = 300,
+	["Commercial Senior Captain"] = 350,
+	["Commercial Commander"] = 400,
+	["Commercial Senior Commander"] = 450,
+	["ATP First Officer"] = 600,
+	["ATP Senior Captain"] = 750,
+	["ATP Commander"] = 1000,
+	["ATP Senior Commander"] = 1500,
+}
+
 local passengerSeats = {[519] = 8, [553] = 6}
 addEventHandler("onVehicleStartEnter", root,
 	function (passenger, seat, door)
@@ -314,11 +332,14 @@ addEventHandler("onPlayerChangeJob", root,
 addEvent("USGcnr_job_pilot.onCargoMissionFinish", true)
 function onPlayerFinishCargo(missionType, distance)
 	if(exports.USGcnr_jobs:getPlayerJob(client) == "pilot" and isPedInVehicle(client)) then
+		local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(client, "pilot")
+		local rankBonus = bonusBasedOnRank[currentJobRank]
 		local reward = missionType == "drop" and 750 or 500
-		reward = reward + (distance/1.25)
+		reward = reward + (distance/1.25) + rankBonus
 		reward = 10*math.floor(reward/10)
-		reward = reward * 2
+		reward = reward
 		givePlayerMoney(client, reward)
+		exports.USGcnr_jobranks:givePlayerJobExp(client, "pilot", math.floor(reward/10))
 		exports.USGmsg:msg(client, "You have earned "..exports.USG:formatMoney(reward).." for completing a cargo mission.", 0, 255, 0)
 	end
 end
