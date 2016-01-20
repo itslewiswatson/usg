@@ -30,7 +30,7 @@ function closeJobMenu()
 end
 
 function toggleJobMenu()
-    if(isElement(jobMenuGUI.window) and guiGetVisiblejobMenuGUI.window)) then
+    if(isElement(jobMenuGUI.window) and guiGetVisible(jobMenuGUI.window)) then
         closeJobMenu()
     elseif(exports.USGrooms:getPlayerRoom() == "cnr") then
         openJobMenu()
