@@ -196,10 +196,11 @@ function createData()
 
 		--Loop through jobIDs table
 		for a,b in pairs(jobIDs) do
-			local checkAccData = getAccountData(plrAcc, "jobExp." .. b) --Check if the player has the data in their account data
+			local dataName = "jobExp." .. b
+			local checkAccData = getAccountData(plrAcc, dataName) --Check if the player has the data in their account data
 
 			--If they don't have it
-			if (not checkAccData) then
+			if (checkAccData == false) then
 				setAccountData(plrAcc, "jobExp." .. b, 0) --Set it for them.
 				outputChatBox("No account data for jobExp." .. b, source)
 			end
