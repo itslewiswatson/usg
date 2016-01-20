@@ -226,7 +226,7 @@ addCommandHandler("testexp",
 		if (jobName and exp) then
 			outputChatBox("Triggered from command", player)
 			givePlayerJobExp(player, jobName, exp)
-			outputChatBox("test 4", player)
+			outputChatBox("test 4 bbitbucket", player)
 		end
 	end
 )
