@@ -208,8 +208,8 @@ function jailPlayer(player, duration, jail, jailedby)
     exports.USGcnr_wanted:setPlayerWantedLevel(player, 0)
     triggerClientJailEvent(player, jailedby or "-", duration) -- bad solution to event not ready clientside
     addEventHandler("onPlayerSpawn", player, onJailedPlayerSpawn)
-	toggleControl ( player, "fire", false )
-	toggleControl ( player, "jump", false )
+    toggleControl ( player, "fire", false )
+    toggleControl ( player, "jump", false )
 end
 
 function unfreezePlayer(player)
@@ -247,11 +247,58 @@ function unjailPlayer(player)
 
         triggerClientEvent(player, "USGcnr_jail.onLeaveJail", player)
         removeEventHandler("onPlayerSpawn", player, onJailedPlayerSpawn)
-		toggleControl ( player, "fire", true )
-		toggleControl ( player, "jump", true )
-		
+        toggleControl ( player, "fire", true )
+        toggleControl ( player, "jump", true )
+        
     end
 end
+
+function onlineCops(player)
+local number = 0
+    for k,v in ipairs(getElementsByType("player")) do 
+        x = exports.USGcnr_jobs:getPlayerJob(v) 
+        if ( x == "police") then 
+            number = number + 1 
+        end 
+    end 
+    return number
+end
+
+function payJailFine(player)
+    if(jailedPlayers[player]) then
+        if ( onlineCops == 0 ) then return  exports.USGmsg:msg(player,"There is no online cops, you can't use /payjailfine", 255,255,255) end
+        local x,_,_ = getTimerDetails(jailedPlayers[player].timer)
+        local money = x * 0.13
+        if ( getPlayerMoney(player) < money ) return  exports.USGmsg:msg(player,"You don't have enough money.", 255,255,255) end
+        takePlayerMoney(player,money)
+        exports.USGmsg:msg(player,"You paid "..money.."$ for jail fine", 255,255,255)
+        local jail = jails[jailedPlayers[player].jail] or jails.LV
+        setElementDimension(player, exports.USGRooms:getRoomDimension("cnr"))
+        setElementInterior(player, 0)
+        setElementPosition(player, jail.x, jail.y, jail.z)
+        setElementRotation(player, 0,0,jail.rot)
+        killTimer(jailedPlayers[player].timer)
+        jailedPlayers[player] = nil
+        exports.MySQL:execute("UPDATE cnr__accounts SET jailtime='0',jail=NULL WHERE username=?", exports.USGaccounts:getPlayerAccount(player))
+        -- just in case it got saved from a restart
+        exports.USGcnr_room:updatePlayerAccountData(player, "jailtime", 0)
+        exports.USGcnr_room:updatePlayerAccountData(player, "jail", nil)
+
+        triggerClientEvent(player, "USGcnr_jail.onLeaveJail", player)
+        removeEventHandler("onPlayerSpawn", player, onJailedPlayerSpawn)
+        toggleControl ( player, "fire", true )
+        toggleControl ( player, "jump", true )
+        for k,v in ipairs(getElementsByType("player")) do 
+            y = exports.USGcnr_jobs:getPlayerJob(v)
+            if ( y == "police")
+                givePlayerMoney(v,money/onlineCops(player)) 
+                exports.USGmsg:msg(v,"You got "..money/onlineCops(player).."$ from a criminal who used /payjailfine", 255,255,255)
+            end 
+        end
+    end
+end
+addCommandHandler ( "payjailfine", payJailFine)
+
 
 function unjailPlayerOpenDoor(player)
     if(jailedPlayers[player]) then
@@ -269,10 +316,12 @@ function unjailPlayerOpenDoor(player)
 
         triggerClientEvent(player, "USGcnr_jail.onLeaveJail", player)
         removeEventHandler("onPlayerSpawn", player, onJailedPlayerSpawn)
-		toggleControl ( player, "fire", true )
-		toggleControl ( player, "jump", true )
+        toggleControl ( player, "fire", true )
+        toggleControl ( player, "jump", true )
     end
 end
+
+
 
 function onJailedPlayerSpawn()
     if(jailedPlayers[source]) then
