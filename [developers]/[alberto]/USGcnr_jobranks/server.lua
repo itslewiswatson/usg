@@ -110,7 +110,7 @@ function getPlayerJobRank(player, jobName)
 				return rank
 			end
 		else
-			outputDebugString("Error getting ranks from job name given. (job name is wrong)", 1)
+			return false
 		end
 	else
 		outputDebugString("Error on getting player job rank. (No player and/or job name given)", 1)
@@ -160,16 +160,13 @@ function givePlayerJobExp(player, jobName, expToGive)
 			setAccountData(plrAcc, dataName, newJobExp)
 			local checkNewJobRank = getPlayerJobRank(player, jobName)
 
-			outputChatBox(currentJobRank .. ", " .. checkNewJobRank, player)
-
 			if (checkNewJobRank ~= currentJobRank) then
 				local jobBonus = getJobBonus(player, jobName, checkNewJobRank)
 
 				if (jobBonus) then
-					exports.USGmsg:msg(player, "You have been promoted to " .. checkNewJobRank .. "! You have received a bonus of $" .. jobBonus, 255, 255, 0)
+					exports.USGmsg:msg(player, "You have been promoted to " .. checkNewJobRank .. "! You have received a bonus of $" .. exports.USGmisc:convertNumber(jobBonus), 255, 255, 0)
+					givePlayerMoney(player, jobBonus)
 				end
-			else
-				outputChatBox("No rank difference")
 			end
 		end
 	end
@@ -185,7 +182,6 @@ function getPlayerJobExp(player, jobName)
 		local jobExp = getAccountData(plrAcc, dataName)
 
 		if (jobExp) then
-			outputChatBox(jobName .. ": " .. jobExp, player, 255, 255, 0)
 			return jobExp
 		end
 	end
