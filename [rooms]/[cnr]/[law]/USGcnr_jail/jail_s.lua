@@ -269,7 +269,7 @@ function payJailFine(player)
         if ( onlineCops == 0 ) then return  exports.USGmsg:msg(player,"There is no online cops, you can't use /payjailfine", 255,255,255) end
         local x,_,_ = getTimerDetails(jailedPlayers[player].timer)
         local money = x * 0.13
-        if ( getPlayerMoney(player) < money ) return  exports.USGmsg:msg(player,"You don't have enough money.", 255,255,255) end
+        if ( getPlayerMoney(player) < money ) then return  exports.USGmsg:msg(player,"You don't have enough money.", 255,255,255) end
         takePlayerMoney(player,money)
         exports.USGmsg:msg(player,"You paid "..money.."$ for jail fine", 255,255,255)
         local jail = jails[jailedPlayers[player].jail] or jails.LV
