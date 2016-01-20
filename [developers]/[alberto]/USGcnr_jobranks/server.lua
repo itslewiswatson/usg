@@ -201,6 +201,7 @@ function createData()
 			--If they don't have it
 			if (not checkAccData) then
 				setAccountData(plrAcc, "jobExp." .. b, 0) --Set it for them.
+				outputChatBox("No account data for jobExp." .. b, source)
 			end
 		end
 	else
