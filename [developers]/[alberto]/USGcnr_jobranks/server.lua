@@ -1,3 +1,6 @@
+------------------------------------------------------------
+--Job ranks table
+------------------------------------------------------------
 local jobRanks = {
 	["Pilot"] = {
 		--syntax:
@@ -20,6 +23,9 @@ local jobRanks = {
 	},
 } 
 
+----------------------------------------------------------------------------------------------
+--Job bonuses table which stores the given bonus amount for a rank when a player ranks up
+----------------------------------------------------------------------------------------------
 local jobBonuses = {
 	--[Job name] = {Ranks go in here, follow syntax below}
 	["Pilot"] = {
@@ -42,7 +48,10 @@ local jobBonuses = {
 	},
 }
 
+------------------------------------------------------------
 --Converts jobID to the actual name
+--NOT NEEDED - REMOVE ONCE KNOWN ITS WORKING
+------------------------------------------------------------
 local dataNameFromJobName = {
 	["Bus Driver"] = "busDriver",
 	["Criminal"] = "criminal",
@@ -60,13 +69,27 @@ local dataNameFromJobName = {
 	["Taxi Driver"] = "taxiDriver",
 	["Train Driver"] = "trainDriver",
 	["Truck Driver"] = "truckDriver",
-
 }
 
+------------------------------------------------------------
+--All the job IDs
+------------------------------------------------------------
+local jobIDs = {
+	"pilot",
+	"police",
+	"trucker",
+	"medic",
+	"Mechanic",
+	"criminal",
+}
+
+------------------------------------------------------------
+--Gets the players current job rank (the rank name, not exp)
+------------------------------------------------------------
 function getPlayerJobRank(player, jobName)
 	if (player and isElement(player) and getElementType(player) == "player" and jobName) then
 		if (jobRanks[jobName]) then
-			local dataName = "jobExp." .. dataNameFromJobName[jobName]
+			local dataName = "jobExp." .. jobName
 			local plrAcc = getPlayerAccount(player)
 			local jobExp = getAccountData(plrAcc, dataName)
 
@@ -92,7 +115,7 @@ function getPlayerJobRank(player, jobName)
 	end
 end
 
---Since we need to get the client and not parse player as a variable (for security reasons)
+--[[--Since we need to get the client and not parse player as a variable (for security reasons)
 --make an event that then activates the getPlayerJobRank function
 addEvent("getJobRank", true)
 addEventHandler("getJobRank", root, 
@@ -103,9 +126,10 @@ addEventHandler("getJobRank", root,
 			end
 		end
 	end
-)
-
+)]]
+------------------------------------------------------------
 --Gets the job bonus value from a given job and the rank
+------------------------------------------------------------
 function getJobBonus(player, jobName, newRank)
 	if (player and isElement(player) and jobName and newRank) then
 		if (jobBonuses[jobName]) then
@@ -118,10 +142,13 @@ function getJobBonus(player, jobName, newRank)
 	end
 end
 
+------------------------------------------------------------
 --Handles giving player job experience for a given job.
+------------------------------------------------------------
 function givePlayerJobExp(player, jobName, expToGive)
 	if (player and isElement(player) and jobName and expToGive) then
-		local dataName = "jobExp." .. dataNameFromJobName[jobName]
+		--local dataName = "jobExp." .. dataNameFromJobName[jobName]
+		local dataName = "jobExp." .. jobName
 		local plrAcc = getPlayerAccount(player)
 		local currentJobExp = getAccountData(plrAcc, dataName)
 
@@ -135,7 +162,10 @@ function givePlayerJobExp(player, jobName, expToGive)
 
 			if (checkNewJobRank ~= currentJobRank) then
 				local jobBonus = getJobBonus(player, jobName, checkNewJobRank)
-				exports.USGmsg:msg(player, "You have been promoted to " .. checkNewJobRank .. "! You have received a bonus of $" .. jobBonus, 255, 255, 0)
+
+				if (jobBonus) then
+					exports.USGmsg:msg(player, "You have been promoted to " .. checkNewJobRank .. "! You have received a bonus of $" .. jobBonus, 255, 255, 0)
+				end
 			else
 				outputChatBox("No rank difference")
 			end
@@ -143,6 +173,9 @@ function givePlayerJobExp(player, jobName, expToGive)
 	end
 end
 
+------------------------------------------------------------
+--Gets the players job Exp for the given job name/id
+------------------------------------------------------------
 function getPlayerJobExp(player, jobName)
 	if (player and isElement(player) and jobName) then
 		local plrAcc = getPlayerAccount(player)
@@ -156,11 +189,36 @@ function getPlayerJobExp(player, jobName)
 	end
 end
 
+------------------------------------------------------------
+--Check if player has job Exp data for all jobs on Login
+------------------------------------------------------------
+function createData()
+	if (not isGuestAccount(getPlayerAccount(source))) then
+		local plrAcc = getPlayerAccount(source) --get players account
+
+		--Loop through jobIDs table
+		for a,b in pairs(jobIDs) do
+			local checkAccData = getAccountData(plrAcc, "jobExp." .. b) --Check if the player has the data in their account data
+
+			--If they don't have it
+			if (not checkAccData) then
+				setAccountData(plrAcc, "jobExp." .. b, 0) --Set it for them.
+			end
+		end
+	else
+		outputDebugString("Player not logged in for createData!", 1)
+		return
+	end
+end
+addEventHandler("onPlayerLogin", root, createData)
+
+------------------------------------------------------------------------------------------------------------------------
 --Development functions
 addCommandHandler("checkjobexp", 
 	function(player, cmd, jobName)
 		if (jobName) then
-			getPlayerJobExp(player, jobName)
+			local exp = getPlayerJobExp(player, jobName)
+			outputChatBox("Checked, " .. exp, player)
 		end
 	end
 )
