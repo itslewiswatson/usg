@@ -3,7 +3,7 @@ jobMenuGUI = {}
 
 function createJobMenu()
     local screenW, screenH = guiGetScreenSize()
-    jobMenuGUI.window = guiCreateWindow((screenW - 264) / 2, (screenH - 259) / 2, 264, 259, "Employment", false)
+    jobMenuGUI.window = guiCreateWindow((screenW - 264) / 2, (screenH - 259) / 2,  239, 230, "Employment", false)
     guiWindowSetSizable(jobMenuGUI.window, false)
     jobMenuGUI.close  = guiCreateButton(66, 183, 104, 37, "Close", false, jobMenuGUI.window)
     jobMenuGUI.quit = guiCreateButton(65, 143, 105, 35, "Quit job", false,jobMenuGUI.window)
@@ -25,7 +25,7 @@ end
 
 function closeJobMenu()
     if(isElement(jobMenuGUI.window) and guiGetVisible(jobMenuGUI.window)) then
-        guiGetVisible(jobMenuGUI.window, false)
+        guiSetVisible(jobMenuGUI.window, false)
         showCursor("menu", false)
     end
 end
