@@ -151,6 +151,7 @@ function givePlayerJobExp(player, jobName, expToGive)
 	if (player and isElement(player) and jobName and expToGive) then
 		--local dataName = "jobExp." .. dataNameFromJobName[jobName]
 		local dataName = "jobExp." .. jobName
+		outputChatBox(dataName, player)
 		local plrAcc = getPlayerAccount(player)
 		local currentJobExp = getAccountData(plrAcc, dataName)
 
@@ -183,6 +184,9 @@ function getPlayerJobExp(player, jobName)
 
 		if (jobExp) then
 			return jobExp
+		else
+			setAccountData(plrAcc, dataName, 0)
+			return 0
 		end
 	end
 end
