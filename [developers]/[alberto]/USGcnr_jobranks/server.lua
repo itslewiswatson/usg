@@ -223,8 +223,9 @@ addCommandHandler("checkjobexp",
 addCommandHandler("testexp", 
 	function(player, cmd, jobName, exp)
 		if (jobName and exp) then
-			outputChatBox("Triggered from command")
+			outputChatBox("Triggered from command", player)
 			givePlayerJobExp(player, jobName, exp)
+			outputChatBox("test", player)
 		end
 	end
 )
