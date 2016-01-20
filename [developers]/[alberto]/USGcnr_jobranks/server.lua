@@ -1,8 +1,9 @@
 ------------------------------------------------------------
 --Job ranks table
+--Job name needs to be the jobID
 ------------------------------------------------------------
 local jobRanks = {
-	["Pilot"] = {
+	["pilot"] = {
 		--syntax:
 		--[exp needed] = {rankName = the rank name, reward = amount of money given when player ranks up},
 		[0] = {rankName = "Junior Flight Officer", reward = 0},
@@ -25,10 +26,11 @@ local jobRanks = {
 
 ----------------------------------------------------------------------------------------------
 --Job bonuses table which stores the given bonus amount for a rank when a player ranks up
+--Job name needs to be the jobID
 ----------------------------------------------------------------------------------------------
 local jobBonuses = {
 	--[Job name] = {Ranks go in here, follow syntax below}
-	["Pilot"] = {
+	["pilot"] = {
 		--[rank name] = bonus given when player ranks up,
 		["Junior Flight Officer"] = 0,
 		["Flight Officer"] = 1000,
@@ -217,8 +219,7 @@ addEventHandler("onPlayerLogin", root, createData)
 addCommandHandler("checkjobexp", 
 	function(player, cmd, jobName)
 		if (jobName) then
-			local exp = getPlayerJobExp(player, jobName)
-			outputChatBox("Checked, " .. exp, player)
+			getPlayerJobExp(player, jobName)
 		end
 	end
 )
