@@ -95,20 +95,23 @@ function getPlayerJobRank(player, jobName)
 			local plrAcc = getPlayerAccount(player)
 			local jobExp = getAccountData(plrAcc, dataName)
 
-			if (jobExp) then
-				local rank = false
-
-				for k,v in pairs(jobRanks[jobName]) do
-					if (not rank) then
-						rank = v.rankName
-					elseif (jobExp >= k) then
-						rank = v.rankName
-					else
-						break
-					end
-				end
-				return rank
+			if (not jobExp) then
+				setAccountData(plrAcc, dataName, 0)
+				jobExp = 0
 			end
+
+			local rank = false
+
+			for k,v in pairs(jobRanks[jobName]) do
+				if (not rank) then
+					rank = v.rankName
+				elseif (jobExp >= k) then
+					rank = v.rankName
+				else
+					break
+				end
+			end
+			return rank
 		else
 			return false
 		end
@@ -155,19 +158,22 @@ function givePlayerJobExp(player, jobName, expToGive)
 		local plrAcc = getPlayerAccount(player)
 		local currentJobExp = getAccountData(plrAcc, dataName)
 
-		if (currentJobExp) then
-			local currentJobRank = getPlayerJobRank(player, jobName)
-			local newJobExp = currentJobExp + expToGive
-			setAccountData(plrAcc, dataName, newJobExp)
-			local checkNewJobRank = getPlayerJobRank(player, jobName)
+		if (not currentJobExp) then
+			setAccountData(plrAcc, dataName, 0)
+			currentJobExp = 0
+		end
 
-			if (checkNewJobRank ~= currentJobRank) then
-				local jobBonus = getJobBonus(player, jobName, checkNewJobRank)
+		local currentJobRank = getPlayerJobRank(player, jobName)
+		local newJobExp = currentJobExp + expToGive
+		setAccountData(plrAcc, dataName, newJobExp)
+		local checkNewJobRank = getPlayerJobRank(player, jobName)
 
-				if (jobBonus) then
-					exports.USGmsg:msg(player, "You have been promoted to " .. checkNewJobRank .. "! You have received a bonus of $" .. exports.USGmisc:convertNumber(jobBonus), 255, 255, 0)
-					givePlayerMoney(player, jobBonus)
-				end
+		if (checkNewJobRank ~= currentJobRank) then
+			local jobBonus = getJobBonus(player, jobName, checkNewJobRank)
+
+			if (jobBonus) then
+				exports.USGmsg:msg(player, "You have been promoted to " .. checkNewJobRank .. "! You have received a bonus of $" .. exports.USGmisc:convertNumber(jobBonus), 255, 255, 0)
+				givePlayerMoney(player, jobBonus)
 			end
 		end
 	end
@@ -193,6 +199,7 @@ function getPlayerJobExp(player, jobName)
 	end
 end
 
+--[[
 ------------------------------------------------------------
 --Check if player has job Exp data for all jobs on Login
 ------------------------------------------------------------
@@ -216,7 +223,7 @@ function createData()
 		return
 	end
 end
-addEventHandler("onPlayerLogin", root, createData)
+addEventHandler("onPlayerLogin", root, createData)]]
 
 ------------------------------------------------------------------------------------------------------------------------
 --Development functions
