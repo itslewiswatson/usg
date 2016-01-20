@@ -1,42 +1,63 @@
-locations =
-{
-	{ 76.698150634766, -244.18774414063, 1.5, "" },
-	{ 1348.78, 355.87, 19.69, " - BIO-Engineering" },
-	{ 2461.66, -2110.8, 13.54, " - Oil Plant" },
-	{ 2183.56,-2274.58,13.5, " - Train Station" },
-	{ 2757.73, -2394.69, 13.63, " - Docks" },
-	{ -1534.42, -2748.16, 48.53, " - Gas Station" },
-	{ -2109.35, -93.63, 35.32, "" },
-	{ -334.22, 1522.82, 75.35, "" },
-	{ -479.57, -504.42, 25.51, "" },
-	{ -1048.74, -655.38, 32, "" },
-	{ 688, 1844.42, 5.5, "" },
-	{ -1742.28, -106.07, 3.55, " - Docks" },
-	{ -2100.42, -2255.42, 30.62, "" },
-	{ -74.57, -1129.11, 1.07, " - RS Haul" },
-	{ 1018.1, -333.53, 73.99, " - Farm" },
-	{ -1843.15, 135.49, 15.11, " - Solarin Factory" },
-	{ 0, 20, 4, " - Farm" },
-	{ 2100.55, -2218.26, 13.54, " - Airport" },
-	{ -110.71, 1117.29, 19.74, "" },
-	{ -531.12, 2622.91, 53.41, "" },
-	{ -743.63, 2740.09, 47.7, "" },
-	{ -1116.82, -1660.43, 76.36, " - Farm" },
-	{ -2198.19, -2435.08, 30.62, "" },
-	{ -265.66, -2166.94, 28.86, "" },
-	{ 382.7, -1861.36, 7.83, "" },
-	{ 1775.6, -2049.4, 13.56, "" },
-	{ 1780.85, -1928.19, 13.38, "" },
-	{ 2393.54, -1474.36, 23.81, "" },
-	{ 2412.35, -2470.56, 13.62, "" },
-	{ 2317.81, -74.56, 26.48, "" },
-	{ 1694.32, 693.18, 10.82, "" },
-	{ 2634.6, 1075.75, 10.82, " - Gas Station" },
-	{ 1618, 1623, 10.82, " - Airport" },
-	{ 2050.45, 2238.89, 10.82, "" },
-	{ 1403.1953125, 991.703125, 10.8203125, " - Depot"}
+------------------------------------------------------------------------
+-- Global reference to this object.
+------------------------------------------------------------------------
+LocationsShared = {
+	locations = {
+		{ 76.698150634766, -244.18774414063, 1.5, "" },
+		{ 1348.78, 355.87, 19.69, " - BIO-Engineering" },
+		{ 2461.66, -2110.8, 13.54, " - Oil Plant" },
+		{ 2183.56,-2274.58,13.5, " - Train Station" },
+		{ 2757.73, -2394.69, 13.63, " - Docks" },
+		{ -1534.42, -2748.16, 48.53, " - Gas Station" },
+		{ -2109.35, -93.63, 35.32, "" },
+		{ -334.22, 1522.82, 75.35, "" },
+		{ -479.57, -504.42, 25.51, "" },
+		{ -1048.74, -655.38, 32, "" },
+		{ 688, 1844.42, 5.5, "" },
+		{ -1742.28, -106.07, 3.55, " - Docks" },
+		{ -2100.42, -2255.42, 30.62, "" },
+		{ -74.57, -1129.11, 1.07, " - RS Haul" },
+		{ 1018.1, -333.53, 73.99, " - Farm" },
+		{ -1843.15, 135.49, 15.11, " - Solarin Factory" },
+		{ 0, 20, 4, " - Farm" },
+		{ 2100.55, -2218.26, 13.54, " - Airport" },
+		{ -110.71, 1117.29, 19.74, "" },
+		{ -531.12, 2622.91, 53.41, "" },
+		{ -743.63, 2740.09, 47.7, "" },
+		{ -1116.82, -1660.43, 76.36, " - Farm" },
+		{ -2198.19, -2435.08, 30.62, "" },
+		{ -265.66, -2166.94, 28.86, "" },
+		{ 382.7, -1861.36, 7.83, "" },
+		{ 1775.6, -2049.4, 13.56, "" },
+		{ 1780.85, -1928.19, 13.38, "" },
+		{ 2393.54, -1474.36, 23.81, "" },
+		{ 2412.35, -2470.56, 13.62, "" },
+		{ 2317.81, -74.56, 26.48, "" },
+		{ 1694.32, 693.18, 10.82, "" },
+		{ 2634.6, 1075.75, 10.82, " - Gas Station" },
+		{ 1618, 1623, 10.82, " - Airport" },
+		{ 2050.45, 2238.89, 10.82, "" },
+		{ 1403.1953125, 991.703125, 10.8203125, " - Depot"}
+	},
+	locationMarkers = nil,
+	isZonesLoaded = false,
+	isTransporting = false,
+	destinationMarker = nil,
+	rewardMultiplier = 0.3,
+	destionationBlip = nil,
+	transportReward = 0,
+	playerTruck = nil
 }
 
+------------------------------------------------------------------------
+-- Local reference to this object.
+------------------------------------------------------------------------
+local this = LocationsShared
+
+------------------------------------------------------------------------
+-- Given two points and a distance, returns two other points at that 
+-- distance.
+------------------------------------------------------------------------
 function getPointFromDistanceRotation(x, y, dist, angle)
     local a = math.rad(angle-90);
     local dx = math.cos(a) * dist;
@@ -44,77 +65,99 @@ function getPointFromDistanceRotation(x, y, dist, angle)
     return x+dx, y+dy;
 end
 
-local zonesLoaded = false
-local locationMarkers
 local locationGUI = {}
 local playerTruck, playerTrailer
 local transportReward
 local lastHit
 
+------------------------------------------------------------------------
+-- Creates all delivery markers.
+------------------------------------------------------------------------
 function loadLocations()
-	locationMarkers = {}
+	this.locationMarkers = {}
 	local roomDimension = exports.USGrooms:getRoomDimension("cnr")
-	for i, location in ipairs(locations) do
+	for i, location in ipairs(this.locations) do
 		local x,y,z = unpack(location,1,3)
-		if(not zonesLoaded) then
+		if(not this.isZonesLoaded) then
 			location[4] = getZoneName(x,y,z, true)..location[4]
 		end
-		local element = createMarker(x,y,z-1, "cylinder", 2,0,200,0)
-		setElementDimension(element, roomDimension)
-		addEventHandler("onClientMarkerHit", element, onLocationMarkerHit)
-		locationMarkers[element] = location
+		local marker = createMarker(x,y,z-1, "cylinder", 2,0,200,0)
+		setElementDimension(marker, roomDimension)
+		addEventHandler("onClientMarkerHit", marker, onLocationMarkerHit)
+		this.locationMarkers[marker] = location
 	end
-	zonesLoaded = true
+	this.isZonesLoaded = true
 end
 
+------------------------------------------------------------------------
+-- Unloads all delivery markers.
+------------------------------------------------------------------------
 function unloadLocations()
-	if(locationMarkers) then
-		for marker, location in pairs(locationMarkers) do
-			if(isElement(marker)) then
-				destroyElement(marker)
-			end
+	if not this.locationMarkers then return false end
+	for marker, location in pairs(locationMarkers) do
+		if(isElement(marker)) then
+			destroyElement(marker)
 		end
 	end
-	locationMarkers = nil
+	this.locationMarkers = nil
 end
 
+------------------------------------------------------------------------
+-- Checks if is player the vehicle driver.
+------------------------------------------------------------------------
+function isPlayerVehicleDriver(player)
+	if(not getElementType(player) == "player") then return false end
+	return (isPedInVehicle(player) and getVehicleController(getPedOccupiedVehicle(player)) == player)
+end
+
+------------------------------------------------------------------------
+-- Called when player hits the delivery marker.
+------------------------------------------------------------------------
 function onLocationMarkerHit(hitElement, dimensions)
 	if(hitElement ~= localPlayer or not dimensions) then return end
-	if(not isPedInVehicle(hitElement) or getVehicleController(getPedOccupiedVehicle(hitElement)) ~= localPlayer) then
-		exports.USGmsg:msg("You have to be in your truck to use this marker.", 255,0,0)
+	if(not isPlayerVehicleDriver(hitElement)) then
+		exports.USGmsg:msg("You have to be driving your truck to use this marker.", 255, 0, 0)
 		return
 	end
-	if(transporting and source == destinationMarker) then
+	if(this.isTransporting and source == this.destinationMarker) then
 		onDestinationHit()
 	else
 		openLocationGUI(source)
 	end
 end
 
+------------------------------------------------------------------------
+-- Calculates the transport reward based on distance
+------------------------------------------------------------------------
 function calculateTransportReward(source, target)
 	local startPrice = 250
 	local x1,y1,z1 = unpack(source)
 	local x2,y2,z2 = unpack(target)
-	local distancePrice = (getDistanceBetweenPoints3D(x1,y1,z1,x2,y2,z2)*1.5)
+	local distancePrice = (getDistanceBetweenPoints3D(x1,y1,z1,x2,y2,z2)*this.rewardMultiplier)
 	local price = startPrice+distancePrice
 	return math.floor((price / 100)+0.5)*100
 end
 
+------------------------------------------------------------------------
+-- Called when user clicks on "Start" button on Job Window.
+------------------------------------------------------------------------
 function toggleTransport()
-	if(transporting) then
+	if(this.isTransporting) then
 		stopTransport()
 	else
 		local selected = exports.USGGUI:gridlistGetSelectedItem(locationGUI.grid)
-		if(selected) then
-			local i = exports.USGGUI:gridlistGetItemData(locationGUI.grid, selected, 1)
-			local location = locations[i]
-			startTransport(location)
-			closeLocationGUI()
-		end
+		if(not selected) then return false end
+		local i = exports.USGGUI:gridlistGetItemData(locationGUI.grid, selected, 1)
+		local location = this.locations[i]
+		startTransport(location)
+		closeLocationGUI()
 	end
 end
 
-function spaceForTrailer(vehicle)
+------------------------------------------------------------------------
+-- Checks if is there enough space for trailer that will be attached.
+------------------------------------------------------------------------
+function isThereSpaceForTrailer(vehicle)
 	if(not vehicle) then return false end
 	local x,y,z = getElementPosition(vehicle)
 	local rx,ry,rz = getElementRotation(vehicle)
@@ -122,31 +165,33 @@ function spaceForTrailer(vehicle)
 	return isLineOfSightClear(x,y,z-1,endX, endY, z-1,true,true,true,true,true,false,false,vehicle)
 end
 
+------------------------------------------------------------------------
+-- Starts to transport.
+------------------------------------------------------------------------
 function startTransport(location)
-	if(not transporting) then
-		local truck = getPedOccupiedVehicle(localPlayer)
-		if(not spaceForTrailer(truck)) then
-			exports.USGmsg:msg("There is no room for a trailer!", 255, 0, 0)
-			return false
-		end
-		transporting = true
-		for marker, loc in pairs(locationMarkers) do
-			if(loc == location) then
-				destinationMarker = marker
-				break
-			end
-		end
-		local x,y,z = location[1],location[2],location[3]
-		destinationBlip = createBlip(x,y,z,51)
-		transportReward = calculateTransportReward({getElementPosition(lastHit)}, {x,y,z})
-		playerTruck = truck
-
-		triggerServerEvent("USGcnr_job_trucker.onTransportStart", localPlayer)
-		updateLocationGUI()
-		addEventHandler("onClientVehicleExplode", playerTruck, onTruckExplode)
-		addEventHandler("onClientVehicleEnter", playerTruck, onTruckEnter)
-		addEventHandler("onClientVehicleExit", playerTruck, onTruckExit)
+	if(this.isTransporting) then return false end
+	local truck = getPedOccupiedVehicle(localPlayer)
+	if(not isThereSpaceForTrailer(truck)) then
+		exports.USGmsg:msg("There is no room for a trailer!", 255, 0, 0)
+		return false
 	end
+	this.isTransporting = true
+	for marker, loc in pairs(locationMarkers) do
+		if(loc == location) then
+			this.destinationMarker = marker
+			break
+		end
+	end
+	local x,y,z = location[1],location[2],location[3]
+	this.destinationBlip = createBlip(x,y,z,51)
+	this.transportReward = calculateTransportReward({getElementPosition(lastHit)}, {x,y,z})
+	this.playerTruck = truck
+
+	triggerServerEvent("USGcnr_job_trucker.onTransportStart", localPlayer)
+	updateLocationGUI()
+	addEventHandler("onClientVehicleExplode", playerTruck, onTruckExplode)
+	addEventHandler("onClientVehicleEnter", playerTruck, onTruckEnter)
+	addEventHandler("onClientVehicleExit", playerTruck, onTruckExit)
 end
 
 addEvent("USGcnr_job_trucker.onTrailerAttached", true)
@@ -225,7 +270,7 @@ function updateLocationGUI()
 	exports.USGGUI:setText(locationGUI.toggle, transporting and "Stop" or "Start")
 	if(not transporting) then
 		local sourcePosition = {getElementPosition(lastHit)}
-		for i, location in ipairs(locations) do
+		for i, location in ipairs(this.locations) do
 			if(location ~= mLocation) then
 				local row = exports.USGGUI:gridlistAddRow(locationGUI.grid)
 				exports.USGGUI:gridlistSetItemText(locationGUI.grid, row, 1, location[4])
