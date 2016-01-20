@@ -223,7 +223,8 @@ addEventHandler("onPlayerLogin", root, createData)
 addCommandHandler("checkjobexp", 
 	function(player, cmd, jobName)
 		if (jobName) then
-			getPlayerJobExp(player, jobName)
+			local exp = getPlayerJobExp(player, jobName)
+			outputChatBox(jobName .. ", " .. exp, player)
 		end
 	end
 )
