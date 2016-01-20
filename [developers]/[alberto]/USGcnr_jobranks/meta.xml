@@ -1,0 +1,7 @@
+<meta>
+	<script src="server.lua" type="server"/>
+	
+	<export function="getPlayerJobExp" type="server"/>
+	<export function="givePlayerJobExp" type="server"/>
+	<export function="getPlayerJobRank" type="server"/>
+</meta>
