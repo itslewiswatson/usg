@@ -290,7 +290,7 @@ function payJailFine(player)
         toggleControl ( player, "jump", true )
         for k,v in ipairs(getElementsByType("player")) do 
             y = exports.USGcnr_jobs:getPlayerJob(v)
-            if ( y == "police")
+            if ( y == "police") then
                 givePlayerMoney(v,money/onlineCops(player)) 
                 exports.USGmsg:msg(v,"You got "..money/onlineCops(player).."$ from a criminal who used /payjailfine", 255,255,255)
             end 
