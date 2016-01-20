@@ -2,7 +2,7 @@
 --Job ranks table
 --Job name needs to be the jobID
 ------------------------------------------------------------
-local jobRanks = {
+local jobRanks = { 
 	["pilot"] = {
 		--syntax:
 		--[exp needed] = {rankName = the rank name, reward = amount of money given when player ranks up},
