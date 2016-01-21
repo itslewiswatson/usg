@@ -53,6 +53,7 @@ function createMarket()
 
 
     addEventHandler("onClientGUIClick", marketGUI.windClose, closeMarket, false)
+    addEventHandler("onClientGUIClick", marketGUI.invPutItem, putOnMarket, false)
 end
 
 function openMarket()
@@ -82,25 +83,33 @@ function toogleMarket()
 end
 bindKey("F7", "down", toogleMarket)
 
-playerAccountData = {}
-medicines = { "Aspirin","Steroid","Adderall" }
-weaponID = { 16,17,18,19,39,1,2,3,4,5,6,7,8,9,22,23,24,25,26,27,28,29,32,30,31,33,34,10,11,12,46}
-data = playerAccountData[localPlayer]
 
 function updateInv()
 guiGridListClear(marketGUI.invGrid)
     for k,v in ipairs(medicines) do
-        local row = guiGridListAddRow(marketGUI.invGrid)
-        guiGridListSetItemText ( marketGUI.invGrid , row, 1, medicines[k], false, false )
-        guiGridListSetItemText ( marketGUI.invGrid , row, 2, exports.USGcnr_medicines:getPlayerMedicineAmount(v), false, false )    
-    end
-    local weapons = fromJSON(weapons) or {}
-    for i=1,#weapons do
-        local row = guiGridListAddRow(marketGUI.invGrid)
-        if(weapons[i][1] and weapons[i][2] > 0 and weapons[i][1] ~= 40) then -- weapon exists in mysql and weapon is bought
-            local ammo = tonumber(weapons[i][2])
-            guiGridListSetItemText ( marketGUI.invGrid , row, 1, weapons[i][1], false, false )
-            guiGridListSetItemText ( marketGUI.invGrid , row, 2, ammo, false, false )    
+        if exports.USGcnr_medicines:getPlayerMedicineAmount(v) > 0 then
+            local row = guiGridListAddRow(marketGUI.invGrid)
+            guiGridListSetItemText ( marketGUI.invGrid , row, 1, medicines[k], false, false )
+            guiGridListSetItemText ( marketGUI.invGrid , row, 2, exports.USGcnr_medicines:getPlayerMedicineAmount(v), false, false )    
         end
     end
 end
+
+local maxPrice = 500
+local minPrice = 100
+
+function putOnMarket()
+local selected = guiGridListGetSelectedItems(marketGUI.invGrid)
+    if ( selected ) then 
+        if ( guiEditGetCaretIndex(marketGUI.invNumberOfHits) > 0 and guiEditGetCaretIndex(marketGUI.invPrice) > minPrice and guiEditGetCaretIndex(marketGUI.invPrice) < maxPrice then
+            local row = guiGridListAddRow(marketGUI.marketGrid)
+            guiGridListSetItemText ( marketGUI.marketGrid , row, 1, selected[1], false, false )
+            guiGridListSetItemText ( marketGUI.marketGrid , row, 2, guiEditGetCaretIndex(marketGUI.invNumberOfHits), false, false )
+            guiGridListSetItemText ( marketGUI.marketGrid , row, 3, guiEditGetCaretIndex(marketGUI.invPrice), false, false )
+            guiGridListSetItemText ( marketGUI.marketGrid , row, 3, getPlayerName(localPlayer), false, false )
+        end
+    end
+end
+
+
+
