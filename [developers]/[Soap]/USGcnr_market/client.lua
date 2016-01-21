@@ -92,8 +92,8 @@ guiGridListClear(marketGUI.invGrid)
     for k,medicinesAmount in ipairs(medicines) do
 
             local row = guiGridListAddRow(invGrid)
-            guiGridListSetItemText ( marketGUI.invGrid), row, 1, medicines[k], false, false )
-            guiGridListSetItemText ( marketGUI.invGrid), row, 2, medicinesAmount, false, false )    
+            guiGridListSetItemText ( marketGUI.invGrid , row, 1, medicines[k], false, false )
+            guiGridListSetItemText ( marketGUI.invGrid , row, 2, medicinesAmount, false, false )    
         
     end
 end
