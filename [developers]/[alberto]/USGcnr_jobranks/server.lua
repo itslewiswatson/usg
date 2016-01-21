@@ -54,6 +54,7 @@ local jobBonuses = {
 	},
 }
 
+--[[
 ------------------------------------------------------------
 --Converts jobID to the actual name
 --NOT NEEDED - REMOVE ONCE KNOWN ITS WORKING
@@ -75,7 +76,7 @@ local dataNameFromJobName = {
 	["Taxi Driver"] = "taxiDriver",
 	["Train Driver"] = "trainDriver",
 	["Truck Driver"] = "truckDriver",
-}
+}]]
 
 ------------------------------------------------------------
 --All the job IDs
@@ -196,6 +197,27 @@ function givePlayerJobExp(player, jobName, expToGive)
 				if (jobBonus) then
 					exports.USGmsg:msg(player, "You have been promoted to " .. checkNewJobRank .. "! You have received a bonus of $" .. exports.USGmisc:convertNumber(jobBonus), 255, 255, 0)
 					givePlayerMoney(player, jobBonus)
+				end
+			end
+		else
+			outputDebugString("No job exp table for player: " .. getPlayerName(player), 1)
+		end
+	end
+end
+
+------------------------------------------------------------ 
+--Handles setting player job experience for a given job.
+------------------------------------------------------------
+function setPlayerJobExp(player, jobName, expToSet)
+	if (player and isElement(player) and jobName and expToSet) then
+		if (jobExpTable[player]) then
+			local currentJobExp = getPlayerJobExp(player, jobName)
+			local currentJobRank = getPlayerJobRank(player, jobName)
+
+			for k,v in pairs(jobExpTable[player]) do
+				if (jobName == v.jobName) then
+					v.exp = expToSet
+					break
 				end
 			end
 		else

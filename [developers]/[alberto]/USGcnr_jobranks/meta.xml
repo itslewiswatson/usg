@@ -3,5 +3,6 @@
 	
 	<export function="getPlayerJobExp" type="server"/>
 	<export function="givePlayerJobExp" type="server"/>
+	<export function="setPlayerJobExp" type="server"/>
 	<export function="getPlayerJobRank" type="server"/>
 </meta>
