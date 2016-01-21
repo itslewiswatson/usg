@@ -102,6 +102,13 @@ local function toggle()
 	end
 end
 
+addCommandHandler("ok",function()
+    for k,v in pairs(apps) do 
+		outputChatBox(tostring(k).."    "..tostring(v)
+	end
+end
+)
+
 bindKey ( "b", "down", toggle)
 bindKey(",","down",processInput,"left")
 bindKey(".","down",processInput,"right")
