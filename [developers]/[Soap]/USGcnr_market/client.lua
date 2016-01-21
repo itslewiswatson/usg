@@ -77,6 +77,13 @@ function toogleMarket()
         closeMarket()
     elseif(exports.USGrooms:getPlayerRoom() == "cnr") then
         openMarket()
+        outputChatBox(exports.USGcnr_medicines:getPlayerMedicineAmount("Aspirin"))
     end
 end
 bindKey("F7", "down", toogleMarket)
+
+function updateInv()
+guiGridListClear(invGrid)
+
+
+end
