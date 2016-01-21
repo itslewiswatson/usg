@@ -100,6 +100,7 @@ local maxPrice = 500
 local minPrice = 100
 
 function putOnMarket()
+outputChatBox("oaksd")
 local selected = guiGridListGetSelectedItems(marketGUI.invGrid)
     if ( selected ) then 
         if ( guiEditGetCaretIndex(marketGUI.invNumberOfHits) > 0 and guiEditGetCaretIndex(marketGUI.invPrice) > minPrice and guiEditGetCaretIndex(marketGUI.invPrice) < maxPrice ) then
