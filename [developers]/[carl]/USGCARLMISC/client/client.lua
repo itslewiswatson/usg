@@ -11,7 +11,7 @@ end
 
 local function selectApp(id)
 	selectedID = id
-	if(selectApp)then
+	if(selectedApp)then
 		selectedApp.isSelected = false
 	end
 	selectedApp = appsIDs[id]
