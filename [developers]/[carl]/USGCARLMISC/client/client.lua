@@ -2,19 +2,6 @@ local showing = false
 local selectedApp = nil
 local selectedID = nil
 
-local function toggle()
-	if(showing)then
-		showing = false
-		removeEventHandler("onClientRender", root,render)
-		selectedID = nil
-	else
-		showing = true
-		addEventHandler("onClientRender", root,render)
-		selectApp(1)
-	end
-end
-addCommandHandler("ok",toggle)
-
 local function selectApp(id)
 	selectedID = id
 	selectedApp = apps[selectedID]
@@ -90,6 +77,19 @@ local function render()
 		dxDrawMaterialLine3D ( x + apps.money.position.x * Mult,		y + apps.money.position.y * Mult,		z + apps.money.position.z * Mult + apps.money.size.default * Mult,			x + apps.money.position.x * Mult,		y + apps.money.position.y * Mult,		z + apps.money.position.z * Mult,		apps.money.icon,	apps.money.size.default * Mult		)
 	end		
 end
+
+local function toggle()
+	if(showing)then
+		showing = false
+		removeEventHandler("onClientRender", root,render)
+		selectedID = nil
+	else
+		showing = true
+		addEventHandler("onClientRender", root,render)
+		selectApp(1)
+	end
+end
+addCommandHandler("ok",toggle)
 
 local function tableSize(tab)
     local length = 0
