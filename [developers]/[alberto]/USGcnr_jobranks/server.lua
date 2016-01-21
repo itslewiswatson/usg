@@ -104,6 +104,15 @@ function loadDataOnStartup()
 end
 addEventHandler("onResourceStart", resourceRoot, loadDataOnStartup)
 
+function saveDataOnResourceStop()
+	for k,player in pairs(getElementsByType("player")) do
+		if (exports.USGrooms:getPlayerRoom(player) == "cnr") then
+			savePlayerJobExp(player)
+		end
+	end
+end
+addEventHandler("onResourceStop", resourceRoot, saveDataOnResourceStop)
+
 ------------------------------------------------------------
 --Gets the players current job rank (the rank name, not exp)
 ------------------------------------------------------------
