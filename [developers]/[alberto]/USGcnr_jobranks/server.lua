@@ -92,11 +92,17 @@ local jobIDs = {
 -----------------------------------------------------------------
 --Create MySQL table if it hasn't been created on resource start
 -----------------------------------------------------------------
-function createTable()
+function loadDataOnStartup()
 	exports.MySQL:execute("CREATE TABLE IF NOT EXISTS cnr_jobExp (username TEXT, jobExp TEXT)")
 	outputConsole("Done creating table")
+
+	for k,player in pairs(getElementsByType("player")) do
+		if (exports.USGrooms:getPlayerRoom(player) == "cnr") then
+			loadPlayerJobExp(player)
+		end
+	end
 end
-addEventHandler("onResourceStart", resourceRoot, createTable)
+addEventHandler("onResourceStart", resourceRoot, loadDataOnStartup)
 
 ------------------------------------------------------------
 --Gets the players current job rank (the rank name, not exp)
@@ -105,16 +111,6 @@ function getPlayerJobRank(player, jobName)
 	if (player and isElement(player) and getElementType(player) == "player" and jobName) then
 		if (jobRanks[jobName]) then
 			local jobExp = getPlayerJobExp(player, jobName)
-
-			--[[if (jobExpTable[player]) then
-				for k,v in pairs(jobExpTable[player]) do
-					if (v.jobName == jobName) then
-						jobExp = tonumber(v.exp)
-						break
-					end
-				end
-			end]]
-
 			local rank = false
 
 			for k,v in pairs(jobRanks[jobName]) do
@@ -135,18 +131,6 @@ function getPlayerJobRank(player, jobName)
 	end
 end
 
---[[--Since we need to get the client and not parse player as a variable (for security reasons)
---make an event that then activates the getPlayerJobRank function
-addEvent("getJobRank", true)
-addEventHandler("getJobRank", root, 
-	function(jobName)
-		if (jobName) then
-			if (isElement(client) and getElementType(client) == "player") then
-				getPlayerJobRank(client, jobName)
-			end
-		end
-	end
-)]]
 ------------------------------------------------------------
 --Gets the job bonus value from a given job and the rank
 ------------------------------------------------------------
