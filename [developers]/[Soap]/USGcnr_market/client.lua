@@ -95,6 +95,6 @@ guiGridListClear(marketGUI.invGrid)
     for k,v in ipairs(weaponID) do 
         local row = guiGridListAddRow(marketGUI.invGrid)
         guiGridListSetItemText ( marketGUI.invGrid , row, 1, getWeaponNameFromID(weaponID[k]), false, false )
-        guiGridListSetItemText ( marketGUI.invGrid , row, 2, getPedAmmoInClip(localPlayer,v), false, false )    
+        guiGridListSetItemText ( marketGUI.invGrid , row, 2, getWeaponAmmo(v), false, false )    
     end
 end
