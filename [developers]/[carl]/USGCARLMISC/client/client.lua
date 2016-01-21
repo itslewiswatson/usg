@@ -1,3 +1,4 @@
+
 local showing = false
 local selectedApp = nil
 local selectedID = nil
@@ -8,11 +9,9 @@ local function tableSize(tab)
     return length
 end
 
-
 local function selectApp(id)
 	selectedID = id
-	selectedApp = apps[id]
-	outputChatBox(tostring(selectedApp))
+	selectedApp = appsIDs[id]
 end
 
 local function selectPrevious()
@@ -34,7 +33,7 @@ local function selectNext()
 end
 
 local function selectEnter()
-	
+	outputChatBox(selectedApp.name)
 end
 
 local function processInput(_,_,action)
@@ -101,13 +100,6 @@ local function toggle()
 		selectApp(1)
 	end
 end
-
-addCommandHandler("ok",function()
-    for k,v in pairs(apps) do 
-		outputChatBox(tostring(k).."    "..tostring(v)
-	end
-end
-)
 
 bindKey ( "b", "down", toggle)
 bindKey(",","down",processInput,"left")
