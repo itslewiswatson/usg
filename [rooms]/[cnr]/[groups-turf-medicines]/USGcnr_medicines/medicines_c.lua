@@ -2,7 +2,7 @@ local medicinesGUI = {}
 function createDedicinesGUI()
 
     local screenW, screenH = guiGetScreenSize()
-    medicinesGUI.window = guiCreateWindow((screenW - 201) / 2, (screenH - 168) / 2, 201, 168, "Medicines", false)
+    medicinesGUI.window = guiCreateWindow((screenW - 201) / 2, (screenH - 168) / 2, 210, 175, "Medicines", false)
     guiWindowSetSizable(medicinesGUI.window, false)    
 
     exports.USGGUI:setDefaultTextAlignment("left","center")
@@ -16,7 +16,7 @@ function createDedicinesGUI()
     end
     medicinesGUI.amount = guiCreateEdit(5,y+5,110,25,"",false,medicinesGUI.window)
     medicinesGUI.take = guiCreateButton(130,y+5,60,25,"Take",false,medicinesGUI.window)
-    guiSetSize(medicinesGUI.window, 200, y+35, false)
+    guiSetSize(medicinesGUI.window, 200, y+35, true)
     addEventHandler("onClientGUIClick", medicinesGUI.take, onTakeMedicine, false)
 end
 
