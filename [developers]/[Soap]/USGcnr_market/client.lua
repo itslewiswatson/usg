@@ -58,9 +58,9 @@ end
 function openMarket()
     if(not isElement(marketGUI.window)) then
         createMarket()
-        showCursor("menu", true)
+        showCursor( true)
     elseif(not guiGetVisible(marketGUI.window)) then
-        showCursor("menu", true)
+        showCursor( true)
         guiSetVisible(marketGUI.window, true)
     end
 end
@@ -68,7 +68,7 @@ end
 function closeMarket()
     if(isElement(marketGUI.window) and guiGetVisible(marketGUI.window)) then
         guiSetVisible(marketGUI.window, false)
-        showCursor("menu", false)
+        showCursor( false)
     end
 end
 
