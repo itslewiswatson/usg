@@ -27,30 +27,37 @@ end
 
 function createSelectJobGUI()
     if ( getResourceFromName("USGGUI") and not isElement(selectJobGUI.window) ) then
-        selectJobGUI.window = exports.USGGUI:createWindow('right','bottom',250,400,false)
-        selectJobGUI.info = exports.USGGUI:createLabel('center','top', 250,100,false, "No description",selectJobGUI.window)
-        selectJobGUI.skins = exports.USGGUI:createGridList('center',100,240,250,false,selectJobGUI.window)
-            exports.USGGUI:gridlistAddColumn(selectJobGUI.skins,"ID",0.3)
-            exports.USGGUI:gridlistAddColumn(selectJobGUI.skins,"Name",0.7)
-        selectJobGUI.cancel = exports.USGGUI:createButton(50, 360, 75, 20,false,"Cancel",selectJobGUI.window)
-            addEventHandler("onUSGGUIClick",selectJobGUI.cancel, 
+    local screenW, screenH = guiGetScreenSize()
+        selectJobGUI.window = guiCreateWindow(screenW - 274 - 10, (screenH - 447) / 2, 274, 447, "", false)
+        guiWindowSetSizable(selectJobGUI.window, false)
+        selectJobGUI.info = guiCreateLabel(1, 17, 273, 132, "No description", false, selectJobGUI.window)
+        guiLabelSetHorizontalAlign(selectJobGUI.info, "center", false)
+        guiLabelSetVerticalAlign(selectJobGUI.info, "center")
+        selectJobGUI.skins = guiCreateGridList(9, 150, 255, 222, false, selectJobGUI.window)
+        guiGridListAddColumn(selectJobGUI.skins, "ID", 0.3)
+        guiGridListAddColumn(selectJobGUI.skins, "Name", 0.7)
+        selectJobGUI.cancel = guiCreateButton(21, 397, 100, 40, "Close", false, selectJobGUI.window)
+        guiSetProperty(selectJobGUI.cancel, "NormalTextColour", "FFAAAAAA")
+        selectJobGUI.OK = guiCreateButton(154, 397, 100, 40, "Select", false, selectJobGUI.window)
+        guiSetProperty(selectJobGUI.OK, "NormalTextColour", "FFAAAAAA")    
+        addEventHandler("onClientGUIClick",selectJobGUI.cancel, 
             function ( btn, state ) 
                 if ( btn == 1 and state == "down" ) then 
                     setElementModel(localPlayer,skin) 
                     closeJobGUI() 
                 end 
             end, false)
-        selectJobGUI.OK = exports.USGGUI:createButton(175, 360, 75, 20,false,"Select",selectJobGUI.window)
-            addEventHandler("onUSGGUIClick",selectJobGUI.OK, onSelectJob, false)
-            addEventHandler("onUSGGUIClick",selectJobGUI.skins, onClickSkins, false)
+
+            addEventHandler("onClientGUIClick",selectJobGUI.OK, onSelectJob, false)
+            addEventHandler("onClientGUIClick",selectJobGUI.skins, onClickSkins, false)
     end
 end
 
 function onClickSkins(btn,state)
     if ( btn == 1 and state == "down" ) then
-        local selRow = exports.USGGUI:gridlistGetSelectedItem(selectJobGUI.skins)
+        local selRow = guiGridListGetSelectedItem(selectJobGUI.skins)
         if ( selRow ) then
-            local id = tonumber(exports.USGGUI:gridlistGetItemText(selectJobGUI.skins,selRow,1))
+            local id = tonumber(guiGridListGetItemText(selectJobGUI.skins,selRow,1))
             if ( id ) then
                 setElementModel(localPlayer,id)
             end
@@ -63,9 +70,9 @@ end
 function onSelectJob(btn,state)
     if ( btn == 1 and state == "down" ) then
         if ( pickSkin ) then
-            local selRow = exports.USGGUI:gridlistGetSelectedItem(selectJobGUI.skins)
+            local selRow = guiGridListGetSelectedItem(selectJobGUI.skins)
             if ( selRow ) then
-                local skinID = tonumber(exports.USGGUI:gridlistGetItemText(selectJobGUI.skins,selRow,1))
+                local skinID = tonumber(guiGridListGetItemText(selectJobGUI.skins,selRow,1))
                 setPlayerJob(selectedJob, skinID)
                 closeJobGUI()
             else
@@ -80,7 +87,7 @@ end
 
 function closeJobGUI()
     if ( isElement(selectJobGUI.window) ) then
-        exports.USGGUI:setVisible(selectJobGUI.window,false)
+        guiSetVisible(selectJobGUI.window,false)
         showCursor("picker", false)
         selectedJob = false
         if ( skin ) then
@@ -90,22 +97,22 @@ function closeJobGUI()
 end
 
 function showJobGUI(jobID, occupation, skins, description)
-    if not ( isElement(selectJobGUI.window) ) then createSelectJobGUI() else exports.USGGUI:setVisible(selectJobGUI.window,true) end
-    exports.USGGUI:setText(selectJobGUI.window, occupation)
-    exports.USGGUI:setText(selectJobGUI.info,description or "No description")
-    exports.USGGUI:gridlistClear(selectJobGUI.skins)
+    if not ( isElement(selectJobGUI.window) ) then createSelectJobGUI() else guiSetVisible(selectJobGUI.window,true) end
+        guiGetText(selectJobGUI.window, occupation)
+        guiGetText(selectJobGUI.info,description or "No description")
+        guiGridListClear(selectJobGUI.skins)
     if ( pickSkin ) then
         for i=1,#skins do
             local skinID = skins[i].id
             local skinName = skins[i].name or "#"..i
-            local row = exports.USGGUI:gridlistAddRow(selectJobGUI.skins)
-            exports.USGGUI:gridlistSetItemText(selectJobGUI.skins,row,1,tostring(skinID))
-            exports.USGGUI:gridlistSetItemText(selectJobGUI.skins,row,2,tostring(skinName))
+            local row = guiGridListAddRow(selectJobGUI.skins)
+            guiGridListSetItemText(selectJobGUI.skins,row,1,tostring(skinID),false,false)
+            guiGridListSetItemText(selectJobGUI.skins,row,2,tostring(skinName),false,false)
         end
     else
-        local row = exports.USGGUI:gridlistAddRow(selectJobGUI.skins)
-        exports.USGGUI:gridlistSetItemText(selectJobGUI.skins,row,1,"")
-        exports.USGGUI:gridlistSetItemText(selectJobGUI.skins,row,2,"Regular skin")     
+    local row = guiGridListAddRow(selectJobGUI.skins)
+        guiGridListSetItemText(selectJobGUI.skins,row,1,"",false,false)
+        guiGridListSetItemText(selectJobGUI.skins,row,2,"Regular skin",false,false)     
     end
     showCursor("picker", true)
 end
