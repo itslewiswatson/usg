@@ -142,12 +142,12 @@ function createGUI()
         guiWindowSetSizable(vehGUI.window, false)
 
         vehGUI.grid = guiCreateGridList(9, 36, 438, 349, false, vehGUI.window)
-        guiGridListAddColumn(vehGUI.grid, "Car name", 0.1)
-        guiGridListAddColumn(vehGUI.grid, "Plate", 0.1)
-        guiGridListAddColumn(vehGUI.grid, "Health", 0.1)
-        guiGridListAddColumn(vehGUI.grid, "Fuel", 0.1)
-        guiGridListAddColumn(vehGUI.grid, "Locked", 0.1)
-        guiGridListAddColumn(vehGUI.grid, "Location", 0.1)
+        guiGridListAddColumn(vehGUI.grid, "Car name", 0.15)
+        guiGridListAddColumn(vehGUI.grid, "Plate", 0.15)
+        guiGridListAddColumn(vehGUI.grid, "Health", 0.15)
+        guiGridListAddColumn(vehGUI.grid, "Fuel", 0.15)
+        guiGridListAddColumn(vehGUI.grid, "Locked", 0.15)
+        guiGridListAddColumn(vehGUI.grid, "Location", 0.15)
         vehGUI.labelInfo1 = guiCreateLabel(9, 18, 438, 18, "Your vehicles:", false, vehGUI.window)
         guiLabelSetHorizontalAlign(vehGUI.labelInfo1, "center", false)
         guiLabelSetVerticalAlign(vehGUI.labelInfo1, "center")
@@ -228,21 +228,21 @@ function updateVehicleGrid(id)
     end
     local row = vehicles[id].row
     
-        guiGridListSetItemText(vehGUI.grid,row,1,getVehicleNameFromModel(vehicles[id].model))
+        guiGridListSetItemText(vehGUI.grid,row,1,getVehicleNameFromModel(vehicles[id].model),false,false)
         if isElement(vehicles[id].element) then 
             guiGridListSetItemColor(vehGUI.grid,row,1,tocolor(0,255,0))
         else 
             guiGridListSetItemColor(vehGUI.grid,row,1,tocolor(255,0,0))
         end
         
-    guiGridListSetItemText(vehGUI.grid,row,2,vehicles[id].plate or "")
+    guiGridListSetItemText(vehGUI.grid,row,2,vehicles[id].plate or "",false,false)
     
     local health = getVehicleHealth(id)
-    guiGridListSetItemText(vehGUI.grid,row,3,health.."%")
+    guiGridListSetItemText(vehGUI.grid,row,3,health.."%",false,false)
         guiGridListSetItemColor(vehGUI.grid,row,3,tocolor(getRelativeColor(health)))
         
     local fuel = getVehicleFuel(id)
-    guiGridListSetItemText(vehGUI.grid,row,4,getVehicleFuel(id).."%")
+    guiGridListSetItemText(vehGUI.grid,row,4,getVehicleFuel(id).."%",false,false)
         guiGridListSetItemColor(vehGUI.grid,row,4,tocolor(getRelativeColor(fuel)))
     
     local lr,lg,lb = 0,255,0
@@ -251,9 +251,9 @@ function updateVehicleGrid(id)
         lockedString = "No"
         lr,lg,lb = 255,0,0
     end
-    guiGridListSetItemText(vehGUI.grid,row,5,lockedString)
+    guiGridListSetItemText(vehGUI.grid,row,5,lockedString,false,false)
         guiGridListSetItemColor(vehGUI.grid,row,5,tocolor(lr,lg,lb))
-    guiGridListSetItemText(vehGUI.grid,row,6,getZoneName(getVehiclePosition(id)))
+    guiGridListSetItemText(vehGUI.grid,row,6,getZoneName(getVehiclePosition(id)),false,false)
         
     guiGridListSetItemData(vehGUI.grid,row,1,id)    
 end
