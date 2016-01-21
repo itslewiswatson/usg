@@ -169,7 +169,9 @@ function getPlayerJobExp(player, jobName)
 	if (player and isElement(player) and jobName) then
 		for k,v in pairs(jobExpTable[player]) do
 			if (v.jobName == jobName) then
-				return tonumber(v.jobExp)
+				outputChatBox(b.jobName .. ", " .. jobName, player)
+				outputChatBox(v.exp, player)
+				return tonumber(v.exp)
 			end
 		end
 	end
