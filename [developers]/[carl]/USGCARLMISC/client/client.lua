@@ -19,14 +19,18 @@ local function selectPrevious()
 	local previousID = selectedID - 1
 	if(previousID < 1)then
 		selectApp(tableSize(apps))
-
 	else
-		
+		selectApp(previousID)
 	end
 end
 
 local function selectNext()
-	
+	local nextID = selectedID + 1
+	if(nextID > tableSize(apps))then
+		selectApp(1)
+	else
+		selectApp(nextID)
+	end
 end
 
 local function selectEnter()
