@@ -242,14 +242,12 @@ function loadPlayerJobExpCallback(result, player)
 		else
 			local valueTable = fromJSON(result.jobExp)
 
-			--for i,jobIDName in pairs(jobIDs) do
-				for k, idValue in pairs(valueTable) do
-					if (jobIDs[idValue.jobName]) then
-						table.insert(jobExpTable[player], {jobName = idValue.jobName, exp = idValue.exp})
-						outputChatBox("Inserted into table: " .. idValue.jobName .. ", " .. idValue.exp)
-					end
+			for k, idValue in pairs(valueTable) do
+				if (jobIDs[idValue.jobName]) then
+					table.insert(jobExpTable[player], {jobName = idValue.jobName, exp = idValue.exp})
+					outputChatBox("Inserted into table: " .. idValue.jobName .. ", " .. idValue.exp, player)
 				end
-			--end
+			end
 		end
 	end
 end
@@ -296,5 +294,11 @@ addCommandHandler("testexp",
 		if (jobName and exp) then
 			givePlayerJobExp(player, jobName, exp)
 		end
+	end
+)
+
+addCommandHandler("dropjson", 
+	function(player)
+		exports.MySQL:execute("DELETE FROM cnr_jobExp WHERE username=?", exports.USGaccounts:getPlayerAccount(player))
 	end
 )
