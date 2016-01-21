@@ -4,11 +4,11 @@ function toggle()
 	if(showing)then
 		showing = false
 		outputChatBox("Not Showing")
-		addEventHandler("onClientRender", resourceRoot,render)
+		addEventHandler("onClientRender", root,render)
 	else
 		showing = true
 		outputChatBox("Showing")
-		removeEventHandler("onClientRender", resourceRoot,render)
+		removeEventHandler("onClientRender", root,render)
 	end
 end
 addCommandHandler("ok",toggle)
