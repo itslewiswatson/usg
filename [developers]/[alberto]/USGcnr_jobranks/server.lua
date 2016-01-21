@@ -93,7 +93,7 @@ local jobIDs = {
 --Create MySQL table if it hasn't been created on resource start
 -----------------------------------------------------------------
 function createTable()
-	exports.MySQL:execute("CREATE TABLE IF NOT EXISTS cnr_jobExp (username TEXT, jobExp TEXT)")
+	execute("CREATE TABLE IF NOT EXISTS cnr_jobExp (username TEXT, jobExp TEXT)")
 	outputConsole("Done creating table")
 end
 addEventHandler("onResourceStart", resourceRoot, createTable)
@@ -217,7 +217,7 @@ addEvent("onPlayerJoinRoom", true)
 addEventHandler("onPlayerJoinRoom", root, giveOnPlayerJoinRoom)
 
 function loadPlayerJobExp(player)
-	singleQuery(loadPlayerJobExpCallback, {player}, "SELECT * FROM cnr__jobExp WHERE username=?", exports.USGaccounts:getPlayerAccount(player))
+	singleQuery(loadPlayerJobExpCallback, {player}, "SELECT * FROM cnr_jobExp WHERE username=?", exports.USGaccounts:getPlayerAccount(player))
 end
 
 function loadPlayerJobExpCallback(result, player)
