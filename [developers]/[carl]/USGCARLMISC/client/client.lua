@@ -11,7 +11,7 @@ function toggle()
 end
 addCommandHandler("ok",toggle)
 
-function processInput(action)
+function processInput(_,_,action)
 	if(showing)then
 		outputChatBox(action)
 	end	
