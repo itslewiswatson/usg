@@ -10,12 +10,12 @@ function createDedicinesGUI()
     medicinesGUI.medicineRadios = {}
     local y = 5
     for medicine, _ in pairs(medicines) do
-    medicinesGUI.medicineLabels[medicine] = guiCreateLabel(5,y,135,30,false,medicine..":",medicinesGUI.window)
-    medicinesGUI.medicineRadios[medicine] = guiCreateRadioButton(145,y,60,35,false, myMedicines and tostring(myMedicines[medicine]) or "0", medicinesGUI.window)
+    medicinesGUI.medicineLabels[medicine] = guiCreateLabel(5,y,135,30,medicine..":",false,medicinesGUI.window)
+    medicinesGUI.medicineRadios[medicine] = guiCreateRadioButton(145,y,60,35, myMedicines and tostring(myMedicines[medicine]) or "0",false, medicinesGUI.window)
         y = y+35
     end
-    medicinesGUI.amount = guiCreateEdit(5,y+5,110,25,false,"",medicinesGUI.window)
-    medicinesGUI.take = guiCreateButton(130,y+5,60,25,false,"Take",medicinesGUI.window)
+    medicinesGUI.amount = guiCreateEdit(5,y+5,110,25,"",false,medicinesGUI.window)
+    medicinesGUI.take = guiCreateButton(130,y+5,60,25,"Take",false,medicinesGUI.window)
     guiSetSize(medicinesGUI.window, 200, y+35, false)
     addEventHandler("onClientGUIClick", medicinesGUI.take, onTakeMedicine, false)
 end

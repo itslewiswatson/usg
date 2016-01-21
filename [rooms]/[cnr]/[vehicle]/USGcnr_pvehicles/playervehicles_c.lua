@@ -230,20 +230,20 @@ function updateVehicleGrid(id)
     
         guiGridListSetItemText(vehGUI.grid,row,1,getVehicleNameFromModel(vehicles[id].model),false,false)
         if isElement(vehicles[id].element) then 
-            guiGridListSetItemColor(vehGUI.grid,row,1,tocolor(0,255,0),false,false)
+            guiGridListSetItemColor(vehGUI.grid,row,1,0,255,0)
         else 
-            guiGridListSetItemColor(vehGUI.grid,row,1,tocolor(255,0,0),false,false)
+            guiGridListSetItemColor(vehGUI.grid,row,1,255,0,0)
         end
         
     guiGridListSetItemText(vehGUI.grid,row,2,vehicles[id].plate or "",false,false)
     
     local health = getVehicleHealth(id)
     guiGridListSetItemText(vehGUI.grid,row,3,health.."%",false,false)
-        guiGridListSetItemColor(vehGUI.grid,row,3,tocolor(getRelativeColor(health)),false,false)
+        guiGridListSetItemColor(vehGUI.grid,row,3,getRelativeColor(health))
         
     local fuel = getVehicleFuel(id)
     guiGridListSetItemText(vehGUI.grid,row,4,getVehicleFuel(id).."%",false,false)
-        guiGridListSetItemColor(vehGUI.grid,row,4,tocolor(getRelativeColor(fuel)),false,false)
+    guiGridListSetItemColor(vehGUI.grid,row,4,getRelativeColor(fuel))
     
     local lr,lg,lb = 0,255,0
     local lockedString = "Yes"
@@ -252,7 +252,7 @@ function updateVehicleGrid(id)
         lr,lg,lb = 255,0,0
     end
     guiGridListSetItemText(vehGUI.grid,row,5,lockedString,false,false)
-        guiGridListSetItemColor(vehGUI.grid,row,5,tocolor(lr,lg,lb),false,false)
+        guiGridListSetItemColor(vehGUI.grid,row,5,lr,lg,lb)
     guiGridListSetItemText(vehGUI.grid,row,6,getZoneName(getVehiclePosition(id)),false,false)
         
     guiGridListSetItemData(vehGUI.grid,row,1,id)    
