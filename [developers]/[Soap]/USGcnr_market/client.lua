@@ -77,13 +77,22 @@ function toogleMarket()
         closeMarket()
     elseif(exports.USGrooms:getPlayerRoom() == "cnr") then
         openMarket()
-        outputChatBox(exports.USGcnr_medicines:getPlayerMedicineAmount("Aspirin"))
+        updateInv()
     end
 end
 bindKey("F7", "down", toogleMarket)
 
+medicines = { "Aspirin","Steroid","Adderall")
+medicinesAmount = {exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[1]),
+ exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[2]),
+ exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[3])}
+
 function updateInv()
 guiGridListClear(invGrid)
-
-
+for medicines , medicinesAmount in pairs(3) do
+    if medicinesAmout[1] > 0 or medicinesAmout[2] > 0 or medicinesAmout[3] > 0then
+        local row = guiGridListAddRow(invGrid)
+        guiGridListSetItemText ( invGrid, row, 1, medicines, false, false )
+        guiGridListSetItemText ( invGrid, row, 2, medicinesAmount, false, false )    
+    end
 end
