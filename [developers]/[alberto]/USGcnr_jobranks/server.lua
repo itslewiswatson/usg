@@ -94,7 +94,6 @@ local jobIDs = {
 -----------------------------------------------------------------
 function loadDataOnStartup()
 	exports.MySQL:execute("CREATE TABLE IF NOT EXISTS cnr_jobExp (username TEXT, jobExp TEXT)")
-	outputConsole("Done creating table")
 
 	for k,player in pairs(getElementsByType("player")) do
 		if (exports.USGrooms:getPlayerRoom(player) == "cnr") then
@@ -238,7 +237,6 @@ function loadPlayerJobExpCallback(result, player)
 			for k, idValue in pairs(valueTable) do
 				if (jobIDs[idValue.jobName]) then
 					table.insert(jobExpTable[player], {jobName = idValue.jobName, exp = idValue.exp})
-					outputChatBox("Inserted into table: " .. idValue.jobName .. ", " .. idValue.exp, player)
 				end
 			end
 		end
