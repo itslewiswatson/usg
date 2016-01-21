@@ -2,6 +2,13 @@ local showing = false
 local selectedApp = nil
 local selectedID = nil
 
+local function tableSize(tab)
+    local length = 0
+    for _ in pairs(tab) do length = length + 1 end
+    return length
+end
+
+
 local function selectApp(id)
 	selectedID = id
 	selectedApp = apps[selectedID]
@@ -88,13 +95,6 @@ local function toggle()
 		addEventHandler("onClientRender", root,render)
 		selectApp(1)
 	end
-end
-addCommandHandler("ok",toggle)
-
-local function tableSize(tab)
-    local length = 0
-    for _ in pairs(tab) do length = length + 1 end
-    return length
 end
 
 bindKey ( "b", "down", toggle)
