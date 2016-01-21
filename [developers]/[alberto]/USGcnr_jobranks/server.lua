@@ -241,9 +241,9 @@ function loadPlayerJobExpCallback(result, player)
 			local valueTable = fromJSON(result.jobExp)
 			outputChatBox("Data exists, looping..", player)
 
-			for i,jobExpValue in pairs(jobIDs) do
+			for i,jobIDName in pairs(jobIDs) do
 				for k, idValue in pairs(valueTable) do
-					jobExpTable[player][#jobExpTable + 1] = {jobName = id, exp = jobExpValue.exp}
+					jobExpTable[player][#jobExpTable + 1] = {jobName = jobIDName, exp = idValue.exp}
 				end
 			end
 
