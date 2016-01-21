@@ -64,10 +64,6 @@ local function selectNext()
 	end
 end
 
-local function selectEnter()
-	enterAppCurrentlyInUse(selectedApp)
-end
-
 local function toggle()
 	if(showing)then
 		showing = false
@@ -83,6 +79,11 @@ end
 local function enterAppCurrentlyInUse(app)
 	triggerEvent ( app.event, root)
 	toggle()
+end
+
+
+local function selectEnter()
+	enterAppCurrentlyInUse(selectedApp)
 end
 
 
