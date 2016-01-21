@@ -101,12 +101,12 @@ local minPrice = 100
 
 function putOnMarket()
 local selected = guiGridListGetSelectedItems(marketGUI.invGrid)
-    if ( selected ) then 
+    if ( selected ) then
+    local medicineName = guiGridListGetItemData(marketGUI.invGrid, selected, 1)  
         if  type(tonumber(guiGetText(marketGUI.invNumberOfHits))) ~= "number" or type(tonumber(guiGetText(marketGUI.invPrice)))~= "number" or  type(tonumber(guiGetText(marketGUI.invPrice))) ~= "number" then outputChatBox("use a number") return end
         if (tonumber( guiGetText(marketGUI.invNumberOfHits)) > 0 and tonumber(guiGetText(marketGUI.invPrice)) > minPrice and tonumber(guiGetText(marketGUI.invPrice)) < maxPrice ) then
-        outputChatBox("oaksd")    
-        local row = guiGridListAddRow(marketGUI.marketGrid)
-            guiGridListSetItemText ( marketGUI.marketGrid , row, 1, selected[1][1], false, false )
+            local row = guiGridListAddRow(marketGUI.marketGrid)
+            guiGridListSetItemText ( marketGUI.marketGrid , row, 1, medicineName[1], false, false )
             guiGridListSetItemText ( marketGUI.marketGrid , row, 2, guiGetText(marketGUI.invNumberOfHits), false, false )
             guiGridListSetItemText ( marketGUI.marketGrid , row, 3, guiGetText(marketGUI.invPrice), false, false )
             guiGridListSetItemText ( marketGUI.marketGrid , row, 4, getPlayerName(localPlayer), false, false )
