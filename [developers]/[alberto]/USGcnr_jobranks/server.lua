@@ -1,3 +1,5 @@
+local jobExpTable = {}
+
 ------------------------------------------------------------
 --Job ranks table
 --Job name needs to be the jobID
@@ -85,19 +87,29 @@ local jobIDs = {
 	"criminal",
 }
 
+-----------------------------------------------------------------
+--Create MySQL table if it hasn't been created on resource start
+-----------------------------------------------------------------
+function createTable()
+	exports.MySQL:execute("CREATE TABLE IF NOT EXISTS cnr_jobExp (username TEXT, jobExp TEXT)")
+end
+addEventHandler("onResourceStart", resourceRoot, createTable)
+
 ------------------------------------------------------------
 --Gets the players current job rank (the rank name, not exp)
 ------------------------------------------------------------
 function getPlayerJobRank(player, jobName)
 	if (player and isElement(player) and getElementType(player) == "player" and jobName) then
 		if (jobRanks[jobName]) then
-			local dataName = "jobExp." .. jobName
-			local plrAcc = getPlayerAccount(player)
-			local jobExp = getAccountData(plrAcc, dataName)
+			local jobExp = 0
 
-			if (not jobExp) then
-				setAccountData(plrAcc, dataName, 0)
-				jobExp = 0
+			if (jobExpTable[player]) then
+				for k,v in pairs(jobExpTable[player]) do
+					if (v.jobName == jobName) then
+						jobExp = tonumber(v.exp)
+						break
+					end
+				end
 			end
 
 			local rank = false
@@ -147,25 +159,35 @@ function getJobBonus(player, jobName, newRank)
 	end
 end
 
+------------------------------------------------------------
+--Gets the players job Exp for the given job name/id
+------------------------------------------------------------
+function getPlayerJobExp(player, jobName)
+	if (player and isElement(player) and jobName) then
+		for k,v in pairs(jobExpTable[player]) do
+			if (v.jobName == jobName) then
+				return tonumber(v.jobExp)
+			end
+		end
+	end
+end
+
 ------------------------------------------------------------ 
 --Handles giving player job experience for a given job.
 ------------------------------------------------------------
 function givePlayerJobExp(player, jobName, expToGive)
 	if (player and isElement(player) and jobName and expToGive) then
-		--local dataName = "jobExp." .. dataNameFromJobName[jobName]
-		local dataName = "jobExp." .. jobName
-		outputChatBox(dataName, player)
-		local plrAcc = getPlayerAccount(player)
-		local currentJobExp = getAccountData(plrAcc, dataName)
-
-		if (not currentJobExp) then
-			setAccountData(plrAcc, dataName, 0)
-			currentJobExp = 0
-		end
-
+		local currentJobExp = getPlayerJobExp(player, jobName)
 		local currentJobRank = getPlayerJobRank(player, jobName)
 		local newJobExp = currentJobExp + expToGive
-		setAccountData(plrAcc, dataName, newJobExp)
+
+		for k,v in pairs(jobExpTable[player]) do
+			if (jobName == v.jobName) then
+				v.exp = newJobExp
+				break
+			end
+		end
+
 		local checkNewJobRank = getPlayerJobRank(player, jobName)
 
 		if (checkNewJobRank ~= currentJobRank) then
@@ -180,50 +202,68 @@ function givePlayerJobExp(player, jobName, expToGive)
 end
 
 ------------------------------------------------------------
---Gets the players job Exp for the given job name/id
-------------------------------------------------------------
-function getPlayerJobExp(player, jobName)
-	if (player and isElement(player) and jobName) then
-		local plrAcc = getPlayerAccount(player)
-		local dataName = "jobExp." .. jobName
-		local jobExp = getAccountData(plrAcc, dataName)
-
-		if (jobExp) then
-			outputChatBox("1", player)
-			return jobExp
-		else
-			outputChatBox("2", player)
-			setAccountData(plrAcc, dataName, 0)
-			return 0
-		end
-	end
-end
-
---[[
-------------------------------------------------------------
 --Check if player has job Exp data for all jobs on Login
 ------------------------------------------------------------
-function createData()
-	if (not isGuestAccount(getPlayerAccount(source))) then
-		local plrAcc = getPlayerAccount(source) --get players account
+function giveOnPlayerJoinRoom(room)
+	if (room == "cnr") then
+		loadPlayerJobExp(source)
+	end
+addEvent("onPlayerJoinRoom", true)
+addEventHandler("onPlayerJoinRoom", root, giveOnPlayerJoinRoom)
 
-		--Loop through jobIDs table
-		for a,b in pairs(jobIDs) do
-			local dataName = "jobExp." .. b
-			--local checkAccData = getAccountData(plrAcc, dataName) --Check if the player has the data in their account data
+function loadPlayerJobExp(player)
+	singleQuery(loadPlayerJobExpCallback, {player}, "SELECT * FROM cnr__jobExp WHERE username=?", exports.USGaccounts:getPlayerAccount(source))
+end
 
-			--If they don't have it
-			if (not getAccountData(plrAcc, dataName)) then
-				setAccountData(plrAcc, "jobExp." .. b, 0) --Set it for them.
-				outputChatBox("No account data for jobExp." .. b, source)
+function loadPlayerExpCallback(result, player)
+	if (isElement(player) and exports.USGrooms:getPlayerRoom(player) == "cnr") then -- still in cnr room
+		jobExpTable[player] = {}
+
+		if (not result) then
+			for i,id in pairs(jobIDs) do
+				jobExpTable[player][#jobExpTable + 1] = {jobName = id, exp = 0}
+			end
+
+			local jsonData = toJSON(jobExpTable[player])
+			exports.MySQL:execute("INSERT INTO cnr_jobExp (username, jobExp) VALUES(?, ?)", exports.USGaccounts:getPlayerAccount(player), jsonData)
+		else
+			local valueTable = fromJSON(result.jobExp)
+
+			for i,jobExpValue in pairs(jobIDs) do
+				for k, idValue in pairs(valueTable) do
+					jobExpTable[player][#jobExpTable + 1] = {jobName = id, exp = jobExpValue.exp}
+				end
 			end
 		end
-	else
-		outputDebugString("Player not logged in for createData!", 1)
-		return
 	end
 end
-addEventHandler("onPlayerLogin", root, createData)]]
+
+------------------------------------------------------------
+--Save data when player quits server or leaves room
+------------------------------------------------------------
+function saveOnPlayerExitRoom(room)
+	if (room == "cnr") then
+		savePlayerInventory(source)
+		jobExpTable[source] = nil
+	end
+end
+addEvent("onPlayerExitRoom")
+addEventHandler("onPlayerExitRoom", root, saveOnPlayerExitRoom)
+
+function saveOnPlayerQuit()
+	if (exports.USGrooms:getPlayerRoom(source) == "cnr") then
+		savePlayerInventory(source)
+		jobExpTable[source] = nil	
+	end
+end
+addEventHandler("onPlayerQuit", root, saveOnPlayerQuit)
+
+function savePlayerInventory(player)
+	if (jobExpTable[player]) then
+		local jsonData = toJSON(jobExpTable[player])
+		exports.MySQL:execute("UPDATE cnr_jobExp SET jobExp=? WHERE username=?", jsonData, exports.USGaccounts:getPlayerAccount(player))
+	end
+end
 
 ------------------------------------------------------------------------------------------------------------------------
 --Development functions
