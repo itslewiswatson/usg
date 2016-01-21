@@ -18,6 +18,7 @@ local function selectPrevious()
 	local previousID = selectedID - 1
 	if(previousID < 1)then
 		selectApp(tableSize(apps))
+		outputChatBox(tableSize(apps))
 		outputChatBox(selectedApp.name)
 	else
 		
