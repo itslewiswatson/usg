@@ -100,7 +100,7 @@ local maxPrice = 500
 local minPrice = 100
 
 function putOnMarket()
-local selected = guiGridListGetSelectedItems(marketGUI.invGrid)
+local selected = guiGridListGetSelectedItem(marketGUI.invGrid)
     if ( selected ) then
     local medicineName = guiGridListGetItemData(marketGUI.invGrid, selected, 1)  
         if  type(tonumber(guiGetText(marketGUI.invNumberOfHits))) ~= "number" or type(tonumber(guiGetText(marketGUI.invPrice)))~= "number" or  type(tonumber(guiGetText(marketGUI.invPrice))) ~= "number" then outputChatBox("use a number") return end
