@@ -9,7 +9,7 @@ local jobExpTable = {}
 local jobRanks = { 
 	["pilot"] = {
 		--syntax:
-		--[exp needed] = {rankName = the rank name, reward = amount of money given when player ranks up},
+		--[exp needed] = {rankName = the rank name},
 		[0] = {rankName = "Junior Flight Officer"},
 		[1000] = {rankName = "Flight Officer"},
 		[2500] = {rankName = "First Officer"},
