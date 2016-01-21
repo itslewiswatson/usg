@@ -83,6 +83,7 @@ function toogleMarket()
 end
 bindKey("F7", "down", toogleMarket)
 
+medicines = { "Adderall" , "Aspirin" , "Steroid" }
 
 function updateInv()
 guiGridListClear(marketGUI.invGrid)
