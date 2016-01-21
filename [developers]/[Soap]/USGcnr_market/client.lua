@@ -89,10 +89,11 @@ medicinesAmount = {exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[1]
 
 function updateInv()
 guiGridListClear(invGrid)
-for medicines , medicinesAmount in pairs(3) do
-    if medicinesAmout[1] > 0 or medicinesAmout[2] > 0 or medicinesAmout[3] > 0 then
-        local row = guiGridListAddRow(invGrid)
-        guiGridListSetItemText ( invGrid, row, 1, medicines, false, false )
-        guiGridListSetItemText ( invGrid, row, 2, medicinesAmount, false, false )    
+    for medicines , medicinesAmount in pairs(3) do
+        if medicinesAmout[1] > 0 or medicinesAmout[2] > 0 or medicinesAmout[3] > 0 then
+            local row = guiGridListAddRow(invGrid)
+            guiGridListSetItemText ( invGrid, row, 1, medicines, false, false )
+            guiGridListSetItemText ( invGrid, row, 2, medicinesAmount, false, false )    
+        end
     end
 end
