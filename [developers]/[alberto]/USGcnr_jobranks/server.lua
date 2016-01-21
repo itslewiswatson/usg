@@ -167,10 +167,14 @@ end
 ------------------------------------------------------------
 function getPlayerJobExp(player, jobName)
 	if (player and isElement(player) and jobName) then
-		for k,v in pairs(jobExpTable[player]) do
-			if (v.jobName == jobName) then
-				return tonumber(v.exp)
+		if (jobExpTable[player]) then
+			for k,v in pairs(jobExpTable[player]) do
+				if (v.jobName == jobName) then
+					return tonumber(v.exp)
+				end
 			end
+		else
+			outputDebugString("No job exp table for player: " .. getPlayerName(player), 1)
 		end
 	end
 end
@@ -180,26 +184,30 @@ end
 ------------------------------------------------------------
 function givePlayerJobExp(player, jobName, expToGive)
 	if (player and isElement(player) and jobName and expToGive) then
-		local currentJobExp = getPlayerJobExp(player, jobName)
-		local currentJobRank = getPlayerJobRank(player, jobName)
-		local newJobExp = currentJobExp + expToGive
+		if (jobExpTable[player]) then
+			local currentJobExp = getPlayerJobExp(player, jobName)
+			local currentJobRank = getPlayerJobRank(player, jobName)
+			local newJobExp = currentJobExp + expToGive
 
-		for k,v in pairs(jobExpTable[player]) do
-			if (jobName == v.jobName) then
-				v.exp = newJobExp
-				break
+			for k,v in pairs(jobExpTable[player]) do
+				if (jobName == v.jobName) then
+					v.exp = newJobExp
+					break
+				end
 			end
-		end
 
-		local checkNewJobRank = getPlayerJobRank(player, jobName)
+			local checkNewJobRank = getPlayerJobRank(player, jobName)
 
-		if (checkNewJobRank ~= currentJobRank) then
-			local jobBonus = getJobBonus(player, jobName, checkNewJobRank)
+			if (checkNewJobRank ~= currentJobRank) then
+				local jobBonus = getJobBonus(player, jobName, checkNewJobRank)
 
-			if (jobBonus) then
-				exports.USGmsg:msg(player, "You have been promoted to " .. checkNewJobRank .. "! You have received a bonus of $" .. exports.USGmisc:convertNumber(jobBonus), 255, 255, 0)
-				givePlayerMoney(player, jobBonus)
+				if (jobBonus) then
+					exports.USGmsg:msg(player, "You have been promoted to " .. checkNewJobRank .. "! You have received a bonus of $" .. exports.USGmisc:convertNumber(jobBonus), 255, 255, 0)
+					givePlayerMoney(player, jobBonus)
+				end
 			end
+		else
+			outputDebugString("No job exp table for player: " .. getPlayerName(player), 1)
 		end
 	end
 end
