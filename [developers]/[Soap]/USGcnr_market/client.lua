@@ -93,7 +93,7 @@ guiGridListClear(marketGUI.invGrid)
 
             local row = guiGridListAddRow(marketGUI.invGrid)
             guiGridListSetItemText ( marketGUI.invGrid , row, 1, medicines[k], false, false )
-            guiGridListSetItemText ( marketGUI.invGrid , row, 2, medicinesAmount, false, false )    
+            guiGridListSetItemText ( marketGUI.invGrid , row, 2, medicinesAmount[k], false, false )    
         
     end
 end
