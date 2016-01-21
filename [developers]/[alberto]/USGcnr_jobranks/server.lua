@@ -81,12 +81,12 @@ local dataNameFromJobName = {
 --All the job IDs
 ------------------------------------------------------------
 local jobIDs = {
-	"pilot",
-	"police",
-	"trucker",
-	"medic",
-	"Mechanic",
-	"criminal",
+	["pilot"] = true,
+	["police"] = true,
+	["trucker"] = true,
+	["medic"] = true,
+	["Mechanic"] = true,
+	["criminal"] = true,
 }
 
 -----------------------------------------------------------------
@@ -233,7 +233,7 @@ function loadPlayerJobExpCallback(result, player)
 
 		if (not result) then
 
-			for i,id in pairs(jobIDs) do
+			for id,v in pairs(jobIDs) do
 				table.insert(jobExpTable[player], {jobName = id, exp = 0})
 			end
 
@@ -242,11 +242,14 @@ function loadPlayerJobExpCallback(result, player)
 		else
 			local valueTable = fromJSON(result.jobExp)
 
-			for i,jobIDName in pairs(jobIDs) do
+			--for i,jobIDName in pairs(jobIDs) do
 				for k, idValue in pairs(valueTable) do
-					table.insert(jobExpTable[player], {jobName = jobIDName, exp = idValue.exp})
+					if (jobIDs[idValue.jobName]) then
+						table.insert(jobExpTable[player], {jobName = idValue.jobName, exp = idValue.exp})
+						outputChatBox("Inserted into table: " .. idValue.jobName .. ", " .. idValue.exp)
+					end
 				end
-			end
+			--end
 		end
 	end
 end
