@@ -2,14 +2,15 @@ local showing = false;
 
 function toggle()
 	if(showing)then
-		showing = false		
+		showing = false	
+		addEventHandler("onClientRender", localPlayer,render)
 	else
 		showing = true
+		removeEventHandler("onClientRender", localPlayer,render)
 	end
 end
 
 function render()
-	
 	local playerRoom = exports.USGrooms:getPlayerRoom(localPlayer)
 	local x,y,z = getElementPosition(localPlayer)
 	local Mult = 1
@@ -48,5 +49,3 @@ function render()
 	end	
 		
 end
-
-addEventHandler("onClientRender", localPlayer,render)
