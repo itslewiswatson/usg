@@ -1,5 +1,3 @@
-loadstring(exports.mysql:getQueryTool())()
-
 marketGUI = {}
 
 
@@ -96,13 +94,13 @@ guiGridListClear(marketGUI.invGrid)
         guiGridListSetItemText ( marketGUI.invGrid , row, 1, medicines[k], false, false )
         guiGridListSetItemText ( marketGUI.invGrid , row, 2, exports.USGcnr_medicines:getPlayerMedicineAmount(v), false, false )    
     end
-    local weapons = fromJSON(data.weapons) or {}
+    local weapons = fromJSON(weapons) or {}
     for i=1,#weapons do
         local row = guiGridListAddRow(marketGUI.invGrid)
         if(weapons[i][1] and weapons[i][2] > 0 and weapons[i][1] ~= 40) then -- weapon exists in mysql and weapon is bought
             local ammo = tonumber(weapons[i][2])
             guiGridListSetItemText ( marketGUI.invGrid , row, 1, weapons[i][1], false, false )
-            guiGridListSetItemText ( marketGUI.invGrid , row, 2, weapons[i][2], false, false )    
+            guiGridListSetItemText ( marketGUI.invGrid , row, 2, ammo, false, false )    
         end
     end
 end
