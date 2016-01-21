@@ -37,18 +37,6 @@ local function render()
 		
 end
 
-local function toggle()
-	if(showing)then
-		showing = false
-		removeEventHandler("onClientRender", root,render)
-		selectedID = nil
-	else
-		showing = true
-		addEventHandler("onClientRender", root,render)
-		selectApp(1)
-	end
-end
-
 local function selectApp(id)
 	selectedID = id
 	if(selectedApp)then
@@ -80,6 +68,17 @@ local function selectEnter()
 	enterAppCurrentlyInUse(selectedApp)
 end
 
+local function toggle()
+	if(showing)then
+		showing = false
+		removeEventHandler("onClientRender", root,render)
+		selectedID = nil
+	else
+		showing = true
+		addEventHandler("onClientRender", root,render)
+		selectApp(1)
+	end
+end
 
 local function enterAppCurrentlyInUse(app)
 	triggerEvent ( app.event, root)
