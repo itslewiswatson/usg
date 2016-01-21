@@ -9,52 +9,6 @@ local function tableSize(tab)
     return length
 end
 
-
-local function selectApp(id)
-	selectedID = id
-	if(selectedApp)then
-		selectedApp.isSelected = false
-	end
-	selectedApp = appsIDs[id]
-	selectedApp.isSelected = true
-end
-
-local function selectPrevious()
-	local previousID = selectedID - 1
-	if(previousID < 1)then
-		selectApp(tableSize(apps))
-	else
-		selectApp(previousID)
-	end
-end
-
-local function selectNext()
-	local nextID = selectedID + 1
-	if(nextID > tableSize(apps))then
-		selectApp(1)
-	else
-		selectApp(nextID)
-	end
-end
-
-local function selectEnter()
-	enterAppCurrentlyInUse(selectedApp)
-end
-
-local function processInput(_,_,action)
-	if(showing)then
-		if(action == "left")then
-			selectPrevious()
-		elseif(action == "right")then
-			selectNext()
-		elseif(action == "select")then
-			selectEnter()
-		else
-			outputChatBox("There was an error with th 3D panel plz tell Carl")
-		end
-	end	
-end
-
 local function render()
 	local playerRoom = exports.USGrooms:getPlayerRoom(localPlayer)
 	local x,y,z = getElementPosition(localPlayer)
@@ -95,9 +49,56 @@ local function toggle()
 	end
 end
 
+local function selectApp(id)
+	selectedID = id
+	if(selectedApp)then
+		selectedApp.isSelected = false
+	end
+	selectedApp = appsIDs[id]
+	selectedApp.isSelected = true
+end
+
+local function selectPrevious()
+	local previousID = selectedID - 1
+	if(previousID < 1)then
+		selectApp(tableSize(apps))
+	else
+		selectApp(previousID)
+	end
+end
+
+local function selectNext()
+	local nextID = selectedID + 1
+	if(nextID > tableSize(apps))then
+		selectApp(1)
+	else
+		selectApp(nextID)
+	end
+end
+
+local function selectEnter()
+	enterAppCurrentlyInUse(selectedApp)
+end
+
+
 local function enterAppCurrentlyInUse(app)
 	triggerEvent ( app.event, root)
 	toggle()
+end
+
+
+local function processInput(_,_,action)
+	if(showing)then
+		if(action == "left")then
+			selectPrevious()
+		elseif(action == "right")then
+			selectNext()
+		elseif(action == "select")then
+			selectEnter()
+		else
+			outputChatBox("There was an error with th 3D panel plz tell Carl")
+		end
+	end	
 end
 
 
