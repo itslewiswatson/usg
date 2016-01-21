@@ -11,15 +11,15 @@ end
 
 local function selectApp(id)
 	selectedID = id
-	selectedApp = apps[selectedID]
+	selectedApp = apps[id]
+	outputChatBox(tostring(selectedApp))
 end
 
 local function selectPrevious()
 	local previousID = selectedID - 1
 	if(previousID < 1)then
 		selectApp(tableSize(apps))
-		outputChatBox(tableSize(apps))
-		outputChatBox(selectedApp.name)
+
 	else
 		
 	end
