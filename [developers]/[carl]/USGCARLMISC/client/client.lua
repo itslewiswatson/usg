@@ -7,20 +7,6 @@ local function selectApp(id)
 	selectedApp = apps[selectedID]
 end
 
-local function processInput(_,_,action)
-	if(showing)then
-		if(action == "left")then
-			selectPrevious()
-		elseif(action == "right")then
-			selectNext()
-		elseif(action == "select")then
-			selectEnter()
-		else
-			outputChatBox("There was an error with th 3D panel plz tell Carl")
-		end
-	end	
-end
-
 local function selectPrevious()
 	local previousID = selectedID - 1
 	if(previousID < 1)then
@@ -37,6 +23,20 @@ end
 
 local function selectEnter()
 	
+end
+
+local function processInput(_,_,action)
+	if(showing)then
+		if(action == "left")then
+			selectPrevious()
+		elseif(action == "right")then
+			selectNext()
+		elseif(action == "select")then
+			selectEnter()
+		else
+			outputChatBox("There was an error with th 3D panel plz tell Carl")
+		end
+	end	
 end
 
 local function render()
