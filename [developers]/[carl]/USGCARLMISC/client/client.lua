@@ -37,7 +37,7 @@ end
 local function selectPrevious()
 	local previousID = selectedID - 1
 	if(previousID < 1)then
-		selectApp(table.size(apps))
+		selectApp(tableSize(apps))
 		outputChatBox(selectedApp.name)
 	else
 		
@@ -88,11 +88,10 @@ local function render()
 	end
 	if(playerRoom == "cnr" or apps.money.allRooms)then
 		dxDrawMaterialLine3D ( x + apps.money.position.x * Mult,		y + apps.money.position.y * Mult,		z + apps.money.position.z * Mult + apps.money.size.default * Mult,			x + apps.money.position.x * Mult,		y + apps.money.position.y * Mult,		z + apps.money.position.z * Mult,		apps.money.icon,	apps.money.size.default * Mult		)
-	end	
-		
+	end		
 end
 
-local function table.size(tab)
+local function tableSize(tab)
     local length = 0
     for _ in pairs(tab) do length = length + 1 end
     return length
