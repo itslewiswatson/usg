@@ -26,11 +26,11 @@ function openJobPicker(jobID)
 end
 
 function createSelectJobGUI()
-    if ( getResourceFromName("USGGUI") and not isElement(selectJobGUI.window) ) then
+    if (  not isElement(selectJobGUI.window) ) then
     local screenW, screenH = guiGetScreenSize()
-        selectJobGUI.window = guiCreateWindow(screenW - 274 - 10, (screenH - 447) / 2, 274, 447, "", false)
+        selectJobGUI.window = guiCreateWindow(screenW - 274 - 10, (screenH - 447) / 2, 274, 447, "USG - Job panel", false)
         guiWindowSetSizable(selectJobGUI.window, false)
-        selectJobGUI.info = guiCreateLabel(1, 17, 273, 132, "No description", false, selectJobGUI.window)
+        selectJobGUI.info = guiCreateLabel(1, 17, 273, 132, "", false, selectJobGUI.window)
         guiLabelSetHorizontalAlign(selectJobGUI.info, "center", false)
         guiLabelSetVerticalAlign(selectJobGUI.info, "center")
         selectJobGUI.skins = guiCreateGridList(9, 150, 255, 222, false, selectJobGUI.window)
