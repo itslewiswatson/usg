@@ -1,3 +1,13 @@
+local showing = false;
+
+function toggle()
+	if(showing)then
+		showing = false		
+	else
+		showing = true
+	end
+end
+
 function render()
 	
 	local playerRoom = exports.USGrooms:getPlayerRoom(localPlayer)
@@ -39,4 +49,4 @@ function render()
 		
 end
 
-addEventHandler("onClientRender", root,render)
+addEventHandler("onClientRender", localPlayer,render)
