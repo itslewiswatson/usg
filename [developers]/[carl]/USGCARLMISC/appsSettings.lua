@@ -1,7 +1,7 @@
 apps = {}
 	apps.account = {}
 		apps.account.icon = dxCreateTexture("images/account_icon.png")
-		
+		apps.account.name = "Account App"
 		apps.account.position = {}
 			apps.account.position.x = -1.5
 			apps.account.position.y = 1.25
@@ -15,7 +15,7 @@ apps = {}
 	
 	apps.call = {}
 		apps.call.icon = dxCreateTexture("images/call_icon.png")
-		
+		apps.call.name = "Call App"
 		apps.call.position = {}
 			apps.call.position.x = 0
 			apps.call.position.y = 1.5
@@ -29,7 +29,7 @@ apps = {}
 		
 	apps.gps = {}
 		apps.gps.icon = dxCreateTexture("images/gps_icon.png")
-		
+		apps.gps.name = "GPS App"
 		apps.gps.position = {}
 			apps.gps.position.x = 1.5
 			apps.gps.position.y = 1.25
@@ -43,7 +43,7 @@ apps = {}
 		
 	apps.messages = {}
 		apps.messages.icon = dxCreateTexture("images/messages_icon.png")
-		
+		apps.messages.name = "Message App"
 		apps.messages.position = {}
 			apps.messages.position.x = -1.5
 			apps.messages.position.y = -1.25
@@ -57,7 +57,7 @@ apps = {}
 		
 	apps.money = {}
 		apps.money.icon = dxCreateTexture("images/money_icon.png")
-		
+		apps.money.name = "Money App"
 		apps.money.position = {}
 			apps.money.position.x = 1.75
 			apps.money.position.y = 0
@@ -71,7 +71,7 @@ apps = {}
 		
 	apps.music = {}
 		apps.music.icon = dxCreateTexture("images/music_icon.png")
-		
+		apps.music.name = "Music App"
 		apps.music.position = {}
 			apps.music.position.x = 1.5
 			apps.music.position.y = -1.25
@@ -85,7 +85,7 @@ apps = {}
 
 	apps.weapons = {}
 		apps.weapons.icon = dxCreateTexture("images/weapons_icon.png")
-	
+		apps.weapons.name = "Weapon App"
 		apps.weapons.position = {}
 			apps.weapons.position.x = 0
 			apps.weapons.position.y = -1.25

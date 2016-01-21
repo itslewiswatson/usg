@@ -1,23 +1,58 @@
-local showing = false;
+local showing = false
+local selectedApp = nil
+local selectedID = nil
 
-function toggle()
+local function toggle()
 	if(showing)then
 		showing = false
 		removeEventHandler("onClientRender", root,render)
+		selectedID = nil
 	else
 		showing = true
 		addEventHandler("onClientRender", root,render)
+		selectApp(1)
 	end
 end
 addCommandHandler("ok",toggle)
 
-function processInput(_,_,action)
+local function selectApp(id)
+	selectedID = id
+	selectedApp = apps[selectedID]
+end
+
+local function processInput(_,_,action)
 	if(showing)then
-		outputChatBox(action)
+		if(action == "left")then
+			selectPrevious()
+		elseif(action == "right")then
+			selectNext()
+		elseif(action == "select")then
+			selectEnter()
+		else
+			outputChatBox("There was an error with th 3D panel plz tell Carl")
+		end
 	end	
 end
 
-function render()
+local function selectPrevious()
+	local previousID = selectedID - 1
+	if(previousID < 1)then
+		selectApp(table.size(apps))
+		outputChatBox(selectedApp.name)
+	else
+		
+	end
+end
+
+local function selectNext()
+	
+end
+
+local function selectEnter()
+	
+end
+
+local function render()
 	local playerRoom = exports.USGrooms:getPlayerRoom(localPlayer)
 	local x,y,z = getElementPosition(localPlayer)
 	local Mult = 1
@@ -55,6 +90,12 @@ function render()
 		dxDrawMaterialLine3D ( x + apps.money.position.x * Mult,		y + apps.money.position.y * Mult,		z + apps.money.position.z * Mult + apps.money.size.default * Mult,			x + apps.money.position.x * Mult,		y + apps.money.position.y * Mult,		z + apps.money.position.z * Mult,		apps.money.icon,	apps.money.size.default * Mult		)
 	end	
 		
+end
+
+local function table.size(tab)
+    local length = 0
+    for _ in pairs(tab) do length = length + 1 end
+    return length
 end
 
 bindKey ( "b", "down", toggle)

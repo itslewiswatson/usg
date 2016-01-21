@@ -1,7 +1,7 @@
 <meta>
- <script src = "client/client.luac" type = "client" />
- <script src = "appsSettings.luac" type = "client" /> 
- <script src = "vehicleSettings.luac" type = "client" /> 
+ <script src = "client/client.lua" type = "client" />
+ <script src = "appsSettings.lua" type = "client" /> 
+ <script src = "vehicleSettings.lua" type = "client" /> 
 
 	<file src = "images/account_icon.png" />
 	<file src = "images/call_icon.png" />
