@@ -10,6 +10,8 @@ apps = {}
 		apps.account.size = {}
 			apps.account.size.default = 0.5
 			apps.account.size.selected = 0.75
+			
+		apps.account.allRooms = true
 	
 	apps.call = {}
 		apps.call.icon = dxCreateTexture("images/call_icon.png")
@@ -22,6 +24,8 @@ apps = {}
 		apps.call.size = {}
 			apps.call.size.default = 0.5
 			apps.call.size.selected = 0.75
+			
+		apps.call.allRooms = false
 		
 	apps.gps = {}
 		apps.gps.icon = dxCreateTexture("images/gps_icon.png")
@@ -34,6 +38,8 @@ apps = {}
 		apps.gps.size = {}
 			apps.gps.size.default = 0.5
 			apps.gps.size.selected = 0.75
+			
+		apps.gps.allRooms = false
 		
 	apps.messages = {}
 		apps.messages.icon = dxCreateTexture("images/messages_icon.png")
@@ -47,6 +53,8 @@ apps = {}
 			apps.messages.size.default = 0.5
 			apps.messages.size.selected = 0.75
 		
+		apps.messages.allRooms = true
+		
 	apps.money = {}
 		apps.money.icon = dxCreateTexture("images/money_icon.png")
 		
@@ -58,6 +66,8 @@ apps = {}
 		apps.money.size = {}
 			apps.money.size.default = 0.5
 			apps.money.size.selected = 0.75
+			
+		apps.money.allRooms = false
 		
 	apps.music = {}
 		apps.music.icon = dxCreateTexture("images/music_icon.png")
@@ -70,6 +80,8 @@ apps = {}
 		apps.music.size = {}
 			apps.music.size.default = 0.5
 			apps.music.size.selected = 0.75
+			
+		apps.music.allRooms = true
 
 	apps.weapons = {}
 		apps.weapons.icon = dxCreateTexture("images/weapons_icon.png")
@@ -82,3 +94,5 @@ apps = {}
 		apps.weapons.size = {}
 			apps.weapons.size.default = 0.5
 			apps.weapons.size.selected = 0.75
+			
+		apps.weapons.allRooms = false
