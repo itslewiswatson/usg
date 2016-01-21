@@ -2,7 +2,6 @@
 local showing = false
 local selectedApp = nil
 local selectedID = nil
-local appCurrentlyInUse = nil
 
 local function tableSize(tab)
     local length = 0
@@ -10,14 +9,6 @@ local function tableSize(tab)
     return length
 end
 
-local function enterAppCurrentlyInUse(app)
-	triggerEvent ( app.event, root)
-	toggle()
-end
-
-local function exitAppCurrentlyInUse()
-	appCurrentlyInUse = nil
-end
 
 local function selectApp(id)
 	selectedID = id
@@ -103,6 +94,12 @@ local function toggle()
 		selectApp(1)
 	end
 end
+
+local function enterAppCurrentlyInUse(app)
+	triggerEvent ( app.event, root)
+	toggle()
+end
+
 
 bindKey ( "b", "down", toggle)
 bindKey(",","down",processInput,"left")
