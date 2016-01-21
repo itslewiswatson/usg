@@ -82,7 +82,7 @@ function toogleMarket()
 end
 bindKey("F7", "down", toogleMarket)
 
-medicines = { "Aspirin","Steroid","Adderall")
+medicines = { "Aspirin","Steroid","Adderall" }
 medicinesAmount = {exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[1]),
  exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[2]),
  exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[3])}
