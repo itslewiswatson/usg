@@ -224,27 +224,21 @@ function loadPlayerJobExpCallback(result, player)
 		jobExpTable[player] = {}
 
 		if (not result) then
-			outputChatBox("No data found, creating new data.", player)
 
 			for i,id in pairs(jobIDs) do
 				table.insert(jobExpTable[player], {jobName = id, exp = 0})
 			end
-			outputChatBox("Data added to player table, adding to mysql....", player)
 
 			local jsonData = toJSON(jobExpTable[player])
 			exports.MySQL:execute("INSERT INTO cnr_jobExp (username, jobExp) VALUES(?, ?)", exports.USGaccounts:getPlayerAccount(player), jsonData)
-			outputChatBox("Data added to mysql table.", player)
 		else
 			local valueTable = fromJSON(result.jobExp)
-			outputChatBox("Data exists, looping..", player)
 
 			for i,jobIDName in pairs(jobIDs) do
 				for k, idValue in pairs(valueTable) do
 					table.insert(jobExpTable[player], {jobName = jobIDName, exp = idValue.exp})
 				end
 			end
-
-			outputChatBox("Finished looping, data added to player table.", player)
 		end
 	end
 end
@@ -254,8 +248,7 @@ end
 ------------------------------------------------------------
 function saveOnPlayerExitRoom(room)
 	if (room == "cnr") then
-		savePlayerInventory(source)
-		jobExpTable[source] = nil
+		savePlayerJobExp(source)
 	end
 end
 addEvent("onPlayerExitRoom")
@@ -263,16 +256,16 @@ addEventHandler("onPlayerExitRoom", root, saveOnPlayerExitRoom)
 
 function saveOnPlayerQuit()
 	if (exports.USGrooms:getPlayerRoom(source) == "cnr") then
-		savePlayerInventory(source)
-		jobExpTable[source] = nil	
+		savePlayerJobExp(source)
 	end
 end
 addEventHandler("onPlayerQuit", root, saveOnPlayerQuit)
 
-function savePlayerInventory(player)
+function savePlayerJobExp(player)
 	if (jobExpTable[player]) then
 		local jsonData = toJSON(jobExpTable[player])
 		exports.MySQL:execute("UPDATE cnr_jobExp SET jobExp=? WHERE username=?", jsonData, exports.USGaccounts:getPlayerAccount(player))
+		jobExpTable[source] = nil
 	end
 end
 
