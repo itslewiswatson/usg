@@ -11,6 +11,12 @@ function toggle()
 end
 addCommandHandler("ok",toggle)
 
+function processInput(action)
+	if(showing)then
+		outputChatBox(action)
+	end	
+end
+
 function render()
 	local playerRoom = exports.USGrooms:getPlayerRoom(localPlayer)
 	local x,y,z = getElementPosition(localPlayer)
@@ -52,3 +58,6 @@ function render()
 end
 
 bindKey ( "b", "down", toggle)
+bindKey(",","down",processInput,"left")
+bindKey(".","down",processInput,"right")
+bindKey("lalt","down",processInput,"select")
