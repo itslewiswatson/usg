@@ -169,14 +169,9 @@ function getPlayerJobExp(player, jobName)
 	if (player and isElement(player) and jobName) then
 		for k,v in pairs(jobExpTable[player]) do
 			if (v.jobName == jobName) then
-				outputChatBox(v.jobName .. ", " .. jobName, player)
-				outputChatBox(v.exp, player)
 				return tonumber(v.exp)
-			else
-				outputChatBox(v.jobName .. ", " .. jobName, player)
 			end
 		end
-		outputChatBox("End of getPlayerJobExp", player)
 	end
 end
 
@@ -215,7 +210,6 @@ end
 function giveOnPlayerJoinRoom(room)
 	if (room == "cnr") then
 		loadPlayerJobExp(source)
-		outputChatBox("Loading on room enter", source)
 	end
 end
 addEvent("onPlayerJoinRoom", true)
@@ -233,7 +227,6 @@ function loadPlayerJobExpCallback(result, player)
 			outputChatBox("No data found, creating new data.", player)
 
 			for i,id in pairs(jobIDs) do
-				--jobExpTable[player][#jobExpTable + 1] = {jobName = id, exp = 0}
 				table.insert(jobExpTable[player], {jobName = id, exp = 0})
 			end
 			outputChatBox("Data added to player table, adding to mysql....", player)
@@ -247,7 +240,6 @@ function loadPlayerJobExpCallback(result, player)
 
 			for i,jobIDName in pairs(jobIDs) do
 				for k, idValue in pairs(valueTable) do
-					--jobExpTable[player][#jobExpTable + 1] = {jobName = jobIDName, exp = idValue.exp}
 					table.insert(jobExpTable[player], {jobName = jobIDName, exp = idValue.exp})
 				end
 			end
@@ -298,9 +290,7 @@ addCommandHandler("checkjobexp",
 addCommandHandler("testexp", 
 	function(player, cmd, jobName, exp)
 		if (jobName and exp) then
-			outputChatBox("Triggered from command", player)
 			givePlayerJobExp(player, jobName, exp)
-			outputChatBox("test 5", player)
 		end
 	end
 )
