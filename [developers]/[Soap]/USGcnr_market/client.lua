@@ -9,7 +9,7 @@ function createMarket()
         guiSetProperty(marketGUI.windClose, "NormalTextColour", "FFAAAAAA")  
         
     marketGUI.tabpanel = guiCreateTabPanel(9, 31, 557, 407, false, marketGUI.window)
-    marketGUI.invTab = guiCreateTab("Iventory", marketGUI.tabpanel)
+    marketGUI.invTab = guiCreateTab("Inventory", marketGUI.tabpanel)
     marketGUI.invGrid = guiCreateGridList(4, 20, 299, 358, false, marketGUI.invTab)
         guiGridListAddColumn(marketGUI.invGrid, "Items", 0.5)
         guiGridListAddColumn(marketGUI.invGrid, "Amount of hits", 0.5)
@@ -89,7 +89,7 @@ medicinesAmount = {exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[1]
 
 function updateInv()
 guiGridListClear(invGrid)
-    for medicinesAmount,k in pairs(medicines) do
+    for k,medicinesAmount in ipairs(medicines) do
         if medicinesAmout[1] > 0 or medicinesAmout[2] > 0 or medicinesAmout[3] > 0 then
             local row = guiGridListAddRow(invGrid)
             guiGridListSetItemText ( invGrid, row, 1, medicines[k], false, false )
