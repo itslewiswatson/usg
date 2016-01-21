@@ -3,12 +3,10 @@ local showing = false;
 function toggle()
 	if(showing)then
 		showing = false
-		outputChatBox("Not Showing")
-		addEventHandler("onClientRender", root,render)
+		removeEventHandler("onClientRender", root,render)
 	else
 		showing = true
-		outputChatBox("Showing")
-		removeEventHandler("onClientRender", root,render)
+		addEventHandler("onClientRender", root,render)
 	end
 end
 addCommandHandler("ok",toggle)
@@ -52,3 +50,5 @@ function render()
 	end	
 		
 end
+
+bindKey ( "b", "down", toggle)
