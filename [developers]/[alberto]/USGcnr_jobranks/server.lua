@@ -104,16 +104,16 @@ addEventHandler("onResourceStart", resourceRoot, createTable)
 function getPlayerJobRank(player, jobName)
 	if (player and isElement(player) and getElementType(player) == "player" and jobName) then
 		if (jobRanks[jobName]) then
-			local jobExp = 0
+			local jobExp = getPlayerJobExp(player, jobName)
 
-			if (jobExpTable[player]) then
+			--[[if (jobExpTable[player]) then
 				for k,v in pairs(jobExpTable[player]) do
 					if (v.jobName == jobName) then
 						jobExp = tonumber(v.exp)
 						break
 					end
 				end
-			end
+			end]]
 
 			local rank = false
 
@@ -169,11 +169,14 @@ function getPlayerJobExp(player, jobName)
 	if (player and isElement(player) and jobName) then
 		for k,v in pairs(jobExpTable[player]) do
 			if (v.jobName == jobName) then
-				outputChatBox(b.jobName .. ", " .. jobName, player)
+				outputChatBox(v.jobName .. ", " .. jobName, player)
 				outputChatBox(v.exp, player)
 				return tonumber(v.exp)
+			else
+				outputChatBox(v.jobName .. ", " .. jobName, player)
 			end
 		end
+		outputChatBox("End of getPlayerJobExp", player)
 	end
 end
 
@@ -230,7 +233,8 @@ function loadPlayerJobExpCallback(result, player)
 			outputChatBox("No data found, creating new data.", player)
 
 			for i,id in pairs(jobIDs) do
-				jobExpTable[player][#jobExpTable + 1] = {jobName = id, exp = 0}
+				--jobExpTable[player][#jobExpTable + 1] = {jobName = id, exp = 0}
+				table.insert(jobExpTable[player], {jobName = id, exp = 0})
 			end
 			outputChatBox("Data added to player table, adding to mysql....", player)
 
@@ -243,7 +247,8 @@ function loadPlayerJobExpCallback(result, player)
 
 			for i,jobIDName in pairs(jobIDs) do
 				for k, idValue in pairs(valueTable) do
-					jobExpTable[player][#jobExpTable + 1] = {jobName = jobIDName, exp = idValue.exp}
+					--jobExpTable[player][#jobExpTable + 1] = {jobName = jobIDName, exp = idValue.exp}
+					table.insert(jobExpTable[player], {jobName = jobIDName, exp = idValue.exp})
 				end
 			end
 
