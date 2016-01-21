@@ -93,7 +93,7 @@ local jobIDs = {
 --Create MySQL table if it hasn't been created on resource start
 -----------------------------------------------------------------
 function createTable()
-	execute("CREATE TABLE IF NOT EXISTS cnr_jobExp (username TEXT, jobExp TEXT)")
+	exports.MySQL:execute("CREATE TABLE IF NOT EXISTS cnr_jobExp (username TEXT, jobExp TEXT)")
 	outputConsole("Done creating table")
 end
 addEventHandler("onResourceStart", resourceRoot, createTable)
