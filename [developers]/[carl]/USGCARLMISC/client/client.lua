@@ -11,7 +11,11 @@ end
 
 local function selectApp(id)
 	selectedID = id
+	if(selectApp)then
+		selectedApp.isSelected = false
+	end
 	selectedApp = appsIDs[id]
+	selectedApp.isSelected = true
 end
 
 local function selectPrevious()
@@ -33,7 +37,7 @@ local function selectNext()
 end
 
 local function selectEnter()
-	outputChatBox(selectedApp.name)
+	
 end
 
 local function processInput(_,_,action)
@@ -66,6 +70,7 @@ local function render()
 			
 		end
 		
+	--[[
 	if(playerRoom == "cnr" or apps.account.allRooms)then
 		dxDrawMaterialLine3D ( x + apps.account.position.x * Mult,		y + apps.account.position.y * Mult,	z + apps.account.position.z * Mult + apps.account.size.default * Mult,		x + apps.account.position.x * Mult,	y + apps.account.position.y * Mult,	z + apps.account.position.z * Mult,	apps.account.icon,	apps.account.size.default * Mult	)
 	end
@@ -86,7 +91,18 @@ local function render()
 	end
 	if(playerRoom == "cnr" or apps.money.allRooms)then
 		dxDrawMaterialLine3D ( x + apps.money.position.x * Mult,		y + apps.money.position.y * Mult,		z + apps.money.position.z * Mult + apps.money.size.default * Mult,			x + apps.money.position.x * Mult,		y + apps.money.position.y * Mult,		z + apps.money.position.z * Mult,		apps.money.icon,	apps.money.size.default * Mult		)
-	end		
+	end	]]
+
+	for k,v in pairs(appsIDs)do
+		if(playerRoom == "cnr" or v.allRooms)then
+			if(v.isSelected)then
+			dxDrawMaterialLine3D ( x + v.position.x * Mult,		y + v.position.y * Mult,	z + v.position.z * Mult + v.size.selected * Mult,		x + v.position.x * Mult,	y + v.position.y * Mult,	z + v.position.z * Mult,	v.icon,	v.size.selected * Mult	)
+			else
+			dxDrawMaterialLine3D ( x + v.position.x * Mult,		y + v.position.y * Mult,	z + v.position.z * Mult + v.size.default * Mult,		x + v.position.x * Mult,	y + v.position.y * Mult,	z + v.position.z * Mult,	v.icon,	v.size.default * Mult	)
+			end
+		end
+	end
+		
 end
 
 local function toggle()
