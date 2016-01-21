@@ -100,15 +100,15 @@ local maxPrice = 500
 local minPrice = 100
 
 function putOnMarket()
-outputChatBox("oaksd")
 local selected = guiGridListGetSelectedItems(marketGUI.invGrid)
     if ( selected ) then 
+    outputChatBox("oaksd")
         if ( guiEditGetCaretIndex(marketGUI.invNumberOfHits) > 0 and guiEditGetCaretIndex(marketGUI.invPrice) > minPrice and guiEditGetCaretIndex(marketGUI.invPrice) < maxPrice ) then
             local row = guiGridListAddRow(marketGUI.marketGrid)
             guiGridListSetItemText ( marketGUI.marketGrid , row, 1, selected[1], false, false )
             guiGridListSetItemText ( marketGUI.marketGrid , row, 2, guiEditGetCaretIndex(marketGUI.invNumberOfHits), false, false )
             guiGridListSetItemText ( marketGUI.marketGrid , row, 3, guiEditGetCaretIndex(marketGUI.invPrice), false, false )
-            guiGridListSetItemText ( marketGUI.marketGrid , row, 3, getPlayerName(localPlayer), false, false )
+            guiGridListSetItemText ( marketGUI.marketGrid , row, 4, getPlayerName(localPlayer), false, false )
         end
     end
 end
