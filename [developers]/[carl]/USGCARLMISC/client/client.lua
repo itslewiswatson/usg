@@ -9,6 +9,7 @@ function toggle()
 		removeEventHandler("onClientRender", localPlayer,render)
 	end
 end
+addCommandHandler("ok",toggle)
 
 function render()
 	local playerRoom = exports.USGrooms:getPlayerRoom(localPlayer)
