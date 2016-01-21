@@ -1,3 +1,5 @@
+loadstring(exports.mysql:getQueryTool())()
+
 marketGUI = {}
 
 
