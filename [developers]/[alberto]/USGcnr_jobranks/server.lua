@@ -92,6 +92,7 @@ local jobIDs = {
 -----------------------------------------------------------------
 function createTable()
 	exports.MySQL:execute("CREATE TABLE IF NOT EXISTS cnr_jobExp (username TEXT, jobExp TEXT)")
+	outputConsole("Done creating table")
 end
 addEventHandler("onResourceStart", resourceRoot, createTable)
 
