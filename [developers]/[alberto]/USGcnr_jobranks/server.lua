@@ -208,6 +208,7 @@ function giveOnPlayerJoinRoom(room)
 	if (room == "cnr") then
 		loadPlayerJobExp(source)
 	end
+end
 addEvent("onPlayerJoinRoom", true)
 addEventHandler("onPlayerJoinRoom", root, giveOnPlayerJoinRoom)
 
