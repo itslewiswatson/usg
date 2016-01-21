@@ -2,10 +2,12 @@ local showing = false;
 
 function toggle()
 	if(showing)then
-		showing = false	
+		showing = false
+		outputChatBox("Not Showing")
 		addEventHandler("onClientRender", localPlayer,render)
 	else
 		showing = true
+		outputChatBox("Showing")
 		removeEventHandler("onClientRender", localPlayer,render)
 	end
 end
