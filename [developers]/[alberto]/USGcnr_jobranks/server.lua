@@ -1,3 +1,5 @@
+loadstring(exports.Mysql:getQueryTool())()
+
 local jobExpTable = {}
 
 ------------------------------------------------------------
