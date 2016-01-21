@@ -83,15 +83,13 @@ end
 bindKey("F7", "down", toogleMarket)
 
 medicines = { "Aspirin","Steroid","Adderall" }
-medicinesAmount = { outputChatBox(exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[1])),
- outputChatBox(exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[2])),
- outputChatBox( exports.USGcnr_medicines:getPlayerMedicineAmount(medicines[3]))}
+
 
 function updateInv()
 guiGridListClear(marketGUI.invGrid)
-    for k,medicinesAmount in ipairs(medicines) do
+    for k,v in ipairs(medicines) do
         local row = guiGridListAddRow(marketGUI.invGrid)
         guiGridListSetItemText ( marketGUI.invGrid , row, 1, medicines[k], false, false )
-        guiGridListSetItemText ( marketGUI.invGrid , row, 2, medicinesAmount[k], false, false )    
+        guiGridListSetItemText ( marketGUI.invGrid , row, 2, exports.USGcnr_medicines:getPlayerMedicineAmount(v), false, false )    
     end
 end
