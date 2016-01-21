@@ -208,17 +208,17 @@ end
 function giveOnPlayerJoinRoom(room)
 	if (room == "cnr") then
 		loadPlayerJobExp(source)
-		outputChatBox("Loading on room enter", player)
+		outputChatBox("Loading on room enter", source)
 	end
 end
 addEvent("onPlayerJoinRoom", true)
 addEventHandler("onPlayerJoinRoom", root, giveOnPlayerJoinRoom)
 
 function loadPlayerJobExp(player)
-	singleQuery(loadPlayerExpCallback, {player}, "SELECT * FROM cnr__jobExp WHERE username=?", exports.USGaccounts:getPlayerAccount(source))
+	singleQuery(loadPlayerJobExpCallback, {player}, "SELECT * FROM cnr__jobExp WHERE username=?", exports.USGaccounts:getPlayerAccount(player))
 end
 
-function loadPlayerExpCallback(result, player)
+function loadPlayerJobExpCallback(result, player)
 	if (isElement(player) and exports.USGrooms:getPlayerRoom(player) == "cnr") then -- still in cnr room
 		jobExpTable[player] = {}
 
