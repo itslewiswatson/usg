@@ -208,13 +208,14 @@ end
 function giveOnPlayerJoinRoom(room)
 	if (room == "cnr") then
 		loadPlayerJobExp(source)
+		outputChatBox("Loading on room enter", player)
 	end
 end
 addEvent("onPlayerJoinRoom", true)
 addEventHandler("onPlayerJoinRoom", root, giveOnPlayerJoinRoom)
 
 function loadPlayerJobExp(player)
-	singleQuery(loadPlayerJobExpCallback, {player}, "SELECT * FROM cnr__jobExp WHERE username=?", exports.USGaccounts:getPlayerAccount(source))
+	singleQuery(loadPlayerExpCallback, {player}, "SELECT * FROM cnr__jobExp WHERE username=?", exports.USGaccounts:getPlayerAccount(source))
 end
 
 function loadPlayerExpCallback(result, player)
@@ -222,20 +223,27 @@ function loadPlayerExpCallback(result, player)
 		jobExpTable[player] = {}
 
 		if (not result) then
+			outputChatBox("No data found, creating new data.", player)
+
 			for i,id in pairs(jobIDs) do
 				jobExpTable[player][#jobExpTable + 1] = {jobName = id, exp = 0}
 			end
+			outputChatBox("Data added to player table, adding to mysql....", player)
 
 			local jsonData = toJSON(jobExpTable[player])
 			exports.MySQL:execute("INSERT INTO cnr_jobExp (username, jobExp) VALUES(?, ?)", exports.USGaccounts:getPlayerAccount(player), jsonData)
+			outputChatBox("Data added to mysql table.", player)
 		else
 			local valueTable = fromJSON(result.jobExp)
+			outputChatBox("Data exists, looping..", player)
 
 			for i,jobExpValue in pairs(jobIDs) do
 				for k, idValue in pairs(valueTable) do
 					jobExpTable[player][#jobExpTable + 1] = {jobName = id, exp = jobExpValue.exp}
 				end
 			end
+
+			outputChatBox("Finished looping, data added to player table.", player)
 		end
 	end
 end
