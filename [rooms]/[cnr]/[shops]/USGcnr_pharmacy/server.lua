@@ -2,13 +2,17 @@
 local playersRequiredToActivate = 20
 
 local markers = {
-{ 2292.65625, -17.818359375, 26.33846282959}
+{ 2292.65625, -17.818359375, 26.33846282959},
+{-1935.4775390625, 2381.9013671875, 49.499954223633},
+{-1428.2197265625, -964.2802734375, 200.8837890625},
+{-60.654296875, 51.4365234375, 3.110269546508}
 }
 
+local randomPos = markers[math.random(#markers)]
 
 addEventHandler ( "onResourceStart", resourceRoot, function()
 --for k,v in ipairs(markers) do
-        local marker = createMarker(2310.171875, -8.421875, 25, "cylinder",4, 200,255,0,170)
+        local marker = createMarker(randomPos[1], randomPos[2], randomPos[3], "cylinder",4, 200,255,0,170)
         local blip = createBlipAttachedTo ( marker, 26,1,_,_,_,_,_,2000)
         for k, player in ipairs(getElementsByType("player")) do
             if (not exports.USGrooms:getPlayerRoom(player) == "cnr") then
