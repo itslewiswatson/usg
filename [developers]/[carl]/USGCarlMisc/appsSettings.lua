@@ -93,23 +93,7 @@ apps = {}
 			
 		apps.music.allRooms = true
 		
-		apps.music.event = "UserPanel.App.MusicApp"
-
-	apps.weapons = {}
-		apps.weapons.icon = dxCreateTexture("images/weapons_icon.png")
-		apps.weapons.name = "Weapon App"
-		apps.weapons.position = {}
-			apps.weapons.position.x = 0
-			apps.weapons.position.y = -1.25
-			apps.weapons.position.z = 0.5
-			
-		apps.weapons.size = {}
-			apps.weapons.size.default = 0.5
-			apps.weapons.size.selected = 0.75
-			
-		apps.weapons.allRooms = false
-		
-		apps.weapons.event = "UserPanel.App.WeaponApp"		
+		apps.music.event = "UserPanel.App.MusicApp"	
 		
 		
 appsIDs = 
