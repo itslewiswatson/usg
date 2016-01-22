@@ -42,10 +42,10 @@ function createSelectJobGUI()
         guiSetProperty(selectJobGUI.OK, "NormalTextColour", "FFAAAAAA")    
         addEventHandler("onClientGUIClick",selectJobGUI.cancel, 
             function ( btn, state ) 
-                if ( btn == 1 and state == "down" ) then 
+            --  if ( btn == 1 and state == "down" ) then 
                     setElementModel(localPlayer,skin) 
                     closeJobGUI() 
-                end 
+                    --   end 
             end, false)
 
             addEventHandler("onClientGUIClick",selectJobGUI.OK, onSelectJob, false)
@@ -54,7 +54,7 @@ function createSelectJobGUI()
 end
 
 function onClickSkins(btn,state)
-    if ( btn == 1 and state == "down" ) then
+   -- if ( btn == 1 and state == "down" ) then
         local selRow = guiGridListGetSelectedItem(selectJobGUI.skins)
         if ( selRow ) then
             local id = tonumber(guiGridListGetItemText(selectJobGUI.skins,selRow,1))
@@ -64,11 +64,11 @@ function onClickSkins(btn,state)
         elseif ( skin ) then
             setElementModel(localPlayer,skin)
         end
-    end
+        -- end
 end
 
 function onSelectJob(btn,state)
-    if ( btn == 1 and state == "down" ) then
+    --if ( btn == 1 and state == "down" ) then
         if ( pickSkin ) then
             local selRow = guiGridListGetSelectedItem(selectJobGUI.skins)
             if ( selRow ) then
@@ -82,7 +82,7 @@ function onSelectJob(btn,state)
             setPlayerJob(selectedJob,false)
             closeJobGUI()
         end
-    end
+        --end
 end
 
 function closeJobGUI()

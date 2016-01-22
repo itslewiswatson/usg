@@ -2,7 +2,7 @@ local medicinesGUI = {}
 function createDedicinesGUI()
 
     local screenW, screenH = guiGetScreenSize()
-    medicinesGUI.window = guiCreateWindow((screenW - 201) / 2, (screenH - 168) / 2, 230, 190, "Medicines", false)
+    medicinesGUI.window = guiCreateWindow((screenW - 201) / 2, (screenH - 168) / 2, 250, 210, "Medicines", false)
     guiWindowSetSizable(medicinesGUI.window, false)    
 
     exports.USGGUI:setDefaultTextAlignment("left","center")
