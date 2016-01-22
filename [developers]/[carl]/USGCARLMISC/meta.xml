@@ -2,6 +2,8 @@
  <script src = "client/client.lua" type = "client" />
  <script src = "appsSettings.lua" type = "client" /> 
  <script src = "vehicleSettings.lua" type = "client" /> 
+ 
+ <script src = "apps/WeaponApp.lua" type = "client" />
 
 	<file src = "images/account_icon.png" />
 	<file src = "images/call_icon.png" />
