@@ -29,7 +29,6 @@ local function showMessageGUI()
 if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
 	if(guiGetVisible(msgGUI.window) == false)then
 		guiSetVisible ( msgGUI.window, true )
-		showCursor(true)
 		msgfillPlayerGrid()
 	end
 end
