@@ -7,14 +7,14 @@ addEventHandler("onClientResourceStart",resourceRoot,function()
 	weapGUI.window = guiCreateWindow(0.8, 0.6, 0.2, 0.4, apps.weapons.name, true)
     guiWindowSetSizable(weapGUI.window, false)    
     refresh()
-	--guiSetVisible(weapGUI.window,false)
+	guiSetVisible(weapGUI.window,false)
 end
 )
 
 function showWeapGUI()
-	showCursor(true)
     guiSetVisible(weapGUI.window,true)
-	open()
+	showCursor(true)
+	refresh()
 end
 
 function hideWeapGUI()
@@ -26,12 +26,6 @@ addEvent("UserPanel.App.WeaponApp",true)
 addEventHandler("UserPanel.App.WeaponApp",root,showWeapGUI)
 
 bindKey("lalt","down",hideWeapGUI)
-
-
-
-function open()
-    refresh()
-end
 
 function refresh()
     for weaponID, statID in pairs(weaponStats) do
