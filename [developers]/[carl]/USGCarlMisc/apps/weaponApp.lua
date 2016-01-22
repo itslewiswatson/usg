@@ -12,6 +12,7 @@ end
 )
 
 function showWeapGUI()
+outputChatBox("ok")
 	showCursor(true)
     guiSetVisible(weapGUI.window,true)
 	open()
