@@ -40,6 +40,8 @@ local function hideMessageGUI()
 	showCursor(false)
 end
 
+bindKey("lalt","down",hideMessageGUI)
+
 
 function msgfillPlayerGrid()
     guiGridListClear ( msgGUI.gridlist )
