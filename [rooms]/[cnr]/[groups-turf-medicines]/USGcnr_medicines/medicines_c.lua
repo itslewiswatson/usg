@@ -8,13 +8,13 @@ local screenW, screenH = guiGetScreenSize()
     local y = 26
     for medicine, _ in pairs(medicines) do
     medicinesGUI.medicineLabels[medicine] = guiCreateLabel(19, y, 85, 17,medicine..":",false,medicinesGUI.window)
-    medicinesGUI.medicineRadios[medicine] =  guiCreateRadioButton(127, y, 15, 15, myMedicines and tostring(myMedicines[medicine]) or "0", false, medicinesGUI.window)
+    medicinesGUI.medicineRadios[medicine] =  guiCreateRadioButton(127, y, 15, 100, myMedicines and tostring(myMedicines[medicine]) or "0", false, medicinesGUI.window)
         y = y+35
     end
-    medicinesGUI.amount = guiCreateEdit(9, y+30, 111, 22, "", false,medicinesGUI.window)
-    medicinesGUI.take = guiCreateButton(137, y+30, 66, 28, "Take", false,medicinesGUI.window)
+    medicinesGUI.amount = guiCreateEdit(9, y+20, 111, 22, "", false,medicinesGUI.window)
+    medicinesGUI.take = guiCreateButton(137, y+20, 66, 28, "Take", false,medicinesGUI.window)
             guiSetProperty(GUIEditor.button[1], "NormalTextColour", "FFAAAAAA")
-    guiSetSize(medicinesGUI.window, 213, y+30, false)
+    guiSetSize(medicinesGUI.window, 213, y+20, false)
     addEventHandler("onClientGUIClick", medicinesGUI.take, onTakeMedicine, false)
 end
 
