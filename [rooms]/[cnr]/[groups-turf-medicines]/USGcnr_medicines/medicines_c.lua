@@ -1,19 +1,21 @@
 local medicinesGUI = {}
 function createDedicinesGUI()
-    medicinesGUI.window = exports.USGGUI:createWindow("center","center",200,255,false,"Medicines")
-    exports.USGGUI:setDefaultTextAlignment("left","center")
+
+local screenW, screenH = guiGetScreenSize()
+    medicinesGUI.window = guiCreateWindow((screenW - 213) / 2, (screenH - 187) / 2, 213, 187, "USG - Medicines", false)
     medicinesGUI.medicineLabels = {}
     medicinesGUI.medicineRadios = {}
-    local y = 5
+    local y = 26
     for medicine, _ in pairs(medicines) do
-    medicinesGUI.medicineLabels[medicine] = exports.USGGUI:createLabel(5,y,135,30,false,medicine..":",medicinesGUI.window)
-    medicinesGUI.medicineRadios[medicine] = exports.USGGUI:createRadioButton(145,y,60,35,false, myMedicines and tostring(myMedicines[medicine]) or "0", medicinesGUI.window)
+    medicinesGUI.medicineLabels[medicine] = guiCreateLabel(19, y, 85, 17,medicine..":",false,medicinesGUI.window)
+    medicinesGUI.medicineRadios[medicine] =  guiCreateRadioButton(127, y, 100, 15, myMedicines and tostring(myMedicines[medicine]) or "0", false, medicinesGUI.window)
         y = y+35
     end
-    medicinesGUI.amount = exports.USGGUI:createEditBox(5,y+5,110,25,false,"",medicinesGUI.window)
-    medicinesGUI.take = exports.USGGUI:createButton(130,y+5,60,25,false,"Take",medicinesGUI.window)
-    exports.USGGUI:setSize(medicinesGUI.window, 200, y+35, false)
-    addEventHandler("onUSGGUISClick", medicinesGUI.take, onTakeMedicine, false)
+    medicinesGUI.amount = guiCreateEdit(9, y+10, 111, 22, "", false,medicinesGUI.window)
+    medicinesGUI.take = guiCreateButton(137, y+10, 66, 28, "Take", false,medicinesGUI.window)
+            guiSetProperty(medicinesGUI.take, "NormalTextColour", "FFAAAAAA")
+    guiSetSize(medicinesGUI.window, 213, y+45, false)
+    addEventHandler("onClientGUIClick", medicinesGUI.take, onTakeMedicine, false)
 end
 
 function updateMyMedicines(new)
@@ -29,7 +31,7 @@ function recieveMedicines(medicines)
     if(isElement(medicinesGUI.window)) then
         for medicine, amount in pairs(medicines) do
         if(medicinesGUI.medicineRadios[medicine]) then
-            exports.USGGUI:setText(medicinesGUI.medicineRadios[medicine], amount)
+            guiSetText(medicinesGUI.medicineRadios[medicine], amount)
             end
         end
     end
@@ -37,7 +39,7 @@ end
 addEventHandler("USGcnr_medicines.recieveMedicines", localPlayer, recieveMedicines)
 
 function toggleDedicinesGUI()
-    if(not isElement(medicinesGUI.window) or not exports.USGGUI:getVisible(medicinesGUI.window)) then
+    if(not isElement(medicinesGUI.window) or not guiGetVisible(medicinesGUI.window)) then
         openDedicinesGUI()
     else
         closeDedicinesGUI()
@@ -51,13 +53,13 @@ function openDedicinesGUI()
     if(not isElement(medicinesGUI.window)) then
         createDedicinesGUI()
     else
-        exports.USGGUI:setVisible(medicinesGUI.window, true)
+        guiSetVisible(medicinesGUI.window, true)
     end
     showCursor(true)
 end
 
 function closeDedicinesGUI()
-    exports.USGGUI:setVisible(medicinesGUI.window, false)
+        guiSetVisible(medicinesGUI.window, false)
     showCursor(false)
 end
 
@@ -116,7 +118,7 @@ addEventHandler("onPlayerJoinRoom", localPlayer,
 
 function getSelectedMedicine()
     for medicine, radio in pairs(medicinesGUI.medicineRadios) do
-        if(exports.USGGUI:getRadioButtonState(radio)) then
+        if(guiRadioButtonGetSelected(radio)) then
             return medicine
         end
     end
@@ -124,7 +126,7 @@ function getSelectedMedicine()
 end
 
 function onTakeMedicine()
-    local amount = tonumber(exports.USGGUI:getText(medicinesGUI.amount))
+    local amount = tonumber(guiGetText(medicinesGUI.amount))
     if(not amount or amount <= 0) then
         exports.USGmsg:msg("Invalid number, must be more than 0!", 255, 0, 0)
         return

@@ -26,6 +26,33 @@ local jobRanks = {
 		[75000] = {rankName = "ATP Commander"},
 		[100000] = {rankName = "ATP Senior Commander"},
 	},
+
+	["trucker"] = {
+		[0] = {rankName = "Trainee Trucker"},
+		[1000] = {rankName = "Local Trucker"},
+		[2500] = {rankName = "FedEx Trucker"},
+		[5000] = {rankName = "UPS Trucker"},
+		[7500] = {rankName = "Regular Trucker"},
+		[10000] = {rankName = "Experienced Trucker"},
+		[15000] = {rankName = "Respected Trucker"},
+		[25000] = {rankName = "State Trucker"},
+		[50000] = {rankName = "SA Transportation Trucker"},
+		[75000] = {rankName = "King of the Road"},
+		[100000] = {rankName = "Trucking Tycoon"},
+	},
+
+	["medic"] = {
+		[0] = {rankName = "Medical Student"},
+		[1000] = {rankName = "Cleveland Clinic Doctor"},
+		[2500] = {rankName = "General Practitioner"},
+		[5000] = {rankName = "Foundation Medic"},
+		[7500] = {rankName = "Assistant Doctor"},
+		[10000] = {rankName = "Consultant"},
+		[25000] = {rankName = "Middle-grade Doctor"},
+		[50000] = {rankName = "Specialist"},
+		[75000] = {rankName = "Surgeon"},
+		[100000] = {rankName = "Elite Doctor"},
+	},
 } 
 
 ----------------------------------------------------------------------------------------------
