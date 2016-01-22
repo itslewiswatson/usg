@@ -1,0 +1,15 @@
+<meta>
+ <script src = "client/client.lua" type = "client" />
+ <script src = "appsSettings.lua" type = "client" /> 
+ <script src = "vehicleSettings.lua" type = "client" /> 
+ 
+ <script src = "apps/weaponApp.lua" type = "client" /> 
+
+	<file src = "images/account_icon.png" />
+	<file src = "images/call_icon.png" />
+	<file src = "images/gps_icon.png" />
+	<file src = "images/messages_icon.png" />
+	<file src = "images/money_icon.png" />
+	<file src = "images/music_icon.png" />
+	<file src = "images/weapons_icon.png" />
+</meta>
