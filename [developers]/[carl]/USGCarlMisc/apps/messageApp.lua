@@ -1,20 +1,24 @@
 local msgGUI = {}
 local messages = ""
 
-addEventHandler("onClientResourceStart",resourceRoot,function()
-	exports.USGGUI:setDefaultTextAlignment("left","center")
-    msgGUI.window = exports.USGGUI:createWindow("center","center", 300, 430, false,"Message")
-    msgGUI.memo = exports.USGGUI:createMemo("center", "top", 298, 152, false,  messages,msgGUI.window)
-    exports.USGGUI:setProperty( msgGUI.memo, "readOnly", true)
-    msgGUI.input = exports.USGGUI:createEditBox("center",180,298,25,false,"",msgGUI.window)
-    addEventHandler("onUSGGUIAccept", msgGUI.input, sendSMS, false)
-    msgGUI.grid = exports.USGGUI:createGridList("center",205,298,170,false,msgGUI.window)
-    exports.USGGUI:gridlistAddColumn(msgGUI.grid, "Player", 1.0)
-    msgGUI.search = exports.USGGUI:createEditBox("center","bottom",298,25,false,"",msgGUI.window)
-    addEventHandler("onUSGGUIChange",  msgGUI.search, msgsearchchange, false)
-    exports.USGGUI:createLabel("center",375, 295, 35,false,"Search For a Player",msgGUI.window)
-    exports.USGGUI:createLabel("center",150, 290, 35,false,"Type your message here",msgGUI.window)
-end
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        msgGUI.window = guiCreateWindow(0.8, 0.25, 0.2, 0.5, apps.messages.name, true)
+        guiWindowSetSizable(msgGUI.window, false)
+
+        msgGUI.memo = guiCreateMemo(0.03, 0.03, 0.95, 0.35, "", true, msgGUI.window[1])
+        guiMemoSetReadOnly(msgGUI.memo, true)
+        msgGUI.label[1] = guiCreateLabel(0.01, 0.40, 0.1, 0.05, "Type your message here", true, msgGUI.window[1])
+        guiLabelSetHorizontalAlign(msgGUI.label[1], "center", false)
+        guiLabelSetVerticalAlign(msgGUI.label[1], "center")
+        msgGUI.edit[1] = guiCreateEdit(0.03, 0.45, 0.95, 0.07, "", true, msgGUI.window[1])
+        msgGUI.gridlist = guiCreateGridList(0.03, 0.5, 0.95, 0.4, true, msgGUI.window[1])
+        guiGridListAddColumn(msgGUI.gridlist, "Player", 0.9)
+        msgGUI.label[2] = guiCreateLabel(0.02, 0.9, 0.1, 0.04, "Search for a Player:", true, msgGUI.window[1])
+        guiLabelSetHorizontalAlign(msgGUI.label[2], "center", false)
+        guiLabelSetVerticalAlign(msgGUI.label[2], "center")
+        msgGUI.edit[2] = guiCreateEdit(0.03, 0.9, 0.95, 0.05, "", true, msgGUI.window[1])    
+    end
 )
 
 function togglemsgGUI()
