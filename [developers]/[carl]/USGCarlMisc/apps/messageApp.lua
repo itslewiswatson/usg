@@ -28,6 +28,7 @@ addEventHandler("onClientResourceStart", resourceRoot,
 local function showMessageGUI()
 if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
 	if(guiGetVisible(msgGUI.window) == false)then
+		guiSetInputMode("no_binds_when_editing")
 		guiSetVisible ( msgGUI.window, true )
 		msgfillPlayerGrid()
 	end
