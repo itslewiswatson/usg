@@ -16,8 +16,8 @@ addEventHandler("onClientResourceStart", resourceRoot,
         msgGUI.gridlist = guiCreateGridList(0.03, 0.51, 0.94, 0.37, true, msgGUI.window)
         guiGridListAddColumn(msgGUI.gridlist, "Player", 0.9)
         msgGUI.labelSearch = guiCreateLabel(0.02, 0.88, 0.97, 0.04, "Search for a Player:", true, msgGUI.window)
-        guiLabelSetHorizontalAlign(msgGUI.label[2], "center", false)
-        guiLabelSetVerticalAlign(msgGUI.label[2], "center")
+        guiLabelSetHorizontalAlign(msgGUI.labelSearch, "center", false)
+        guiLabelSetVerticalAlign(msgGUI.labelSearch, "center")
         msgGUI.editSearch = guiCreateEdit(0.03, 0.92, 0.94, 0.05, "", true, msgGUI.window)
 		addEventHandler("onClientGUIChanged",  msgGUI.editSearch, msgsearchchange, false)
 
