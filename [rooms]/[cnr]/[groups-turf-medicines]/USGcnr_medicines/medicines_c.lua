@@ -14,7 +14,7 @@ local screenW, screenH = guiGetScreenSize()
     medicinesGUI.amount = guiCreateEdit(9, y+10, 111, 22, "", false,medicinesGUI.window)
     medicinesGUI.take = guiCreateButton(137, y+10, 66, 28, "Take", false,medicinesGUI.window)
             guiSetProperty(medicinesGUI.take, "NormalTextColour", "FFAAAAAA")
-    guiSetSize(medicinesGUI.window, 213, y+30, false)
+    guiSetSize(medicinesGUI.window, 213, y+40, false)
     addEventHandler("onClientGUIClick", medicinesGUI.take, onTakeMedicine, false)
 end
 
