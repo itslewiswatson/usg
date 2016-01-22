@@ -6,7 +6,7 @@ local messages = ""
 
 addEventHandler("onClientResourceStart", resourceRoot,
     function()
-        msgGUI.window = guiCreateWindow(0.78, 0.24, 0.21, 0.51, "", true)
+        msgGUI.window = guiCreateWindow(0.78, 0.24, 0.21, 0.51, apps.messages.name, true)
         guiWindowSetSizable(msgGUI.window, false)
 
         msgGUI.memo = guiCreateMemo(0.03, 0.03, 0.94, 0.35, "", true, msgGUI.window)
@@ -20,7 +20,9 @@ addEventHandler("onClientResourceStart", resourceRoot,
         msgGUI.label[2] = guiCreateLabel(0.02, 0.88, 0.97, 0.04, "Search for a Player:", true, msgGUI.window)
         guiLabelSetHorizontalAlign(msgGUI.label[2], "center", false)
         guiLabelSetVerticalAlign(msgGUI.label[2], "center")
-        msgGUI.edit[2] = guiCreateEdit(0.03, 0.92, 0.94, 0.05, "", true, msgGUI.window)       
+        msgGUI.edit[2] = guiCreateEdit(0.03, 0.92, 0.94, 0.05, "", true, msgGUI.window)
+
+		guiSetVisible ( msgGUI.window, false )
     end
 )
 
