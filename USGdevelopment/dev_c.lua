@@ -34,6 +34,6 @@ function convertNumber ( number )
 end
 
 function matrix()
-outputChatBox(getElementMatrix(localPlayer))
+outputChatBox(table.concat(getElementMatrix(localPlayer)))
 end 
 addCommandHandler("matrix",matrix)
