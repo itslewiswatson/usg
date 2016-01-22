@@ -27,17 +27,21 @@ addEventHandler("onClientResourceStart", resourceRoot,
 
 local function showMessageGUI()
 if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
-	guiSetVisible ( msgGUI.window, true )
-	showCursor(true)
-	msgfillPlayerGrid()
+	if(guiGetVisible(msgGUI.window) == false)then
+		guiSetVisible ( msgGUI.window, true )
+		showCursor(true)
+		msgfillPlayerGrid()
+	end
 end
 
 addEvent("UserPanel.App.MessageApp",true)
 addEventHandler("UserPanel.App.MessageApp",root,showMessageGUI)
 
 local function hideMessageGUI()
-	guiSetVisible ( msgGUI.window, false )
-	showCursor(false)
+	if(guiGetVisible(msgGUI.window) == true)then
+		guiSetVisible ( msgGUI.window, false )
+		showCursor(false)
+	end
 end
 
 bindKey("lalt","down",hideMessageGUI)
