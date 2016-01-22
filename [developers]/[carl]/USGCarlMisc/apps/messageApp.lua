@@ -6,21 +6,21 @@ local messages = ""
 
 addEventHandler("onClientResourceStart", resourceRoot,
     function()
-        msgGUI.window = guiCreateWindow(0.8, 0.25, 0.2, 0.5, apps.messages.name, true)
-        guiWindowSetSizable(msgGUI.window, false)
+        msgGUI.window = guiCreateWindow(0.78, 0.24, 0.21, 0.51, "", true)
+        guiWindowSetSizable(msgGUI.window[1], false)
 
-        msgGUI.memo = guiCreateMemo(0.03, 0.03, 0.95, 0.35, "", true, msgGUI.window)
+        msgGUI.memo = guiCreateMemo(0.03, 0.03, 0.94, 0.35, "", true, msgGUI.window)
         guiMemoSetReadOnly(msgGUI.memo, true)
-        msgGUI.label[1] = guiCreateLabel(0.01, 0.40, 0.1, 0.05, "Type your message here", true, msgGUI.window)
+        msgGUI.label[1] = guiCreateLabel(0.01, 0.38, 0.97, 0.05, "Type your message here", true, msgGUI.window)
         guiLabelSetHorizontalAlign(msgGUI.label[1], "center", false)
         guiLabelSetVerticalAlign(msgGUI.label[1], "center")
-        msgGUI.edit[1] = guiCreateEdit(0.03, 0.45, 0.95, 0.07, "", true, msgGUI.window)
-        msgGUI.gridlist = guiCreateGridList(0.03, 0.5, 0.95, 0.4, true, msgGUI.window)
+        msgGUI.edit[1] = guiCreateEdit(0.03, 0.44, 0.94, 0.07, "", true, msgGUI.window)
+        msgGUI.gridlist = guiCreateGridList(0.03, 0.51, 0.94, 0.37, true, msgGUI.window)
         guiGridListAddColumn(msgGUI.gridlist, "Player", 0.9)
-        msgGUI.label[2] = guiCreateLabel(0.02, 0.9, 0.1, 0.04, "Search for a Player:", true, msgGUI.window)
+        msgGUI.label[2] = guiCreateLabel(0.02, 0.88, 0.97, 0.04, "Search for a Player:", true, msgGUI.window)
         guiLabelSetHorizontalAlign(msgGUI.label[2], "center", false)
         guiLabelSetVerticalAlign(msgGUI.label[2], "center")
-        msgGUI.edit[2] = guiCreateEdit(0.03, 0.9, 0.95, 0.05, "", true, msgGUI.window)    
+        msgGUI.edit[2] = guiCreateEdit(0.03, 0.92, 0.94, 0.05, "", true, msgGUI.window)       
     end
 )
 
