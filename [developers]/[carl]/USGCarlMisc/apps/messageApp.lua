@@ -40,7 +40,7 @@ local function hideMessageGUI()
 	if(guiGetVisible(msgGUI.window) == true)then
 		guiSetVisible ( msgGUI.window, false )
 		showCursor(false)
-	end
+	end`
 end
 
 bindKey("lctrl","down",hideMessageGUI)
@@ -53,7 +53,7 @@ function msgfillPlayerGrid()
         local name = getPlayerName(player)
         if(player ~= localPlayer and (filter == "" or string.find(name:lower(), filter:lower()))) then
         local row = guiGridListAddRow ( msgGUI.gridlist )
-            guiGridListSetItemText(msgGUI.gridlist, row, 1, name)
+            guiGridListSetItemText(msgGUI.gridlist, row, 1, name, false, false)
             guiGridListSetItemData(msgGUI.gridlist, row, 1, player)
         end
     end
