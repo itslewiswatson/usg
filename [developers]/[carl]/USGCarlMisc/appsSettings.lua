@@ -98,11 +98,10 @@ apps = {}
 		
 appsIDs = 
 {
-	[1] = apps.account,
-	[2] = apps.call,
-	[3] = apps.gps,
-	[4] = apps.money,
-	[5] = apps.music,
-	[6] = apps.weapons,
-	[7] = apps.messages
+	apps.account,
+	apps.call,
+	apps.gps,
+	apps.money,
+	apps.music,
+	apps.messages
 }
