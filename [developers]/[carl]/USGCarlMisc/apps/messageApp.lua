@@ -44,7 +44,7 @@ local function hideMessageGUI()
 	end
 end
 
-bindKey("lalt","down",hideMessageGUI)
+bindKey("lctrl","down",hideMessageGUI)
 
 
 function msgfillPlayerGrid()

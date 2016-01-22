@@ -105,4 +105,4 @@ end
 bindKey ( "b", "down", toggle)
 bindKey(",","down",processInput,"left")
 bindKey(".","down",processInput,"right")
-bindKey("lalt","up",processInput,"select")
+bindKey("lalt","down",processInput,"select")
