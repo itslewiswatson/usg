@@ -40,7 +40,7 @@ local function hideMessageGUI()
 	if(guiGetVisible(msgGUI.window) == true)then
 		guiSetVisible ( msgGUI.window, false )
 		showCursor(false)
-	end`
+	end
 end
 
 bindKey("lctrl","down",hideMessageGUI)
