@@ -7,7 +7,7 @@ local messages = ""
 addEventHandler("onClientResourceStart", resourceRoot,
     function()
         msgGUI.window = guiCreateWindow(0.78, 0.24, 0.21, 0.51, "", true)
-        guiWindowSetSizable(msgGUI.window[1], false)
+        guiWindowSetSizable(msgGUI.window, false)
 
         msgGUI.memo = guiCreateMemo(0.03, 0.03, 0.94, 0.35, "", true, msgGUI.window)
         guiMemoSetReadOnly(msgGUI.memo, true)
