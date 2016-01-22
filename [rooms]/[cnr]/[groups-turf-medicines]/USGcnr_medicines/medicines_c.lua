@@ -16,7 +16,7 @@ function createDedicinesGUI()
     end
     medicinesGUI.amount = guiCreateEdit(5,y+5,110,25,"",false,medicinesGUI.window)
     medicinesGUI.take = guiCreateButton(130,y+5,60,25,"Take",false,medicinesGUI.window)
-    guiSetSize(medicinesGUI.window, 200, y+35, false)
+    guiSetSize(medicinesGUI.window, 250, y+200, false)
     addEventHandler("onClientGUIClick", medicinesGUI.take, onTakeMedicine, false)
 end
 

@@ -98,8 +98,8 @@ end
 
 function showJobGUI(jobID, occupation, skins, description)
     if not ( isElement(selectJobGUI.window) ) then createSelectJobGUI() else guiSetVisible(selectJobGUI.window,true) end
-        guiGetText(selectJobGUI.window, occupation)
-        guiGetText(selectJobGUI.info,description or "No description")
+        guiSetText(selectJobGUI.window, occupation)
+        guiSetText(selectJobGUI.info,description or "No description")
         guiGridListClear(selectJobGUI.skins)
     if ( pickSkin ) then
         for i=1,#skins do
