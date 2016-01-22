@@ -1,7 +1,6 @@
-local msgGUI = 
-{
+local msgGUI = {
 	label = {},
-	edit = {}
+	edit = {},
 }
 local messages = ""
 
