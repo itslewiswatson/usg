@@ -23,7 +23,7 @@ function hideWeapGUI()
 end
 
 addEvent("UserPanel.App.WeaponApp",true)
-addEventHandler("UserPanel.App.WeaponApp",resourceRoot,showWeapGUI)
+addEventHandler("UserPanel.App.WeaponApp",root,showWeapGUI)
 
 bindKey("lalt","down",hideWeapGUI)
 
