@@ -27,7 +27,7 @@ exports.USGmsg:msg(root, "Pharmacy is opened go buy some medicines.", 255, 0, 0)
         addEventHandler( "onMarkerHit",marker, onShopMarkerHit)
         addEventHandler( "onMarkerLeave",marker, onShopMarkerLeave)
       --  end
-      setTimer(Over, 7 * 60 * 1000, 1)
+      --  setTimer(Over, 7 * 60 * 1000, 1)
 end
 
 
@@ -42,12 +42,12 @@ triggerClientEvent ( p, "USGcnr_pharmacy.sell.close",resourceRoot)
 end
 
 
-function over()
-exports.USGmsg:msg(root, "Pharmacy is closed.", 255, 0, 0)
-destroyElement(marker)
-destroyElement(blip)
-setTimer(start, 10 * 60 * 1000, 1)
-end
+--[function over()
+--exports.USGmsg:msg(root, "Pharmacy is closed.", 255, 0, 0)
+--destroyElement(marker)
+--destroyElement(blip)
+--setTimer(start, 10 * 60 * 1000, 1)
+--end
 
 
 function onAspirinBuy()
