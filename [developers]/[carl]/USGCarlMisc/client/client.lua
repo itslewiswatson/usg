@@ -78,7 +78,6 @@ end
 
 local function enterAppCurrentlyInUse(app)
 	triggerEvent ( app.event, root)
-	outputChatBox(app.event)
 	toggle()
 end
 

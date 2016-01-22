@@ -4,6 +4,7 @@ local playerStats = {}
 local weapGUI = {}
 
 addEventHandler("onClientResourceStart",resourceRoot,function()
+outputChatBox("created the GUI")
 	weapGUI.window = guiCreateWindow(0.8, 0.6, 0.2, 0.4, apps.weapons.name, true)
     guiWindowSetSizable(weapGUI.window, false)    
     refresh()
@@ -12,7 +13,6 @@ end
 )
 
 function showWeapGUI()
-outputChatBox("ok")
 	showCursor(true)
     guiSetVisible(weapGUI.window,true)
 	open()
