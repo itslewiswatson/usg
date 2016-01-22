@@ -34,6 +34,7 @@ function convertNumber ( number )
 end
 
 function matrix()
-outputChatBox(getCameraMatrix())
+local x, y, z, lx, ly, lz = getCameraMatrix ()
+outputChatBox(x..",".. y..",".. z..",".. lx..",".. ly..",".. lz )
 end 
 addCommandHandler("matrix",matrix)
