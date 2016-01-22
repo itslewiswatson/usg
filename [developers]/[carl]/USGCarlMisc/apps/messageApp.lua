@@ -1,7 +1,4 @@
-local msgGUI = {
-	label = {},
-	edit = {},
-}
+local msgGUI = {}
 local messages = ""
 
 addEventHandler("onClientResourceStart", resourceRoot,
@@ -11,61 +8,48 @@ addEventHandler("onClientResourceStart", resourceRoot,
 
         msgGUI.memo = guiCreateMemo(0.03, 0.03, 0.94, 0.35, "", true, msgGUI.window)
         guiMemoSetReadOnly(msgGUI.memo, true)
-        msgGUI.label[1] = guiCreateLabel(0.01, 0.38, 0.97, 0.05, "Type your message here", true, msgGUI.window)
-        guiLabelSetHorizontalAlign(msgGUI.label[1], "center", false)
-        guiLabelSetVerticalAlign(msgGUI.label[1], "center")
-        msgGUI.edit[1] = guiCreateEdit(0.03, 0.44, 0.94, 0.07, "", true, msgGUI.window)
+        msgGUI.labelMessage = guiCreateLabel(0.01, 0.38, 0.97, 0.05, "Type your message here", true, msgGUI.window)
+        guiLabelSetHorizontalAlign(msgGUI.labelMessage, "center", false)
+        guiLabelSetVerticalAlign(msgGUI.labelMessage, "center")
+        msgGUI.editMessage = guiCreateEdit(0.03, 0.44, 0.94, 0.07, "", true, msgGUI.window)
+		addEventHandler("onClientGUIAccepted", msgGUI.editMessage, sendSMS, false)
         msgGUI.gridlist = guiCreateGridList(0.03, 0.51, 0.94, 0.37, true, msgGUI.window)
         guiGridListAddColumn(msgGUI.gridlist, "Player", 0.9)
-        msgGUI.label[2] = guiCreateLabel(0.02, 0.88, 0.97, 0.04, "Search for a Player:", true, msgGUI.window)
+        msgGUI.labelSearch = guiCreateLabel(0.02, 0.88, 0.97, 0.04, "Search for a Player:", true, msgGUI.window)
         guiLabelSetHorizontalAlign(msgGUI.label[2], "center", false)
         guiLabelSetVerticalAlign(msgGUI.label[2], "center")
-        msgGUI.edit[2] = guiCreateEdit(0.03, 0.92, 0.94, 0.05, "", true, msgGUI.window)
+        msgGUI.editSearch = guiCreateEdit(0.03, 0.92, 0.94, 0.05, "", true, msgGUI.window)
+		addEventHandler("onClientGUIChanged",  msgGUI.editSearch, msgsearchchange, false)
 
 		guiSetVisible ( msgGUI.window, false )
     end
 )
 
-function togglemsgGUI()
+local function showMessageGUI()
 if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
-    if(isElement(msgGUI.window )) then
-        if(exports.USGGUI:getVisible(msgGUI.window )) then
-            exports.USGGUI:setVisible(msgGUI.window , false)
-            showCursor(false)
-            exports.USGblur:setBlurDisabled()
-            showPlayerHudComponent("radar",true)
-        else
-            showCursor(true)
-            exports.USGGUI:setVisible(msgGUI.window , true)
-            msgfillPlayerGrid()
-            exports.USGblur:setBlurEnabled()
-            showPlayerHudComponent("radar",false)
-        end
-    else
-		exports.USGGUI:setVisible(msgGUI.window , true)
-        showCursor(true)
-        msgfillPlayerGrid()
-        exports.USGblur:setBlurEnabled()
-        showPlayerHudComponent("radar",true)
-    end 
-end 
-addEvent("UserPanel.App.MessageApp",true)
-addEventHandler("UserPanel.App.MessageApp",root,togglemsgGUI)
-
-
-function msgRefresh()
-    msgfillPlayerGrid()
+	guiSetVisible ( msgGUI.window, true )
+	showCursor(true)
+	msgfillPlayerGrid()
 end
 
+addEvent("UserPanel.App.MessageApp",true)
+addEventHandler("UserPanel.App.MessageApp",root,showMessageGUI)
+
+local function hideMessageGUI()
+	guiSetVisible ( msgGUI.window, false )
+	showCursor(false)
+end
+
+
 function msgfillPlayerGrid()
-    exports.USGGUI:gridlistClear(msgGUI.grid)
-    local filter = exports.USGGUI:getText(msgGUI.search)
+    guiGridListClear ( msgGUI.gridlist )
+    local filter = guiGetText(msgGUI.editSearch)
     for i, player in ipairs(getElementsByType("player")) do
         local name = getPlayerName(player)
         if(player ~= localPlayer and (filter == "" or string.find(name:lower(), filter:lower()))) then
-        local row = exports.USGGUI:gridlistAddRow(msgGUI.grid)
-            exports.USGGUI:gridlistSetItemText(msgGUI.grid, row, 1, name)
-            exports.USGGUI:gridlistSetItemData(msgGUI.grid, row, 1, player)
+        local row = guiGridListAddRow ( msgGUI.gridlist )
+            guiGridListSetItemText(msgGUI.gridlist, row, 1, name)
+            guiGridListSetItemData(msgGUI.gridlist, row, 1, player)
         end
     end
 end
@@ -73,18 +57,18 @@ end
 
 function refreshMessages()
     if(isElement(msgGUI.memo)) then
-        exports.USGGUI:setText(msgGUI.memo, messages)
+         guiSetText (msgGUI.memo, messages)
     end
 end
 
 function sendSMS()
-    local selected = exports.USGGUI:gridlistGetSelectedItem(msgGUI.grid)
+    local selected = guiGridListGetSelectedItem(msgGUI.gridlist)
     if(selected) then
-        local player = exports.USGGUI:gridlistGetItemData(msgGUI.grid, selected, 1)
+        local player = guiGridListGetItemData(msgGUI.gridlist, selected, 1)
         if(isElement(player)) then
-            local message = exports.USGGUI:getText(msgGUI.input)
+            local message = guiGetText(msgGUI.editMessage)
             triggerServerEvent("sendPM", localPlayer, player, message)
-            exports.USGGUI:setText(msgGUI.input, "")
+            guiSetText(msgGUI.editMessage, "")
         else
             exports.USGmsg:msg("This player has quit.", 255,0,0)
         end
