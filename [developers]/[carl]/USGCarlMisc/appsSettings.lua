@@ -4,7 +4,7 @@ apps = {}
 		apps.account.name = "Account App"
 		apps.account.position = {}
 			apps.account.position.x = -1.5
-			apps.account.position.y = 1.25
+			apps.account.position.y = 1.5
 			apps.account.position.z = 0.5
 			
 		apps.account.size = {}
@@ -36,7 +36,7 @@ apps = {}
 		apps.gps.name = "GPS App"
 		apps.gps.position = {}
 			apps.gps.position.x = 1.5
-			apps.gps.position.y = 1.25
+			apps.gps.position.y = 1.5
 			apps.gps.position.z = 0.5
 			
 		apps.gps.size = {}
@@ -52,7 +52,7 @@ apps = {}
 		apps.messages.name = "Message App"
 		apps.messages.position = {}
 			apps.messages.position.x = -1.5
-			apps.messages.position.y = -1.25
+			apps.messages.position.y = -1.5
 			apps.messages.position.z = 0.5
 			
 		apps.messages.size = {}
@@ -84,7 +84,7 @@ apps = {}
 		apps.music.name = "Music App"
 		apps.music.position = {}
 			apps.music.position.x = 1.5
-			apps.music.position.y = -1.25
+			apps.music.position.y = -1.5
 			apps.music.position.z = 0.5
 			
 		apps.music.size = {}
