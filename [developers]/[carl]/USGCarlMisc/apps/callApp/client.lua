@@ -25,6 +25,7 @@ addEventHandler("onClientResourceStart", resourceRoot,
 
 local function showCallGUI()
 if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
+outputChatBox("Showing Call")
 	if(guiGetVisible(callGUI.window) == false)then
 		guiSetInputMode("no_binds_when_editing")
 		guiSetVisible ( callGUI.window, true )
