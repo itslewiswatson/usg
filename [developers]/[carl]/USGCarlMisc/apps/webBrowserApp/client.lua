@@ -12,8 +12,10 @@ local function showBrowser()
 end
 
 local function hideBrowser()
-	WebBrowserGUI.instance:CloseButton_Click("left", "up")
-	showCursor(false)
+	if(WebBrowserGUI.instance)then
+		WebBrowserGUI.instance:CloseButton_Click("left", "up")
+		showCursor(false)
+	end
 end
 
 bindKey("lctrl","down",hideBrowser)
