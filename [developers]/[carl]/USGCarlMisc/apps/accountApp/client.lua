@@ -18,6 +18,9 @@ addEventHandler("onClientResourceStart", resourceRoot,
         accGUI.buttonEmail = guiCreateButton(0.32, 0.82, 0.35, 0.10, "Update Email", true, accGUI.window)
         guiSetProperty(accGUI.buttonEmail, "NormalTextColour", "FFAAAAAA")    
 		
+		addEventHandler("onClientGUIClick", accGUI.buttonPassword, updatePass, false)    
+		addEventHandler("onClientGUIClick", accGUI.buttonEmail, updateEmail, false)		
+		
 		guiSetVisible ( accGUI.window, false )
     end
 )
@@ -42,26 +45,9 @@ end
 
 bindKey("lctrl","down",hideAccountGUI)
 
-function createAccountGUI()
-    exports.USGGUI:setDefaultTextAlignment("left","center")
-    accGUI.window = exports.USGGUI:createWindow("center","center", 300, 430, false,"Account Settings")
-        exports.USGGUI:createLabel("center",5, 290, 35,false,"Username:",accGUI.window)
-    accGUI.usernamebox = exports.USGGUI:createEditBox("center",36,298,25,false,"",accGUI.window)
-        exports.USGGUI:createLabel("center",55, 290, 35,false,"Password:",accGUI.window)
-    accGUI.passwordbox = exports.USGGUI:createEditBox("center",87,298,25,false,"",accGUI.window)
-        exports.USGGUI:createLabel("center",115, 290, 35,false,"New Password:",accGUI.window)
-    accGUI.newpasswordbox = exports.USGGUI:createEditBox("center",150,298,25,false,"",accGUI.window)
-    accGUI.updatePass = exports.USGGUI:createButton("center",192,110,25,false,"Update password",accGUI.window)
-    addEventHandler("onUSGGUISClick", accGUI.updatePass, updatePass, false)      
-        exports.USGGUI:createLabel("center",235, 290, 35,false,"New Email:",accGUI.window)
-    accGUI.newemailbox = exports.USGGUI:createEditBox("center",272,298,25,false,"",accGUI.window)
-    accGUI.updateEmail = exports.USGGUI:createButton("center",300,110,25,false,"Update email",accGUI.window)
-    addEventHandler("onUSGGUISClick", accGUI.updateEmail, updateEmail, false)
-end
-
 function getInput()
-    local user = exports.USGGUI:getText(accGUI.usernamebox)
-    local pass = exports.USGGUI:getText(accGUI.passwordbox)
+    local user = guiGetText ( accGUI.editUsername )
+    local pass = guiGetText ( accGUI.editPassword )
     if(#user == 0) then
         exports.USGmsg:msg("Enter your username.", 255, 0, 0)
         return false
@@ -75,7 +61,7 @@ end
 function updatePass()
     local user, pass = getInput()
     if(user) then
-        local newPass = exports.USGGUI:getText(accGUI.newpasswordbox)
+        local newPass = guiGetText ( accGUI.editNewPassword )
         if(#newPass < 6) then
             exports.USGmsg:msg("Your password must be 6 characters long.", 255, 0, 0)
             return
@@ -87,7 +73,7 @@ end
 function updateEmail()
     local user, pass = getInput()
     if(user) then
-        local newEmail = exports.USGGUI:getText(accGUI.newemailbox )
+        local newEmail = guiGetText ( accGUI.editEmail )
         if(#newEmail < 4) then
             exports.USGmsg:msg("Your email must be 4 characters long.", 255, 0, 0)
             return
