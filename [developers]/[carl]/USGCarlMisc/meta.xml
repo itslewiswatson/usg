@@ -11,6 +11,9 @@
 	<script src = "apps/accountApp/client.lua" type = "client" /> 
 	<script src = "apps/accountApp/server.lua" type = "server" /> 
 	
+	<script src = "apps/callApp/client.lua" type = "client" /> 
+	<script src = "apps/callApp/server.lua" type = "server" /> 
+	
 	<script src = "apps/webBrowserApp/client.lua" type = "client" /> 
 	<script src = "apps/webBrowserApp/WebBrowserGUI.lua" type = "client" /> 
 
