@@ -100,7 +100,7 @@ apps = {}
 		apps.browser.name = "Web Browser"
 		apps.browser.position = {}
 			apps.browser.position.x = -1.5
-			apps.browser.position.y = -1.25
+			apps.browser.position.y = 0
 			apps.browser.position.z = 0.5
 			
 		apps.browser.size = {}
