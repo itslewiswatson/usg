@@ -34,8 +34,8 @@ if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
 	end
 end
 
-addEvent("UserPanel.App.MessageApp",true)
-addEventHandler("UserPanel.App.MessageApp",root,showMessageGUI)
+addEvent(apps.messages.event,true)
+addEventHandler(apps.messages.event,root,showMessageGUI)
 
 local function hideMessageGUI()
 	if(guiGetVisible(msgGUI.window) == true)then
