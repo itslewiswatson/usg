@@ -6,9 +6,6 @@ addEventHandler("onClientResourceStart", resourceRoot,
 	end
 )
 
-addEvent(apps.browser.event,true)
-addEventHandler(apps.browser.event,root,showBrowser)
-
 local function showBrowser()
 	if WebBrowserGUI.instance ~= nil then return end
 	WebBrowserGUI.instance = WebBrowserGUI:new()
@@ -20,3 +17,5 @@ local function hideBrowser()
 end
 
 bindKey("lctrl","down",hideBrowser)
+addEvent(apps.browser.event,true)
+addEventHandler(apps.browser.event,root,showBrowser)
