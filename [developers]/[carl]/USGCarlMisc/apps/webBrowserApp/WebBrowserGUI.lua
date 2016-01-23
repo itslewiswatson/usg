@@ -5,7 +5,7 @@ function WebBrowserGUI:new() local o=setmetatable({},{__index=WebBrowserGUI}) o:
 
 function WebBrowserGUI:constructor()
 	local sizeX, sizeY = screenWidth * 0.9, screenHeight * 0.9
-	self.m_Window = GuiWindow(screenWidth * 0.05, screenHeight * 0.05, sizeX, sizeY, "Web browser", false)
+	self.m_Window = GuiWindow(screenWidth * 0.05, screenHeight * 0.05, sizeX, sizeY, apps.browser.name, false)
 	self.m_Window:setSizable(false)
 
 	self.m_BackButton = GuiButton(5, 25, 32, 32, "<", false, self.m_Window)
