@@ -3,7 +3,7 @@ local services = {
     {name="Police",id="police"},
     {name="Medic",id="medic"},
     {name="Mechanic",id="mechanic"},
-    }
+}
     
 local callGUI = {}
 
@@ -17,6 +17,12 @@ addEventHandler("onClientResourceStart", resourceRoot,
         callGUI.button = guiCreateButton(0.27, 0.91, 0.45, 0.07, "Call", true, callGUI.window)
         guiSetProperty(callGUI.button, "NormalTextColour", "FFAAAAAA")    
 		
+		for i, service in ipairs(services) do
+            local row = guiGridListAddRow ( callGUI.gridlist )
+            guiGridListSetItemText(callGUI.gridlist, row, 1, service.name,false,false)
+            guiGridListSetItemData(callGUI.gridlist, row, 1, i)
+		end
+		
 		addEventHandler("onClientGUIClick",  callGUI.button, phoneCall , false)
 		
 		guiSetVisible ( callGUI.window, false )
@@ -25,7 +31,6 @@ addEventHandler("onClientResourceStart", resourceRoot,
 
 local function showCallGUI()
 if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
-outputChatBox("Showing Call")
 	if(guiGetVisible(callGUI.window) == false)then
 		guiSetInputMode("no_binds_when_editing")
 		guiSetVisible ( callGUI.window, true )
