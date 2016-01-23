@@ -95,6 +95,22 @@ apps = {}
 		
 		apps.music.event = "UserPanel.App.MusicApp"	
 		
+	apps.browser = {}
+		apps.browser.icon = dxCreateTexture("images/browser_icon.png")
+		apps.browser.name = "Web Browser"
+		apps.browser.position = {}
+			apps.browser.position.x = -1.5
+			apps.browser.position.y = -1.25
+			apps.browser.position.z = 0.5
+			
+		apps.browser.size = {}
+			apps.browser.size.default = 0.5
+			apps.browser.size.selected = 0.75
+			
+		apps.browser.allRooms = true
+		
+		apps.browser.event = "UserPanel.App.BrowserApp"			
+		
 		
 appsIDs = 
 {
