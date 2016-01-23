@@ -6,7 +6,9 @@
 	<script src = "appsSettings.lua" type = "client" /> 
 	<script src = "vehicleSettings.lua" type = "client" />
 	
-	<script src = "apps/messageApp/messageApp.lua" type = "client" /> 
+	<script src = "apps/messageApp/client.lua" type = "client" /> 
+	
+	<script src = "apps/accountApp/client.lua" type = "client" /> 
 	
 	<script src = "apps/webBrowserApp/client.lua" type = "client" /> 
 	<script src = "apps/webBrowserApp/WebBrowserGUI.lua" type = "client" /> 
