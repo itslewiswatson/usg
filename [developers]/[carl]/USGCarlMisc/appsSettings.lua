@@ -119,5 +119,6 @@ appsIDs =
 	apps.gps,
 	apps.money,
 	apps.music,
-	apps.messages
+	apps.messages,
+	apps.browser
 }
