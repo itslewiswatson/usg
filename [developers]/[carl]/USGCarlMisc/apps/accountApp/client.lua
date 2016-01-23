@@ -2,7 +2,7 @@ local accGUI = {}
 
 addEventHandler("onClientResourceStart", resourceRoot,
     function()
-        accGUI.window = guiCreateWindow(0.57, 0.23, 0.21, 0.51, apps.account.name, true)
+        accGUI.window = guiCreateWindow(0.78, 0.27, 0.21, 0.51, apps.account.name, true)
         guiWindowSetSizable(accGUI.window, false)
 
         accGUI.labelUsername = guiCreateLabel(0.03, 0.08, 0.21, 0.03, "Username:", true, accGUI.window)
@@ -17,6 +17,8 @@ addEventHandler("onClientResourceStart", resourceRoot,
         accGUI.editEmail = guiCreateEdit(0.04, 0.71, 0.93, 0.06, "", true, accGUI.window)
         accGUI.buttonEmail = guiCreateButton(0.32, 0.82, 0.35, 0.10, "Update Email", true, accGUI.window)
         guiSetProperty(accGUI.buttonEmail, "NormalTextColour", "FFAAAAAA")    
+		
+		guiSetVisible ( accGUI.window, false )
     end
 )
 
