@@ -1,0 +1,8 @@
+<meta>
+	<script src="client/jobCoreClient.lua" type="client"/>
+	<script src="client/jobCreatorVariablesClient.lua" type="client"/>
+
+	<script src="server/jobCoreServer.lua" type="server"/>
+
+	<script src="shared/jobVariablesShared.lua" type="shared"/>
+</meta>
