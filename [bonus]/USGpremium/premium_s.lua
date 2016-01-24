@@ -75,7 +75,7 @@ function removePremium(account)
 		if (exports.mysql:isConnected()) then
 			local connection = exports.mysql:getConnection()
 			if (connection) then
-				dbExec(connection,"DELETE FROM premium WHERE username=?",k)
+				dbExec(connection,"DELETE FROM `premium` WHERE `username`=?", account)
 			else
 				error("Failed to remove - No DB connection")
 			end
@@ -91,8 +91,8 @@ function autoSave()
 	--outputDebugString("Saving...")
 	local connection = exports.mysql:getConnection()
 	if (connection) then
-		for k,v in pairs(premiums) do
-			dbExec(connection,"UPDATE premium SET time=? WHERE username=?",premiums[k].timeLeft,k)
+		for account in pairs(premiums) do
+			dbExec(connection,"UPDATE `premium` SET `time`=? WHERE `username`=?", premiums[account].timeLeft, account)
 		end
 	else
 		error("[PREMIUM] Unable to save premium time (Connection could not be established)")
@@ -100,20 +100,16 @@ function autoSave()
 end
 setTimer(autoSave,60000*5,0)
 
-function isPlayerPremium(player)
-	if (not player) then
-		return false
-	end
-	if (isElement(player)) and (getElementType(player) == "player") and (exports.USGaccounts:isPlayerLoggedIn(player)) then
-		local account = exports.USGaccounts:getPlayerAccount(player)
-		if (account) then
-			if (premiums[account]) then return true else return false end
-		else
-			return false
+function isPlayerPremium(plr)
+	if (not plr) then return end
+	if (isElement(plr) and plr.type == "player" and exports.USGaccounts:isPlayerLoggedIn(plr)) then
+		local account = exports.USGaccounts:getPlayerAccount(plr)
+		if (account and premiums[account]) then
+			return true 
 		end
-	else
 		return false
 	end
+	return false
 end
 
 function getPlayerPremiumTime(player)

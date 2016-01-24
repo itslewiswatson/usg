@@ -4,5 +4,5 @@
   <export function="isPlayerPremium" />
   <export function="isPlayerPremium" type="client" />
   <export function="getPlayerPremiumTime" />
-  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000" />
+  <min_mta_version client="1.5.2" server="1.5.2" />
 </meta>
