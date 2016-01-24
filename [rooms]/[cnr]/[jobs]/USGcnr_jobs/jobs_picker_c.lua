@@ -35,17 +35,17 @@ function createSelectJobGUI()
         guiLabelSetVerticalAlign(selectJobGUI.info, "center")
         selectJobGUI.skins = guiCreateGridList(9, 150, 255, 222, false, selectJobGUI.window)
         guiGridListAddColumn(selectJobGUI.skins, "ID", 0.3)
-        guiGridListAddColumn(selectJobGUI.skins, "Name", 0.7)
+        guiGridListAddColumn(selectJobGUI.skins, "Name", 0.6)
         selectJobGUI.cancel = guiCreateButton(21, 397, 100, 40, "Close", false, selectJobGUI.window)
         guiSetProperty(selectJobGUI.cancel, "NormalTextColour", "FFAAAAAA")
         selectJobGUI.OK = guiCreateButton(154, 397, 100, 40, "Select", false, selectJobGUI.window)
         guiSetProperty(selectJobGUI.OK, "NormalTextColour", "FFAAAAAA")    
         addEventHandler("onClientGUIClick",selectJobGUI.cancel, 
             function ( btn, state ) 
-                if ( btn == 1 and state == "down" ) then 
+            --  if ( btn == 1 and state == "down" ) then 
                     setElementModel(localPlayer,skin) 
                     closeJobGUI() 
-                end 
+                    --   end 
             end, false)
 
             addEventHandler("onClientGUIClick",selectJobGUI.OK, onSelectJob, false)
@@ -54,7 +54,7 @@ function createSelectJobGUI()
 end
 
 function onClickSkins(btn,state)
-    if ( btn == 1 and state == "down" ) then
+   -- if ( btn == 1 and state == "down" ) then
         local selRow = guiGridListGetSelectedItem(selectJobGUI.skins)
         if ( selRow ) then
             local id = tonumber(guiGridListGetItemText(selectJobGUI.skins,selRow,1))
@@ -64,11 +64,11 @@ function onClickSkins(btn,state)
         elseif ( skin ) then
             setElementModel(localPlayer,skin)
         end
-    end
+        -- end
 end
 
 function onSelectJob(btn,state)
-    if ( btn == 1 and state == "down" ) then
+    --if ( btn == 1 and state == "down" ) then
         if ( pickSkin ) then
             local selRow = guiGridListGetSelectedItem(selectJobGUI.skins)
             if ( selRow ) then
@@ -82,7 +82,7 @@ function onSelectJob(btn,state)
             setPlayerJob(selectedJob,false)
             closeJobGUI()
         end
-    end
+        --end
 end
 
 function closeJobGUI()
@@ -98,8 +98,8 @@ end
 
 function showJobGUI(jobID, occupation, skins, description)
     if not ( isElement(selectJobGUI.window) ) then createSelectJobGUI() else guiSetVisible(selectJobGUI.window,true) end
-        guiGetText(selectJobGUI.window, occupation)
-        guiGetText(selectJobGUI.info,description or "No description")
+        guiSetText(selectJobGUI.window, occupation)
+        guiSetText(selectJobGUI.info,description or "No description")
         guiGridListClear(selectJobGUI.skins)
     if ( pickSkin ) then
         for i=1,#skins do

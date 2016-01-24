@@ -1,22 +1,20 @@
 local medicinesGUI = {}
 function createDedicinesGUI()
 
-    local screenW, screenH = guiGetScreenSize()
-    medicinesGUI.window = guiCreateWindow((screenW - 201) / 2, (screenH - 168) / 2, 230, 190, "Medicines", false)
-    guiWindowSetSizable(medicinesGUI.window, false)    
-
-    exports.USGGUI:setDefaultTextAlignment("left","center")
+local screenW, screenH = guiGetScreenSize()
+    medicinesGUI.window = guiCreateWindow((screenW - 213) / 2, (screenH - 187) / 2, 213, 187, "USG - Medicines", false)
     medicinesGUI.medicineLabels = {}
     medicinesGUI.medicineRadios = {}
-    local y = 10
+    local y = 26
     for medicine, _ in pairs(medicines) do
-    medicinesGUI.medicineLabels[medicine] = guiCreateLabel(10,y,135,30,medicine..":",false,medicinesGUI.window)
-    medicinesGUI.medicineRadios[medicine] = guiCreateRadioButton(150,y,60,35, myMedicines and tostring(myMedicines[medicine]) or "0",false, medicinesGUI.window)
+    medicinesGUI.medicineLabels[medicine] = guiCreateLabel(19, y, 85, 17,medicine..":",false,medicinesGUI.window)
+    medicinesGUI.medicineRadios[medicine] =  guiCreateRadioButton(127, y, 100, 15, myMedicines and tostring(myMedicines[medicine]) or "0", false, medicinesGUI.window)
         y = y+35
     end
-    medicinesGUI.amount = guiCreateEdit(5,y+5,110,25,"",false,medicinesGUI.window)
-    medicinesGUI.take = guiCreateButton(130,y+5,60,25,"Take",false,medicinesGUI.window)
-    guiSetSize(medicinesGUI.window, 200, y+35, false)
+    medicinesGUI.amount = guiCreateEdit(9, y+10, 111, 22, "", false,medicinesGUI.window)
+    medicinesGUI.take = guiCreateButton(137, y+10, 66, 28, "Take", false,medicinesGUI.window)
+            guiSetProperty(medicinesGUI.take, "NormalTextColour", "FFAAAAAA")
+    guiSetSize(medicinesGUI.window, 213, y+45, false)
     addEventHandler("onClientGUIClick", medicinesGUI.take, onTakeMedicine, false)
 end
 

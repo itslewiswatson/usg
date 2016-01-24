@@ -1,0 +1,28 @@
+<meta>
+
+	<oop>true</oop>
+
+	<script src = "client/client.lua" type = "client" />
+	<script src = "appsSettings.lua" type = "client" /> 
+	<script src = "vehicleSettings.lua" type = "client" />
+	
+	<script src = "apps/messageApp/client.lua" type = "client" /> 
+	
+	<script src = "apps/accountApp/client.lua" type = "client" /> 
+	<script src = "apps/accountApp/server.lua" type = "server" /> 
+	
+	<script src = "apps/callApp/client.lua" type = "client" /> 
+	<script src = "apps/callApp/server.lua" type = "server" /> 
+	
+	<script src = "apps/webBrowserApp/client.lua" type = "client" /> 
+	<script src = "apps/webBrowserApp/WebBrowserGUI.lua" type = "client" /> 
+
+	<file src = "images/account_icon.png" />
+	<file src = "images/call_icon.png" />
+	<file src = "images/gps_icon.png" />
+	<file src = "images/messages_icon.png" />
+	<file src = "images/money_icon.png" />
+	<file src = "images/music_icon.png" />
+	<file src = "images/weapons_icon.png" />
+	<file src = "images/browser_icon.png" />
+</meta>

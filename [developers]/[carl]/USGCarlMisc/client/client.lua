@@ -1,5 +1,6 @@
 
 local showing = false
+local lastSelectedID = nil
 local selectedApp = nil
 local selectedID = nil
 
@@ -68,11 +69,15 @@ local function toggle()
 	if(showing)then
 		showing = false
 		removeEventHandler("onClientRender", root,render)
+		lastSelectedID = selectedID
 		selectedID = nil
 	else
 		showing = true
 		addEventHandler("onClientRender", root,render)
-		selectApp(1)
+		if(not lastSelectedID)then
+			lastSelectedID = 1
+		end
+		selectApp(lastSelectedID)
 	end
 end
 

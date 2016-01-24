@@ -4,7 +4,7 @@ apps = {}
 		apps.account.name = "Account App"
 		apps.account.position = {}
 			apps.account.position.x = -1.5
-			apps.account.position.y = 1.25
+			apps.account.position.y = 1.5
 			apps.account.position.z = 0.5
 			
 		apps.account.size = {}
@@ -36,7 +36,7 @@ apps = {}
 		apps.gps.name = "GPS App"
 		apps.gps.position = {}
 			apps.gps.position.x = 1.5
-			apps.gps.position.y = 1.25
+			apps.gps.position.y = 1.5
 			apps.gps.position.z = 0.5
 			
 		apps.gps.size = {}
@@ -52,7 +52,7 @@ apps = {}
 		apps.messages.name = "Message App"
 		apps.messages.position = {}
 			apps.messages.position.x = -1.5
-			apps.messages.position.y = -1.25
+			apps.messages.position.y = -1.5
 			apps.messages.position.z = 0.5
 			
 		apps.messages.size = {}
@@ -84,7 +84,7 @@ apps = {}
 		apps.music.name = "Music App"
 		apps.music.position = {}
 			apps.music.position.x = 1.5
-			apps.music.position.y = -1.25
+			apps.music.position.y = -1.5
 			apps.music.position.z = 0.5
 			
 		apps.music.size = {}
@@ -93,32 +93,32 @@ apps = {}
 			
 		apps.music.allRooms = true
 		
-		apps.music.event = "UserPanel.App.MusicApp"
-
-	apps.weapons = {}
-		apps.weapons.icon = dxCreateTexture("images/weapons_icon.png")
-		apps.weapons.name = "Weapon App"
-		apps.weapons.position = {}
-			apps.weapons.position.x = 0
-			apps.weapons.position.y = -1.25
-			apps.weapons.position.z = 0.5
-			
-		apps.weapons.size = {}
-			apps.weapons.size.default = 0.5
-			apps.weapons.size.selected = 0.75
-			
-		apps.weapons.allRooms = false
+		apps.music.event = "UserPanel.App.MusicApp"	
 		
-		apps.weapons.event = "UserPanel.App.WeaponApp"		
+	apps.browser = {}
+		apps.browser.icon = dxCreateTexture("images/browser_icon.png")
+		apps.browser.name = "Web Browser"
+		apps.browser.position = {}
+			apps.browser.position.x = -1.5
+			apps.browser.position.y = 0
+			apps.browser.position.z = 0.5
+			
+		apps.browser.size = {}
+			apps.browser.size.default = 0.5
+			apps.browser.size.selected = 0.75
+			
+		apps.browser.allRooms = true
+		
+		apps.browser.event = "UserPanel.App.BrowserApp"			
 		
 		
 appsIDs = 
 {
-	[1] = apps.account,
-	[2] = apps.call,
-	[3] = apps.gps,
-	[4] = apps.money,
-	[5] = apps.music,
-	[6] = apps.weapons,
-	[7] = apps.messages
+	apps.account,
+	apps.call,
+	apps.gps,
+	apps.money,
+	apps.music,
+	apps.messages,
+	apps.browser
 }
