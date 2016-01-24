@@ -102,6 +102,8 @@ function onChangeJob(ID)
 		if (jobActive == false) then
 			addEventHandler("onClientVehicleEnter", root, startJob)
 		end
+	else
+		clearData()
 	end
 end
 addEventHandler("onPlayerChangeJob", localPlayer, onChangeJob)
