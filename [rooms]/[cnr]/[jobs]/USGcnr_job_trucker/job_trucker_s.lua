@@ -39,7 +39,7 @@ function onTransportStop(success, reward)
 		destroyElement(playerTrailers[client])
 	end
 	if(success) then
-		reward = reward * 2
+		reward = reward
 		givePlayerMoney(client, reward)
 		exports.USGcnr_money:logTransaction(client, "earned "..exports.USG:formatMoney(reward).." from trucking")
 	end
