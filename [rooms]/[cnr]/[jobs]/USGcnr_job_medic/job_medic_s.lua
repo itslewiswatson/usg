@@ -19,7 +19,7 @@ addEventHandler("onPlayerChangeJob", root,
 	function (ID)
 		if(ID ~= "medic" and not medics[source]) then return end
 		if(not medics[source]) then
-			giveWeapon(source, 41, 99999999,false)
+			giveWeapon(source, 41, 99999999, true)
 			medics[source] = true
 			addEventHandler("onPlayerExitRoom", source, onMedicQuit)
 			addEventHandler("onPlayerQuit", source, onMedicQuit)
@@ -42,6 +42,8 @@ function onMedicLoseJob(medic, jobChanged, ID)
 				isStillMedic = false
 			else
 				isStillMedic = true
+				--Give extra ammo just in case they're coming back for more
+				giveWeapon(medic, 41, 99999999, true)
 			end
 		end
 
