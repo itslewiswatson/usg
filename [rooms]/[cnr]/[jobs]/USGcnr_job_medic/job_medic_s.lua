@@ -24,21 +24,33 @@ addEventHandler("onPlayerChangeJob", root,
 			addEventHandler("onPlayerExitRoom", source, onMedicQuit)
 			addEventHandler("onPlayerQuit", source, onMedicQuit)
 		else
-			onMedicLoseJob(source)
+			onMedicLoseJob(source, true, ID)
 		end
 	end
 )
 
 function onMedicQuit()
-	onMedicLoseJob(source)
+	onMedicLoseJob(source, false)
 end
 
-function onMedicLoseJob(medic)
+function onMedicLoseJob(medic, jobChanged, ID)
 	if(medics[medic]) then
-		removeEventHandler("onPlayerExitRoom", medic, onMedicQuit)
-		removeEventHandler("onPlayerQuit", medic, onMedicQuit)
-		takeWeapon(source, 41)
-		medics[medic] = false
+		local isStillMedic = false
+
+		if (jobChanged == true) then
+			if (ID and ID ~= "medic") then
+				isStillMedic = false
+			else
+				isStillMedic = true
+			end
+		end
+
+		if (isStillMedic == false) then
+			removeEventHandler("onPlayerExitRoom", medic, onMedicQuit)
+			removeEventHandler("onPlayerQuit", medic, onMedicQuit)
+			takeWeapon(source, 41)
+			medics[medic] = false
+		end
 	end
 end
 
