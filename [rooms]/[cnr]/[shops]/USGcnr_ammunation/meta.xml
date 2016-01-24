@@ -29,6 +29,7 @@
   <file src="images\weapon_id_39.png" type="client" />
   <file src="images\weapon_id_44.png" type="client" />
   <file src="images\weapon_id_45.png" type="client" />
+  <file src="images\weapon_id_46.png" type="client" />
   <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
   </min_mta_version>
   <export function="getPlayerBoughtWeapons" />
