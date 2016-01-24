@@ -26,6 +26,9 @@ function zoneEntry(element, matchingDimension)
 	if (localPlayer.team.name == "Police") then
 		setPedWeaponSlot(localPlayer, 1)
 		return
+	elseif (exports.USGcnr_jobs:getPlayerOccupation(localPlayer) == "Paramedic") then
+		setPedWeaponSlot(localPlayer, 9)
+		return
 	end
 end
 for _, z in ipairs(safeZones) do
@@ -44,7 +47,7 @@ function fireCheck(button, state)
 	if (localPlayer.vehicle) then return end
 	if (fireKeys[button] and state == true) then
 		if (isElementWithinSafeZone(localPlayer)) then
-			if (localPlayer:getWeapon() == 3) then
+			if (localPlayer:getWeapon() == 3 or localPlayer:getWeapon() == 41) then
 				toggleControl("fire", true)
 			else
 				toggleControl("fire", false)
