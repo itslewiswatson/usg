@@ -27,9 +27,9 @@ addEventHandler("onClientResourceStart", resourceRoot,
         guiSetProperty(gpsGUI.buttonPlayerMark, "NormalTextColour", "FFAAAAAA")
         gpsGUI.buttonPlayerUnMark = guiCreateButton(0.51, 0.46, 0.46, 0.07, "Unmark", true, gpsGUI.window)
         guiSetProperty(gpsGUI.buttonPlayerUnMark, "NormalTextColour", "FFAAAAAA")
-        gpsGUI.destination = guiCreateLabel(0.03, 0.52, 0.94, 0.06, "Destination", true, gpsGUI.window)
-        guiLabelSetHorizontalAlign(gpsGUI.destination, "center", false)
-        guiLabelSetVerticalAlign(gpsGUI.destination, "center")
+        gpsGUI.labelDestination = guiCreateLabel(0.03, 0.52, 0.94, 0.06, "Destination", true, gpsGUI.window)
+        guiLabelSetHorizontalAlign(gpsGUI.labelDestination, "center", false)
+        guiLabelSetVerticalAlign(gpsGUI.labelDestination, "center")
         gpsGUI.gridlistLocation = guiCreateGridList(0.03, 0.59, 0.94, 0.31, true, gpsGUI.window)
         guiGridListAddColumn(gpsGUI.gridlistLocation, "Location", 0.9)
         gpsGUI.buttonLocationMark = guiCreateButton(0.03, 0.91, 0.46, 0.07, "Mark", true, gpsGUI.window)
@@ -113,7 +113,7 @@ function gpsupdateDestination()
     if(destination) then
         destinationName = destination.name or "Unknown"
     end
-    guiSetText(gpsGUI.destination, "Destination: "..destinationName)
+    guiSetText(gpsGUI.labelDestination, "Destination: "..destinationName)
 end
 
 function gpsunmarkPlayer()
