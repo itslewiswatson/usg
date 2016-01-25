@@ -27,6 +27,7 @@ if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
 	if(guiGetVisible(callGUI.window) == false)then
 		guiSetInputMode("no_binds_when_editing")
 		guiSetVisible ( callGUI.window, true )
+		showHelpGUI(helpInfo.app)
 	end
 end
 
@@ -37,6 +38,7 @@ local function hideCallGUI()
 	if(guiGetVisible(callGUI.window) == true)then
 		guiSetVisible (callGUI.window, false )
 		showCursor(false)
+		hideHelpGUI()
 	end
 end
 

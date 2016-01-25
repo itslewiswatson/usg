@@ -1,4 +1,4 @@
-musicGUI = {}
+local musicGUI = {}
 
 addEventHandler("onClientResourceStart", resourceRoot,
     function()
@@ -49,6 +49,7 @@ if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
 		guiSetVisible ( musicGUI.window, true )
 		gpsfillPlayerGrid()
 		gpsfillLocationGrid()
+		showHelpGUI(helpInfo.app)
 	end
 end
 
@@ -59,6 +60,7 @@ local function hideMusicGUI()
 	if(guiGetVisible(musicGUI.window) == true)then
 		guiSetVisible ( musicGUI.window, false )
 		showCursor(false)
+		hideHelpGUI()
 	end
 end
 

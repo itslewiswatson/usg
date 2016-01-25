@@ -39,6 +39,7 @@ if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
 		guiSetVisible ( gpsGUI.window, true )
 		gpsfillPlayerGrid()
 		gpsfillLocationGrid()
+		showHelpGUI(helpInfo.app)
 	end
 end
 
@@ -49,6 +50,7 @@ local function hidegpsGUI()
 	if(guiGetVisible(gpsGUI.window) == true)then
 		guiSetVisible ( gpsGUI.window, false )
 		showCursor(false)
+		hideHelpGUI()
 	end
 end
 

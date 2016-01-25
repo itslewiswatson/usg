@@ -48,6 +48,7 @@ if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
 		guiSetInputMode("no_binds_when_editing")
 		guiSetVisible ( moneyGUI.window, true )
 		moneyfillPlayerGrid()
+		showHelpGUI(helpInfo.app)
 	end
 end
 
@@ -58,6 +59,7 @@ local function hideMoneyGUI()
 	if(guiGetVisible(moneyGUI.window) == true)then
 		guiSetVisible ( moneyGUI.window, false )
 		showCursor(false)
+		hideHelpGUI()
 	end
 end
 

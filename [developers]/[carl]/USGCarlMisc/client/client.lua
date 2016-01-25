@@ -68,11 +68,13 @@ end
 local function toggle()
 	if(showing)then
 		showing = false
+		hideHelpGUI()
 		removeEventHandler("onClientRender", root,render)
 		lastSelectedID = selectedID
 		selectedID = nil
 	else
 		showing = true
+		showHelpGUI(helpInfo.UPHome)
 		addEventHandler("onClientRender", root,render)
 		if(not lastSelectedID)then
 			lastSelectedID = 1

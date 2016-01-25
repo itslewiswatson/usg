@@ -31,6 +31,7 @@ if(not exports.USGaccounts:isPlayerLoggedIn()) then return end
 		guiSetInputMode("no_binds_when_editing")
 		guiSetVisible ( msgGUI.window, true )
 		msgfillPlayerGrid()
+		showHelpGUI(helpInfo.app)
 	end
 end
 
@@ -41,6 +42,7 @@ local function hideMessageGUI()
 	if(guiGetVisible(msgGUI.window) == true)then
 		guiSetVisible ( msgGUI.window, false )
 		showCursor(false)
+		hideHelpGUI()
 	end
 end
 
