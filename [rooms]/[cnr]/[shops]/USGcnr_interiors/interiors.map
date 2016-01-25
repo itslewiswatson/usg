@@ -43,8 +43,8 @@
 <interiorReturn	refid="SHOTRANGE4"	posX="301.80"	posY="-76.82"	posZ="1000.51"	rotation="0"	interior="4"	dimension="4"	/>
 <interiorEntry	id="SHOTRANGE5"	posX="301.6"	posY="-74.89"	posZ="1000.51"	rotation="0"	dimension="9"	interior="4"	/>
 <interiorReturn	refid="SHOTRANGE5"	posX="301.80"	posY="-76.82"	posZ="1000.51"	rotation="0"	interior="4"	dimension="9"	/>
----<interiorEntry	id="SHOTRANGE16"	posX="2178"	posY="938.6982"	posZ="11.093437"	rotation="0"	dimension="0"	interior="0"	/>---
----<interiorReturn	refid="SHOTRANGE16"	posX="301.80"	posY="-74.826171875"	posZ="1000.51"	rotation="0"	interior="4"	dimension="5"	/>---
+---interiorEntry	id="SHOTRANGE16"	posX="2178"	posY="938.6982"	posZ="11.093437"	rotation="0"	dimension="0"	interior="0"	---
+---interiorReturn	refid="SHOTRANGE16"	posX="301.80"	posY="-74.826171875"	posZ="1000.51"	rotation="0"	interior="4"	dimension="5"	---
 
 
 <interiorEntry	id="SHOTRANGE6"	posX="306.340"	posY="-141.88"	posZ="1003.06"	rotation="0"	dimension="1"	interior="7"	/>
