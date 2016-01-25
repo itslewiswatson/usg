@@ -22,6 +22,7 @@
 	<script src = "apps/gpsApp/client.lua" type = "client" /> 
 	
 	<script src = "apps/moneyApp/client.lua" type = "client" /> 
+	<script src = "apps/moneyApp/server.lua" type = "server" /> 
 
 	<file src = "images/account_icon.png" />
 	<file src = "images/call_icon.png" />
