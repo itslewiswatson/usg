@@ -59,8 +59,8 @@ binds = {}
 helpInfo = {}
 	helpInfo.UPHome = {}
 		helpInfo.UPHome.title = "Help"
-		helpInfo.UPHome.text = "Use "..binds.toggleUserPanel.key.." to toggle the User Panel /n Use "..binds.previousSelection.key.." and "..binds.nextSelection.key.." to navigate /n Use "..binds.select.key.." to enter the App"
+		helpInfo.UPHome.text = "Use "..binds.toggleUserPanel.key.." to toggle the User Panel \nUse "..binds.previousSelection.key.." and "..binds.nextSelection.key.." to navigate \nUse "..binds.select.key.." to enter the App"
 	
 	helpInfo.app = {}
 		helpInfo.app.title = "Help"
-		helpInfo.app.text = "Use "..binds.toggleCursor.key.." to toggle the cursor /nUse "..binds.closeAllApps.key.." to close open Apps /nYou can open multiple apps at the same time"
+		helpInfo.app.text = "Use "..binds.toggleCursor.key.." to toggle the cursor \nUse "..binds.closeAllApps.key.." to close open Apps \nYou can open multiple apps at the same time"
