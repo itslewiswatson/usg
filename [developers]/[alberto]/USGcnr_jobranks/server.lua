@@ -53,6 +53,21 @@ local jobRanks = {
 		[75000] = {rankName = "Surgeon"},
 		[100000] = {rankName = "Elite Doctor"},
 	},
+
+	["quarryMiner"] = {
+		[0] = {rankName = "Trainee Quarry Miner"},
+		[1000] = {rankName = "Field Operator I"},
+		[2500] = {rankName = "Field Operator II"},
+		[5000] = {rankName = "Field Operator III"},
+		[7500] = {rankName = "Field Operator IV"},
+		[10000] = {rankName = "Mine Engineer I"},
+		[15000] = {rankName = "Mine Engineer II"},
+		[20000] = {rankName = "Mine Engineer III"},
+		[25000] = {rankName = "Mine Engineer IV"},
+		[50000] = {rankName = "Geologist I"},
+		[75000] = {rankName = "Geologist II"},
+		[100000] = {rankName = "King of the Quarry"},
+	},
 } 
 
 ----------------------------------------------------------------------------------------------
