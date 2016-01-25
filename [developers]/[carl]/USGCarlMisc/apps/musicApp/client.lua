@@ -24,6 +24,15 @@ addEventHandler("onClientResourceStart", resourceRoot,
         musicGUI.buttonRemove = guiCreateButton(0.61, 0.90, 0.36, 0.07, "Remove", true, musicGUI.window)
         guiSetProperty(musicGUI.buttonRemove, "NormalTextColour", "FFAAAAAA")  
 
+		library = exports.USGplayermusic:getLibrary()
+			if(library) then
+				for i, item in ipairs(library) do
+					local row = guiGridListAddRow ( musicGUI.gridlistLibrary )
+					guiGridListSetItemText(musicGUI.gridlistLibrary, row, 1, item.name, false, false)
+					guiGridListSetItemData(musicGUI.gridlistLibrary, row, 1, item)
+				end
+			end
+		
 		guiSetVisible(musicGUI.window,false)
     end
 )
