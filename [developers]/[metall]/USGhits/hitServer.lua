@@ -9,10 +9,10 @@ function placeHit(plr, cmd, target, amount)
 			hits[target] = amount
 			setElementData(target, "hit", true)
 			exports.USGmsg:msg("A hit has been placed on "..getPlayerName(target).." kill him to get $"..amount, root, 255, 255, 0)
-			if (not isElement(hits[target][2])) then
+			if (not isElement(blip[target])) then
 				local int, dim = getElementInterior(target), getElementDimension(target)
-				hits[target][2] = createBlipAttachedTo(target, 41)
-				setElementInterior(hits[target][2], int)
+				blip[target] = createBlipAttachedTo(target, 41)
+				setElementInterior(blip[target], int)
 			end
 		end
 	end
@@ -24,15 +24,15 @@ function onWasted(ammo, killer)
 		if (source ~= killer) then
 			local pay = hits[source]
 			givePlayerMoney(killer, pay)
-			if (isElement(hits[source][2])) then
-				destroyElement(hits[source])
+			if (isElement(blip[source])) then
+				destroyElement(blip[source])
 			end
 			hits[source] = false
 			setElementData(source, "hit", false)
 			exports.USGmsg:msg(getPlayerName(killer).." has killed "..getPlayerName(source).." and has gotten $"..pay, root, 255, 255, 0)
 		else
-			if (isElement(hits[source][2])) then
-				destroyElement(hits[source][2])
+			if (isElement(blip[source])) then
+				destroyElement(blip[source])
 			end
 			hits[source] = false
 			setElementData(source, "hit", false)
@@ -44,7 +44,7 @@ addEventHandler("onPlayerWasted", root, onWasted)
 
 function onQuit()
 	if (hits[source] ~= false and getElementData(source, "hit")) then
-		if (isElement(hits[source][2])) then destroyElement(hits[source][2]) end
+		if (isElement(blip[source])) then destroyElement(blip[source]) end
 		outputChatBox("The hit event has been cancelled due to "..getPlayerName(source).." quiting!", root, 255, 255, 0)
 	end
 end
