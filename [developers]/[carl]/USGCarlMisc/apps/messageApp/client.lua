@@ -44,7 +44,7 @@ local function hideMessageGUI()
 	end
 end
 
-bindKey(binds.closeAllApps.keybinds.closeAllApps.keyState,hideMessageGUI)
+bindKey( binds.closeAllApps.key, binds.closeAllApps.keyState,hideMessageGUI)
 
 
 function msgfillPlayerGrid()
