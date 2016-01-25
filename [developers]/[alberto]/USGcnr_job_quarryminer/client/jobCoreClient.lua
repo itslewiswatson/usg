@@ -169,7 +169,7 @@ function onChangeJob(ID)
 	if (ID == jobID) then
 		if (not miners[localPlayer]) then
 			miners[localPlayer] = true
-			outputChatBox("Get inside a #FFFF00Dozer", 255, 255, 255, true)
+			exports.USGmsg:msg("Get inside a #FFFF00Dozer", 255, 255, 255)
 		end
 	else
 		clearData()
@@ -207,7 +207,7 @@ addEventHandler("onClientVehicleEnter", root, startJob)
 
 function onVehicleDestroyed()
 	clearData()
-	outputChatBox("Your #FFFF00Dozer #FF0000exploded#FFFFFF! Go and spawn another one.", 255, 255, 255, true)
+	exports.USGmsg:msg("Your #FFFF00Dozer#FFFFFF was destroyed! Go and spawn another one.", 255, 255, 255)
 end
 
 --Clears all the data for when the player quits, has finished the job or resigns
@@ -312,7 +312,7 @@ function createNewLocation()
 
 	blowMarker = createMarker(c4Plants[randomNumber][1], c4Plants[randomNumber][2], c4Plants[randomNumber][3], "cylinder", 2, 255, 0, 0)
 	blowBlip = createBlipAttachedTo(blowMarker, 0, 2, 255, 0, 0)
-	outputChatBox("Go to the #FF0000marker #FFFFFFand plant an explosive.", 255, 255, 255, true)
+	exports.USGmsg:msg("Go to the #FF0000marker #FFFFFFand plant an explosive.", 255, 255, 255)
 	addEventHandler("onClientMarkerHit", blowMarker, blowUp)
 end
 
@@ -322,7 +322,7 @@ function blowUp(player)
 		if (not isPedInVehicle(localPlr)) then
 			c4Object = createObject(1654, c4Plants[randomNumber][1], c4Plants[randomNumber][2], c4Plants[randomNumber][3])
 			destroyElement(blowMarker)
-			outputChatBox("Planted explosive, please move away from the area!", 255, 255, 255)
+			exports.USGmsg:msg("Planted explosive, please move away from the area!", 255, 255, 255)
 			isRendering = true
 			addEventHandler("onClientRender", root, renderDX)
 			dxVariable = 1
@@ -338,7 +338,7 @@ function blowUp(player)
 				destroyElement(c4Object)
 				killTimer(decreaseBlowTime)
 				createRocks()
-				outputChatBox("Explosive has blown! Get into your #FFFF00Dozer #FFFFFFand pick up the #FF0000Rocks#FFFFFF!", 255, 255, 255, true)
+				exports.USGmsg:msg("Explosive has blown! Get into your #FFFF00Dozer #FFFFFFand pick up the #FF0000Rocks#FFFFFF!", 255, 255, 255)
 			end, (blowTime * 1000), 1)
 		end
 	end
@@ -386,7 +386,7 @@ function createProcessing()
 	processMarker = createMarker(632.40137, 893.42865, -43.96094, "cylinder", 4, 255, 255, 0, 255)
 	processBlip = createBlipAttachedTo(processMarker, 0, 2, 255, 255, 0)
 
-	outputChatBox("Go to the #FFFF00processing marker", 255, 255, 255, true)
+	exports.USGmsg:msg("Go to the #FFFF00processing marker", 255, 255, 255)
 
 	addEventHandler("onClientMarkerHit", processMarker, processRocks)
 end
@@ -420,7 +420,7 @@ function processRocks(player)
 						setElementFrozen(veh, false)
 						setElementFrozen(localPlr, false)
 						killTimer(processingTimer)
-						outputChatBox("Processing finished!", 255, 255, 0)
+						exports.USGmsg:msg("Processing finished!", 255, 255, 0)
 						triggerServerEvent("payPlayer", localPlr, amountOfRocks)
 						showCursor(false, false)
 						clearData()
