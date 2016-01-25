@@ -33,7 +33,7 @@ function Turf:Turf(dbRow)
         self.colShape = createColCuboid(self.x, self.y, -50, self.x2-self.x, self.y2-self.y, self.maxHeight+50)
     else
         --self.colShape = createColRectangle(self.x, self.y, self.x2-self.x, self.y2-self.y)
-        self.colShape = createColCuboid(self.x, self.y, 3, self.x2-self.x, self.y2-self.y, 12)
+        self.colShape = createColCuboid(self.x, self.y, 3, self.x2-self.x, self.y2-self.y, 16)
     end
     self.radarArea = createRadarArea(self.x, self.y, self.x2-self.x, self.y2-self.y, 255,255,255, 165)
     self:updateColor()
