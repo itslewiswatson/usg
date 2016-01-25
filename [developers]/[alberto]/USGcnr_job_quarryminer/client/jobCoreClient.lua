@@ -3,7 +3,7 @@ local c4Plants = {
 	[1] = {697.09375, 903.54730, -39.88151},
 	[2] = {641.20074, 957.58807, -35.19804},
 	[3] = {692.69903564453, 729.64056396484, -7.1828298568726},
-	[4] = {669.69396972656, 1008.1853027344, 5.8230533599854},
+	[4] = {669.69396972656, 1008.1853027344, 4.8230533599854},
 	[5] = {484.5419921875, 908.326171875, -30.95329284668},
 	[6] = {461.4912109375, 877.119140625, -28.826314926147},
 	[7] = {655.40625, 725.9716796875, -4.2181539535522},
@@ -36,12 +36,12 @@ local blownRocks = {
 	},
 
 	[4] = {
-			{665.60852050781, 1003.1563720703, 5.8512983322144},
-			{666.63684082031, 1007.1403808594, 5.8289213180542},
-			{670.93438720703, 1007.6164550781, 5.8262481689453},
-			{671.38177490234, 1003.8521118164, 5.84166431427},
-			{668.76000976563, 1003.9117431641, 5.847056388855},
-			{668.85357666016, 1000.2744750977, 5.8643798828125},
+			{665.60852050781, 1003.1563720703, 4.8512983322144},
+			{666.63684082031, 1007.1403808594, 4.8289213180542},
+			{670.93438720703, 1007.6164550781, 4.8262481689453},
+			{671.38177490234, 1003.8521118164, 4.84166431427},
+			{668.76000976563, 1003.9117431641, 4.847056388855},
+			{668.85357666016, 1000.2744750977, 4.8643798828125},
 	},
 
 	[5] = {
@@ -169,10 +169,6 @@ function onChangeJob(ID)
 		if (not miners[localPlayer]) then
 			miners[localPlayer] = true
 			outputChatBox("Get inside a #FFFF00Dozer", 255, 255, 255, true)
-
-			if (jobActive == false) then
-				addEventHandler("onClientVehicleEnter", root, startJob)
-			end
 		end
 	else
 		clearData()
@@ -190,28 +186,22 @@ addEventHandler("onPlayerExitRoom", localPlayer,
 	end
 )
 
-addCommandHandler("setjob", 
-	function()
-		outputChatBox("Job set", 255, 255, 0)
-		outputChatBox("Spawn and get inside a #FFFF00Dozer", 255, 255, 255, true)
-		if (jobActive == false) then
-			addEventHandler("onClientVehicleEnter", root, startJob)
-		end
-	end
-)
-
 function startJob(player, seat)
 	if (player == localPlr) then
 		if (seat == 0) then	
 			local vehModel = getElementModel(source)
+
 			if (vehModel == 486) then
-				jobActive = true
-				removeEventHandler("onClientVehicleEnter", root, startJob)
-				createNewLocation()
+				if (jobActive == false) then
+					clearData()
+					jobActive = true
+					createNewLocation()
+				end
 			end
 		end
 	end
 end
+addEventHandler("onClientVehicleEnter", root, startJob)
 
 --Clears all the data for when the player quits, has finished the job or resigns
 function clearData()
@@ -222,7 +212,10 @@ function clearData()
 	currentProcessingProgress = 0
 	dxVariable = 0
 	blowTime = 6
-	removeEventHandler("onClientRender", root, renderDX)
+	
+	if (isEventHandlerAdded("onClientRender", root, renderDX)) then
+		removeEventHandler("onClientRender", root, renderDX)
+	end
 
 	if (isElement(blowMarker)) then
 		destroyElement(blowMarker)
@@ -299,14 +292,6 @@ function clearData()
 end
 addEventHandler("onClientPlayerQuit", root, clearData)
 addEventHandler("onClientPlayerWasted", root, clearData)
-
-function cancelJob(player, seat)
-	clearData()
-	removeEventHandler("onClientVehicleEnter", root, startJob)
-
-	outputChatBox("You quit, job has canceled", 255, 255, 0)
-end
-addCommandHandler("quitjob", cancelJob)
 
 --Creates a new location to plant the C4
 function createNewLocation()
@@ -432,4 +417,23 @@ function processRocks(player)
 			, 500, 0)
 		end
 	end
+end
+
+function isEventHandlerAdded( sEventName, pElementAttachedTo, func )
+	if 
+		type( sEventName ) == 'string' and 
+		isElement( pElementAttachedTo ) and 
+		type( func ) == 'function' 
+	then
+		local aAttachedFunctions = getEventHandlers( sEventName, pElementAttachedTo )
+		if type( aAttachedFunctions ) == 'table' and #aAttachedFunctions > 0 then
+			for i, v in ipairs( aAttachedFunctions ) do
+				if v == func then
+					return true
+				end
+			end
+		end
+	end
+ 
+	return false
 end
