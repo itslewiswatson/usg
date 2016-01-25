@@ -47,7 +47,7 @@ local function hideCallGUI()
 	end
 end
 
-bindKey("lctrl","down",hideCallGUI)
+bindKey(binds.closeAllApps.key,binds.closeAllApps.keyState,hideCallGUI)
 
 function phoneCall()
     local selected = guiGridListGetSelectedItem(callGUI.gridlist)

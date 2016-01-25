@@ -12,6 +12,6 @@ local function hideBrowser()
 	end
 end
 
-bindKey("lctrl","down",hideBrowser)
+bindKey(binds.closeAllApps.key,binds.closeAllApps.keyState,hideBrowser)
 addEvent(apps.browser.event,true)
 addEventHandler(apps.browser.event,root,showBrowser)

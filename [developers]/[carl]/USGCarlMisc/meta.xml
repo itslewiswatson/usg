@@ -3,8 +3,10 @@
 	<oop>true</oop>
 
 	<script src = "client/client.lua" type = "client" />
+	
 	<script src = "appsSettings.lua" type = "client" /> 
 	<script src = "vehicleSettings.lua" type = "client" />
+	<script src = "globalSettings.lua" type = "client" />
 	
 	<script src = "apps/messageApp/client.lua" type = "client" /> 
 	
