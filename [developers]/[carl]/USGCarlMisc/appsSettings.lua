@@ -38,6 +38,9 @@ apps = {}
 		
 		apps.call.event = "UserPanel.App.CallApp"
 		
+		apps.call.messages = {}
+			apps.call.messages.selectService = "You did not select a service from the list."
+		
 	apps.gps = {}
 		apps.gps.icon = dxCreateTexture("images/gps_icon.png")
 		apps.gps.name = "GPS App"
@@ -54,6 +57,12 @@ apps = {}
 		
 		apps.gps.event = "UserPanel.App.GPSApp"
 		
+		apps.gps.messages = {}
+			apps.gps.messages.playerQuit = "This player has quit."
+			apps.gps.messages.selectPlayer = "You did not select a player."
+			apps.gps.gpsOutsideOnly = "You can only set GPS when outside."
+			apps.gps.selectLocation = "You did not select a location."
+		
 	apps.messages = {}
 		apps.messages.icon = dxCreateTexture("images/messages_icon.png")
 		apps.messages.name = "Message App"
@@ -69,6 +78,10 @@ apps = {}
 		apps.messages.allRooms = true
 		
 		apps.messages.event = "UserPanel.App.MessageApp"
+		
+		apps.messages.messages = {}
+			apps.messages.messages.playerQuit = "This player has quit."
+			apps.messages.messages.selectPlayer = "You did not select a player."
 		
 	apps.money = {}
 		apps.money.icon = dxCreateTexture("images/money_icon.png")

@@ -1,10 +1,3 @@
-
-local services = {
-    {name="Police",id="police"},
-    {name="Medic",id="medic"},
-    {name="Mechanic",id="mechanic"},
-}
-    
 local callGUI = {}
 
 addEventHandler("onClientResourceStart", resourceRoot,
@@ -55,6 +48,6 @@ function phoneCall()
         local id = guiGridListGetItemData(callGUI.gridlist, selected, 1)
         triggerServerEvent("testing.callServices", localPlayer, services[id].id, services[id].name)
     else
-        exports.USGmsg:msg("You did not select a service from the list.", 255, 0, 0)
+        exports.USGmsg:msg(apps.call.messages.selectService, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
     end
 end

@@ -76,10 +76,10 @@ function sendSMS()
             triggerServerEvent("sendPM", localPlayer, player, message)
             guiSetText(msgGUI.editMessage, "")
         else
-            exports.USGmsg:msg("This player has quit.", 255,0,0)
+            exports.USGmsg:msg(apps.messages.messages.playerQuit, messages.color.alert.r,messages.color.alert.g,messages.color.alert.b) 
         end
     else
-        exports.USGmsg:msg("You did not select a player.", 255,0,0)
+        exports.USGmsg:msg(apps.messages.messages.selectPlayer,messages.color.alert.r,messages.color.alert.g,messages.color.alert.b) 
     end
 end
 
