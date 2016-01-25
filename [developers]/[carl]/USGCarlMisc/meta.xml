@@ -18,6 +18,8 @@
 	
 	<script src = "apps/webBrowserApp/client.lua" type = "client" /> 
 	<script src = "apps/webBrowserApp/WebBrowserGUI.lua" type = "client" /> 
+	
+	<script src = "apps/gpsApp/client.lua" type = "client" /> 
 
 	<file src = "images/account_icon.png" />
 	<file src = "images/call_icon.png" />
