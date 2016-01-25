@@ -192,7 +192,7 @@ function startJob(player, seat)
 			local vehModel = getElementModel(source)
 
 			if (vehModel == 486) then
-				if (jobActive == false) then
+				if (jobActive == false and miners[localPlayer]) then
 					clearData()
 					jobActive = true
 					createNewLocation()
@@ -212,7 +212,7 @@ function clearData()
 	currentProcessingProgress = 0
 	dxVariable = 0
 	blowTime = 6
-	
+
 	if (isEventHandlerAdded("onClientRender", root, renderDX)) then
 		removeEventHandler("onClientRender", root, renderDX)
 	end
