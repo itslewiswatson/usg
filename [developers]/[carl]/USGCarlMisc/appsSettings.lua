@@ -99,6 +99,11 @@ apps = {}
 		
 		apps.money.event = "UserPanel.App.MoneyApp"
 		
+		apps.money.messages = {}
+			apps.money.messages.invalidAmount = "Invalid amount."
+			apps.money.messages.playerQuit = "This player has quit."
+			apps.money.messages.selectPlayer = "You did not select a player."
+		
 	apps.music = {}
 		apps.music.icon = dxCreateTexture("images/music_icon.png")
 		apps.music.name = "Music App"

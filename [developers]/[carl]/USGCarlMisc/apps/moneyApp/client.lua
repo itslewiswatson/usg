@@ -32,13 +32,13 @@ function sendMoney()
             triggerServerEvent("testing.sendMoney", player, amount)
                 guiSetText(moneyGUI.editAmount, "")
             else
-                exports.USGmsg:msg("Invalid amount.", 255, 0, 0)
+                exports.USGmsg:msg(apps.money.messages.invalidAmount, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
             end
         else
-            exports.USGmsg:msg("This player has quit.", 255,0,0)
+            exports.USGmsg:msg(apps.money.messages.playerQuit,  messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
         end
     else
-        exports.USGmsg:msg("You did not select a player.", 255,0,0)
+        exports.USGmsg:msg(apps.money.messages.selectPlayer,  messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
     end
 end
 
