@@ -32,7 +32,7 @@ addEventHandler("onClientResourceStart", resourceRoot,
 		addEventHandler("onClientGUIClick", gpsGUI.buttonPlayerMark , gpsmarkPlayer, false)
 		addEventHandler("onClientGUIClick", gpsGUI.buttonPlayerMark , gpsunmarkPlayer, false)
 		addEventHandler("onClientGUIClick", gpsGUI.buttonLocationMark, gpslocmark , false)
-		addEventHandler("onClientGUIClick", buttonLocationUnMark, gpsunmarkPlayer , false)
+		addEventHandler("onClientGUIClick", gpsGUI.buttonLocationUnMark, gpsunmarkPlayer , false)
 		
 		guiSetVisible ( gpsGUI.window, false )		
     end
