@@ -1,5 +1,5 @@
 local msgGUI = {}
-local messages = ""
+local messagesString = ""
 
 addEventHandler("onClientResourceStart", resourceRoot,
     function()
@@ -63,7 +63,7 @@ end
 
 function refreshMessages()
     if(isElement(msgGUI.memo)) then
-         guiSetText (msgGUI.memo, messages)
+         guiSetText (msgGUI.memo, messagesString)
     end
 end
 
@@ -76,7 +76,6 @@ function sendSMS()
             triggerServerEvent("sendPM", localPlayer, player, message)
             guiSetText(msgGUI.editMessage, "")
         else
-		outputChatBox(tostring(messages.color.alert.r))
             exports.USGmsg:msg(apps.messages.messages.playerQuit, messages.color.alert.r,messages.color.alert.g,messages.color.alert.b) 
         end
     else
@@ -92,7 +91,7 @@ end
 
 addEvent("onRecievePM")
 function onRecieveMessage(message)
-    messages = "< "..getPlayerName(source)..": "..message.."\n\n"..messages
+    messagesString = "< "..getPlayerName(source)..": "..message.."\n\n"..messagesString
     if(msgGUI) then
         refreshMessages()
     end
@@ -101,7 +100,7 @@ addEventHandler("onRecievePM", root, onRecieveMessage)
 
 addEvent("onSendPM")
 function onSentMessage(target, message)
-    messages = "> "..getPlayerName(target)..": "..message.."\n\n"..messages
+    messagesString = "> "..getPlayerName(target)..": "..message.."\n\n"..messagesString
     if(msgGUI) then
         refreshMessages()
     end
