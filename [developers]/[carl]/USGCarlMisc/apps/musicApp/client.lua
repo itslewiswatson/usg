@@ -68,7 +68,7 @@ function onAddClick()
     local name, url = guiGetText(musicGUI.editName), guiGetText(musicGUI.editURL)
     if(url and #url > 4) then
         if(exports.USGplayermusic:addToLibrary(url, #name > 0 and name or false)) then
-            exports.USGmsg:msg("Added to library!", 0, 255, 0)
+            exports.USGmsg:msg(apps.music.messages.libraryAdd, messages.color.info.r, messages.color.info.g, messages.color.info.b)
             local item = { url = url, name = #name > 0 and name or url}
             table.insert(library, item)
             local row = guiGridListAddRow(musicGUI.gridlistLibrary)
@@ -86,7 +86,7 @@ function onRemoveClick()
         local item = guiGridListGetItemData(musicGUI.gridlistLibrary, selected, 1)
         if(item) then
             if(exports.USGplayermusic:removeFromLibrary(item.url)) then
-                exports.USGmsg:msg("Removed from library!", 0, 255, 0)
+                exports.USGmsg:msg(apps.music.messages.libraryRemove, messages.color.info.r, messages.color.info.g, messages.color.info.b)
                 guiGridListRemoveRow ( musicGUI.gridlistLibrary, selected )
                 for i, lItem in ipairs(library) do
                     if(lItem.url == item.url) then
@@ -94,13 +94,13 @@ function onRemoveClick()
                     end
                 end
             else
-                exports.USGmsg:msg("Could not remove from library.", 255, 0, 0)
+                exports.USGmsg:msg(apps.music.messages.libraryRemoveError, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
             end
         else
-            exports.USGmsg:msg("Could not find related URL!", 255, 0, 0)
+            exports.USGmsg:msg(apps.music.messages.urlError, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
         end
     else
-        exports.USGmsg:msg("You need to select an item to remove!", 255, 0, 0)
+        exports.USGmsg:msg(apps.music.messages.selectItemRemove, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
     end
 end
 
@@ -115,10 +115,10 @@ function onPlayClick()
         if(item) then
             playItem(item)
         else
-            exports.USGmsg:msg("Could not find related URL!", 255, 0, 0)
+            exports.USGmsg:msg(apps.music.messages.urlError, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
         end
     else
-        exports.USGmsg:msg("You need to select an item!", 255, 0, 0)
+        exports.USGmsg:msg(apps.music.messages.selectItem, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
     end
 end
 
@@ -207,7 +207,7 @@ end
 
 function soundStream(success, length, name)
     if(not success) then
-        exports.USGmsg:msg("Invalid stream/URL ( "..currentItem.name..")!", 255, 0, 0)
+        exports.USGmsg:msg("Invalid stream/URL ( "..currentItem.name..")!", messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
         next()
     else
         if(length == 0) then

@@ -26,6 +26,11 @@ messages = {}
 			messages.color.alert.g = 0
 			messages.color.alert.b = 0
 			
+		messages.color.info = {}
+			messages.color.info.r = 0
+			messages.color.info.g = 255
+			messages.color.info.b = 0
+			
 binds = {}
 	binds.toggleUserPanel = {}
 		binds.toggleUserPanel.key = "b"

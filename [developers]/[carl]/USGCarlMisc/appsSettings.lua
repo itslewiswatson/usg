@@ -120,6 +120,14 @@ apps = {}
 		
 		apps.music.event = "UserPanel.App.MusicApp"	
 		
+		apps.music.messages = {}
+			apps.music.messages.libraryAdd = "Added to library!"
+			apps.music.messages.libraryRemove = "Removed from library!"
+			apps.music.messages.libraryRemoveError = "Could not remove from library."
+			apps.music.messages.urlError = "Could not find related URL!"
+			apps.music.messages.selectItem = "You need to select an item!"
+			apps.music.messages.selectItemRemove = "You need to select an item to remove!"
+		
 	apps.browser = {}
 		apps.browser.icon = dxCreateTexture("images/browser_icon.png")
 		apps.browser.name = "Web Browser"
