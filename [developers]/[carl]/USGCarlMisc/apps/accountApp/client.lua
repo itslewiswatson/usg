@@ -43,7 +43,7 @@ local function hideAccountGUI()
 	end
 end
 
-bindKey("lctrl","down",hideAccountGUI)
+bindKey(binds.closeAllApps.key,binds.closeAllApps.keyState,hideAccountGUI)
 
 function getInput()
     local user = guiGetText ( accGUI.editUsername )

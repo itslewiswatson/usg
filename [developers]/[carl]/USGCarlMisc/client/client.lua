@@ -107,12 +107,12 @@ local function processInput(_,_,action)
 end
 
 
-bindKey ( "b", "down", toggle)
-bindKey(",","down",processInput,"left")
-bindKey(".","down",processInput,"right")
-bindKey("lalt","down",processInput,"select")
+bindKey(binds.toggleUserPanel.key, binds.toggleUserPanel.keyState, toggle)
+bindKey(binds.previousSelection.key,binds.previousSelection.keyState,processInput,"left")
+bindKey(binds.nextSelection.key,binds.nextSelection.keyState,processInput,"right")
+bindKey(binds.select.key,binds.select.keyState,processInput,"select")
 
-bindKey("ralt","down",function()
+bindKey(binds.toggleCursor.key,binds.toggleCursor.keyState,function()
 	showCursor(not isCursorShowing())
 end
 )

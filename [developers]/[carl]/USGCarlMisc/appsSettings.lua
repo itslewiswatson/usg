@@ -129,10 +129,3 @@ appsIDs =
 	apps.messages,
 	apps.browser
 }
-
-messages = {}
-	messages.color ={}
-		messages.color.alert = {}
-			messages.color.alert.r = 255
-			messages.color.alert.g = 0
-			messages.color.alert.b = 0
