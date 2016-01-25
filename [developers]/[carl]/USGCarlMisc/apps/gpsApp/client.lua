@@ -27,7 +27,7 @@ addEventHandler("onClientResourceStart", resourceRoot,
         guiSetProperty(gpsGUI.buttonPlayerMark, "NormalTextColour", "FFAAAAAA")
         gpsGUI.buttonPlayerUnMark = guiCreateButton(0.51, 0.46, 0.46, 0.07, "Unmark", true, gpsGUI.window)
         guiSetProperty(gpsGUI.buttonPlayerUnMark, "NormalTextColour", "FFAAAAAA")
-        gpsGUI.destination = guiCreateLabel(0.28, 0.52, 0.45, 0.06, "Destination", true, gpsGUI.window)
+        gpsGUI.destination = guiCreateLabel(0.03, 0.52, 0.94, 0.06, "Destination", true, gpsGUI.window)
         guiLabelSetHorizontalAlign(gpsGUI.destination, "center", false)
         guiLabelSetVerticalAlign(gpsGUI.destination, "center")
         gpsGUI.gridlistLocation = guiCreateGridList(0.03, 0.59, 0.94, 0.31, true, gpsGUI.window)
