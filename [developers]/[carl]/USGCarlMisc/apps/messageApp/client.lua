@@ -1,5 +1,5 @@
 local msgGUI = {}
-local messages = ""
+local messagesString = ""
 
 addEventHandler("onClientResourceStart", resourceRoot,
     function()
@@ -63,7 +63,7 @@ end
 
 function refreshMessages()
     if(isElement(msgGUI.memo)) then
-         guiSetText (msgGUI.memo, messages)
+         guiSetText (msgGUI.memo, messagesString)
     end
 end
 
@@ -91,7 +91,7 @@ end
 
 addEvent("onRecievePM")
 function onRecieveMessage(message)
-    messages = "< "..getPlayerName(source)..": "..message.."\n\n"..messages
+    messagesString = "< "..getPlayerName(source)..": "..message.."\n\n"..messagesString
     if(msgGUI) then
         refreshMessages()
     end
@@ -100,7 +100,7 @@ addEventHandler("onRecievePM", root, onRecieveMessage)
 
 addEvent("onSendPM")
 function onSentMessage(target, message)
-    messages = "> "..getPlayerName(target)..": "..message.."\n\n"..messages
+    messagesString = "> "..getPlayerName(target)..": "..message.."\n\n"..messagesString
     if(msgGUI) then
         refreshMessages()
     end
