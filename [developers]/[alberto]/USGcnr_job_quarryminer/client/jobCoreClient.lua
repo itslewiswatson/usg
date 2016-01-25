@@ -2,6 +2,7 @@
 local c4Plants = {
 	[1] = {697.09375, 903.54730, -39.88151},
 	[2] = {641.20074, 957.58807, -35.19804},
+	[3] = {692.69903564453, 729.64056396484, -7.1828298568726},
 }
 
 --Rocks that appear when C4 has blown
@@ -18,6 +19,13 @@ local blownRocks = {
 			{637.54663, 955.77673, -35.46286},
 			{639.12158, 952.84076, -35.72335},
 			{643.44617, 954.09894, -35.44550},
+		},
+
+	[3] = {
+			{698.24224853516, 733.69323730469, -6.7209587097168},
+			{690.13671875, 733.80010986328, -6.3384227752686},
+			{691.41143798828, 736.74859619141, -5.8814177513123},
+			{691.92498779297, 732.10241699219, -6.7438073158264},
 		},
 }
 
@@ -370,5 +378,12 @@ addCommandHandler("fre",
 	function()
 		showCursor(false, false)
 		setElementFrozen(getPedOccupiedVehicle(localPlr), false)
+	end
+)
+
+addCommandHandler("pos",
+	function()
+		local x, y, z = getElementPosition(localPlayer)
+		outputChatBox(x .. ", " .. y .. ", " .. z)
 	end
 )

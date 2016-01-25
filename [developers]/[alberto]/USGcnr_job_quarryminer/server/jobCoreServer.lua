@@ -17,7 +17,7 @@ addEventHandler("payPlayer", root,
 			local payment = basePayment * rocksCollected
 
 			givePlayerMoney(client, payment)
-			exports.USGmsg:msg(client,"Payment: " .. payment .. " for processing " .. rocksCollected .. " rocks.", 0, 255, 0)
+			exports.USGmsg:msg(client,"Payment: " .. exports.USG:formatMoney(payment) .. " for processing " .. rocksCollected .. " rocks.", 0, 255, 0)
 		end
 	end
 )
