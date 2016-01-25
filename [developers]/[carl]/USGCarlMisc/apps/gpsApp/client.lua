@@ -88,7 +88,7 @@ function gpsfillLocationGrid()
     local px,py,pz = getElementPosition(localPlayer)
     for type, typeLocations in pairs(locations) do
     local row = guiGridListAddRow ( gpsGUI.gridlistLocation )
-        guiGridListSetItemText(gpsGUI.girdlistPlayer, row, 1, type, false, false)
+        guiGridListSetItemText(gpsGUI.gridlistLocation, row, 1, type, false, false)
     end
 end
 
