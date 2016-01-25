@@ -104,6 +104,10 @@ function onRemoveClick()
     end
 end
 
+local settingsReady = function ()
+    return getResourceFromName("USGplayersettings") and getResourceState(getResourceFromName("USGplayersettings")) == "running"
+end
+
 function onPlayClick()
     local selected = guiGridListGetSelectedItem(musicGUI.gridlistLibrary)
     if(selected) then
