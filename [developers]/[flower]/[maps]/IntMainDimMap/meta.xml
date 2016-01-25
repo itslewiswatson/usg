@@ -1,5 +1,6 @@
 <meta>
 	<info description="IntMainDimMaps" version="1.0" author="Flower Power" />
-	<map src="FlowerJaySA.map" type="server" />
-	<map src="FlowerJaySA2.map" type="server" />
+	<min_mta_version client="1.5" server="1.5" />
+	<script src="FlowerJaySA.luac" type="client" />
+	<script src="FlowerJaySA2.luac" type="client" />
 </meta>
