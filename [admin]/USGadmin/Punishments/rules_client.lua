@@ -95,8 +95,8 @@ function updateTimeout()
 			timeout = timeout - 1
 			exports.USGGUI:setText(rulesGUI.window, "Rules - "..timeout.." seconds left")
 		else
-			killTimer(timeoutTimer)
 			closeRulesGUI()
+			killTimer(timeoutTimer)
 		end
 	else
 		killTimer(timeoutTimer)
