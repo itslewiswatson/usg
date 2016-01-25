@@ -23,6 +23,8 @@
 	
 	<script src = "apps/moneyApp/client.lua" type = "client" /> 
 	<script src = "apps/moneyApp/server.lua" type = "server" /> 
+	
+	<script src = "apps/musicApp/client.lua" type = "client" /> 
 
 	<file src = "images/account_icon.png" />
 	<file src = "images/call_icon.png" />
