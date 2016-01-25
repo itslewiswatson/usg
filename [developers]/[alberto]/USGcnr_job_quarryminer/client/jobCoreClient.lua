@@ -192,7 +192,7 @@ function startJob(player, seat)
 			local vehModel = getElementModel(source)
 
 			if (vehModel == 486) then
-				if (jobActive == false and miners[localPlayer]) then
+				if (jobActive == false and exports.USGcnr_jobs:getPlayerJob(player) == jobID) then
 					clearData()
 					jobActive = true
 					createNewLocation()
