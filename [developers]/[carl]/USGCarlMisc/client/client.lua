@@ -84,8 +84,8 @@ local function toggle()
 end
 
 local function enterAppCurrentlyInUse(app)
-	triggerEvent ( app.event, root)
 	toggle()
+	triggerEvent ( app.event, root)
 end
 
 
