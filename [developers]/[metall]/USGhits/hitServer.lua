@@ -8,7 +8,7 @@ function placeHit(plr, cmd, target, amount)
 		if (exports.USGadmin:getPlayerStaffLevel(plr) >= 2) then
 			hits[target] = amount
 			setElementData(target, "hit", true)
-			exports.USGmsg:msg("A hit has been placed on "..getPlayerName(target).." kill him to get $"..amount, root, 255, 255, 0)
+			exports.USGmsg:msg(root, "A hit has been placed on "..getPlayerName(target).." kill him to get $"..amount, 255, 255, 0)
 			if (not isElement(blip[target])) then
 				local int, dim = getElementInterior(target), getElementDimension(target)
 				blip[target] = createBlipAttachedTo(target, 41)
@@ -29,14 +29,14 @@ function onWasted(ammo, killer)
 			end
 			hits[source] = false
 			setElementData(source, "hit", false)
-			exports.USGmsg:msg(getPlayerName(killer).." has killed "..getPlayerName(source).." and has gotten $"..pay, root, 255, 255, 0)
+			exports.USGmsg:msg(root, getPlayerName(killer).." has killed "..getPlayerName(source).." and has gotten $"..pay, 255, 255, 0)
 		else
 			if (isElement(blip[source])) then
 				destroyElement(blip[source])
 			end
 			hits[source] = false
 			setElementData(source, "hit", false)
-			exports.USGmsg:msg(getPlayerName(source).." has killed himself. Hit event cancelled!", root, 200, 0, 0)
+			exports.USGmsg:msg(root, getPlayerName(source).." has killed himself. Hit event cancelled!", 200, 0, 0)
 		end
 	end
 end
@@ -45,7 +45,7 @@ addEventHandler("onPlayerWasted", root, onWasted)
 function onQuit()
 	if (hits[source] ~= false and getElementData(source, "hit")) then
 		if (isElement(blip[source])) then destroyElement(blip[source]) end
-		outputChatBox("The hit event has been cancelled due to "..getPlayerName(source).." quiting!", root, 255, 255, 0)
+		exports.USGmsg:msg(root, "The hit event has been cancelled due to "..getPlayerName(source).." quiting!", 200, 0, 0)
 	end
 end
 addEventHandler("onPlayerQuit", root, onQuit)
