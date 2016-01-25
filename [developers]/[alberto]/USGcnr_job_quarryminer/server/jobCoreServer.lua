@@ -9,13 +9,15 @@ addEventHandler("onResourceStart", resourceRoot,
     end
 )
 
+local basePayment = 400
 addEvent("payPlayer", true)
 addEventHandler("payPlayer", root, 
 	function(rocksCollected)
 		if (isElement(client)) then
-			--Temporary payment
-			local payment = 400 * rocksCollected 
-			outputChatBox("Payment: $" .. payment, client, 0, 255, 0)
+			local payment = basePayment * rocksCollected
+
+			givePlayerMoney(client, payment)
+			exports.USGmsg:msg(client,"Payment: " .. payment .. " for processing " .. rocksCollected .. " rocks.", 0, 255, 0)
 		end
 	end
 )

@@ -94,16 +94,21 @@ addEventHandler("onClientResourceStart", resourceRoot,
 )
 
 -- *** job loading ***
+local miners = {}
 addEvent("onPlayerChangeJob", true)
 function onChangeJob(ID)
 	if (ID == jobID) then
-		outputChatBox("Get inside a #FFFF00Dozer", 255, 255, 255, true)
+		if (not miners[localPlayer]) then
+			miners[localPlayer] = true
+			outputChatBox("Get inside a #FFFF00Dozer", 255, 255, 255, true)
 
-		if (jobActive == false) then
-			addEventHandler("onClientVehicleEnter", root, startJob)
+			if (jobActive == false) then
+				addEventHandler("onClientVehicleEnter", root, startJob)
+			end
 		end
 	else
 		clearData()
+		miners[localPlayer] = false
 	end
 end
 addEventHandler("onPlayerChangeJob", localPlayer, onChangeJob)
@@ -209,13 +214,17 @@ function clearData()
 		processBlip = nil
 	end
 
-	if (isElementFrozen(localPlr)) then
-		setElementFrozen(localPlr, false)
+	--if (isElementFrozen(localPlr)) then
+		--setElementFrozen(localPlr, false)
 
-		if (getPedOccupiedVehicle(localPlr)) then
-			setElementFrozen(getPedOccupiedVehicle(localPlr), false)
-		end
+	if (isCursorShowing()) then
+		showCursor(false, false)
 	end
+
+	if (getPedOccupiedVehicle(localPlr)) then
+		setElementFrozen(getPedOccupiedVehicle(localPlr), false)
+	end
+	--end
 
 	rockMarkers = {}
 	rockBlips = {}
@@ -281,7 +290,7 @@ function createRocks()
 				local rock = createObject(964, v[1], v[2], v[3])
 				setElementCollisionsEnabled(rock, false)
 				local rockMarker = createMarker(v[1], v[2], v[3], "cylinder", 2, 0, 0, 0, 0)
-				local rockBlip = createBlipAttachedTo(rockMarker, 0, 2, 255, 255, 0)
+				local rockBlip = createBlipAttachedTo(rockMarker, 0, 1, 255, 0, 0)
 				rockMarkers[rockMarker] = rockMarker
 				rocks[rockMarker] = rock
 				rockBlips[rockMarker] = rockBlip
@@ -332,7 +341,8 @@ function processRocks(player)
 			end
 
 			setElementFrozen(veh, true)
-			setElementFrozen(localPlr, true)
+			--setElementFrozen(localPlr, true)
+			showCursor(true, true)
 
 			processingTimer = setTimer(
 				function()
@@ -346,6 +356,7 @@ function processRocks(player)
 						killTimer(processingTimer)
 						outputChatBox("Processing finished!", 255, 255, 0)
 						triggerServerEvent("payPlayer", localPlr, amountOfRocks)
+						showCursor(false, false)
 						clearData()
 						setTimer(createNewLocation, 2000, 1)
 					end
@@ -357,7 +368,7 @@ end
 
 addCommandHandler("fre", 
 	function()
-		setElementFrozen(localPlr, false)
+		showCursor(false, false)
 		setElementFrozen(getPedOccupiedVehicle(localPlr), false)
 	end
 )
