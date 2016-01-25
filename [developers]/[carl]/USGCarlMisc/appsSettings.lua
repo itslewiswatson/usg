@@ -14,6 +14,13 @@ apps = {}
 		apps.account.allRooms = true
 		
 		apps.account.event = "UserPanel.App.AccountApp"
+		
+		apps.account.messages = {}
+			apps.account.messages.enterUsername = "Enter your username."
+			apps.account.messages.enterPassword = "Enter your password."
+			apps.account.messages.passwordTooShort = "Your password must be 6 characters long."
+			apps.account.messages.emailTooLong = "Your email must be 4 characters long."
+
 	
 	apps.call = {}
 		apps.call.icon = dxCreateTexture("images/call_icon.png")
@@ -122,3 +129,10 @@ appsIDs =
 	apps.messages,
 	apps.browser
 }
+
+messages = {}
+	messages.color ={}
+		messages.color.alert = {}
+			messages.color.alert.r = 255
+			messages.color.alert.g = 0
+			messages.color.alert.b = 0

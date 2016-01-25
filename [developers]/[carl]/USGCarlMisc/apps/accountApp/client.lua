@@ -49,10 +49,10 @@ function getInput()
     local user = guiGetText ( accGUI.editUsername )
     local pass = guiGetText ( accGUI.editPassword )
     if(#user == 0) then
-        exports.USGmsg:msg("Enter your username.", 255, 0, 0)
+        exports.USGmsg:msg(apps.account.messages.enterUsername, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
         return false
     elseif(#pass == 0) then
-        exports.USGmsg:msg("Enter your password.", 255, 0, 0)
+        exports.USGmsg:msg(apps.account.messages.enterPassword, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
         return false
     end
     return user,pass
@@ -63,7 +63,7 @@ function updatePass()
     if(user) then
         local newPass = guiGetText ( accGUI.editNewPassword )
         if(#newPass < 6) then
-            exports.USGmsg:msg("Your password must be 6 characters long.", 255, 0, 0)
+            exports.USGmsg:msg(apps.account.messages.passwordTooShort, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
             return
         end
         triggerServerEvent("USGphone.changePassword", localPlayer, user, pass, newPass)
@@ -75,7 +75,7 @@ function updateEmail()
     if(user) then
         local newEmail = guiGetText ( accGUI.editEmail )
         if(#newEmail < 4) then
-            exports.USGmsg:msg("Your email must be 4 characters long.", 255, 0, 0)
+            exports.USGmsg:msg(apps.account.messages.emailTooLong, messages.color.alert.r, messages.color.alert.g, messages.color.alert.b)
             return
         end
         triggerServerEvent("USGphone.changeEmail", localPlayer, user, pass, newEmail)
