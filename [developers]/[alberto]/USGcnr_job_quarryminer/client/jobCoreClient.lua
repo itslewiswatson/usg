@@ -103,6 +103,7 @@ local decreaseBlowTime = nil
 
 --Value and boolean variables
 local localPlr = getLocalPlayer()
+local jobVehicle = false
 local jobActive = false
 local randomNumber = 0
 local rocksCollected = 0
@@ -194,6 +195,7 @@ function startJob(player, seat)
 			if (vehModel == 486) then
 				if (jobActive == false and exports.USGcnr_jobs:getPlayerJob(player) == jobID) then
 					clearData()
+					jobVehicle = source
 					jobActive = true
 					createNewLocation()
 				end
@@ -202,6 +204,11 @@ function startJob(player, seat)
 	end
 end
 addEventHandler("onClientVehicleEnter", root, startJob)
+
+function onVehicleDestroyed()
+	clearData()
+	outputChatBox("Your #FFFF00Dozer #FF0000exploded#FFFFFF! Go and spawn another one.", 255, 255, 0)
+end
 
 --Clears all the data for when the player quits, has finished the job or resigns
 function clearData()
@@ -215,6 +222,10 @@ function clearData()
 
 	if (isEventHandlerAdded("onClientRender", root, renderDX)) then
 		removeEventHandler("onClientRender", root, renderDX)
+	end
+
+	if (isElement(jobVehicle)) then
+		removeEventHandler("onClientElementDestroy", jobVehicle, onVehicleDestroyed)
 	end
 
 	if (isElement(blowMarker)) then
@@ -296,6 +307,7 @@ addEventHandler("onClientPlayerWasted", root, clearData)
 --Creates a new location to plant the C4
 function createNewLocation()
 	jobActive = true
+	addEventHandler("onClientElementDestroy", jobVehicle, onVehicleDestroyed)
 	randomNumber = math.random(#c4Plants)
 
 	blowMarker = createMarker(c4Plants[randomNumber][1], c4Plants[randomNumber][2], c4Plants[randomNumber][3], "cylinder", 2, 255, 0, 0)

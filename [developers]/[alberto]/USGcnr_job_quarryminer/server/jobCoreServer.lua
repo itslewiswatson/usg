@@ -37,7 +37,7 @@ addEventHandler("payPlayer", root,
 
 			givePlayerMoney(client, payment)
 			exports.USGcnr_jobranks:givePlayerJobExp(client, "quarryMiner", expAmount)
-			exports.USGmsg:msg(client, "You earned" .. exports.USG:formatMoney(payment) .. " and " .. expAmount .. " exp for processing " .. rocksCollected .. " rocks.", 0, 255, 0)
+			exports.USGmsg:msg(client, "You earned " .. exports.USG:formatMoney(payment) .. " and " .. expAmount .. " exp for processing " .. rocksCollected .. " rocks.", 0, 255, 0)
 		end
 	end
 )
