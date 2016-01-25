@@ -2,7 +2,7 @@ local helpGUI = {}
 
 addEventHandler("onClientResourceStart", resourceRoot,
     function()
-        helpGUI.window = guiCreateWindow(0.62, 0.89, 0.25, 0.11, "", true)
+        helpGUI.window = guiCreateWindow(0.63, 0.88, 0.23, 0.12, "", true)
         guiWindowSetSizable(helpGUI.window, false)
 
         helpGUI.label = guiCreateLabel(0.04, 0.16, 0.95, 0.79, "", true, helpGUI.window)
