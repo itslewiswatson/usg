@@ -6,7 +6,7 @@ function placeHit(plr, cmd, target, amount)
 	local target = findPlayer(target)
 	if (target) then
 		if (exports.USGadmin:getPlayerStaffLevel(plr) >= 2) then
-			hits[target][1] = amount
+			hits[target] = amount
 			setElementData(target, "hit", true)
 			exports.USGmsg:msg("A hit has been placed on "..getPlayerName(target).." kill him to get $"..amount, root, 255, 255, 0)
 			if (not isElement(hits[target][2])) then
@@ -22,7 +22,7 @@ addCommandHandler("placehit", placeHit)
 function onWasted(ammo, killer)
 	if (hits[source] ~= false and getElementData(source, "hit")) then
 		if (source ~= killer) then
-			local pay = hits[source][1]
+			local pay = hits[source]
 			givePlayerMoney(killer, pay)
 			if (isElement(hits[source][2])) then
 				destroyElement(hits[source])
