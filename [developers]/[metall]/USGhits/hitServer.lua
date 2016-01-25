@@ -2,9 +2,18 @@ local hits = {}
 local blip = {}
 
 function placeHit(plr, cmd, target, amount)
-	if (hits[target]) then return end
 	local target = findPlayer(target)
 	if (target) then
+		if (hits[target]) then return end
+		local amount = math.floor(amount)
+		if (amount < 10000) then
+			outputChatBox("You have to enter something greater than $10,000", plr, 255, 0, 0)
+			return
+		end
+		if (amount > 100000) then
+			outputChatBox("You have to enter something smaller than $100,000", plr, 255, 0, 0)
+			return
+		end
 		if (exports.USGadmin:getPlayerStaffLevel(plr) >= 2) then
 			hits[target] = amount
 			setElementData(target, "hit", true)
