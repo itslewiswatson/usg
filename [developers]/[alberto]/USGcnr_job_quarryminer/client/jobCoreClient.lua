@@ -272,7 +272,7 @@ function blowUp(player)
 				destroyElement(c4Object)
 				killTimer(decreaseBlowTime)
 				createRocks()
-				outputChatBox("Explosive has blown! Get into your dozer and pick up the rocks!", 255, 255, 255)
+				outputChatBox("Explosive has blown! Get into your #FFFF00Dozer #FFFFFFand pick up the #FF0000Rocks#FFFFFF!", 255, 255, 255, true)
 			end, (blowTime * 1000), 1)
 		end
 	end
@@ -287,7 +287,7 @@ function createRocks()
 		if (blownRocks[randomNumber]) then
 			amountOfRocks = #blownRocks[randomNumber]
 			for k,v in pairs(blownRocks[randomNumber]) do
-				local rock = createObject(964, v[1], v[2], v[3])
+				local rock = createObject(3929, v[1], v[2], v[3])
 				setElementCollisionsEnabled(rock, false)
 				local rockMarker = createMarker(v[1], v[2], v[3], "cylinder", 2, 0, 0, 0, 0)
 				local rockBlip = createBlipAttachedTo(rockMarker, 0, 1, 255, 0, 0)
