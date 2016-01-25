@@ -232,16 +232,21 @@ end
 		end
 	end
 end]]
+
 function getPlayerJobExp(player, id)
 	if (player and isElement(player) and id) then
-		local checkExp = checkPlayerJobExp(player, id)
+		if (jobRanks[id]) then
+			local checkExp = checkPlayerJobExp(player, id)
 
-		if (checkExp) then
-			return tonumber(checkExp)
+			if (checkExp) then
+				return tonumber(checkExp)
+			else
+				table.insert(jobExpTable[player], {jobName = id, exp = 0})
+				checkExp = checkPlayerJobExp(player, id)
+				return checkExp
+			end
 		else
-			table.insert(jobExpTable[player], {jobName = id, exp = 0})
-			checkExp = checkPlayerJobExp(player, id)
-			return checkExp
+			outputDebugString("No job listed under that name: " .. id .. ", activated by: " .. getPlayerName(player), 1)
 		end
 	end
 end
