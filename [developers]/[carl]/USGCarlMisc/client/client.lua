@@ -111,3 +111,8 @@ bindKey ( "b", "down", toggle)
 bindKey(",","down",processInput,"left")
 bindKey(".","down",processInput,"right")
 bindKey("lalt","down",processInput,"select")
+
+bindKey("ralt","down",function()
+	showCursor(not isCursorShowing())
+end
+)
