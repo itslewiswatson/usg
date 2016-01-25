@@ -145,6 +145,7 @@ local jobIDs = {
 	["medic"] = true,
 	["Mechanic"] = true,
 	["criminal"] = true,
+	["quarryMiner"] = true,
 }
 
 -----------------------------------------------------------------
@@ -215,11 +216,41 @@ end
 ------------------------------------------------------------
 --Gets the players job Exp for the given job name/id
 ------------------------------------------------------------
-function getPlayerJobExp(player, jobName)
-	if (player and isElement(player) and jobName) then
+--[[function getPlayerJobExp(player, id)
+	if (player and isElement(player) and id) then
 		if (jobExpTable[player]) then
 			for k,v in pairs(jobExpTable[player]) do
-				if (v.jobName == jobName) then
+				if (v.jobName == id) then
+					return tonumber(v.exp)
+				else
+					table.insert(jobExpTable[player], {jobName = id, exp = 0})
+					return 0
+				end
+			end
+		else
+			outputDebugString("No job exp table for player: " .. getPlayerName(player), 1)
+		end
+	end
+end]]
+function getPlayerJobExp(player, id)
+	if (player and isElement(player) and id) then
+		local checkExp = checkPlayerJobExp(player, id)
+
+		if (checkExp) then
+			return tonumber(checkExp)
+		else
+			table.insert(jobExpTable[player], {jobName = id, exp = 0})
+			checkExp = checkPlayerJobExp(player, id)
+			return checkExp
+		end
+	end
+end
+
+function checkPlayerJobExp(player, id)
+	if (player and isElement(player) and id) then
+		if (jobExpTable[player]) then
+			for k,v in pairs(jobExpTable[player]) do
+				if (v.jobName == id) then
 					return tonumber(v.exp)
 				end
 			end
@@ -228,7 +259,6 @@ function getPlayerJobExp(player, jobName)
 		end
 	end
 end
-
 ------------------------------------------------------------ 
 --Handles giving player job experience for a given job.
 ------------------------------------------------------------
