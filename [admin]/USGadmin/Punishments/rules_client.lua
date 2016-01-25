@@ -15,7 +15,7 @@ local timeout
 local timeoutTimer
 
 function closeRulesGUI()
-	if(not allowedToClose or not rulesGUI or not isElement(rulesGUI.window)) then return end
+	if(not rulesGUI or not isElement(rulesGUI.window)) then return end
 	destroyElement(rulesGUI.window)
 	timeout = false
 	rulesGUI = false
@@ -90,13 +90,13 @@ end
 addEventHandler("USGadmin.showRules", localPlayer, showRules)
 
 function updateTimeout()
-	if(timeout) then
-		if(timeout > 0) then
+	if (timeout) then
+		if (timeout > 1) then
 			timeout = timeout - 1
 			exports.USGGUI:setText(rulesGUI.window, "Rules - "..timeout.." seconds left")
 		else
-			killTimer(timeoutTimer)
 			closeRulesGUI()
+			killTimer(timeoutTimer)
 		end
 	else
 		killTimer(timeoutTimer)

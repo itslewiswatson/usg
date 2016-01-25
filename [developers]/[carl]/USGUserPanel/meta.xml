@@ -1,30 +1,38 @@
 <meta>
- <script src = "UP_client.luac" type = "client" />
- 
- <script src = "app/MessageApp.lua" type = "client" />
- 
-  <script src = "app/AccountApp_client.lua" type = "client" />
-  <script src = "app/AccountApp_server.lua" type = "server" />
-  
-  <script src = "app/MoneyApp_client.lua" type = "client" />
-  <script src = "app/MoneyApp_server.lua" type = "server" />
-  
-  <script src = "app/CallApp_client.lua" type = "client" />
-  <script src = "app/CallApp_server.lua" type = "server" />
-  
-  <script src = "app/GpsApp.lua" type = "client" />
-  
-  <script src = "app/WeaponApp.lua" type = "client" />
-  
-  <script src = "app/MusicApp.lua" type = "client" />
- 
 
- <file src = "account_icon.png" />
-  <file src = "call_icon.png" />
-   <file src = "gps_icon.png" />
-    <file src = "messages_icon.png" />
-	 <file src = "money_icon.png" />
-	  <file src = "music_icon.png" />
-	   <file src = "account_icon.png" />
-	   <file src = "weapons_icon.png" />
+	<oop>true</oop>
+
+	<script src = "appsSettings.luac" type = "client" /> 
+	<script src = "vehicleSettings.luac" type = "client" />
+	<script src = "globalSettings.luac" type = "client" />
+	
+	<script src = "client/client.luac" type = "client" />
+	<script src = "client/helpGUI.luac" type = "client" />
+	
+	<script src = "apps/messageApp/client.luac" type = "client" /> 
+	
+	<script src = "apps/accountApp/client.luac" type = "client" /> 
+	<script src = "apps/accountApp/server.lua" type = "server" /> 
+	
+	<script src = "apps/callApp/client.luac" type = "client" /> 
+	<script src = "apps/callApp/server.lua" type = "server" /> 
+	
+	<script src = "apps/webBrowserApp/client.luac" type = "client" /> 
+	<script src = "apps/webBrowserApp/WebBrowserGUI.lua" type = "client" /> 
+	
+	<script src = "apps/gpsApp/client.luac" type = "client" /> 
+	
+	<script src = "apps/moneyApp/client.luac" type = "client" /> 
+	<script src = "apps/moneyApp/server.lua" type = "server" /> 
+	
+	<script src = "apps/musicApp/client.luac" type = "client" /> 
+
+	<file src = "images/account_icon.png" />
+	<file src = "images/call_icon.png" />
+	<file src = "images/gps_icon.png" />
+	<file src = "images/messages_icon.png" />
+	<file src = "images/money_icon.png" />
+	<file src = "images/music_icon.png" />
+	<file src = "images/weapons_icon.png" />
+	<file src = "images/browser_icon.png" />
 </meta>

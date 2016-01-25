@@ -53,6 +53,21 @@ local jobRanks = {
 		[75000] = {rankName = "Surgeon"},
 		[100000] = {rankName = "Elite Doctor"},
 	},
+
+	["quarryMiner"] = {
+		[0] = {rankName = "Trainee Quarry Miner"},
+		[1000] = {rankName = "Field Operator I"},
+		[2500] = {rankName = "Field Operator II"},
+		[5000] = {rankName = "Field Operator III"},
+		[7500] = {rankName = "Field Operator IV"},
+		[10000] = {rankName = "Mine Engineer I"},
+		[15000] = {rankName = "Mine Engineer II"},
+		[20000] = {rankName = "Mine Engineer III"},
+		[25000] = {rankName = "Mine Engineer IV"},
+		[50000] = {rankName = "Geologist I"},
+		[75000] = {rankName = "Geologist II"},
+		[100000] = {rankName = "King of the Quarry"},
+	},
 } 
 
 ----------------------------------------------------------------------------------------------
@@ -78,6 +93,21 @@ local jobBonuses = {
 		["ATP Senior Captain"] = 20000,
 		["ATP Commander"] = 50000,
 		["ATP Senior Commander"] = 100000,
+	},
+
+	["quarryMiner"] = {
+		["Trainee Quarry Miner"] = 0,
+		["Field Operator I"] = 1000,
+		["Field Operator II"] = 1500,
+		["Field Operator III"] = 2000,
+		["Field Operator IV"] = 2500,
+		["Mine Engineer I"] = 5000,
+		["Mine Engineer II"] = 6500,
+		["Mine Engineer III"] = 9000,
+		["Mine Engineer IV"] = 12500,
+		["Geologist I"] = 25000,
+		["Geologist II"] = 50000,
+		["King of the Quarry"] = 100000,
 	},
 }
 
@@ -115,6 +145,7 @@ local jobIDs = {
 	["medic"] = true,
 	["Mechanic"] = true,
 	["criminal"] = true,
+	["quarryMiner"] = true,
 }
 
 -----------------------------------------------------------------
@@ -185,11 +216,46 @@ end
 ------------------------------------------------------------
 --Gets the players job Exp for the given job name/id
 ------------------------------------------------------------
-function getPlayerJobExp(player, jobName)
-	if (player and isElement(player) and jobName) then
+--[[function getPlayerJobExp(player, id)
+	if (player and isElement(player) and id) then
 		if (jobExpTable[player]) then
 			for k,v in pairs(jobExpTable[player]) do
-				if (v.jobName == jobName) then
+				if (v.jobName == id) then
+					return tonumber(v.exp)
+				else
+					table.insert(jobExpTable[player], {jobName = id, exp = 0})
+					return 0
+				end
+			end
+		else
+			outputDebugString("No job exp table for player: " .. getPlayerName(player), 1)
+		end
+	end
+end]]
+
+function getPlayerJobExp(player, id)
+	if (player and isElement(player) and id) then
+		if (jobRanks[id]) then
+			local checkExp = checkPlayerJobExp(player, id)
+
+			if (checkExp) then
+				return tonumber(checkExp)
+			else
+				table.insert(jobExpTable[player], {jobName = id, exp = 0})
+				checkExp = checkPlayerJobExp(player, id)
+				return checkExp
+			end
+		else
+			outputDebugString("No job listed under that name: " .. id .. ", activated by: " .. getPlayerName(player), 1)
+		end
+	end
+end
+
+function checkPlayerJobExp(player, id)
+	if (player and isElement(player) and id) then
+		if (jobExpTable[player]) then
+			for k,v in pairs(jobExpTable[player]) do
+				if (v.jobName == id) then
 					return tonumber(v.exp)
 				end
 			end
@@ -198,7 +264,6 @@ function getPlayerJobExp(player, jobName)
 		end
 	end
 end
-
 ------------------------------------------------------------ 
 --Handles giving player job experience for a given job.
 ------------------------------------------------------------

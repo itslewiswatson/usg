@@ -162,9 +162,9 @@ function onDraw()
 	for i=1,math.min(MAX_MSG,#messages) do
 		dxDrawRectangle(0,math.max((i-1)*BOX_HEIGHT,messages[i].y),sX,BOX_HEIGHT,tocolor(0,0,0,messages[i].bgalpha), false)
 		dxDrawText(messages[i].text,0,math.max((i-1)*BOX_HEIGHT,messages[i].y),sX-20,messages[i].y+BOX_HEIGHT,
-			tocolor(unpack(messages[i].color)),1,"default","center","center",false,false,true)
+			tocolor(unpack(messages[i].color)),1,"default","center","center",false,false,true,true)
 		if(messages[i].count > 1) then -- draw number of messages with same text
-			dxDrawText("( "..messages[i].count.." )", sX-20,math.max((i-1)*BOX_HEIGHT,messages[i].y),sx,messages[i].y+BOX_HEIGHT, tocolor(255,255,0), 1, "default", "center", "center",false,false,true)
+			dxDrawText("( "..messages[i].count.." )", sX-20,math.max((i-1)*BOX_HEIGHT,messages[i].y),sx,messages[i].y+BOX_HEIGHT, tocolor(255,255,0), 1, "default", "center", "center",false,false,true,true)
 		end
 	end
 end

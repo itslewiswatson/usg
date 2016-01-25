@@ -89,6 +89,7 @@ function start()
     
     helicopter = createVehicle ( 563, HeliSpawnX,HeliSpawnY,HeliSpawnZ,0,0,HeliSpawnROT)
     setElementFrozen(helicopter,true)
+    setElementData(helicopter, "vehicle.isMedicineHeli", true)
     
     waypointBlip = createBlipAttachedTo ( helicopter, 41)
     for k, player in ipairs(getElementsByType("player")) do

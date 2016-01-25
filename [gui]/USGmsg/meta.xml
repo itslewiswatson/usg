@@ -1,5 +1,5 @@
 <meta>
-  <script src="msg_client.luac" type="client" />
+  <script src="msg_client.lua" type="client" />
   <script src="msg_server.lua" type="server" />
   <export function="msg" type="client" />
   <export function="msg" type="server" />
