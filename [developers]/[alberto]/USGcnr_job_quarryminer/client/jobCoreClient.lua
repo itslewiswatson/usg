@@ -207,7 +207,7 @@ addEventHandler("onClientVehicleEnter", root, startJob)
 
 function onVehicleDestroyed()
 	clearData()
-	outputChatBox("Your #FFFF00Dozer #FF0000exploded#FFFFFF! Go and spawn another one.", 255, 255, 0)
+	outputChatBox("Your #FFFF00Dozer #FF0000exploded#FFFFFF! Go and spawn another one.", 255, 255, 255, true)
 end
 
 --Clears all the data for when the player quits, has finished the job or resigns
