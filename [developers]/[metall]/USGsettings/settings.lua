@@ -13,11 +13,11 @@ function makeUI()
 	guiSetProperty(applyButton, "NormalTextColour", "FFAAAAAA")
 	guiSetAlpha(settingsWindow, 0.92)
 	
-	addEventHandler("onClientGUIClick", close, closeGUI, false)
+	addEventHandler("onClientGUIClick", applyButton, apply, false)
 end
 addCommandHandler("settings", makeUI)
 
-function closeGUI()
+function apply()
 	guiSetVisible(settingsWindow, false)
 	showCursor(false)
 end
