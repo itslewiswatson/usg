@@ -125,9 +125,9 @@ function gpslocmark()
         exports.USGmsg:msg("You can only set GPS when outside.", 255,0,0)
         return false
     end
-    local selected = guiGridListGetSelectedItem(gridlistLocation)
+    local selected = guiGridListGetSelectedItem(gpsGUI.gridlistLocation)
     if(selected) then
-        local locationType = guiGridListGetItemText(gridlistLocation, selected, 1)
+        local locationType = guiGridListGetItemText(gpsGUI.gridlistLocation, selected, 1)
         local distance = false
         local closest = false
         local px,py,pz = getElementPosition(localPlayer)
@@ -138,7 +138,7 @@ function gpslocmark()
                 distance = dist
             end
         end
-        exports.USGcnr_gps:setDestination(exports.USGGUI:gridlistGetItemText(gridlistLocation, selected, 1), closest.x, closest.y, closest.z)
+        exports.USGcnr_gps:setDestination(guiGridListGetItemText(gpsGUI.gridlistLocation, selected, 1), closest.x, closest.y, closest.z)
         gpsupdateDestination()
     else
         exports.USGmsg:msg("You did not select a location.", 255,0,0)
