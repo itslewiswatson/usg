@@ -306,14 +306,22 @@ addEventHandler("onClientPlayerWasted", root, clearData)
 
 --Creates a new location to plant the C4
 function createNewLocation()
-	jobActive = true
-	addEventHandler("onClientElementDestroy", jobVehicle, onVehicleDestroyed)
-	randomNumber = math.random(#c4Plants)
+	if (isPedInVehicle(localPlr)) then
+		local veh = getPedOccupiedVehicle(localPlr)
+		local model = getElementModel(veh)
 
-	blowMarker = createMarker(c4Plants[randomNumber][1], c4Plants[randomNumber][2], c4Plants[randomNumber][3], "cylinder", 2, 255, 0, 0)
-	blowBlip = createBlipAttachedTo(blowMarker, 0, 2, 255, 0, 0)
-	exports.USGmsg:msg("Go to the #FF0000marker #FFFFFFand plant an explosive.", 255, 255, 255)
-	addEventHandler("onClientMarkerHit", blowMarker, blowUp)
+		if (model == 486) then
+			jobActive = true
+			jobVehicle = veh
+			addEventHandler("onClientElementDestroy", jobVehicle, onVehicleDestroyed)
+			randomNumber = math.random(#c4Plants)
+
+			blowMarker = createMarker(c4Plants[randomNumber][1], c4Plants[randomNumber][2], c4Plants[randomNumber][3], "cylinder", 2, 255, 0, 0)
+			blowBlip = createBlipAttachedTo(blowMarker, 0, 2, 255, 0, 0)
+			exports.USGmsg:msg("Go to the #FF0000marker #FFFFFFand plant an explosive.", 255, 255, 255)
+			addEventHandler("onClientMarkerHit", blowMarker, blowUp)
+		end
+	end
 end
 
 --Function to handle the planting and blowing up of the C4
