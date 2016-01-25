@@ -76,6 +76,7 @@ function sendSMS()
             triggerServerEvent("sendPM", localPlayer, player, message)
             guiSetText(msgGUI.editMessage, "")
         else
+		outputChatBox(messages.color.alert.r)
             exports.USGmsg:msg(apps.messages.messages.playerQuit, messages.color.alert.r,messages.color.alert.g,messages.color.alert.b) 
         end
     else
