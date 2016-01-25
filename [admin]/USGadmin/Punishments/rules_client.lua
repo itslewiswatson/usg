@@ -15,12 +15,11 @@ local timeout
 local timeoutTimer
 
 function closeRulesGUI()
-	if(not allowedToClose or not rulesGUI or not isElement(rulesGUI.window)) then outputChatBox("Returning in closeRulesGUI") return end
+	if(not rulesGUI or not isElement(rulesGUI.window)) then return end
 	destroyElement(rulesGUI.window)
 	timeout = false
 	rulesGUI = false
 	showCursor("rules", false)
-	outputChatBox("Closed rules menu")
 end
 
 function displayRules()
@@ -98,7 +97,6 @@ function updateTimeout()
 		else
 			closeRulesGUI()
 			killTimer(timeoutTimer)
-			outputChatBox("Closed on updateTimeout")
 		end
 	else
 		killTimer(timeoutTimer)
