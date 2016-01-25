@@ -138,6 +138,7 @@ function start()
         addEventHandler ( "onVehicleExit", vehicle, OnVehicleExit )
         addEventHandler ( "onVehicleExplode", vehicle, OnVehicleExplode )
         CarBlip = createBlipAttachedTo ( vehicle, 12, 1)
+        setElementData(vehicle, "vehicle.isHijack", true)
 
         for k, player in ipairs(getElementsByType("player")) do
             if(not exports.USGrooms:getPlayerRoom(player) == "cnr") then

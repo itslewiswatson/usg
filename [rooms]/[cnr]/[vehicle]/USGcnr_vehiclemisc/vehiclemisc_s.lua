@@ -93,6 +93,10 @@ function cmdLockVehicle(pSource, cmd)
 		exports.USGmsg:msg(pSource, "You need to be driving the vehicle to lock or unlock it.", 255, 0, 0)
 		return
 	end
+	local checkIsHijack = getElementData(vehicle, "vehicle.isHijack")
+	local checkIsMedicineHeli = getElementData(vehicle, "vehicle.isMedicineHeli")
+	if (checkIsHijack and checkIsHijack == true) then exports.USGmsg:msg(pSource, "You can't lock the hijack vehicle.", 255, 0, 0) return end
+	if (checkIsMedicineHeli and checkIsMedicineHeli == true) then exports.USGmsg:msg(pSource, "You can't lock the Medicine helicopter.", 255, 0, 0) return end
 	local state = not isVehicleLocked(vehicle)
 	setVehicleLocked(vehicle, state)
 	exports.USGmsg:msg(pSource, "You have "..(state and "locked" or "unlocked").." your vehicle.", 0, 255, 0)
