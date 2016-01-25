@@ -94,6 +94,21 @@ local jobBonuses = {
 		["ATP Commander"] = 50000,
 		["ATP Senior Commander"] = 100000,
 	},
+
+	["quarryMiner"] = {
+		["Trainee Quarry Miner"] = 0,
+		["Field Operator I"] = 1000,
+		["Field Operator II"] = 1500,
+		["Field Operator III"] = 2000,
+		["Field Operator IV"] = 2500,
+		["Mine Engineer I"] = 5000,
+		["Mine Engineer II"] = 6500,
+		["Mine Engineer III"] = 9000,
+		["Mine Engineer IV"] = 12500,
+		["Geologist I"] = 25000,
+		["Geologist II"] = 50000,
+		["King of the Quarry"] = 100000,
+	},
 }
 
 --[[

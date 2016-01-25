@@ -295,6 +295,7 @@ addEventHandler("onClientPlayerWasted", root, clearData)
 
 --Creates a new location to plant the C4
 function createNewLocation()
+	jobActive = true
 	randomNumber = math.random(#c4Plants)
 
 	blowMarker = createMarker(c4Plants[randomNumber][1], c4Plants[randomNumber][2], c4Plants[randomNumber][3], "cylinder", 2, 255, 0, 0)
