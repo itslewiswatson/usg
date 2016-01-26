@@ -1,0 +1,4 @@
+<meta>
+	<info description="La Araña" version="1.0" author="Flower Power" />
+	<script src="movingRadarServer.lua" type="server" />
+</meta>
