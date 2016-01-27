@@ -17,7 +17,7 @@
         end
     end
     )
-end]]
+end
 
 addEventHandler("onClientResourceStart", resourceRoot,
     function ()
@@ -29,4 +29,4 @@ addEventHandler("onClientResourceStart", resourceRoot,
             addEventHandler("onServerPlayerLogin", localPlayer, addCrouchHandler)                   
         end
     end
-)
+)]]
