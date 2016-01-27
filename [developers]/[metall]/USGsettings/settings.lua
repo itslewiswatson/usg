@@ -12,6 +12,7 @@ function makeUI()
 	guiWindowSetSizable(settingsWindow, false)
 	guiSetProperty(applyButton, "NormalTextColour", "FFAAAAAA")
 	guiSetAlpha(settingsWindow, 0.92)
+	guiCheckBoxSetSelected(oldPhoneCheckbox, true)
 	
 	addEventHandler("onClientGUIClick", applyButton, apply, false)
 end
