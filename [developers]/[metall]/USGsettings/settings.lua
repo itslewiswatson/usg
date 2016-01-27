@@ -37,11 +37,13 @@ function testCheckbox()
 		guiCheckBoxSetSelected(newPhoneCheckbox, false)
 		outputChatBox("Old phone", 255, 0, 0)
 		commandLine = "toggleUPphone"
+		return
 	end
 	if (guiCheckBoxGetSelected(newPhoneCheckbox)) then
 		guiCheckBoxSetSelected(oldPhoneCheckbox, false)
 		outputChatBox("New phone", 0, 255, 0)
 		commandLine = ""
+		return
 	end
 end
 addEventHandler("onClientGUIClick", root, testCheckbox)
