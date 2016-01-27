@@ -27,7 +27,7 @@ function testCheckbox()
 	if (guiCheckBoxGetSelected(newPhoneCheckbox)) then
 		-- trigger command: toggleUPphone
 		outputChatBox("New phone", 0, 255, 0)
-	else
+	elseif (guiCheckBoxGetSelected(oldPhoneCheckbox)) then
 		-- leave it
 		outputChatBox("Old phone", 255, 0, 0)
 	end
