@@ -40,14 +40,14 @@ function testCheckbox()
         guiCheckBoxSetSelected(newPhoneCheckbox, false)
         outputChatBox("Old phone", 255, 0, 0)
  
-        -- YOU changed the state of the checkbox, but still function will still execute, so we have to stop it from doing that.
+        -- YOU changed the state of the checkbox, but this function will still execute, so we have to stop it from doing that.
         hasChangedByMetall = true
  
         commandLine = "toggleUPphone"
-    elseif (guiCheckBoxGetSelected(newPhoneCheckbox) and not hasChanged) then
+    elseif (guiCheckBoxGetSelected(newPhoneCheckbox)) then
         guiCheckBoxSetSelected(oldPhoneCheckbox, false)
  
-        -- YOU changed the state of the checkbox, but still function will still execute, so we have to stop it from doing that.
+        -- YOU changed the state of the checkbox, but this function will still execute, so we have to stop it from doing that.
         hasChangedByMetall = true
  
         outputChatBox("New phone", 0, 255, 0)
