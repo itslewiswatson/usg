@@ -35,7 +35,7 @@ function testCheckbox()
 	if (getElementType(source) ~= "gui-checkbox") then return end
 	
 	local hasChanged = false
-	if (guiCheckBoxGetSelected(oldPhoneCheckbox) and (hasChanged == false)) then
+	if (guiCheckBoxGetSelected(oldPhoneCheckbox) and not hasChanged) then
 		guiCheckBoxSetSelected(newPhoneCheckbox, false)
 		outputChatBox("Old phone", 255, 0, 0)
 		hasChanged = true
