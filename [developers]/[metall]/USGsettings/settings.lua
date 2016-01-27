@@ -12,7 +12,7 @@ function makeUI()
 	guiWindowSetSizable(settingsWindow, false)
 	guiSetProperty(applyButton, "NormalTextColour", "FFAAAAAA")
 	guiSetAlpha(settingsWindow, 0.92)
-	guiCheckBoxSetSelected(oldPhoneCheckbox, true)
+	guiCheckBoxSetSelected(newPhoneCheckbox, true)
 	
 	addEventHandler("onClientGUIClick", applyButton, apply, false)
 end
@@ -24,7 +24,7 @@ function apply()
 end
 
 function testCheckbox()
-	if (not getElementType(source) == "gui-checkbox") then return end
+	if (getElementType(source) ~= "gui-checkbox") then return end
 	if (guiCheckBoxGetSelected(newPhoneCheckbox)) then
 		guiCheckBoxSetSelected(oldPhoneCheckbox, false)
 		outputChatBox("New phone", 0, 255, 0)
