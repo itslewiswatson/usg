@@ -41,7 +41,7 @@ function testCheckbox()
         outputChatBox("Old phone", 255, 0, 0)
  
         -- YOU changed the state of the checkbox, but this function will still execute, so we have to stop it from doing that.
-        hasChangedByMetall = true
+        hasChangedByMetall = false
  
         commandLine = "toggleUPphone"
     elseif (source == newPhoneCheckbox) then
