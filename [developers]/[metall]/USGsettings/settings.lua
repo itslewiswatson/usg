@@ -33,13 +33,17 @@ end
 
 function testCheckbox()
 	if (getElementType(source) ~= "gui-checkbox") then return end
-	if (guiCheckBoxGetSelected(oldPhoneCheckbox)) then
+	
+	local hasChanged = false
+	if (guiCheckBoxGetSelected(oldPhoneCheckbox) and (hasChanged == false)) then
 		guiCheckBoxSetSelected(newPhoneCheckbox, false)
 		outputChatBox("Old phone", 255, 0, 0)
+		hasChanged = true
 		commandLine = "toggleUPphone"
 		return
 	elseif (guiCheckBoxGetSelected(newPhoneCheckbox)) then
 		guiCheckBoxSetSelected(oldPhoneCheckbox, false)
+		hasChanged = false
 		outputChatBox("New phone", 0, 255, 0)
 		return
 	end
