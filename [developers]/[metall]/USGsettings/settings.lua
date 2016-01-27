@@ -32,4 +32,4 @@ function testCheckbox()
 		outputChatBox("Old phone", 255, 0, 0)
 	end
 end
-addEventHandler("onClientGUIClick", settingsWindow, testCheckbox)
+addEventHandler("onClientGUIClick", root, testCheckbox)
