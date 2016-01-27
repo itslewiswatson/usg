@@ -37,18 +37,18 @@ function testCheckbox()
     if (getElementType(source) ~= "gui-checkbox" or hasChangedByMetall == true) then hasChangedByMetall = false return end
    
     if (source == oldPhoneCheckbox) then
+        hasChangedByMetall = false
         guiCheckBoxSetSelected(newPhoneCheckbox, false)
         outputChatBox("Old phone", 255, 0, 0)
  
         -- YOU changed the state of the checkbox, but this function will still execute, so we have to stop it from doing that.
-        hasChangedByMetall = false
  
         commandLine = "toggleUPphone"
     elseif (source == newPhoneCheckbox) then
+        hasChangedByMetall = true
         guiCheckBoxSetSelected(oldPhoneCheckbox, false)
  
         -- YOU changed the state of the checkbox, but this function will still execute, so we have to stop it from doing that.
-        hasChangedByMetall = true
  
         outputChatBox("New phone", 0, 255, 0)
     end
