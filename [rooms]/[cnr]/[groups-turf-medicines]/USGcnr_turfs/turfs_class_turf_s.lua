@@ -329,6 +329,7 @@ end
 function Turf:colHit(hitElement, matchingDimension)
     if(not matchingDimension) then return end
     if(getElementType(hitElement) ~= "player") then return end
+    if (isPedInVehicle(hitElement)) then exports.USGmsg:msg(hitElement, "You can not turf while in a vehicle!", 255, 0, 0) return end
     if(self:isOwned()) then
         exports.USGmsg:msg(hitElement, "You entered a turf owned by the "..self:getFullOwnerName()..".",0,255,0)
     else
