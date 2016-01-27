@@ -21,3 +21,13 @@ function apply()
 	guiSetVisible(settingsWindow, false)
 	showCursor(false)
 end
+
+function testCheckbox()
+	if (not getElementType(source) == "gui-checkbox") then return end
+	if (guiCheckBoxGetSelected(newPhoneCheckbox)) then
+		-- trigger command: toggleUPphone
+	else
+		-- leave it
+	end
+end
+addEventHandler("onClientGUIClick", settingsWindow, testCheckbox)
