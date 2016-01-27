@@ -1,3 +1,5 @@
+local commandLine
+
 function makeUI()
 	settingsWindow = guiCreateWindow(666, 373, 290, 405, "Settings", false)
 	phoneLabel = guiCreateLabel(10, 24, 211, 21, "Toggle between new and old phone:", false, settingsWindow)
@@ -21,6 +23,11 @@ addCommandHandler("settings", makeUI)
 function apply()
 	guiSetVisible(settingsWindow, false)
 	showCursor(false)
+	if (commandLine) then
+		executeCommandHandler(commandLine)
+	else
+		commandLine = ""
+	end
 end
 
 function testCheckbox()
@@ -28,10 +35,12 @@ function testCheckbox()
 	if (guiCheckBoxGetSelected(newPhoneCheckbox)) then
 		guiCheckBoxSetSelected(oldPhoneCheckbox, false)
 		outputChatBox("New phone", 0, 255, 0)
+		commandLine = ""
 	end
 	if (guiCheckBoxGetSelected(oldPhoneCheckbox)) then
 		guiCheckBoxSetSelected(newPhoneCheckbox, false)
 		outputChatBox("Old phone", 255, 0, 0)
+		commandLine = "toggleUPphone"
 	end
 end
 addEventHandler("onClientGUIClick", root, testCheckbox)
