@@ -34,7 +34,8 @@ end
 local hasChangedByMetall = false
  
 function testCheckbox()
-    if (getElementType(source) ~= "gui-checkbox" or hasChangedByMetall == true) then hasChangedByMetall = false return end
+    if (getElementType(source) ~= "gui-checkbox") then return end
+    if (hasChangedByMetall == true) then hasChangedByMetall = false return end
    
     if (source == oldPhoneCheckbox) then
         hasChangedByMetall = true
