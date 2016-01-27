@@ -37,7 +37,7 @@ function testCheckbox()
     if (getElementType(source) ~= "gui-checkbox" or hasChangedByMetall == true) then hasChangedByMetall = false return end
    
     if (source == oldPhoneCheckbox) then
-        hasChangedByMetall = false
+        hasChangedByMetall = true
         guiCheckBoxSetSelected(newPhoneCheckbox, false)
         outputChatBox("Old phone", 255, 0, 0)
  
