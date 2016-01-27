@@ -10,7 +10,7 @@ function loadATMs()
         for i, ATM in ipairs(ATMs) do
             local object = createObject(2942, ATM.x, ATM.y, ATM.z, 0,0,ATM.rot)
             setObjectBreakable(object, false)
-            local marker = createMarker(ATM.x, ATM.y, ATM.z-0.7, "cylinder", 2, 255,255,0,3)
+            local marker = createMarker(ATM.x, ATM.y, ATM.z-0.7, "cylinder", 1, 255,255,0,3)
             setElementParent(object, marker)
             addEventHandler("onClientMarkerHit", marker, onATMMarkerHit)
             table.insert(markers, marker)
@@ -99,7 +99,7 @@ ATMs =
     { x = -1806.1992, y = 955.7998, z = 24.5000, rot = 89.9890 },
     { x = 2841.6001, y = 1270.0000, z = 11.0000, rot = 269.7500 },
     { x = 1437.5996, y = 2647.7998, z = 11.0000, rot = 270.0000 },
-    { x = 2158.5000, y = 939.3000, z = 10.5000, rot = 269.7473 },
+    { x = 2159.5000, y = 939.3000, z = 10.5000, rot = 269.7473 },
     { x = 2020.2000, y = 999.2000, z = 10.5000, rot = 90.0000 },
     { x = 2227.7998, y = 1402.7998, z = 10.7000, rot = 90.0000 },
     { x = 1590.8000, y = 703.3000, z = 10.5000, rot = 270.0000 },
