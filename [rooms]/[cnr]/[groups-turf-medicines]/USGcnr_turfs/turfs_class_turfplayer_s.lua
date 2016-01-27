@@ -51,6 +51,7 @@ function TurfPlayer:canTurf()
     and exports.USGcnr_jobs:getPlayerJobType(self.element) == "criminal"
     and exports.USGcnr_groups:getPlayerGroup(self.element)
     and not exports.USGcnr_job_police:isPlayerArrested(self.element)
+    and not isPedInVehicle(self.element)
 end
 
 function TurfPlayer:startCapture()

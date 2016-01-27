@@ -10,7 +10,7 @@ function loadATMs()
         for i, ATM in ipairs(ATMs) do
             local object = createObject(2942, ATM.x, ATM.y, ATM.z, 0,0,ATM.rot)
             setObjectBreakable(object, false)
-            local marker = createMarker(ATM.x, ATM.y, ATM.z-0.7, "cylinder", 2, 255,255,0,3)
+            local marker = createMarker(ATM.x, ATM.y, ATM.z-0.7, "cylinder", 1, 255,255,0,3)
             setElementParent(object, marker)
             addEventHandler("onClientMarkerHit", marker, onATMMarkerHit)
             table.insert(markers, marker)
