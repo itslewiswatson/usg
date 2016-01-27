@@ -26,8 +26,10 @@ function testCheckbox()
 	if (not getElementType(source) == "gui-checkbox") then return end
 	if (guiCheckBoxGetSelected(newPhoneCheckbox)) then
 		-- trigger command: toggleUPphone
+		outputChatBox("New phone", 0, 255, 0)
 	else
 		-- leave it
+		outputChatBox("Old phone", 255, 0, 0)
 	end
 end
 addEventHandler("onClientGUIClick", settingsWindow, testCheckbox)
