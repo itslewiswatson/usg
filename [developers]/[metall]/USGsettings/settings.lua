@@ -27,7 +27,7 @@ function testCheckbox()
 	if (guiCheckBoxGetSelected(newPhoneCheckbox)) then
 		guiCheckBoxSetSelected(oldPhoneCheckbox, false)
 		outputChatBox("New phone", 0, 255, 0)
-	else if (guiCheckBoxGetSelected(oldPhoneCheckbox)) then
+	elseif (guiCheckBoxGetSelected(oldPhoneCheckbox)) then
 		guiCheckBoxSetSelected(newPhoneCheckbox, false)
 		outputChatBox("Old phone", 255, 0, 0)
 	end
