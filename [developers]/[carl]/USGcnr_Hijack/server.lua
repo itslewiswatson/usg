@@ -194,7 +194,7 @@ function over(player)
             end
 
             if (isTimer(timerCheckWater)) then
-                killtimer(timerCheckWater)
+                killTimer(timerCheckWater)
             end
 
     		messageCNR(getPlayerName(player).." delivered the hijacked car in time!", 0, 255, 0)
