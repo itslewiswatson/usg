@@ -1,4 +1,4 @@
---[[function addCrouchHandler()
+function addCrouchHandler()
     addEventHandler("onClientRender", root,
     function ()
     if(exports.USGrooms:getPlayerRoom() == "cnr") then
@@ -29,4 +29,4 @@ addEventHandler("onClientResourceStart", resourceRoot,
             addEventHandler("onServerPlayerLogin", localPlayer, addCrouchHandler)                   
         end
     end
-)]]
+)
