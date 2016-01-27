@@ -40,12 +40,10 @@ function testCheckbox()
 		outputChatBox("Old phone", 255, 0, 0)
 		hasChanged = true
 		commandLine = "toggleUPphone"
-		return
 	elseif (guiCheckBoxGetSelected(newPhoneCheckbox) and hasChanged) then
 		guiCheckBoxSetSelected(oldPhoneCheckbox, false)
 		hasChanged = false
 		outputChatBox("New phone", 0, 255, 0)
-		return
 	end
 	
 	--[[if (guiCheckBoxGetSelected(oldPhoneCheckbox)) then
