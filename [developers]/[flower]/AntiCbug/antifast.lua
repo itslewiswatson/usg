@@ -2,6 +2,9 @@ weponblocker = {}--записывает тик
 
 blocketime = { --ид оружия и время задержки в мс
 	[24]=570, -- дигл
+--	[25]=990, -- шот
+--	[34]=900, -- снайпа
+	[27]=250  -- Spaz-12
 }
 
 addEventHandler("onClientResourceStart",getResourceRootElement(getThisResource()),
