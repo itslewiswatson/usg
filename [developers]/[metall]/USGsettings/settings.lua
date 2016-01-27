@@ -45,7 +45,7 @@ function testCheckbox()
  
         commandLine = "toggleUPphone"
     elseif (source == newPhoneCheckbox) then
-        hasChangedByMetall = false
+        hasChangedByMetall = true
         guiCheckBoxSetSelected(oldPhoneCheckbox, false)
  
         -- YOU changed the state of the checkbox, but this function will still execute, so we have to stop it from doing that.
