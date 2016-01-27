@@ -24,6 +24,7 @@ function apply()
 	guiSetVisible(settingsWindow, false)
 	showCursor(false)
 	if (commandLine) then
+		outputChatBox(commandLine, 255, 255, 0)
 		executeCommandHandler(commandLine)
 	else
 		commandLine = ""
