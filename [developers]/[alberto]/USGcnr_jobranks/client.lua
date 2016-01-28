@@ -96,11 +96,11 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 		guiSetText(jobNameLabel, currentPlrJobName)
 		guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
 
-		local invertedTable = table_invert(jobRanksTable)
+		--local invertedTable = table_invert(jobRanksTable)
 
-		for k,v in pairs(invertedTable) do
+		--[[for k,v in pairs(jobRanksTable) do
 			outputChatBox(#k .. ", " .. v)
-		end
+		end]]
 	else
 		outputChatBox("Something is missing on sendDataToClient")
 	end
@@ -133,11 +133,11 @@ function selectedGridListRank()
 	guiSetText(jobRanksNeededExpLabel, "Needed EXP: " .. neededExp)
 
 	if (jobBonus[rankName]) then
-		guiSetText(jobRanksMoneyBonusLabel, jobBonus[rankName])
+		guiSetText(jobRanksMoneyBonusLabel, "Money bonus: " .. exports.USGmisc:convertNumber(jobBonus[rankName]))
 	end
 
 	if (jobRewards[rankName]) then
-		guiSetText(jobRanksJobBonusLabel, jobRewards[rankName])
+		guiSetText(jobRanksJobBonusLabel, "Job Bonus: " .. exports.USGmisc:convertNumber(jobRewards[rankName]))
 	end
 end
 
