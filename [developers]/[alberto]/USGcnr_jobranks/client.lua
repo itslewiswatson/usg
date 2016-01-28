@@ -175,8 +175,8 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrR
 				if (v.rankName == currentPlrRankName) then
 					--outputChatBox("1: " .. v.rankName .. ", " .. v.expNeeded)
 					--outputChatBox("2: " .. jobRankNamesTable[currentPlrJobName][k+1].rankName .. ", " .. jobRankNamesTable[currentPlrJobName][k+1].expNeeded)
-					guiSetText(expProBarLabel, currentJobExp .. "/" .. v.expNeeded .. " exp")
-					guiSetText(currentRankDetailsLabel, "Current Rank: " .. currentPlrRankName .. "\n\nNext Rank: " .. jobRankNamesTable[currentPlrJobName][k+1].rankName)
+					guiSetText(expProBarLabel, currentJobExp .. "/" .. jobRankNamesTable[currentPlrJobName][k+1].expNeeded .. " exp")
+					guiSetText(currentRankDetailsLabel, "Current Rank: L" .. k .. " - " .. currentPlrRankName .. "\n\nNext Rank: L" .. tostring(k+1) .. " - " .. jobRankNamesTable[currentPlrJobName][k+1].rankName)
 				end
 			end
 		end
