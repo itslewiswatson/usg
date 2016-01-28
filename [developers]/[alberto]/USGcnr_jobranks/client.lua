@@ -10,8 +10,6 @@ local jobRewards = false
 
 local jobRankNamesTable = {
 	["pilot"] = {
-		--syntax:
-		--[exp needed] = {rankName = the rank name},
 		{expNeeded = 0, rankName = "Junior Flight Officer"},
 		{expNeeded = 1000, rankName = "Flight Officer"},
 		{expNeeded = 2500, rankName = "First Officer"},
@@ -88,7 +86,7 @@ local jobNameFromDataName = {
 function createGUI()
 	local sX, sY = guiGetScreenSize()
 
-	window = guiCreateWindow((sX - 570) / 2, (sY - 260) / 2, 503, 393, "USG ~ Job Progress", false)
+	window = guiCreateWindow((sX - 570) / 2, (sY - 260) / 2, 503, 393, "USG ~ Current Job Progress", false)
 
 	tabPanel = guiCreateTabPanel(9, 21, 484, 318, false, window)
 
@@ -169,12 +167,10 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrR
 		jobRanks = jobRanksTable
 
 		if (jobNameFromDataName[currentPlrJobName]) then
-			guiSetText(jobNameLabel, jobNameFromDataName[currentPlrJobName])
+			guiSetText(jobNameLabel, "Current job: " .. jobNameFromDataName[currentPlrJobName])
 
 			for k,v in pairs(jobRankNamesTable[currentPlrJobName]) do
 				if (v.rankName == currentPlrRankName) then
-					--outputChatBox("1: " .. v.rankName .. ", " .. v.expNeeded)
-					--outputChatBox("2: " .. jobRankNamesTable[currentPlrJobName][k+1].rankName .. ", " .. jobRankNamesTable[currentPlrJobName][k+1].expNeeded)
 					guiSetText(expProBarLabel, currentJobExp .. "/" .. jobRankNamesTable[currentPlrJobName][k+1].expNeeded .. " exp")
 					guiSetText(currentRankDetailsLabel, "Current Rank: L" .. k .. " - " .. currentPlrRankName .. "\n\nNext Rank: L" .. tostring(k+1) .. " - " .. jobRankNamesTable[currentPlrJobName][k+1].rankName)
 					
@@ -185,14 +181,6 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrR
 				end
 			end
 		end
-
-		--local invertedTable = table_invert(jobRanksTable)
-
-		--[[for k,v in pairs(jobRanksTable) do
-			outputChatBox(#k .. ", " .. v)
-		end]]
-	else
-		outputChatBox("Something is missing on sendDataToClient")
 	end
 end
 addEvent("sendDataToClient", true)

@@ -263,8 +263,6 @@ function getPlayerJobExp(player, id)
 				checkExp = checkPlayerJobExp(player, id)
 				return checkExp
 			end
-		else
-			outputDebugString("No job listed under that name: " .. id .. ", activated by: " .. getPlayerName(player), 1)
 		end
 	end
 end
@@ -419,6 +417,8 @@ function retrieveClientStats()
 				if (jobRanks[currentJob]) then
 					triggerClientEvent(client, "populateRankGridList", client, jobRanks[currentJob], jobBonuses[currentJob], jobExtraReward[currentJob])
 				end
+			else
+				exports.USGmsg:msg(client, "Progress can't be viewed under this job!", 255, 0, 0)
 			end
 		--end
 	end
@@ -434,19 +434,5 @@ addCommandHandler("checkjobexp",
 			local exp = getPlayerJobExp(player, jobName)
 			outputChatBox(jobName .. ", " .. exp, player)
 		end
-	end
-)
-
-addCommandHandler("testexp", 
-	function(player, cmd, jobName, exp)
-		if (jobName and exp) then
-			givePlayerJobExp(player, jobName, exp)
-		end
-	end
-)
-
-addCommandHandler("dropjson", 
-	function(player)
-		exports.MySQL:execute("DELETE FROM cnr_jobExp WHERE username=?", exports.USGaccounts:getPlayerAccount(player))
 	end
 )
