@@ -171,11 +171,13 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 		if (jobNameFromDataName[currentPlrJobName]) then
 			guiSetText(jobNameLabel, jobNameFromDataName[currentPlrJobName])
 
-			if (jobRanksTable[currentPlrExp]) then
-				local plrJobRankName = jobRanksTable[currentPlrExp]
+			if (jobRanks[currentPlrExp]) then
+				local plrJobRankName = jobRanks[currentJobExp]
+				outputChatBox(plrJobRankName)
 
 				for k,v in pairs(jobRankNamesTable[currentPlrJobName]) do
-					if (v.rankName == jobRanksTable[currentPlrExp]) then
+					outputChatBox(v.rankName)
+					if (v.rankName == plrJobRankName) then
 						outputChatBox("1: " .. v.rankName .. ", " .. v.expNeeded)
 						k = k + 1
 						outputChatBox("2: " .. v.rankName .. ", " .. v.expNeeded)
