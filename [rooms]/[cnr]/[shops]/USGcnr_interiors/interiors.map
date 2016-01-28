@@ -22,8 +22,8 @@
 ---interiorReturn	refid="AMMUN2 (3)"	posX="285.8"	posY="-85.45"	posZ="1000.54"	rotation="-3870.01"	interior="4"	dimension="2"---
 ---interiorEntry	id="AMMUN2 (4)"	posX="2539.04"	posY="2083.56"	posZ="9.82222"	rotation="0"	dimension="0"	interior="0"	---
 ---interiorReturn	refid="AMMUN2 (4)"	posX="285.8"	posY="-85.45"	posZ="1000.54"	rotation="90"	interior="4"	dimension="3"	---
----interiorEntry	id="AMMUN3"	posX="777.231"	posY="1871.47"	posZ="3.97687"	rotation="-0.100006"	dimension="0"	interior="0"	-->
-<interiorReturn	refid="AMMUN3"	posX="296.92"	posY="-111.97"	posZ="1000.57"	rotation="300.994"	interior="6"	dimension="3"	/>
+---interiorEntry	id="AMMUN3"	posX="777.231"	posY="1871.47"	posZ="3.97687"	rotation="-0.100006"	dimension="0"	interior="0"	
+<interiorReturn	refid="AMMUN3"	posX="296.92"	posY="-111.97"	posZ="1000.57"	rotation="300.994"	interior="6"	dimension="3"	/>-->
 <interiorEntry	id="AMMUN3 (2)"	posX="-315.676"	posY="829.868"	posZ="13.4266"	rotation="0"	dimension="0"	interior="0"	/>
 <interiorReturn	refid="AMMUN3 (2)"	posX="296.92"	posY="-111.97"	posZ="1000.57"	rotation="300.994"	interior="6"	dimension="4"	/>
 <interiorEntry	id="AMMUN3 (3)"	posX="-2093.51"	posY="-2464.79"	posZ="29.6404"	rotation="0"	dimension="0"	interior="0"	/>
