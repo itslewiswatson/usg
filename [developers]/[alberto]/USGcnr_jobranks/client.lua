@@ -177,6 +177,11 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrR
 					--outputChatBox("2: " .. jobRankNamesTable[currentPlrJobName][k+1].rankName .. ", " .. jobRankNamesTable[currentPlrJobName][k+1].expNeeded)
 					guiSetText(expProBarLabel, currentJobExp .. "/" .. jobRankNamesTable[currentPlrJobName][k+1].expNeeded .. " exp")
 					guiSetText(currentRankDetailsLabel, "Current Rank: L" .. k .. " - " .. currentPlrRankName .. "\n\nNext Rank: L" .. tostring(k+1) .. " - " .. jobRankNamesTable[currentPlrJobName][k+1].rankName)
+					
+					local progressValue = currentJobExp / jobRankNamesTable[currentPlrJobName][k+1].expNeeded * 100
+					guiProgressBarSetProgress(expProgBar, progressValue)
+
+					break
 				end
 			end
 		end
