@@ -36,7 +36,7 @@ function createGUI()
 	line02 = guiCreateLabel(11, 153, 464, 18, "---------------------------------------------------------------------------------------------------------------------------", false, currentJobTab)
 
 	jobRanksGridlist = guiCreateGridList(10, 173, 215, 110, false, currentJobTab)
-	rankNameCol = guiGridListAddColumn(GUIEditor.gridlist[1], "Rank", 0.9)
+	rankNameCol = guiGridListAddColumn(jobRanksGridlist, "Rank", 0.9)
 
 	jobRanksTitleLabel = guiCreateLabel(235, 171, 240, 20, "Job ranks", false, currentJobTab)
 	guiLabelSetHorizontalAlign(jobRanksTitleLabel, "center", false)
@@ -57,6 +57,8 @@ function createGUI()
 
 	closeBtn = guiCreateButton(370, 349, 123, 34, "Close", false, window)
 	guiSetProperty(closeBtn, "NormalTextColour", "FFAAAAAA")
+
+	addEventHandler("onClientGUIDoubleClick", jobRanksGridlist, selectedGridListRank)
 	--GUIEditor.button[2] = guiCreateButton(10, 349, 123, 34, "Quit Job", false, GUIEditor.window[1])
 	--guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFAAAAAA")    
 end
@@ -116,7 +118,6 @@ function selectedGridListRank()
 	guiSetText(jobRanksRankNameLabel, "Rank Name: " .. rankName)
 	guiSetText(jobRanksNeededExpLabel, "Needed EXP: " .. neededExp)
 end
-addEventHandler("onClientGUIDoubleClick", jobRanksGridlist, selectedGridListRank)
 
 function table_invert(t)
   local u = { }
