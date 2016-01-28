@@ -220,20 +220,22 @@ function openLocationGUI(locationMarker)
 end
 
 function updateLocationGUI()
-	local mLocation = locationMarkers[lastHit]
-	exports.USGGUI:gridlistClear(locationGUI.grid)
-	exports.USGGUI:setText(locationGUI.toggle, transporting and "Stop" or "Start")
-	if(not transporting) then
-		local sourcePosition = {getElementPosition(lastHit)}
-		for i, location in ipairs(locations) do
-			if(location ~= mLocation) then
-				local row = exports.USGGUI:gridlistAddRow(locationGUI.grid)
-				exports.USGGUI:gridlistSetItemText(locationGUI.grid, row, 1, location[4])
-				local reward = calculateTransportReward(sourcePosition, {location[1],location[2],location[3]})
-				exports.USGGUI:gridlistSetItemText(locationGUI.grid, row, 2, 
-					exports.USG:formatMoney(reward))
-				exports.USGGUI:gridlistSetItemSortIndex(locationGUI.grid, row, 2, reward)
-				exports.USGGUI:gridlistSetItemData(locationGUI.grid, row, 1, i)
+	if (locationMarkers[lastHit]) then
+		local mLocation = locationMarkers[lastHit]
+		exports.USGGUI:gridlistClear(locationGUI.grid)
+		exports.USGGUI:setText(locationGUI.toggle, transporting and "Stop" or "Start")
+		if(not transporting) then
+			local sourcePosition = {getElementPosition(lastHit)}
+			for i, location in ipairs(locations) do
+				if(location ~= mLocation) then
+					local row = exports.USGGUI:gridlistAddRow(locationGUI.grid)
+					exports.USGGUI:gridlistSetItemText(locationGUI.grid, row, 1, location[4])
+					local reward = calculateTransportReward(sourcePosition, {location[1],location[2],location[3]})
+					exports.USGGUI:gridlistSetItemText(locationGUI.grid, row, 2, 
+						exports.USG:formatMoney(reward))
+					exports.USGGUI:gridlistSetItemSortIndex(locationGUI.grid, row, 2, reward)
+					exports.USGGUI:gridlistSetItemData(locationGUI.grid, row, 1, i)
+				end
 			end
 		end
 	end
