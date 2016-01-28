@@ -172,16 +172,13 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrR
 			guiSetText(jobNameLabel, jobNameFromDataName[currentPlrJobName])
 
 			for k,v in pairs(jobRankNamesTable[currentPlrJobName]) do
-				outputChatBox(v.rankName)
 				if (v.rankName == currentPlrRankName) then
-					outputChatBox("1: " .. v.rankName .. ", " .. v.expNeeded)
-					outputChatBox("2: " .. jobRankNamesTable[currentPlrJobName][k+1].rankName .. ", " .. jobRankNamesTable[currentPlrJobName][k+1].expNeeded)
-					--guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
+					--outputChatBox("1: " .. v.rankName .. ", " .. v.expNeeded)
+					--outputChatBox("2: " .. jobRankNamesTable[currentPlrJobName][k+1].rankName .. ", " .. jobRankNamesTable[currentPlrJobName][k+1].expNeeded)
+					guiSetText(expProBarLabel, currentJobExp .. "/" .. v.expNeeded .. " exp")
+					guiSetText(currentRankDetailsLabel, "Current Rank: " .. currentPlrRankName .. "\n\nNext Rank: " .. jobRankNamesTable[currentPlrJobName][k+1].rankName)
 				end
 			end
-			outputChatBox("Done table")
-		else
-			outputChatBox("Nope 1")
 		end
 
 		--local invertedTable = table_invert(jobRanksTable)
