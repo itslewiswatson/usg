@@ -398,17 +398,17 @@ end
 
 function retrieveClientStats()
 	if (client and isElement(client)) then
-		local currentJob = exports.USGcnr_jobs:getPlayerOccupation(client)
+		local currentJob = exports.USGcnr_jobs:getPlayerJob(client)
 
-		if (dataNameFromJobName[currentJob]) then
-			local currentPlrExp = getPlayerJobExp(client, dataNameFromJobName[currentJob])
+		--if (dataNameFromJobName[currentJob]) then
+			local currentPlrExp = getPlayerJobExp(client, currentJob)
 
-			triggerClientEvent(client, "sendDataToClient", client, dataNameFromJobName[currentJob], currentPlrExp, jobRanks[dataNameFromJobName[currentJob]])
+			triggerClientEvent(client, "sendDataToClient", client, currentJob, currentPlrExp, jobRanks[currentJob])
 
 			if (jobRanks[dataNameFromJobName[currentJob]]) then
-				triggerClientEvent(client, "populateRankGridList", client, jobRanks[dataNameFromJobName[currentJob]])
+				triggerClientEvent(client, "populateRankGridList", client, jobRanks[currentJob])
 			end
-		end
+		--end
 	end
 end
 addEvent("getJobStats", true)
