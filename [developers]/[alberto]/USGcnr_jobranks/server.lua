@@ -407,7 +407,7 @@ function retrieveClientStats()
 				triggerClientEvent(client, "sendDataToClient", client, currentJob, currentPlrExp, jobRanks[currentJob])
 
 				if (jobRanks[currentJob]) then
-					triggerClientEvent(client, "populateRankGridList", client, jobRanks[currentJob])
+					triggerClientEvent(client, "populateRankGridList", client, jobRanks[currentJob], jobBonuses[currentJob], jobExtraReward[currentJob])
 				end
 			end
 		--end

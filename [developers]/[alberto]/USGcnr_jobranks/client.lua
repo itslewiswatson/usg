@@ -3,6 +3,11 @@ local nextRank = "Next Rank"
 local currentJobExp = 0
 local totalExpRequired = 0
 
+--Tables
+local jobRanks = false
+local jobBonus = false
+local jobRewards = false
+
 -- -------------------------------
 -- Job Progress UI
 -- -------------------------------
@@ -87,13 +92,14 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 		end
 
 		currentJobExp = currentPlrExp
+		jobRanks = jobRanksTable
 		guiSetText(jobNameLabel, currentPlrJobName)
 		guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
 
 		local invertedTable = table_invert(jobRanksTable)
 
 		for k,v in pairs(invertedTable) do
-			outputChatBox(#k .. ", " .. #v)
+			outputChatBox(#k .. ", " .. v)
 		end
 	else
 		outputChatBox("Something is missing on sendDataToClient")
@@ -102,8 +108,11 @@ end
 addEvent("sendDataToClient", true)
 addEventHandler("sendDataToClient", root, clientData)
 
-function setGridListData(ranksTable)
+function setGridListData(ranksTable, bonusTable, rewardsTable)
 	if (ranksTable) then
+		jobBonus = bonusTable
+		jobRewards = rewardsTable
+
 		for k,v in pairs(ranksTable) do
 			local row = guiGridListAddRow(jobRanksGridlist)
 
@@ -122,6 +131,14 @@ function selectedGridListRank()
 
 	guiSetText(jobRanksRankNameLabel, "Rank Name: " .. rankName)
 	guiSetText(jobRanksNeededExpLabel, "Needed EXP: " .. neededExp)
+
+	if (jobBonus[rankName]) then
+		guiSetText(jobRanksMoneyBonusLabel, jobBonus[rankName])
+	end
+
+	if (jobRewards[rankName]) then
+		guiSetText(jobRanksJobBonusLabel, jobRewards[rankName])
+	end
 end
 
 function table_invert(t)
