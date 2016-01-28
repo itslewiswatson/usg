@@ -264,18 +264,13 @@ addEventHandler("onPlayerWasted",root, destroyVehicle)
 addEventHandler("onPlayerQuit", root, destroyVehicle)
 addEventHandler("onPlayerExitRoom", root, destroyVehicle)
 
-addEvent("onPlayerChangeJob", true)
 function onChangeJob(ID)
-    outputChatBox("Triggered job change", source)
-
     if (isElement(vehicles[source]))then
-    	outputChatBox("Destroying...", source)
         destroyElement(vehicles[source])
         removeEventHandler("onPlayerWasted", source, destroyVehicle)
-    else
-    	outputChatBox("No vehicle found under this player in the table.", source)
     end
 end
+addEvent("onPlayerChangeJob", true)
 addEventHandler("onPlayerChangeJob", root, onChangeJob)
 
 addCommandHandler("djv",
