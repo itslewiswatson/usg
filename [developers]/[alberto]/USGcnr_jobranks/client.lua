@@ -7,66 +7,70 @@ local expText = currentJobExp .. "/" .. totalExpRequired .. " exp"
 -- -------------------------------
 -- Job Progress UI
 -- -------------------------------
-local sX, sY = guiGetScreenSize()
+function createGUI()
+	local sX, sY = guiGetScreenSize()
 
-window = guiCreateWindow((sX - 570) / 2, (sY - 260) / 2, 503, 393, "USG ~ Job Progress", false)
+	window = guiCreateWindow((sX - 570) / 2, (sY - 260) / 2, 503, 393, "USG ~ Job Progress", false)
 
-tabPanel = guiCreateTabPanel(9, 21, 484, 318, false, window)
+	tabPanel = guiCreateTabPanel(9, 21, 484, 318, false, window)
 
-currentJobTab = guiCreateTab("Current Job Progress", tabPanel)
+	currentJobTab = guiCreateTab("Current Job Progress", tabPanel)
 
-jobNameLabel = guiCreateLabel(12, 4, 464, 18, jobName, false, currentJobTab)
-guiLabelSetColor(jobNameLabel, 203, 216, 56)
-guiLabelSetHorizontalAlign(jobNameLabel, "center", false)
-guiLabelSetVerticalAlign(jobNameLabel, "center")
+	jobNameLabel = guiCreateLabel(12, 4, 464, 18, jobName, false, currentJobTab)
+	guiLabelSetColor(jobNameLabel, 203, 216, 56)
+	guiLabelSetHorizontalAlign(jobNameLabel, "center", false)
+	guiLabelSetVerticalAlign(jobNameLabel, "center")
 
-expProgBar = guiCreateProgressBar(11, 26, 465, 49, false, currentJobTab)
-guiProgressBarSetProgress(expProgBar, 50)
+	expProgBar = guiCreateProgressBar(11, 26, 465, 49, false, currentJobTab)
+	guiProgressBarSetProgress(expProgBar, 50)
 
-expProBarLabel = guiCreateLabel(10, 10, 446, 26, expText, false, expProgBar)
-guiLabelSetColor(expProBarLabel, 30, 148, 33)
-guiLabelSetHorizontalAlign(expProBarLabel, "center", false)
-guiLabelSetVerticalAlign(expProBarLabel, "center")
+	expProBarLabel = guiCreateLabel(10, 10, 446, 26, expText, false, expProgBar)
+	guiLabelSetColor(expProBarLabel, 30, 148, 33)
+	guiLabelSetHorizontalAlign(expProBarLabel, "center", false)
+	guiLabelSetVerticalAlign(expProBarLabel, "center")
 
-currentRankDetailsLabel = guiCreateLabel(11, 103, 464, 50, "Current Rank: " .. currentRank .. "\n\nNext Rank: " .. nextRank, false, currentJobTab)
-guiLabelSetHorizontalAlign(currentRankDetailsLabel, "center", false)
-guiLabelSetVerticalAlign(currentRankDetailsLabel, "center")
-line01 = guiCreateLabel(11, 85, 464, 18, "---------------------------------------------------------------------------------------------------------------------------", false, currentJobTab)
-line02 = guiCreateLabel(11, 153, 464, 18, "---------------------------------------------------------------------------------------------------------------------------", false, currentJobTab)
+	currentRankDetailsLabel = guiCreateLabel(11, 103, 464, 50, "Current Rank: " .. currentRank .. "\n\nNext Rank: " .. nextRank, false, currentJobTab)
+	guiLabelSetHorizontalAlign(currentRankDetailsLabel, "center", false)
+	guiLabelSetVerticalAlign(currentRankDetailsLabel, "center")
+	line01 = guiCreateLabel(11, 85, 464, 18, "---------------------------------------------------------------------------------------------------------------------------", false, currentJobTab)
+	line02 = guiCreateLabel(11, 153, 464, 18, "---------------------------------------------------------------------------------------------------------------------------", false, currentJobTab)
 
-jobRanksGridlist = guiCreateGridList(10, 173, 215, 110, false, currentJobTab)
-rankNameCol = guiGridListAddColumn(GUIEditor.gridlist[1], "Rank", 0.9)
+	jobRanksGridlist = guiCreateGridList(10, 173, 215, 110, false, currentJobTab)
+	rankNameCol = guiGridListAddColumn(GUIEditor.gridlist[1], "Rank", 0.9)
 
-jobRanksTitleLabel = guiCreateLabel(235, 171, 240, 20, "Job ranks", false, currentJobTab)
-guiLabelSetHorizontalAlign(jobRanksTitleLabel, "center", false)
-guiLabelSetVerticalAlign(jobRanksTitleLabel, "center")
+	jobRanksTitleLabel = guiCreateLabel(235, 171, 240, 20, "Job ranks", false, currentJobTab)
+	guiLabelSetHorizontalAlign(jobRanksTitleLabel, "center", false)
+	guiLabelSetVerticalAlign(jobRanksTitleLabel, "center")
 
-jobRanksRankNameLabel = guiCreateLabel(234, 191, 240, 20, "Rank Name: King of the Quarry", false, currentJobTab)
-guiLabelSetVerticalAlign(jobRanksRankNameLabel, "center")
+	jobRanksRankNameLabel = guiCreateLabel(234, 191, 240, 20, "Rank Name: King of the Quarry", false, currentJobTab)
+	guiLabelSetVerticalAlign(jobRanksRankNameLabel, "center")
 
-jobRanksNeededExpLabel = guiCreateLabel(234, 211, 240, 20, "Needed EXP: 100,000", false, currentJobTab)
-guiLabelSetVerticalAlign(jobRanksNeededExpLabel, "center")
+	jobRanksNeededExpLabel = guiCreateLabel(234, 211, 240, 20, "Needed EXP: 100,000", false, currentJobTab)
+	guiLabelSetVerticalAlign(jobRanksNeededExpLabel, "center")
 
-jobRanksMoneyBonusLabel = guiCreateLabel(234, 231, 240, 20, "Money bonus: $100,000", false, currentJobTab)
-guiLabelSetVerticalAlign(jobRanksMoneyBonusLabel, "center")
+	jobRanksMoneyBonusLabel = guiCreateLabel(234, 231, 240, 20, "Money bonus: $100,000", false, currentJobTab)
+	guiLabelSetVerticalAlign(jobRanksMoneyBonusLabel, "center")
 
-jobRanksJobBonusLabel = guiCreateLabel(234, 251, 240, 20, "Job Bonus: $1,000", false, currentJobTab)
-guiLabelSetVerticalAlign(jobRanksJobBonusLabel, "center")
+	jobRanksJobBonusLabel = guiCreateLabel(234, 251, 240, 20, "Job Bonus: $1,000", false, currentJobTab)
+	guiLabelSetVerticalAlign(jobRanksJobBonusLabel, "center")
 
 
-closeBtn = guiCreateButton(370, 349, 123, 34, "Close", false, window)
-guiSetProperty(closeBtn, "NormalTextColour", "FFAAAAAA")
---GUIEditor.button[2] = guiCreateButton(10, 349, 123, 34, "Quit Job", false, GUIEditor.window[1])
---guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFAAAAAA")    
-
-guiWindowSetSizable(window, false)
-guiSetVisible(window, false)
+	closeBtn = guiCreateButton(370, 349, 123, 34, "Close", false, window)
+	guiSetProperty(closeBtn, "NormalTextColour", "FFAAAAAA")
+	--GUIEditor.button[2] = guiCreateButton(10, 349, 123, 34, "Quit Job", false, GUIEditor.window[1])
+	--guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFAAAAAA")    
+end
 -- ------------------
 
 function showJobUI()
 	if (exports.USGrooms:getPlayerRoom(localPlayer) == "cnr") then
-		guiSetVisible(window, true)
-		showCursor(true, true)
+		if (not isElement(window)) then
+			createGUI()
+			showCursor("jobRanks", true)
+		elseif (not guiGetVisible(window)) then
+			guiSetVisible(window, true)
+			showCursor("jobRanks", true)
+		end
 		triggerServerEvent("getJobStats", localPlayer)
 	end
 end
