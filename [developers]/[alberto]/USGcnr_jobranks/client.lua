@@ -155,8 +155,8 @@ function closeGUI()
 	showCursor(false, false)
 end
 
-function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
-	if (currentPlrJobName and currentPlrExp and jobRanksTable) then
+function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrRankName)
+	if (currentPlrJobName and currentPlrExp and jobRanksTable and currentPlrRankName) then
 		if (not isElement(window)) then
 			createGUI()
 			showCursor(true, true)
@@ -171,23 +171,16 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 		if (jobNameFromDataName[currentPlrJobName]) then
 			guiSetText(jobNameLabel, jobNameFromDataName[currentPlrJobName])
 
-			if (jobRanks[currentPlrExp]) then
-				local plrJobRankName = jobRanks[currentJobExp]
-				outputChatBox(plrJobRankName)
-
-				for k,v in pairs(jobRankNamesTable[currentPlrJobName]) do
-					outputChatBox(v.rankName)
-					if (v.rankName == plrJobRankName) then
-						outputChatBox("1: " .. v.rankName .. ", " .. v.expNeeded)
-						k = k + 1
-						outputChatBox("2: " .. v.rankName .. ", " .. v.expNeeded)
-						--guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
-					end
+			for k,v in pairs(jobRankNamesTable[currentPlrJobName]) do
+				outputChatBox(v.rankName)
+				if (v.rankName == currentPlrRankName) then
+					outputChatBox("1: " .. v.rankName .. ", " .. v.expNeeded)
+					k = k + 1
+					outputChatBox("2: " .. v.rankName .. ", " .. v.expNeeded)
+					--guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
 				end
-				outputChatBox("Done table")
-			else
-				outputChatBox("Nope 2")
 			end
+			outputChatBox("Done table")
 		else
 			outputChatBox("Nope 1")
 		end
