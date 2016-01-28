@@ -265,21 +265,21 @@ addEventHandler("onPlayerQuit", root, destroyVehicle)
 addEventHandler("onPlayerExitRoom", root, destroyVehicle)
 
 addEvent("onPlayerChangeJob", true)
-function onChangeJob(player, ID)
-    local currentPlrJob = exports.USGcnr_jobs:getPlayerJob(player)
-    outputChatBox("Triggered job change", player)
+function onChangeJob(ID)
+    local currentPlrJob = exports.USGcnr_jobs:getPlayerJob(source)
+    outputChatBox("Triggered job change", source)
 
     if (currentPlrJob ~= ID) then
-    	outputChatBox("Not same, proceed", player)
-	    if (isElement(vehicles[player]))then
-	    	outputChatBox("Destroying...", player)
-	        destroyElement(vehicles[player])
-	        removeEventHandler("onPlayerWasted", player, destroyVehicle)
+    	outputChatBox("Not same, proceed", source)
+	    if (isElement(vehicles[source]))then
+	    	outputChatBox("Destroying...", source)
+	        destroyElement(vehicles[source])
+	        removeEventHandler("onPlayerWasted", source, destroyVehicle)
 	    else
-	    	outputChatBox("No vehicle found under this player in the table.", player)
+	    	outputChatBox("No vehicle found under this player in the table.", source)
 	    end
 	else
-		outputChatBox("Same, something is wrong", player)
+		outputChatBox("Same, something is wrong", source)
     end
 end
 addEventHandler("onPlayerChangeJob", root, onChangeJob)
