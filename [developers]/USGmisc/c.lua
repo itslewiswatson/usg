@@ -13,3 +13,13 @@ function isPlayerInRange(player,x,y,z,range)
 	local pX,pY,pZ = getElementPosition(player)
 	return ((x-pX)^2+(y-pY)^2+(z-pZ)^2)^0.5<=range
 end
+
+addCommandHandler("clearchat", 
+	function()
+		local chatLength = getChatboxLayout()["chat_lines"]
+
+		for i=1, chatLength do
+			outputChatBox("")
+		end
+	end
+)
