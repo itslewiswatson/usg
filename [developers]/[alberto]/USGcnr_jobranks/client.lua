@@ -2,7 +2,6 @@ local currentRank = "Current rank"
 local nextRank = "Next Rank"
 local currentJobExp = 0
 local totalExpRequired = 0
-local expText = currentJobExp .. "/" .. totalExpRequired .. " exp"
 
 -- -------------------------------
 -- Job Progress UI
@@ -16,7 +15,7 @@ function createGUI()
 
 	currentJobTab = guiCreateTab("Current Job Progress", tabPanel)
 
-	jobNameLabel = guiCreateLabel(12, 4, 464, 18, jobName, false, currentJobTab)
+	jobNameLabel = guiCreateLabel(12, 4, 464, 18, "jobName", false, currentJobTab)
 	guiLabelSetColor(jobNameLabel, 203, 216, 56)
 	guiLabelSetHorizontalAlign(jobNameLabel, "center", false)
 	guiLabelSetVerticalAlign(jobNameLabel, "center")
@@ -24,12 +23,12 @@ function createGUI()
 	expProgBar = guiCreateProgressBar(11, 26, 465, 49, false, currentJobTab)
 	guiProgressBarSetProgress(expProgBar, 50)
 
-	expProBarLabel = guiCreateLabel(10, 10, 446, 26, expText, false, expProgBar)
+	expProBarLabel = guiCreateLabel(10, 10, 446, 26, "", false, expProgBar)
 	guiLabelSetColor(expProBarLabel, 30, 148, 33)
 	guiLabelSetHorizontalAlign(expProBarLabel, "center", false)
 	guiLabelSetVerticalAlign(expProBarLabel, "center")
 
-	currentRankDetailsLabel = guiCreateLabel(11, 103, 464, 50, "Current Rank: " .. currentRank .. "\n\nNext Rank: " .. nextRank, false, currentJobTab)
+	currentRankDetailsLabel = guiCreateLabel(11, 103, 464, 50, "Current Rank: Nothing\n\nNext Rank: Nothing", false, currentJobTab)
 	guiLabelSetHorizontalAlign(currentRankDetailsLabel, "center", false)
 	guiLabelSetVerticalAlign(currentRankDetailsLabel, "center")
 	line01 = guiCreateLabel(11, 85, 464, 18, "---------------------------------------------------------------------------------------------------------------------------", false, currentJobTab)
@@ -68,10 +67,10 @@ function showJobUI()
 	if (exports.USGrooms:getPlayerRoom(localPlayer) == "cnr") then
 		if (not isElement(window)) then
 			createGUI()
-			showCursor("jobRanks", true)
+			showCursor(true, true)
 		elseif (not guiGetVisible(window)) then
 			guiSetVisible(window, true)
-			showCursor("jobRanks", true)
+			showCursor(true, true)
 		end
 		triggerServerEvent("getJobStats", localPlayer)
 	end
@@ -81,9 +80,8 @@ addCommandHandler("jr", showJobUI)
 function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 	if (currentPlrJobName and currentPlrExp and jobRanksTable) then
 		currentJobExp = currentPlrExp
-		jobName = currentPlrJobName
-		guiSetText(window, jobName)
-		guiSetText(currentJobExp, currentPlrExp)
+		guiSetText(jobNameLabel, currentPlrJobName)
+		guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
 
 		local invertedTable = table_invert(jobRanksTable)
 

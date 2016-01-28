@@ -411,6 +411,8 @@ function retrieveClientStats()
 		end
 	end
 end
+addEvent("getJobStats", true)
+addEventHandler("getJobStats", root, retrieveClientStats)
 
 ------------------------------------------------------------------------------------------------------------------------
 --Development functions
