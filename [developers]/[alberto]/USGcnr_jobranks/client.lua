@@ -10,6 +10,7 @@ local sX, sY = guiGetScreenSize()
 
 window = guiCreateWindow((sX - 570) / 2, (sY - 260) / 2, 503, 393, "USG ~ Job Progress", false)
 guiWindowSetSizable(window, false)
+guiSetVisible(window, false)
 
 tabPanel = guiCreateTabPanel(9, 21, 484, 318, false, window)
 
@@ -59,7 +60,7 @@ guiSetProperty(closeBtn, "NormalTextColour", "FFAAAAAA")
 --GUIEditor.button[2] = guiCreateButton(10, 349, 123, 34, "Quit Job", false, GUIEditor.window[1])
 --guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFAAAAAA")    
 
-guiSetVisible(window, false)
+
 -- ------------------
 
 function showJobUI()
