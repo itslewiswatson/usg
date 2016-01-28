@@ -8,6 +8,80 @@ local jobRanks = false
 local jobBonus = false
 local jobRewards = false
 
+local jobRankNamesTable = {
+	["pilot"] = {
+		--syntax:
+		--[exp needed] = {rankName = the rank name},
+		{expNeeded = 0, rankName = "Junior Flight Officer"},
+		{expNeeded = 1000, rankName = "Flight Officer"},
+		{expNeeded = 2500, rankName = "First Officer"},
+		{expNeeded = 5000, rankName = "Captain"},
+		{expNeeded = 7500, rankName = "Senior Captain"},
+		{expNeeded = 10000, rankName = "Commercial First Officer"},
+		{expNeeded = 12500, rankName = "Commercial Captain"},
+		{expNeeded = 15000, rankName = "Commercial Senior Captain"},
+		{expNeeded = 17500, rankName = "Commercial Commander"},
+		{expNeeded = 20000, rankName = "Commercial Senior Commander"},
+		{expNeeded = 25000, rankName = "ATP First Officer"},
+		{expNeeded = 30000, rankName = "ATP Captain"},
+		{expNeeded = 50000, rankName = "ATP Senior Captain"},
+		{expNeeded = 75000, rankName = "ATP Commander"},
+		{expNeeded = 100000, rankName = "ATP Senior Commander"},
+	},
+
+	["trucker"] = {
+		{expNeeded = 0, rankName = "Trainee Trucker"},
+		{expNeeded = 1000, rankName = "Local Trucker"},
+		{expNeeded = 2500, rankName = "FedEx Trucker"},
+		{expNeeded = 5000, rankName = "UPS Trucker"},
+		{expNeeded = 7500, rankName = "Regular Trucker"},
+		{expNeeded = 10000, rankName = "Experienced Trucker"},
+		{expNeeded = 15000, rankName = "Respected Trucker"},
+		{expNeeded = 25000, rankName = "State Trucker"},
+		{expNeeded = 50000, rankName = "SA Transportation Trucker"},
+		{expNeeded = 75000, rankName = "King of the Road"},
+		{expNeeded = 100000, rankName = "Trucking Tycoon"},
+	},
+
+	["medic"] = {
+		{expNeeded = 0, rankName = "Medical Student"},
+		{expNeeded = 1000, rankName = "Cleveland Clinic Doctor"},
+		{expNeeded = 2500, rankName = "General Practitioner"},
+		{expNeeded = 5000, rankName = "Foundation Medic"},
+		{expNeeded = 7500, rankName = "Assistant Doctor"},
+		{expNeeded = 10000, rankName = "Consultant"},
+		{expNeeded = 25000, rankName = "Middle-grade Doctor"},
+		{expNeeded = 50000, rankName = "Specialist"},
+		{expNeeded = 75000, rankName = "Surgeon"},
+		{expNeeded = 100000, rankName = "Elite Doctor"},
+	},
+
+	["quarryMiner"] = {
+		{expNeeded = 0, rankName = "Trainee Quarry Miner"},
+		{expNeeded = 1000, rankName = "Field Operator I"},
+		{expNeeded = 2500, rankName = "Field Operator II"},
+		{expNeeded = 5000, rankName = "Field Operator III"},
+		{expNeeded = 7500, rankName = "Field Operator IV"},
+		{expNeeded = 10000, rankName = "Mine Engineer I"},
+		{expNeeded = 15000, rankName = "Mine Engineer II"},
+		{expNeeded = 20000, rankName = "Mine Engineer III"},
+		{expNeeded = 25000, rankName = "Mine Engineer IV"},
+		{expNeeded = 50000, rankName = "Geologist I"},
+		{expNeeded = 75000, rankName = "Geologist II"},
+		{expNeeded = 100000, rankName = "King of the Quarry"},
+	},
+}
+
+local jobNameFromDataName = {
+	["criminal"] = "Criminal",
+	["medic"] = "Paramedic",
+	["pilot"] = "Pilot",
+	["policeOfficer"] = "Police Officer",
+	["quarryMiner"] = "Quarry Miner",
+	["trucker"] = "Trucker",
+	["Mechanic"] = "Mechanic",
+}
+
 -- -------------------------------
 -- Job Progress UI
 -- -------------------------------
@@ -93,8 +167,23 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 
 		currentJobExp = currentPlrExp
 		jobRanks = jobRanksTable
-		guiSetText(jobNameLabel, currentPlrJobName)
-		guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
+
+		if (jobNameFromDataName[currentPlrJobName]) then
+			guiSetText(jobNameLabel, jobNameFromDataName[currentPlrJobName])
+
+			if (jobRanksTable[currentPlrExp]) then
+				local plrJobRankName = jobRanksTable[currentPlrExp]
+
+				for k,v in pairs(jobRankNamesTable) do
+					if (v.rankName == jobRanksTable[currentPlrExp]) then
+						outputChatBox("1: " .. v.rankName .. ", " .. v.expNeeded)
+						k = k + 1
+						outputChatBox("2: " .. v.rankName .. ", " .. v.expNeeded)
+						--guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
+					end
+				end
+			end
+		end
 
 		--local invertedTable = table_invert(jobRanksTable)
 
@@ -130,7 +219,7 @@ function selectedGridListRank()
 	local neededExp = guiGridListGetItemData(jobRanksGridlist, selectedItemRow, selectedItemCol)
 
 	guiSetText(jobRanksRankNameLabel, "Rank Name: " .. rankName)
-	guiSetText(jobRanksNeededExpLabel, "Needed EXP: " .. neededExp)
+	guiSetText(jobRanksNeededExpLabel, "Needed EXP: " .. exports.USGmisc:convertNumber(neededExp))
 
 	if (jobBonus[rankName]) then
 		guiSetText(jobRanksMoneyBonusLabel, "Money bonus: " .. exports.USGmisc:convertNumber(jobBonus[rankName]))

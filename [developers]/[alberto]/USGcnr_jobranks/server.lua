@@ -130,9 +130,8 @@ local jobExtraReward = {
 	},
 }
 
-
 ------------------------------------------------------------
---Converts Occupation to ID
+--Occupation to ID and ID to Occupation
 ------------------------------------------------------------
 local dataNameFromJobName = {
 	["Criminal"] = "criminal",
@@ -141,6 +140,16 @@ local dataNameFromJobName = {
 	["Police Officer"] = "policeOfficer",
 	["Quarry Miner"] = "quarryMiner",
 	["Trucker"] = "trucker",
+	["Mechanic"] = "Mechanic",
+}
+
+local jobNameFromDataName = {
+	["criminal"] = "Criminal",
+	["medic"] = "Paramedic",
+	["pilot"] = "Pilot",
+	["policeOfficer"] = "Police Officer",
+	["quarryMiner"] = "Quarry Miner",
+	["trucker"] = "Trucker",
 	["Mechanic"] = "Mechanic",
 }
 
