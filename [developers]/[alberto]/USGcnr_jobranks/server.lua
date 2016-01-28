@@ -111,29 +111,38 @@ local jobBonuses = {
 	},
 }
 
---[[
+local jobExtraReward = {
+	["pilot"] = {
+		["Junior Flight Officer"] = 0,
+		["Flight Officer"] = 50,
+		["First Officer"] = 100,
+		["Captain"] = 150,
+		["Senior Captain"] = 200,
+		["Commercial First Officer"] = 250,
+		["Commercial Captain"] = 300,
+		["Commercial Senior Captain"] = 350,
+		["Commercial Commander"] = 400,
+		["Commercial Senior Commander"] = 450,
+		["ATP First Officer"] = 600,
+		["ATP Senior Captain"] = 750,
+		["ATP Commander"] = 1000,
+		["ATP Senior Commander"] = 1500,
+	},
+}
+
+
 ------------------------------------------------------------
---Converts jobID to the actual name
---NOT NEEDED - REMOVE ONCE KNOWN ITS WORKING
+--Converts Occupation to ID
 ------------------------------------------------------------
 local dataNameFromJobName = {
-	["Bus Driver"] = "busDriver",
 	["Criminal"] = "criminal",
-	["Delivery Driver"] = "deliveryDriver",
-	["Farmer"] = "farmer",
-	["Fire Fighter"] = "fireFighter",
-	["Garbage Man"] = "garbageMan",
-	["Lumberjack"] = "lumberjack",
-	["Maintenence Man"] = "maintenenceMan",
-	["Oil Miner"] = "oilMiner",
-	["Paramedic"] = "paramedic",
+	["Paramedic"] = "medic",
 	["Pilot"] = "pilot",
 	["Police Officer"] = "policeOfficer",
 	["Quarry Miner"] = "quarryMiner",
-	["Taxi Driver"] = "taxiDriver",
-	["Train Driver"] = "trainDriver",
-	["Truck Driver"] = "truckDriver",
-}]]
+	["Trucker"] = "trucker",
+	["Mechanic"] = "Mechanic",
+}
 
 ------------------------------------------------------------
 --All the job IDs
@@ -380,6 +389,26 @@ function savePlayerJobExp(player)
 		local jsonData = toJSON(jobExpTable[player])
 		exports.MySQL:execute("UPDATE cnr_jobExp SET jobExp=? WHERE username=?", jsonData, exports.USGaccounts:getPlayerAccount(player))
 		jobExpTable[source] = nil
+	end
+end
+
+------------------------------------------------------------------------------------------------------------------------
+-- Client Events and stuff
+------------------------------------------------------------------------------------------------------------------------
+
+function retrieveClientStats()
+	if (client and isElement(client)) then
+		local currentJob = exports.USGcnr_jobs:getPlayerOccupation(client)
+
+		if (dataNameFromJobName[currentJob]) then
+			local currentPlrExp = getPlayerJobExp(client, dataNameFromJobName[currentJob])
+
+			triggerClientEvent(client, "sendDataToClient", client, dataNameFromJobName[currentJob], currentPlrExp, jobRanks[dataNameFromJobName[currentJob]])
+
+			if (jobRanks[dataNameFromJobName[currentJob]]) then
+				triggerClientEvent(client, "populateRankGridList", client, jobRanks[dataNameFromJobName[currentJob]])
+			end
+		end
 	end
 end
 

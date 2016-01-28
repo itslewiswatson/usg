@@ -1,0 +1,120 @@
+local currentRank = "Current rank"
+local currentJobExp = 0
+local totalExpRequired = 0
+local expText = currentJobExp .. "/" .. totalExpRequired .. " exp"
+
+-- -------------------------------
+-- Job Progress UI
+-- -------------------------------
+local sX, sY = guiGetScreenSize()
+
+window = guiCreateWindow((sX - 570) / 2, (sY - 260) / 2, 503, 393, "USG ~ Job Progress", false)
+guiWindowSetSizable(window, false)
+
+tabPanel = guiCreateTabPanel(9, 21, 484, 318, false, window)
+
+currentJobTab = guiCreateTab("Current Job Progress", tabPanel)
+
+jobNameLabel = guiCreateLabel(12, 4, 464, 18, jobName, false, currentJobTab)
+guiLabelSetColor(jobNameLabel, 203, 216, 56)
+guiLabelSetHorizontalAlign(jobNameLabel, "center", false)
+guiLabelSetVerticalAlign(jobNameLabel, "center")
+
+expProgBar = guiCreateProgressBar(11, 26, 465, 49, false, currentJobTab)
+guiProgressBarSetProgress(expProgBar, 50)
+
+expProBarLabel = guiCreateLabel(10, 10, 446, 26, expText, false, expProgBar)
+guiLabelSetColor(expProBarLabel, 30, 148, 33)
+guiLabelSetHorizontalAlign(expProBarLabel, "center", false)
+guiLabelSetVerticalAlign(expProBarLabel, "center")
+
+currentRankDetailsLabel = guiCreateLabel(11, 103, 464, 50, "Current Rank: " .. currentRank .. "\n\nNext Rank: " .. nextRank, false, currentJobTab)
+guiLabelSetHorizontalAlign(currentRankDetailsLabel, "center", false)
+guiLabelSetVerticalAlign(currentRankDetailsLabel, "center")
+line01 = guiCreateLabel(11, 85, 464, 18, "---------------------------------------------------------------------------------------------------------------------------", false, currentJobTab)
+line02 = guiCreateLabel(11, 153, 464, 18, "---------------------------------------------------------------------------------------------------------------------------", false, currentJobTab)
+
+jobRanksGridlist = guiCreateGridList(10, 173, 215, 110, false, currentJobTab)
+rankNameCol = guiGridListAddColumn(GUIEditor.gridlist[1], "Rank", 0.9)
+
+jobRanksTitleLabel = guiCreateLabel(235, 171, 240, 20, "Job ranks", false, currentJobTab)
+guiLabelSetHorizontalAlign(jobRanksTitleLabel, "center", false)
+guiLabelSetVerticalAlign(jobRanksTitleLabel, "center")
+
+jobRanksRankNameLabel = guiCreateLabel(234, 191, 240, 20, "Rank Name: King of the Quarry", false, currentJobTab)
+guiLabelSetVerticalAlign(jobRanksRankNameLabel, "center")
+
+jobRanksNeededExpLabel = guiCreateLabel(234, 211, 240, 20, "Needed EXP: 100,000", false, currentJobTab)
+guiLabelSetVerticalAlign(jobRanksNeededExpLabel, "center")
+
+jobRanksMoneyBonusLabel = guiCreateLabel(234, 231, 240, 20, "Money bonus: $100,000", false, currentJobTab)
+guiLabelSetVerticalAlign(jobRanksMoneyBonusLabel, "center")
+
+jobRanksJobBonusLabel = guiCreateLabel(234, 251, 240, 20, "Job Bonus: $1,000", false, currentJobTab)
+guiLabelSetVerticalAlign(jobRanksJobBonusLabel, "center")
+
+
+closeBtn = guiCreateButton(370, 349, 123, 34, "Close", false, window)
+guiSetProperty(closeBtn, "NormalTextColour", "FFAAAAAA")
+--GUIEditor.button[2] = guiCreateButton(10, 349, 123, 34, "Quit Job", false, GUIEditor.window[1])
+--guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFAAAAAA")    
+
+guiSetVisible(window, false)
+-- ------------------
+
+function showJobUI()
+	if (exports.USGrooms:getPlayerRoom(localPlayer) == "cnr") then
+		guiSetVisible(window, not guiGetVisible(window))
+		showCursor(not isCursorShowing())
+		triggerServerEvent("getJobStats", localPlayer)
+	end
+end
+addCommandHandler("jr", showJobUI)
+
+function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
+	if (currentPlrJobName and currentPlrExp and jobRanksTable) then
+		currentJobExp = currentPlrExp
+		jobName = currentPlrJobName
+		guiSetText(window, jobName)
+		guiSetText(currentJobExp, currentPlrExp)
+
+		local invertedTable = table_invert(jobRanksTable)
+
+		for k,v in pairs(invertedTable) do
+			outputChatBox(k .. ", " .. v)
+		end
+	else
+		outputChatBox("Something is missing on sendDataToClient")
+	end
+end
+addEvent("sendDataToClient", true)
+addEventHandler("sendDataToClient", root, clientData)
+
+function setGridListData(ranksTable)
+	if (ranksTable) then
+		for k,v in pairs(ranksTable) do
+			local row = guiGridListAddRow(jobRanksGridlist)
+
+			guiGridListSetItemText(jobRanksGridlist, row, rankNameCol, v, false, false)
+			guiGridListSetItemData(jobRanksGridlist, row, rankNameCol, k)
+		end
+	end
+end
+addEvent("populateRankGridList", true)
+addEventHandler("populateRankGridList", root, setGridListData)
+
+function selectedGridListRank()
+	local selectedItemRow, selectedItemCol = guiGridListGetSelectedItem(jobRanksGridlist)
+	local rankName = guiGridListGetItemText(jobRanksGridlist, selectedItemRow, selectedItemCol)
+	local neededExp = guiGridListGetItemData(jobRanksGridlist, selectedItemRow, selectedItemCol)
+
+	guiSetText(jobRanksRankNameLabel, "Rank Name: " .. rankName)
+	guiSetText(jobRanksNeededExpLabel, "Needed EXP: " .. neededExp)
+end
+addEventHandler("onClientGUIDoubleClick", jobRanksGridlist, selectedGridListRank)
+
+function table_invert(t)
+  local u = { }
+  for k, v in pairs(t) do u[v] = k end
+  return u
+end
