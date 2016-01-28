@@ -174,7 +174,7 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 			if (jobRanksTable[currentPlrExp]) then
 				local plrJobRankName = jobRanksTable[currentPlrExp]
 
-				for k,v in pairs(jobRankNamesTable) do
+				for k,v in pairs(jobRankNamesTable[currentPlrJobName]) do
 					if (v.rankName == jobRanksTable[currentPlrExp]) then
 						outputChatBox("1: " .. v.rankName .. ", " .. v.expNeeded)
 						k = k + 1
