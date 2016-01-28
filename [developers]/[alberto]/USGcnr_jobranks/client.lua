@@ -58,6 +58,7 @@ function createGUI()
 	guiSetProperty(closeBtn, "NormalTextColour", "FFAAAAAA")
 
 	addEventHandler("onClientGUIDoubleClick", jobRanksGridlist, selectedGridListRank)
+	addEventHandler("onClientGUIClick", closeBtn, closeGUI)
 	--GUIEditor.button[2] = guiCreateButton(10, 349, 123, 34, "Quit Job", false, GUIEditor.window[1])
 	--guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFAAAAAA")    
 end
@@ -70,6 +71,11 @@ function showJobUI()
 end
 addCommandHandler("jr", showJobUI)
 
+function closeGUI()
+	guiSetVisible(window, false)
+	showCursor(false, false)
+end
+
 function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 	if (currentPlrJobName and currentPlrExp and jobRanksTable) then
 		if (not isElement(window)) then
@@ -79,7 +85,7 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 			guiSetVisible(window, true)
 			showCursor(true, true)
 		end
-		
+
 		currentJobExp = currentPlrExp
 		guiSetText(jobNameLabel, currentPlrJobName)
 		guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
@@ -87,7 +93,7 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 		local invertedTable = table_invert(jobRanksTable)
 
 		for k,v in pairs(invertedTable) do
-			outputChatBox(k .. ", " .. v)
+			outputChatBox(#k .. ", " .. #v)
 		end
 	else
 		outputChatBox("Something is missing on sendDataToClient")
@@ -101,7 +107,7 @@ function setGridListData(ranksTable)
 		for k,v in pairs(ranksTable) do
 			local row = guiGridListAddRow(jobRanksGridlist)
 
-			guiGridListSetItemText(jobRanksGridlist, row, rankNameCol, v, false, false)
+			guiGridListSetItemText(jobRanksGridlist, row, rankNameCol, v.rankName, false, false)
 			guiGridListSetItemData(jobRanksGridlist, row, rankNameCol, k)
 		end
 	end
