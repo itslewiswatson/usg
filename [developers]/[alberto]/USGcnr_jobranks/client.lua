@@ -175,8 +175,8 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrR
 				outputChatBox(v.rankName)
 				if (v.rankName == currentPlrRankName) then
 					outputChatBox("1: " .. v.rankName .. ", " .. v.expNeeded)
-					k = k + 1
-					outputChatBox("2: " .. v.rankName .. ", " .. v.expNeeded)
+					local nextExp, nextRankName = next(jobRankNamesTable[currentPlrJobName], k)
+					outputChatBox("2: " .. nextRankName .. ", " .. nextExp)
 					--guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
 				end
 			end
