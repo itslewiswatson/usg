@@ -403,10 +403,12 @@ function retrieveClientStats()
 		--if (dataNameFromJobName[currentJob]) then
 			local currentPlrExp = getPlayerJobExp(client, currentJob)
 
-			triggerClientEvent(client, "sendDataToClient", client, currentJob, currentPlrExp, jobRanks[currentJob])
+			if (currentPlrExp) then
+				triggerClientEvent(client, "sendDataToClient", client, currentJob, currentPlrExp, jobRanks[currentJob])
 
-			if (jobRanks[dataNameFromJobName[currentJob]]) then
-				triggerClientEvent(client, "populateRankGridList", client, jobRanks[currentJob])
+				if (jobRanks[currentJob]) then
+					triggerClientEvent(client, "populateRankGridList", client, jobRanks[currentJob])
+				end
 			end
 		--end
 	end

@@ -65,13 +65,6 @@ end
 
 function showJobUI()
 	if (exports.USGrooms:getPlayerRoom(localPlayer) == "cnr") then
-		if (not isElement(window)) then
-			createGUI()
-			showCursor(true, true)
-		elseif (not guiGetVisible(window)) then
-			guiSetVisible(window, true)
-			showCursor(true, true)
-		end
 		triggerServerEvent("getJobStats", localPlayer)
 	end
 end
@@ -79,6 +72,14 @@ addCommandHandler("jr", showJobUI)
 
 function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 	if (currentPlrJobName and currentPlrExp and jobRanksTable) then
+		if (not isElement(window)) then
+			createGUI()
+			showCursor(true, true)
+		elseif (not guiGetVisible(window)) then
+			guiSetVisible(window, true)
+			showCursor(true, true)
+		end
+		
 		currentJobExp = currentPlrExp
 		guiSetText(jobNameLabel, currentPlrJobName)
 		guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
