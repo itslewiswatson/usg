@@ -184,7 +184,12 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable)
 						--guiSetText(expProBarLabel, currentJobExp .. "/1 exp")
 					end
 				end
+				outputChatBox("Done table")
+			else
+				outputChatBox("Nope 2")
 			end
+		else
+			outputChatBox("Nope 1")
 		end
 
 		--local invertedTable = table_invert(jobRanksTable)
