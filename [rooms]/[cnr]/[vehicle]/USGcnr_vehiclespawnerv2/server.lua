@@ -264,6 +264,18 @@ addEventHandler("onPlayerWasted",root, destroyVehicle)
 addEventHandler("onPlayerQuit", root, destroyVehicle)
 addEventHandler("onPlayerExitRoom", root, destroyVehicle)
 
+addEvent("onPlayerChangeJob", true)
+function onChangeJob(ID)
+    local currentPlrJob = exports.USGcnr_jobs:getPlayerJob(source)
+
+    if (currentPlrJob ~= ID) then
+	    if (isElement(vehicles[source]))then
+	        destroyElement(vehicles[source])
+	        removeEventHandler("onPlayerWasted", source, destroyVehicle)
+	    end
+    end
+end
+addEventHandler("onPlayerChangeJob", root, onChangeJob)
 
 addCommandHandler("djv",
 	function (player)
