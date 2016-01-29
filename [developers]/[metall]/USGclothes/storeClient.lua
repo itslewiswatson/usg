@@ -1,5 +1,9 @@
 local sx, sy = guiGetScreenSize()
 
+local storeLocations = {
+	{1223.0185546875, -955.0712890625, 42.9375, 0, 0, "Random"},
+}
+
 function initializeWindow()
 	local x, y = 711, 466
 

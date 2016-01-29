@@ -1,7 +1,3 @@
-local storeLocations = {
-	{1223.0185546875, -955.0712890625, 42.9375, 0, 0, "Random"},
-}
-
 categories = {
 	{"Shirts", 0},
 	{"Hair", 1},
