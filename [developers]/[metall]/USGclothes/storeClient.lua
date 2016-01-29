@@ -30,8 +30,8 @@ addEventHandler("onClientResourceStart", resourceRoot, initializeWindow)
 
 function placeStores()
 	for ind, dat in pairs(storeLocations) do
-		local x, y, z = dat[1], dat[2], dat[3]
-		marker = createMarker(x, y, z, "cylinder", 2, 200, 0, 0, 200)
+		local x, y, z = dat[1], dat[2], dat[3] - 1
+		marker = createMarker(x, y, z, "cylinder", 1, 200, 0, 0, 200)
 		addEventHandler("onClientMarkerHit", marker, test)
 	end
 end
