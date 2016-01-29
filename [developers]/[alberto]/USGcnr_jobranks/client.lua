@@ -187,6 +187,7 @@ addEvent("sendDataToClient", true)
 addEventHandler("sendDataToClient", root, clientData)
 
 function setGridListData(currentJobID, bonusTable, rewardsTable)
+	guiGridListClear(jobRanksGridlist)
 	if (currentJobID and bonusTable and rewardsTable) then
 		jobBonus = bonusTable
 		jobRewards = rewardsTable
@@ -211,11 +212,11 @@ function selectedGridListRank()
 	guiSetText(jobRanksNeededExpLabel, "Needed EXP: " .. exports.USGmisc:convertNumber(neededExp))
 
 	if (jobBonus[rankName]) then
-		guiSetText(jobRanksMoneyBonusLabel, "Money bonus: " .. exports.USGmisc:convertNumber(jobBonus[rankName]))
+		guiSetText(jobRanksMoneyBonusLabel, "Rank Reward: $" .. exports.USGmisc:convertNumber(jobBonus[rankName]))
 	end
 
 	if (jobRewards[rankName]) then
-		guiSetText(jobRanksJobBonusLabel, "Job Bonus: " .. exports.USGmisc:convertNumber(jobRewards[rankName]))
+		guiSetText(jobRanksJobBonusLabel, "Job Bonus: $" .. exports.USGmisc:convertNumber(jobRewards[rankName]))
 	end
 end
 
