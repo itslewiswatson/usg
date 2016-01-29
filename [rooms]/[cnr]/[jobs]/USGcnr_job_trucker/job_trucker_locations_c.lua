@@ -97,7 +97,7 @@ function calculateTransportReward(source, target)
 	local x2,y2,z2 = unpack(target)
 	local distancePrice = (getDistanceBetweenPoints3D(x1,y1,z1,x2,y2,z2)*1.5)
 	local price = startPrice+distancePrice
-	return math.floor((price / 100)+0.5)*100*2
+	return math.floor((price / 100)+0.5)*100
 end
 
 function toggleTransport()
