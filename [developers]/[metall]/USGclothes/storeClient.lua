@@ -4,6 +4,18 @@ local storeLocations = {
 	{1223.0185546875, -955.0712890625, 42.9375, 0, 0, "Random"},
 }
 
+categories = {
+	{"Shirts", 0},
+	{"Hair", 1},
+	{"Pants", 2},
+	{"Shoes", 3},
+	{"Necklaces", 13},
+	{"Watches", 14},
+	{"Glasses", 15},
+	{"Hats", 16},
+	{"Custom Clothing", "c"},
+}
+
 function initializeWindow()
 	local x, y = 711, 466
 
@@ -49,13 +61,15 @@ function setUp(state, element)
 		end
 	
 		for index, category in ipairs(categories) do
+			outputDebugString("Made it to 1")
 			if (category.id ~= nil) then
+				outputDebugString("Made it to 2")
 				local row = guiGridListAddRow(categoriesGrid)
 				guiGridListSetItemText(categoriesGrid, row, 1, category[1], false, false)
 				guiGridListSetItemData(categoriesGrid, row, 1, category[2])
 			end
 		end
-		setupPed(true, element)
+		--setupPed(true, element)
 	else
 		fadeCamera(false)
 		setTimer(fadeCamera, 1200, 1, true)
