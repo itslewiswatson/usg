@@ -1,6 +1,16 @@
 local cigarettes = {}
 local cooldown = {}
 
+function jetPack(plr)
+	local state
+	if (not doesPedHaveJetPack(plr)) then
+		givePedJetPack(thePlayer)              
+    else
+        local attempt = removePedJetPack(plr)
+	end
+end
+addCommandHandler("pack", jetPack)
+
 function pizzaPos(plr)
 	local x, y, z = getElementPosition(plr)
 	x, y, z = math.ceil(x), math.ceil(y), math.ceil(z)
