@@ -118,16 +118,16 @@ function createGUI()
 	guiLabelSetHorizontalAlign(jobRanksTitleLabel, "center", false)
 	guiLabelSetVerticalAlign(jobRanksTitleLabel, "center")
 
-	jobRanksRankNameLabel = guiCreateLabel(234, 191, 240, 20, "Rank Name: King of the Quarry", false, currentJobTab)
+	jobRanksRankNameLabel = guiCreateLabel(234, 191, 240, 20, "Rank Name:", false, currentJobTab)
 	guiLabelSetVerticalAlign(jobRanksRankNameLabel, "center")
 
-	jobRanksNeededExpLabel = guiCreateLabel(234, 211, 240, 20, "Needed EXP: 100,000", false, currentJobTab)
+	jobRanksNeededExpLabel = guiCreateLabel(234, 211, 240, 20, "Needed EXP:", false, currentJobTab)
 	guiLabelSetVerticalAlign(jobRanksNeededExpLabel, "center")
 
-	jobRanksMoneyBonusLabel = guiCreateLabel(234, 231, 240, 20, "Money bonus: $100,000", false, currentJobTab)
+	jobRanksMoneyBonusLabel = guiCreateLabel(234, 231, 240, 20, "Money bonus:", false, currentJobTab)
 	guiLabelSetVerticalAlign(jobRanksMoneyBonusLabel, "center")
 
-	jobRanksJobBonusLabel = guiCreateLabel(234, 251, 240, 20, "Job Bonus: $1,000", false, currentJobTab)
+	jobRanksJobBonusLabel = guiCreateLabel(234, 251, 240, 20, "Job Bonus:", false, currentJobTab)
 	guiLabelSetVerticalAlign(jobRanksJobBonusLabel, "center")
 
 
