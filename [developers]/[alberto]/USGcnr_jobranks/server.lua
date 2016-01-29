@@ -303,30 +303,15 @@ end
 function getPlayerJobBonus(player, jobName, currentRank)
 	if (player and isElement(player) and jobName and currentRank) then
 		if (jobBonus[jobName]) then
-			outputChatBox("Starting loop..", player)
 			for k,v in pairs(jobBonus[jobName]) do
 				if (k == currentRank) then
-					outputChatBox(v, player)
 					return v
-				else
-					outputChatBox("Nope 3: " .. k .. ", " .. currentRank, player)
 				end
 			end
-		else
-			outputChatBox("Nope 2", player)
 		end
-	else
-		outputChatBox("Nope 1")
 	end
 end
 
-addCommandHandler("testbonus", 
-	function(player)
-		local b = getPlayerJobBonus(player, "trucker", "Trainee Trucker")
-
-		outputChatBox(b, player)
-	end
-)
 ------------------------------------------------------------
 --Gets the players job Exp for the given job name/id
 ------------------------------------------------------------
