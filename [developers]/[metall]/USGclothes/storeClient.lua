@@ -34,10 +34,46 @@ function placeStores()
 	for ind, dat in pairs(storeLocations) do
 		local x, y, z = dat[1], dat[2], dat[3] - 1
 		marker = createMarker(x, y, z, "cylinder", 1, 200, 0, 0, 200)
-		addEventHandler("onClientMarkerHit", marker, test)
+		addEventHandler("onClientMarkerHit", marker, enterMarker)
 	end
 end
 addEventHandler("onClientResourceStart", resourceRoot, placeStores)
+
+function setUp(state, element)
+	guiGridListClear(categoriesGrid)
+	guiGridListClear(allGrid)
+	if (state) then
+		if (not guiGetVisible(clothesWindow)) then
+			guiSetVisible(clothesWindow, true)
+			showCursor(true)
+		end
+	
+		for index, category in ipairs(categories) do
+			if (category.id ~= nil) then
+				local row = guiGridListAddRow(categoriesGrid)
+				guiGridListSetItemText(categoriesGrid, row, 1, category[1], false, false)
+				guiGridListSetItemData(categoriesGrid, row, 1, category[2])
+			end
+		end
+		setupPed(true, element)
+	else
+		setTimer(setupPed, 1200, 1, false, element)
+		if (guiGetVisible(clothesWindow)) then
+			guiSetVisible(clothesWindow, false)
+			showCursor(false)
+		end
+	end
+end
+
+function enterMarker(element, md)
+	if (element ~= localPlayer) then return end
+	if (getElementType(element) == "player" and md) then
+		if (not isPedInVehicle(element)) then
+			setTimer(setUp, 1200, 1, true, element)
+			checkCJSkin(element)
+		end
+	end
+end
 
 function closeWin()
 	guiSetVisible(clothesWindow, false)
