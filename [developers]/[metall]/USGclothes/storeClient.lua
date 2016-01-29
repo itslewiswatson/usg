@@ -73,7 +73,7 @@ function enterMarker(element, md)
 		if (not isPedInVehicle(element)) then
 			fadeCamera(false)
 			setTimer(fadeCamera, 1200, 1, true)
-			setUp(true, element)
+			setTimer(setUp, 1200, 1, true, element)
 		end
 	end
 end
