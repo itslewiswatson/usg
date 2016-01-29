@@ -39,8 +39,13 @@ function onTransportStop(success, reward)
 		destroyElement(playerTrailers[client])
 	end
 	if(success) then
-		reward = reward
+		local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(client, "trucker")
+		local rankBonus = exports.USGcnr_jobranks:getPlayerMoneyBonus(client, "trucker", currentJobRank)
+		local expAmount = math.floor(reward / 10)
+		reward = reward + rankBonus
 		givePlayerMoney(client, reward)
+		exports.USGcnr_jobranks:givePlayerJobExp(client, "trucker", expAmount)
+		exports.USGmsg:msg(client, "Exp earned: " .. exports.USGmisc:convertNumber(expAmount), 255, 255, 0)
 		exports.USGcnr_money:logTransaction(client, "earned "..exports.USG:formatMoney(reward).." from trucking")
 	end
 end

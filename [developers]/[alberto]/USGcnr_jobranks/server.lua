@@ -74,7 +74,7 @@ local jobRanks = {
 --Job bonuses table which stores the given bonus amount for a rank when a player ranks up
 --Job name needs to be the jobID
 ----------------------------------------------------------------------------------------------
-local jobBonuses = {
+local jobRankReward = {
 	--[Job name] = {Ranks go in here, follow syntax below}
 	["pilot"] = {
 		--[rank name] = bonus given when player ranks up,
@@ -138,7 +138,7 @@ local jobBonuses = {
 	},
 }
 
-local jobExtraReward = {
+local jobBonus = {
 	["pilot"] = {
 		["Junior Flight Officer"] = 0,
 		["Flight Officer"] = 50,
@@ -288,13 +288,27 @@ end
 ------------------------------------------------------------
 --Gets the job bonus value from a given job and the rank
 ------------------------------------------------------------
-function getJobBonus(player, jobName, newRank)
+function getRankBonus(player, jobName, newRank)
 	if (player and isElement(player) and jobName and newRank) then
-		if (jobBonuses[jobName]) then
-			for k,v in pairs(jobBonuses[jobName]) do
+		if (jobRankReward[jobName]) then
+			for k,v in pairs(jobRankReward[jobName]) do
 				if (k == newRank) then
 					return v
 				end
+			end
+		end
+	end
+end
+
+function getPlayerJobBonus(player, jobName, currrentRank)
+	if (player and isElement(player) and jobName and currrentRank) then
+		if (jobBonus[jobName]) then
+			--for k,v in pairs(jobExtraReward[jobName]) do
+			if (jobBonus[jobName][currentRank]) then
+				--if (k == currentRank) then
+					outputChatBox(jobBonus[jobName][currentRank], player)
+					return jobBonus[jobName][currentRank]
+				--end
 			end
 		end
 	end
@@ -369,7 +383,7 @@ function givePlayerJobExp(player, jobName, expToGive)
 			local checkNewJobRank = getPlayerJobRank(player, jobName)
 
 			if (checkNewJobRank ~= currentJobRank) then
-				local jobBonus = getJobBonus(player, jobName, checkNewJobRank)
+				local jobBonus = getRankBonus(player, jobName, checkNewJobRank)
 
 				if (jobBonus) then
 					exports.USGmsg:msg(player, "You have been promoted to " .. checkNewJobRank .. "! You have received a bonus of $" .. exports.USGmisc:convertNumber(jobBonus), 255, 255, 0)
@@ -484,7 +498,7 @@ function retrieveClientStats()
 				triggerClientEvent(client, "sendDataToClient", client, currentJob, currentPlrExp, jobRanks[currentJob], currentPlrRankName)
 
 				if (jobRanks[currentJob]) then
-					triggerClientEvent(client, "populateRankGridList", client, currentJob, jobBonuses[currentJob], jobExtraReward[currentJob])
+					triggerClientEvent(client, "populateRankGridList", client, currentJob, jobRankReward[currentJob], jobBonus[currentJob])
 				end
 			else
 				exports.USGmsg:msg(client, "Progress can't be viewed under this job!", 255, 0, 0)

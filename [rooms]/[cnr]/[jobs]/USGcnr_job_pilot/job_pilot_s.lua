@@ -333,7 +333,7 @@ addEvent("USGcnr_job_pilot.onCargoMissionFinish", true)
 function onPlayerFinishCargo(missionType, distance)
 	if(exports.USGcnr_jobs:getPlayerJob(client) == "pilot" and isPedInVehicle(client)) then
 		local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(client, "pilot")
-		local rankBonus = bonusBasedOnRank[currentJobRank]
+		local rankBonus = exports.USGcnr_jobranks:getPlayerMoneyBonus(client, "pilot", currentJobRank)--bonusBasedOnRank[currentJobRank]
 		local reward = missionType == "drop" and 750 or 500
 		reward = reward + (distance/1.25) + rankBonus
 		reward = 10*math.floor(reward/10)
@@ -341,7 +341,8 @@ function onPlayerFinishCargo(missionType, distance)
 		local expAmount = math.floor(reward/10)
 		givePlayerMoney(client, reward)
 		exports.USGcnr_jobranks:givePlayerJobExp(client, "pilot", expAmount)
-		exports.USGmsg:msg(client, "You have earned "..exports.USG:formatMoney(reward).." and " .. tostring(expAmount) .. " exp for completing a cargo mission.", 0, 255, 0)
+		exports.USGmsg:msg(client, "You have earned "..exports.USG:formatMoney(reward).." and " .. exports.USGmisc:convertNumber(expAmount) .. " exp for completing a cargo mission.", 0, 255, 0)
+		exports.USGcnr_money:logTransaction(client, "earned "..exports.USG:formatMoney(reward).." from pilot")
 	end
 end
 addEventHandler("USGcnr_job_pilot.onCargoMissionFinish", root, onPlayerFinishCargo)
