@@ -15,6 +15,21 @@ categories = {
 	{"Hats", 16},
 }
 
+cuIds = {
+	["a"] = "cj_ped_head",
+	["b"] = "cj_ped_torso",
+	["c"] = "cj_ped_legs",
+	["d"] = "cj_ped_feet",
+	["0"] = "cj_ped_torso",
+	["1"] = "cj_ped_head",
+	["2"] = "cj_ped_legs",
+	["3"] = "cj_ped_feet",
+	["13"] = "cj_ped_torso",
+	["14"] = "Watches",
+	["15"] = "cj_ped_head",
+	["16"] = "cj_ped_head",
+}
+
 function initializeWindow()
 	local x, y = 711, 466
 
@@ -40,6 +55,28 @@ function initializeWindow()
 	--addEventHandler("onClientGUIClick", closeButton, closeWin, false)
 end
 addEventHandler("onClientResourceStart", resourceRoot, initializeWindow)
+
+function getShaderID(id)
+	local id = tostring(id)
+	if (cuIds[id]) then
+		return cuIds[id]
+	else
+		return false
+	end
+end
+
+function applyClothes(player, txd, model, id, sid, custom, path)
+	if (getElementType(player) == "ped") then
+		previewClothingItem(txd, mdl, id)
+	else
+		addPedClothes(player, txd, md1, md)
+	end
+	if (custom) then
+		applyCustomTexture(player, path, sid)
+	else
+		removeCustomTexture(player, sid)
+	end
+end
 
 function placeStores()
 	for ind, dat in pairs(storeLocations) do
@@ -68,9 +105,9 @@ function setUp(state, element)
 		end
 		--setupPed(true, element)
 	else
-		fadeCamera(false)
-		setTimer(fadeCamera, 1200, 1, true)
-		setTimer(setupPed, 1200, 1, false, element)
+		--fadeCamera(false)
+		--setTimer(fadeCamera, 1200, 1, true)
+		--setTimer(setupPed, 1200, 1, false, element)
 		if (guiGetVisible(clothesWindow)) then
 			guiSetVisible(clothesWindow, false)
 			showCursor(false)
@@ -82,8 +119,8 @@ function enterMarker(element, md)
 	if (element ~= localPlayer) then return end
 	if (getElementType(element) == "player" and md) then
 		if (not isPedInVehicle(element)) then
-			fadeCamera(false)
-			setTimer(fadeCamera, 1200, 1, true)
+			--fadeCamera(false)
+			--setTimer(fadeCamera, 1200, 1, true)
 			setTimer(setUp, 1200, 1, true, element)
 		end
 	end
