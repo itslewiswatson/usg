@@ -276,13 +276,13 @@ function handleButtons()
 			local custom = tonumber(data[4])
 			
 			if (custom == 0) then
-				applyClothes(clothingPed, txd, dff, id, shaderID, false)
+				applyClothes(clothPed, txd, dff, id, shaderID, false)
 			elseif (custom == 1) then
 				local path = data[5]
 				local path = directory..path
 				
 				if (doesCustomFileExist(path)) then
-					applyClothes(clothingPed, txd, dff, id, shaderID, true, path)
+					applyClothes(clothPed, txd, dff, id, shaderID, true, path)
 				else
 					triggerServerEvent("USGclothes.downloadSkin", root, localPlayer, path, shaderID)
 				end
