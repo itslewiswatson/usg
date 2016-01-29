@@ -31,10 +31,3 @@ function testCheckbox()
     if (getElementType(source) ~= "gui-checkbox") then return end
 end
 addEventHandler("onClientGUIClick", root, testCheckbox)
-
-function testExplo()
-	local x, y, z = getElementPosition(localPlayer)
-	local x, y, z = x + math.random(-15, 15), y + math.random(-15, 15), z + math.random(-5, 5)
-	createExplosion(x, y, z, math.random(0, 12), true, 1, true)
-end
-addCommandHandler("testexplo", testExplo)
