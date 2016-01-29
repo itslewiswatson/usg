@@ -37,7 +37,7 @@ function initializeWindow()
 	guiSetProperty(buyCJButton, "NormalTextColour", "FFAAAAAA")
 	guiSetProperty(closeButton, "NormalTextColour", "FFAAAAAA")
 	
-	addEventHandler("onClientGUIClick", closeButton, closeWin, false)
+	--addEventHandler("onClientGUIClick", closeButton, closeWin, false)
 end
 addEventHandler("onClientResourceStart", resourceRoot, initializeWindow)
 
@@ -60,9 +60,7 @@ function setUp(state, element)
 		end
 	
 		for index, category in ipairs(categories) do
-			outputDebugString("Made it to 1")
 			if (category[2] ~= nil) then
-				outputDebugString("Made it to 2")
 				local row = guiGridListAddRow(categoriesGrid)
 				guiGridListSetItemText(categoriesGrid, row, 1, category[1], false, false)
 				guiGridListSetItemData(categoriesGrid, row, 1, category[2])
@@ -101,3 +99,60 @@ function test()
 	showCursor(true)
 end
 addCommandHandler("testcloth", test)
+
+function handleButtons()
+	if (source == closeButton) then
+		if (guiGetVisible(clothesWindow)) then
+			setUp(false, localPlayer)
+			triggerServerEvent("USGclothes.loadItems", localPlayer, localPlayer, false)
+		end
+	elseif (source == buyButton) then
+		local itemRow, itemCol = guiGridListGetSelectedItem(allGrid)
+		local data = guiGridListGetItemData(allGrid, itemRow, itemCol)
+		
+		if (data) then
+			local data = split(data, ";")
+			local txd, dff, id = data[1], data[2], data[3]
+			
+			local shaderID = getShaderID(id)
+			local custom = tonumber(data[4])
+			
+			if (custom == 0) then
+				triggerServerEvent("USGclothes.buyItem", localPlayer, txd..";"..dff..";"..id..";"..shaderID)
+				setUp(false, localPlayer)
+			elseif (custom == 1) then
+				local path = data[5]
+				triggerServerEvent("USGclothes.buyItem", localPlayer, txd..";"..dff..";"..id..";"..shaderID)
+				setUp(false, localPlayer)
+			end
+		end
+	elseif (source == categoriesGrid) then
+		local catRow, catCol = guiGridListGetSelectedItem(categoriesGrid)
+		local clothID = guiGridListGetItemData(categoriesGrid, catRow, catCol)
+		getClothesFromID(clothID)
+	elseif (source == allGrid) then
+		local itemRow, itemCol = guiGridListGetSelectedItem(allGrid)
+		local data = guiGridListGetItemData(allGrid, itemRow, itemCol)
+		
+		if (data) then
+			local data = split(data, ";")
+			local txd, dff, id = data[1], data[2], data[3]
+			local shaderID = getShaderID(id)
+			local custom = tonumber(data[4])
+			
+			if (custom == 0) then
+				applyClothes(clothingPed, txd, dff, id, shaderID, false)
+			elseif (custom == 1) then
+				local path = data[5]
+				local path = directory..path
+				
+				if (doesCustomFileExist(path)) then
+					applyClothes(clothingPed, txd, dff, id, shaderID, true, path)
+				else
+					triggerServerEvent("USGclothes.downloadSkin", root, localPlayer, path, shaderID)
+				end
+			end
+		end
+	end
+end
+addEventHandler("onClientGUIClick", root, handleButtons)
