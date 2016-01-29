@@ -13,7 +13,6 @@ categories = {
 	{"Watches", 14},
 	{"Glasses", 15},
 	{"Hats", 16},
-	{"Custom Clothing", "c"},
 }
 
 function initializeWindow()
@@ -62,7 +61,7 @@ function setUp(state, element)
 	
 		for index, category in ipairs(categories) do
 			outputDebugString("Made it to 1")
-			if (category.id ~= nil) then
+			if (category[2] ~= nil) then
 				outputDebugString("Made it to 2")
 				local row = guiGridListAddRow(categoriesGrid)
 				guiGridListSetItemText(categoriesGrid, row, 1, category[1], false, false)
