@@ -1,5 +1,7 @@
 <meta>
 	<info description="Interiors in main dimension" version="1.0" author="Flower Power" />
+	<min_mta_version client="1.5" server="1.5" />
+	<download_priority_group>1337</download_priority_group> <!--It's needed to don't bug the begining camera -->
 	<script src="buildingsClient.luac" type="client" />
 
 	<file src="files/policest02_lan.dff" />
