@@ -186,16 +186,16 @@ end
 addEvent("sendDataToClient", true)
 addEventHandler("sendDataToClient", root, clientData)
 
-function setGridListData(ranksTable, bonusTable, rewardsTable)
-	if (ranksTable) then
+function setGridListData(currentJobID, bonusTable, rewardsTable)
+	if (currentJobID and bonusTable and rewardsTable) then
 		jobBonus = bonusTable
 		jobRewards = rewardsTable
 
-		for k,v in pairs(ranksTable) do
+		for k,v in pairs(jobRankNamesTable[currentJobID]) do
 			local row = guiGridListAddRow(jobRanksGridlist)
 
 			guiGridListSetItemText(jobRanksGridlist, row, rankNameCol, v.rankName, false, false)
-			guiGridListSetItemData(jobRanksGridlist, row, rankNameCol, k)
+			guiGridListSetItemData(jobRanksGridlist, row, rankNameCol, v.expNeeded)
 		end
 	end
 end

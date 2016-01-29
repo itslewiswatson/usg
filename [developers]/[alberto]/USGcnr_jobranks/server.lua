@@ -90,7 +90,7 @@ local jobBonuses = {
 		["Commercial Senior Commander"] = 5000,
 		["ATP First Officer"] = 10000,
 		["ATP Captain"] = 15000,
-		["ATP Senior Captain"] = 20000,
+		["ATP Senior Captain"] = 25000,
 		["ATP Commander"] = 50000,
 		["ATP Senior Commander"] = 100000,
 	},
@@ -108,6 +108,33 @@ local jobBonuses = {
 		["Geologist I"] = 25000,
 		["Geologist II"] = 50000,
 		["King of the Quarry"] = 100000,
+	},
+
+	["trucker"] = {
+		["Trainee Trucker"] = 0,
+		["Local Trucker"] = 1000,
+		["FedEx Trucker"] = 1500,
+		["UPS Trucker"] = 2000,
+		["Regular Trucker"] = 2500,
+		["Experienced Trucker"] = 5000,
+		["Respected Trucker"] = 7500,
+		["State Trucker"] = 10000,
+		["SA Transportation Trucker"] = 25000,
+		["King of the Road"] = 50000,
+		["Trucking Tycoon"] = 100000,
+	},
+
+	["medic"] = {
+		["Medical Student"] = 0,
+		["Cleveland Clinic Doctor"] = 1000,
+		["General Practitioner"] = 2000,
+		["Foundation Medic"] = 3500,
+		["Assistant Doctor"] = 5000,
+		["Consultant"] = 7500,
+		["Middle-grade Doctor"] = 10000,
+		["Specialist"] = 25000,
+		["Surgeon"] = 50000,
+		["Elite Doctor"] = 100000,
 	},
 }
 
@@ -127,6 +154,48 @@ local jobExtraReward = {
 		["ATP Senior Captain"] = 750,
 		["ATP Commander"] = 1000,
 		["ATP Senior Commander"] = 1500,
+	},
+
+	["quarryMiner"] = {
+		["Trainee Quarry Miner"] = 0,
+		["Field Operator I"] = 50,
+		["Field Operator II"] = 100,
+		["Field Operator III"] = 150,
+		["Field Operator IV"] = 200,
+		["Mine Engineer I"] = 450,
+		["Mine Engineer II"] = 600,
+		["Mine Engineer III"] = 750,
+		["Mine Engineer IV"] = 900,
+		["Geologist I"] = 1250,
+		["Geologist II"] = 1500,
+		["King of the Quarry"] = 2000,
+	},
+
+	["trucker"] = {
+		["Trainee Trucker"] = 0,
+		["Local Trucker"] = 100,
+		["FedEx Trucker"] = 150,
+		["UPS Trucker"] = 200,
+		["Regular Trucker"] = 250,
+		["Experienced Trucker"] = 500,
+		["Respected Trucker"] = 750,
+		["State Trucker"] = 1000,
+		["SA Transportation Trucker"] = 1500,
+		["King of the Road"] = 1750,
+		["Trucking Tycoon"] = 2000,
+	},
+
+	["medic"] = {
+		["Medical Student"] = 0,
+		["Cleveland Clinic Doctor"] = 100,
+		["General Practitioner"] = 125,
+		["Foundation Medic"] = 150,
+		["Assistant Doctor"] = 175,
+		["Consultant"] = 200,
+		["Middle-grade Doctor"] = 300,
+		["Specialist"] = 450,
+		["Surgeon"] = 600,
+		["Elite Doctor"] = 900,
 	},
 }
 
@@ -415,7 +484,7 @@ function retrieveClientStats()
 				triggerClientEvent(client, "sendDataToClient", client, currentJob, currentPlrExp, jobRanks[currentJob], currentPlrRankName)
 
 				if (jobRanks[currentJob]) then
-					triggerClientEvent(client, "populateRankGridList", client, jobRanks[currentJob], jobBonuses[currentJob], jobExtraReward[currentJob])
+					triggerClientEvent(client, "populateRankGridList", client, currentJob, jobBonuses[currentJob], jobExtraReward[currentJob])
 				end
 			else
 				exports.USGmsg:msg(client, "Progress can't be viewed under this job!", 255, 0, 0)
