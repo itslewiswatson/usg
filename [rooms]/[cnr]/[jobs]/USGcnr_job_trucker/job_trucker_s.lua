@@ -41,11 +41,16 @@ function onTransportStop(success, reward)
 	if(success) then
 		local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(client, "trucker")
 		local rankBonus = exports.USGcnr_jobranks:getPlayerJobBonus(client, "trucker", currentJobRank)
-		local expAmount = math.floor(reward / 10)
-		reward = reward + rankBonus
-		givePlayerMoney(client, reward)
-		exports.USGcnr_jobranks:givePlayerJobExp(client, "trucker", expAmount)
-		exports.USGmsg:msg(client, "Exp earned: " .. exports.USGmisc:convertNumber(expAmount), 255, 255, 0)
+
+		if (currentJobRank and rankBonus) then
+			reward = reward + rankBonus
+			givePlayerMoney(client, reward)
+			local expAmount = math.floor(reward / 10)
+			exports.USGcnr_jobranks:givePlayerJobExp(client, "trucker", expAmount)
+			exports.USGmsg:msg(client, "Exp earned: " .. exports.USGmisc:convertNumber(expAmount), 255, 255, 0)
+		else
+			outputChatBox("Something went wrong with trucker payment", client)
+		end
 		exports.USGcnr_money:logTransaction(client, "earned "..exports.USG:formatMoney(reward).." from trucking")
 	end
 end

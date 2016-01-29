@@ -62,13 +62,13 @@ function healPlayer(medic)
 	if(getElementHealth(source) < 100) then	
 		if(getPlayerMoney(source) >= 100) then
 			setElementHealth(source, getElementHealth(source)+10)
-			local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(client, "medic")
-			local rankBonus = exports.USGcnr_jobranks:getPlayerJobBonus(client, "medic", currentJobRank)
+			local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(medic, "medic")
+			local rankBonus = exports.USGcnr_jobranks:getPlayerJobBonus(medic, "medic", currentJobRank)
 			local cashReward = 200 + rankBonus
 			local expAmount = cashReward / 2
 			takePlayerMoney(source, (cashReward - rankBonus))
 			givePlayerMoney(medic, cashReward)
-			exports.USGcnr_jobranks:givePlayerJobExp(client, "medic", expAmount)
+			exports.USGcnr_jobranks:givePlayerJobExp(medic, "medic", expAmount)
 			exports.USGmsg:msg(medic,"You have earned $" .. exports.USG:formatMoney(cashReward) .. " and " .. exports.USGmisc:convertNumber(expAmount) .. " exp for healing " .. getPlayerName(source), 0, 255, 0)
 		else
 			exports.USGmsg:msg(source, "You don't have enough money to afford healing!", 255, 0, 0)
