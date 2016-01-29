@@ -2,7 +2,7 @@ local sx, sy = guiGetScreenSize()
 
 function initializeWindow()
 
-	clothesWindow = guiCreateWindow((sx / 2) - 816, (sy / 2) - 201, 711, 466, "Clothes Store", false)
+	clothesWindow = guiCreateWindow( 816, 201, 711, 466, "Clothes Store", false)
 	categoriesGrid = guiCreateGridList(9, 22, 190, 174, false, clothesWindow)
 	currentGrid = guiCreateGridList(9, 202, 190, 174, false, clothesWindow)
 	allGrid = guiCreateGridList(205, 22, 496, 354, false, clothesWindow)
