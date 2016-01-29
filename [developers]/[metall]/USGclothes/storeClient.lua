@@ -1,4 +1,5 @@
 local sx, sy = guiGetScreenSize()
+local rotating = false
 
 local storeLocations = {
 	{1223.0185546875, -955.0712890625, 42.9375, 0, 0, "Random"},
@@ -87,6 +88,51 @@ function placeStores()
 end
 addEventHandler("onClientResourceStart", resourceRoot, placeStores)
 
+function setupPed(state, element)
+	if (state) then
+		if (isElement(element)) then
+			if (not isElement(clothPed)) then
+				clothPed = createPed(0, pedX, pedY, pedZ + 1)
+				setElementDimension(clothPed, viewingDim)
+			end
+			setElementFrozen(element, true)
+			setElementDimension(element, viewingDim)
+			setElementInterior(element, 0)
+			setCameraMatrix(mX, mY, mZ, mLX, mLY, mLZ)
+			if (not rotating) then
+				rotating = true
+				addEventHandler("onClientRender", root, tickRotation)
+			end
+		end
+	else
+		if (isElement(clothPed)) then
+			destroyElement(clothPed)
+			if (rotating) then
+				rotating = false
+				removeEventHandler("onClientRender", root, tickRotation)
+			end
+		end
+		if (isElement(element)) then
+			local int, dim = getElementInterior(element), getElementDimension(element)
+			local int, dim = tonumber(int), tonumber(dim)
+			setElementInterior(element, int)
+			setElementDimension(element, dim)
+			setElementFrozen(element, false)
+			setCameraTarget(localPlayer)
+		end
+	end
+end
+
+function tickRotation()
+	if (not isElement(clothPed)) then
+		removeEventHandler("onClientRender", root, tickRotation)
+		rotating = false
+		return
+	end
+	local _, _, crot = getElementRotation(clothPed)
+	setElementRotation(clothPed, 0, 0, crot + 0.75)
+end
+
 function setUp(state, element)
 	guiGridListClear(categoriesGrid)
 	guiGridListClear(allGrid)
@@ -103,11 +149,11 @@ function setUp(state, element)
 				guiGridListSetItemData(categoriesGrid, row, 1, category[2])
 			end
 		end
-		--setupPed(true, element)
+		setupPed(true, element)
 	else
 		--fadeCamera(false)
 		--setTimer(fadeCamera, 1200, 1, true)
-		--setTimer(setupPed, 1200, 1, false, element)
+		setTimer(setupPed, 1200, 1, false, element)
 		if (guiGetVisible(clothesWindow)) then
 			guiSetVisible(clothesWindow, false)
 			showCursor(false)
