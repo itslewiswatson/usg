@@ -40,7 +40,7 @@ function onTransportStop(success, reward)
 	end
 	if(success) then
 		local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(client, "trucker")
-		local rankBonus = exports.USGcnr_jobranks:getPlayerMoneyBonus(client, "trucker", currentJobRank)
+		local rankBonus = exports.USGcnr_jobranks:getPlayerJobBonus(client, "trucker", currentJobRank)
 		local expAmount = math.floor(reward / 10)
 		reward = reward + rankBonus
 		givePlayerMoney(client, reward)

@@ -15,7 +15,7 @@ addEventHandler("payPlayer", root,
 	function(rocksCollected)
 		if (isElement(client)) then
 			local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(client, "quarryMiner")
-			local rankBonus = exports.USGcnr_jobranks:getPlayerMoneyBonus(client, "quarryMiner", currentJobRank)
+			local rankBonus = exports.USGcnr_jobranks:getPlayerJobBonus(client, "quarryMiner", currentJobRank)
 			local payment = basePayment * rocksCollected + rankBonus
 			local expAmount = math.floor(payment/10)
 

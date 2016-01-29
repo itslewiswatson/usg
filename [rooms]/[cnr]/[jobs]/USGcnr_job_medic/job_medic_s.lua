@@ -63,7 +63,7 @@ function healPlayer(medic)
 		if(getPlayerMoney(source) >= 100) then
 			setElementHealth(source, getElementHealth(source)+10)
 			local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(client, "medic")
-			local rankBonus = exports.USGcnr_jobranks:getPlayerMoneyBonus(client, "medic", currentJobRank)
+			local rankBonus = exports.USGcnr_jobranks:getPlayerJobBonus(client, "medic", currentJobRank)
 			local cashReward = 200 + rankBonus
 			local expAmount = cashReward / 2
 			takePlayerMoney(source, (cashReward - rankBonus))
