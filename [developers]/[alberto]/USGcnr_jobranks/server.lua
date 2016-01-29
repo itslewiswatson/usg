@@ -303,12 +303,11 @@ end
 function getPlayerJobBonus(player, jobName, currrentRank)
 	if (player and isElement(player) and jobName and currrentRank) then
 		if (jobBonus[jobName]) then
-			--for k,v in pairs(jobExtraReward[jobName]) do
-			if (jobBonus[jobName][currentRank]) then
-				--if (k == currentRank) then
-					outputChatBox(jobBonus[jobName][currentRank], player)
-					return jobBonus[jobName][currentRank]
-				--end
+			for k,v in pairs(jobBonus[jobName]) do
+				if (k == currentRank) then
+					outputChatBox(v, player)
+					return v
+				end
 			end
 		end
 	end
