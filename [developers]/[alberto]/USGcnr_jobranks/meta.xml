@@ -2,6 +2,7 @@
 	<script src="server.lua" type="server"/>
 	<script src="client.lua" type="client"/>
 	
+	<export function="openWindow" type="client"/>
 	<export function="getPlayerJobExp" type="server"/>
 	<export function="givePlayerJobExp" type="server"/>
 	<export function="setPlayerJobExp" type="server"/>

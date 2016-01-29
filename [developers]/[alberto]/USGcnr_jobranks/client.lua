@@ -141,12 +141,12 @@ function createGUI()
 end
 -- ------------------
 
-function showJobUI()
+function openWindow()
 	if (exports.USGrooms:getPlayerRoom(localPlayer) == "cnr") then
 		triggerServerEvent("getJobStats", localPlayer)
 	end
 end
-addCommandHandler("jr", showJobUI)
+--addCommandHandler("jr", showJobUI)
 
 function closeGUI()
 	guiSetVisible(window, false)
