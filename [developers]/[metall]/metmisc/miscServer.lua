@@ -4,9 +4,9 @@ local cooldown = {}
 function jetPack(plr)
 	local state
 	if (not doesPedHaveJetPack(plr)) then
-		givePedJetPack(thePlayer)              
+		givePedJetPack(plr)              
     else
-        local attempt = removePedJetPack(plr)
+        removePedJetPack(plr)
 	end
 end
 addCommandHandler("pack", jetPack)
