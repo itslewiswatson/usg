@@ -137,6 +137,58 @@ function test()
 end
 addCommandHandler("testcloth", test)
 
+function findClothes(ctype, idex)
+	if (ctype == 0) then
+		index = 67
+	elseif (ctype == 1) then
+		index = 32
+	elseif (ctype == 2) then
+		index = 44
+	elseif (ctype == 3) then
+		index = 37
+	end
+	
+	local rValue
+	if (not idex) then
+		local ctable = {}
+		for k = 0, index do
+			local ctex, cmod = getClothesByTypeIndex(ctype, k)
+			if (ctex and cmod) then
+				table.insert(ctable, {name = ctex, texture = ctex, model = cmod, id = ctype, price = 150, custom = false})
+			end
+		end
+		return ctable
+	else
+		local texture, model = getClothesByTypeIndex(ctype, idex)
+		return texture, model
+	end
+end
+	
+
+function getClothesFromID(id)
+	guiGridListClear(allGrid)
+	if (type(id) == "number") then
+		local ctable = findClothes(id)
+		for ind, item in ipairs(ctable) do
+			if (item.id ~= nil) then
+				local row = guiGridListAddRow(allGrid)
+				guiGridListSetItemText(allGrid, row, 1, "$"..item.price.." - "..item.name, false, false)
+				guiGridListSetItemData(allGrid, row, 1, item.texture..";"..item.model..";"..item.id..";0")
+			end
+		end
+	else
+		for name, category in pairs(custom) do
+			local catRow = guiGridListAddRow(allGrid)
+			guiGridListSetItemText(allGrid, catRow, 1, name, true, false)
+			for ind, item in pairs(category) do
+				local itemRow = guiGridListAddRow(allGrid)
+				guiGridListSetItemText(allGrid, itemRow, 1, "$"..item.price.." - "..item.name, false, false)
+				guiGridListSetItemData(allGrid, itemRow, 1, item.texture..";"..item.model..";"..item.id..";1;"..item.custom)
+			end
+		end
+	end
+end
+
 function handleButtons()
 	if (source == closeButton) then
 		if (guiGetVisible(clothesWindow)) then
