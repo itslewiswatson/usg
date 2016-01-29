@@ -1,8 +1,7 @@
 local sx, sy = guiGetScreenSize()
 
 function initializeWindow()
-
-	clothesWindow = guiCreateWindow( 816, 201, 711, 466, "Clothes Store", false)
+	clothesWindow = guiCreateWindow((sx / 2) - 816, (sy / 2) - 201, 711, 466, "Clothes Store", false)
 	categoriesGrid = guiCreateGridList(9, 22, 190, 174, false, clothesWindow)
 	currentGrid = guiCreateGridList(9, 202, 190, 174, false, clothesWindow)
 	allGrid = guiCreateGridList(205, 22, 496, 354, false, clothesWindow)
@@ -16,10 +15,14 @@ function initializeWindow()
 	
 	guiWindowSetSizable(clothesWindow, false)
 	guiSetAlpha(clothesWindow, 1.00)
-	guiSetVisible(clothesWindow, true)
 	guiSetProperty(buyButton, "NormalTextColour", "FFAAAAAA")
 	guiSetProperty(buyCJButton, "NormalTextColour", "FFAAAAAA")
 	guiSetProperty(closeButton, "NormalTextColour", "FFAAAAAA")
 end
-addCommandHandler("test", initializeWindow)
---addEventHandler("onClientResourceStart", resourceRoot, initializeWindow)
+addEventHandler("onClientResourceStart", resourceRoot, initializeWindow)
+
+function test()
+	guiSetVisible(clothesWindow, true)
+	showCursor(true)
+end
+addCommandHandler("testcloth", test)
