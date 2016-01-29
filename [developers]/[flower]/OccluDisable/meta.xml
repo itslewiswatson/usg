@@ -1,0 +1,4 @@
+<meta>
+	<info description="Disables Occlusion" version="1.0" author="Flower Power" />
+	<script src="OccluScriptServer.lua" type="server" />
+</meta>

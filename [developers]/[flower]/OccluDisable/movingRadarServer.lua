@@ -1,0 +1,1 @@
+﻿setOcclusionsEnabled( false ) --Sets Occlusion Disabled
