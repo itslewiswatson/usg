@@ -14,6 +14,7 @@ function initializeWindow()
 	current = guiGridListAddColumn(currentGrid, "Current Clothes", 0.9)
 	
 	guiWindowSetSizable(clothesWindow, false)
+	guiSetVisible(clothesWindow, false)
 	guiSetAlpha(clothesWindow, 1.00)
 	guiSetProperty(buyButton, "NormalTextColour", "FFAAAAAA")
 	guiSetProperty(buyCJButton, "NormalTextColour", "FFAAAAAA")
