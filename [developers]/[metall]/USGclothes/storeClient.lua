@@ -57,6 +57,8 @@ function setUp(state, element)
 		end
 		setupPed(true, element)
 	else
+		fadeCamera(false)
+		setTimer(fadeCamera, 1200, 1, true)
 		setTimer(setupPed, 1200, 1, false, element)
 		if (guiGetVisible(clothesWindow)) then
 			guiSetVisible(clothesWindow, false)
@@ -69,8 +71,9 @@ function enterMarker(element, md)
 	if (element ~= localPlayer) then return end
 	if (getElementType(element) == "player" and md) then
 		if (not isPedInVehicle(element)) then
-			setTimer(setUp, 1200, 1, true, element)
-			checkCJSkin(element)
+			fadeCamera(false)
+			setTimer(fadeCamera, 1200, 1, true)
+			setUp(true, element)
 		end
 	end
 end
