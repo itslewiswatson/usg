@@ -300,8 +300,8 @@ function getRankBonus(player, jobName, newRank)
 	end
 end
 
-function getPlayerJobBonus(player, jobName, currrentRank)
-	if (player and isElement(player) and jobName and currrentRank) then
+function getPlayerJobBonus(player, jobName, currentRank)
+	if (player and isElement(player) and jobName and currentRank) then
 		if (jobBonus[jobName]) then
 			outputChatBox("Starting loop..", player)
 			for k,v in pairs(jobBonus[jobName]) do
