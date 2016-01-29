@@ -1,11 +1,9 @@
 local sx, sy = guiGetScreenSize()
 
-local storeLocations = {
-	{1223.0185546875, -955.0712890625, 42.9375, 0, 0, "Random"},
-}
-
 function initializeWindow()
-	clothesWindow = guiCreateWindow((sx / 2) - 816, (sy / 2) - 201, 711, 466, "Clothes Store", false)
+	local x, y = 711, 466
+
+	clothesWindow = guiCreateWindow((sx / 2) - (x / 2), (sy / 2) - (y / 2), x, y, "Clothes Store", false)
 	categoriesGrid = guiCreateGridList(9, 22, 190, 174, false, clothesWindow)
 	currentGrid = guiCreateGridList(9, 202, 190, 174, false, clothesWindow)
 	allGrid = guiCreateGridList(205, 22, 496, 354, false, clothesWindow)
