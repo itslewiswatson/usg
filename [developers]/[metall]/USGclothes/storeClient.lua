@@ -19,8 +19,15 @@ function initializeWindow()
 	guiSetProperty(buyButton, "NormalTextColour", "FFAAAAAA")
 	guiSetProperty(buyCJButton, "NormalTextColour", "FFAAAAAA")
 	guiSetProperty(closeButton, "NormalTextColour", "FFAAAAAA")
+	
+	addEventHandler("onClientGUIClick", closeButton, closeWin, false)
 end
 addEventHandler("onClientResourceStart", resourceRoot, initializeWindow)
+
+function closeWin()
+	guiSetVisible(clothesWindow, false)
+	showCursor(false)
+end
 
 function test()
 	guiSetVisible(clothesWindow, true)
