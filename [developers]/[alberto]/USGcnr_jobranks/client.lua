@@ -221,7 +221,7 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrR
 				if (v.rankName == currentPlrRankName) then
 					local nextRankText = ""
 
-					if (jobRankNamesTable[currentPlrJobName][k+1].expNeeded) then
+					if (jobRankNamesTable[currentPlrJobName][k+1]) then
 						nextRankText = jobRankNamesTable[currentPlrJobName][k+1].rankName
 						nextRankExp = jobRankNamesTable[currentPlrJobName][k+1].expNeeded
 					else
