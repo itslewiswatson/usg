@@ -127,7 +127,7 @@ function emptyNet(player, matchingDim)
 
 				fish[player] = nil
 				exports.USGmsg:msg(player, "Your catch has been sold for $"..value..", "..amount.." fishes", 0, 200, 0)
-				givePlayerMoney(player, value)
+				givePlayerMoney(player, value + rankBonus)
 				exports.USGcnr_jobranks:givePlayerJobExp(client, "Fisherman", expAmount)
 			else
 				exports.USGmsg:msg(player, "You have not caught anything", 200, 0, 0)

@@ -63,7 +63,7 @@ function givePayment(player)
 	local rankBonus = exports.USGcnr_jobranks:getPlayerJobBonus(player, "Pizza Delivery", currentJobRank)
 	local expAmount = math.floor(pay/6)
 
-	givePlayerMoney(player, pay)
+	givePlayerMoney(player, pay + rankBonus)
 	exports.USGcnr_jobranks:givePlayerJobExp(player, "Pizza Delivery", expAmount)
 	exports.USGmsg:msg(player, "You have delivered the pizza, here's your payment: $"..pay..", " .. expAmount .. " exp", 0, 255, 0)
 	newDelivery(player, 1)
