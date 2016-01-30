@@ -219,8 +219,18 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrR
 
 			for k,v in pairs(jobRankNamesTable[currentPlrJobName]) do
 				if (v.rankName == currentPlrRankName) then
-					guiSetText(expProBarLabel, currentJobExp .. "/" .. jobRankNamesTable[currentPlrJobName][k+1].expNeeded .. " exp")
-					guiSetText(currentRankDetailsLabel, "Current Rank: L" .. k .. " - " .. currentPlrRankName .. "\n\nNext Rank: L" .. tostring(k+1) .. " - " .. jobRankNamesTable[currentPlrJobName][k+1].rankName)
+					local nextRankText = ""
+
+					if (jobRankNamesTable[currentPlrJobName][k+1].expNeeded) then
+						nextRankText = jobRankNamesTable[currentPlrJobName][k+1].rankName
+						nextRankExp = jobRankNamesTable[currentPlrJobName][k+1].expNeeded
+					else
+						nextRankText = "Max rank reached"
+						nextRankExp = 0
+					end
+
+					guiSetText(expProBarLabel, currentJobExp .. "/" .. nextRankExp .. " exp")
+					guiSetText(currentRankDetailsLabel, "Current Rank: L" .. k .. " - " .. currentPlrRankName .. "\n\nNext Rank: L" .. tostring(k+1) .. " - " .. nextRankText)
 					
 					local progressValue = currentJobExp / jobRankNamesTable[currentPlrJobName][k+1].expNeeded * 100
 					guiProgressBarSetProgress(expProgBar, progressValue)

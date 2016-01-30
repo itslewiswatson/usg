@@ -779,22 +779,6 @@ addCommandHandler("checkjobrank",
 	end
 )
 
-addCommandHandler("checkstreetexp", 
-	function(player, cmd, jobName)
-		if (jobName) then
-			local exp = getPlayerJobExp(player, "Street Cleaner")
-			outputChatBox(jobName .. ", " .. exp, player)
-		end
-	end
-)
-addCommandHandler("checkpizzaexp", 
-	function(player, cmd, jobName)
-		if (jobName) then
-			local exp = getPlayerJobExp(player, "Pizza Delivery")
-			outputChatBox(jobName .. ", " .. exp, player)
-		end
-	end
-)
 addCommandHandler("testmaxexp", 
 	function(player, cmd, jobName)
 		if (jobName) then
