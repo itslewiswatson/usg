@@ -110,9 +110,9 @@ function renderHUD()
 
         --dxDrawImage(1479, 210, 32, 32, ":USGGUI/skins/abc/window_title_corner.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
         --dxDrawText("", 1420, 210, 1479, 242, tocolor(255, 255, 255, 255), 1.00, "default", "left", "top", false, false, false, false, false)
-        
-        dxDrawText(wantedlvl, screenW * 0.8875, screenH * 0.2333, screenW * 0.9244, screenH * 0.2689, tocolor(255, 255, 255, 255), 1.00, "default", "left", "top", false, false, false, false, false)
-        dxDrawImage(screenW * 0.9244, screenH * 0.2333, screenW * 0.0200, screenH * 0.0356, "wanted-star.png")
+
+        dxDrawText(wantedlvl, screenWidth * 0.8875, screenHeight * 0.2333, screenWidth * 0.9244, screenHeight * 0.2689, tocolor(255, 255, 255, 255), 1.00, "default", "left", "top", false, false, false, false, false)
+        dxDrawImage(screenWidth * 0.9244, screenHeight * 0.2333, screenWidth * 0.0200, screenHeight * 0.0356, "wanted-star.png")
         dxSetAspectRatioAdjustmentEnabled(false)
     end
     -- 
