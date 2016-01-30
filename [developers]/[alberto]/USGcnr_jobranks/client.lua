@@ -68,6 +68,51 @@ local jobRankNamesTable = {
 		{expNeeded = 75000, rankName = "Geologist II"},
 		{expNeeded = 100000, rankName = "King of the Quarry"},
 	},
+
+	["Mechanic"] = {
+		{expNeeded = 0, rankName = "Trainee Mechanic"},
+		{expNeeded = 1000, rankName = "General Mechanic"},
+		{expNeeded = 2500, rankName = "Skilled Mechanic"},
+		{expNeeded = 5000, rankName = "Elite Mechanic"},
+		{expNeeded = 10000, rankName = "Vehicle Engineer I"},
+		{expNeeded = 15000, rankName = "Vehicle Engineer II"},
+		{expNeeded = 25000, rankName = "Vehicle Engineer III"},
+		{expNeeded = 50000, rankName = "Legendary Mechanic"},
+		{expNeeded = 100000, rankName = "Master of Engines"},
+	},
+
+	["Pizza Delivery"] = {
+		{expNeeded = 0, rankName = "Newbie Pizzaboy"},
+		{expNeeded = 1000, rankName = "Dominos Pizzaboy"},
+		{expNeeded = 2500, rankName = "Pizza Hut Pizzaboy"},
+		{expNeeded = 5000, rankName = "Enthusiast Pizzaboy"},
+		{expNeeded = 10000, rankName = "Skilled Pizzaboy"},
+		{expNeeded = 15000, rankName = "Professional Pizzaboy"},
+		{expNeeded = 25000, rankName = "Elite Pizzaboy"},
+		{expNeeded = 50000, rankName = "Legendary Pizzaboy"},
+		{expNeeded = 100000, rankName = "Master of Pizzas"},
+	},
+
+	["Fisherman"] = {
+		{expNeeded = 0, rankName = "Newbie Fisherman"},
+		{expNeeded = 1000, rankName = "Local Fisherman"},
+		{expNeeded = 5000, rankName = "Skilled Fisherman"},
+		{expNeeded = 10000, rankName = "Professional Fisherman"},
+		{expNeeded = 25000, rankName = "Elite Fisherman"},
+		{expNeeded = 50000, rankName = "Legendary Fisherman"},
+		{expNeeded = 100000, rankName = "King of the Ocean"},
+	},
+
+	["Street Cleaner"] = {
+		{expNeeded = 0, rankName = "Trainee Cleaner"},
+		{expNeeded = 1000, rankName = "Enthusiast Cleaner"},
+		{expNeeded = 5000, rankName = "Skilled Cleaner"},
+		{expNeeded = 10000, rankName = "Professional Cleaner"},
+		{expNeeded = 15000, rankName = "Elite Cleaner"},
+		{expNeeded = 25000, rankName = "Master Cleaner"},
+		{expNeeded = 50000, rankName = "Legendary Cleaner"},
+		{expNeeded = 100000, rankName = "Mr Shine"},
+	},
 }
 
 local jobNameFromDataName = {
@@ -78,6 +123,9 @@ local jobNameFromDataName = {
 	["quarryMiner"] = "Quarry Miner",
 	["trucker"] = "Trucker",
 	["Mechanic"] = "Mechanic",
+	["Pizza Delivery"] = "Pizza Delivery",
+	["Fisherman"] = "Fisherman",
+	["Street Cleaner"] = "Street Cleaner",
 }
 
 -- -------------------------------
