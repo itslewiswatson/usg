@@ -121,9 +121,14 @@ function emptyNet(player, matchingDim)
 			if (fish[player] and fish[player][1] and fish[player][1] >= 1) then
 				local value = fish[player][1]
 				local amount = fish[player][2]
+				local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(client, "Fisherman")
+				local rankBonus = exports.USGcnr_jobranks:getPlayerJobBonus(client, "Fisherman", currentJobRank)
+				local expAmount = math.floor(value/6)
+
 				fish[player] = nil
 				exports.USGmsg:msg(player, "Your catch has been sold for $"..value..", "..amount.." fishes", 0, 200, 0)
 				givePlayerMoney(player, value)
+				exports.USGcnr_jobranks:givePlayerJobExp(client, "Fisherman", expAmount)
 			else
 				exports.USGmsg:msg(player, "You have not caught anything", 200, 0, 0)
 			end
