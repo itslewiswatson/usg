@@ -662,6 +662,16 @@ addCommandHandler("checkjobexp",
 	end
 )
 
+addCommandHandler("checkjobrank",
+	function(player, cmd, jobName)
+		if (jobName) then
+			local rankname = getPlayerJobRank(player, jobName)
+
+			outputChatBox(jobName .. ", " .. rankname, player)
+		end
+	end
+)
+
 addCommandHandler("checkstreetexp", 
 	function(player, cmd, jobName)
 		if (jobName) then
