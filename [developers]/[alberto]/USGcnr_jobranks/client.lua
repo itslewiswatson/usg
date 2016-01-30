@@ -232,7 +232,7 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrR
 					guiSetText(expProBarLabel, currentJobExp .. "/" .. nextRankExp .. " exp")
 					guiSetText(currentRankDetailsLabel, "Current Rank: L" .. k .. " - " .. currentPlrRankName .. "\n\nNext Rank: L" .. tostring(k+1) .. " - " .. nextRankText)
 					
-					local progressValue = currentJobExp / jobRankNamesTable[currentPlrJobName][k+1].expNeeded * 100
+					local progressValue = currentJobExp / nextRankExp * 100
 					guiProgressBarSetProgress(expProgBar, progressValue)
 
 					break
