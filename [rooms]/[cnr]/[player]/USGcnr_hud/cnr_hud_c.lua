@@ -110,9 +110,12 @@ function renderHUD()
 
         --dxDrawImage(1479, 210, 32, 32, ":USGGUI/skins/abc/window_title_corner.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
         --dxDrawText("", 1420, 210, 1479, 242, tocolor(255, 255, 255, 255), 1.00, "default", "left", "top", false, false, false, false, false)
+        --(380 / 1280) * sx, (71 / 720) * sy, (503 / 1280) * sx, (410 / 720) * sy
+        dxDrawImage((1479 / 1600) * screenWidth, (210 / 900) * screenHeight, (32 / 1600) * screenWidth, (32 / 900) * screenHeight, ":USGGUI/skins/abc/window_title_corner.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawText("", (1420 / 1600) * screenWidth, (210 / 900) * screenHeight, (1479 / 1600) * screenWidth, (242 / 900) * screenHeight, tocolor(255, 255, 255, 255), 1.00, "default", "left", "top", false, false, false, false, false)
 
-        dxDrawText(wantedlvl, screenWidth * 0.8875, screenHeight * 0.2333, screenWidth * 0.9244, screenHeight * 0.2689, tocolor(180,0,0),2,"pricedown","right","top")
-        dxDrawImage(screenWidth * 0.9244, screenHeight * 0.2333, 32, 32, "wanted-star.png")
+        --dxDrawText(wantedlvl, screenWidth * 0.8875, screenHeight * 0.2333, screenWidth * 0.9244, screenHeight * 0.2689, tocolor(180,0,0),2,"pricedown","right","top")
+        --dxDrawImage(screenWidth * 0.9244, screenHeight * 0.2333, 32, 32, "wanted-star.png")
 
         --dxDrawImage(0.924375*screenWidth, 0.23333333333333*screenHeight, 0.02*screenWidth, 0.035555555555556*screenHeight, "wanted-star.png")
         --dxDrawText(wantedlvl, 0.8875*screenWidth, 0.23333333333333*screenHeight, 0.924375*screenWidth, 0.26888888888889*screenHeight,tocolor(180,0,0),2,"pricedown","right","top")
