@@ -92,6 +92,7 @@ function setupPed(state, element)
 	if (state) then
 		if (isElement(element)) then
 			if (not isElement(clothPed)) then
+				local pedX, pedY, pedZ = getElementPosition(element)
 				clothPed = createPed(0, pedX, pedY, pedZ + 1)
 				setElementDimension(clothPed, viewingDim)
 			end
