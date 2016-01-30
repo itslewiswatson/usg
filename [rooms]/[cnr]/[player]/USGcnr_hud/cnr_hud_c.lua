@@ -104,7 +104,7 @@ function renderHUD()
     -- wanted level
     local wantedlvl = isResourceReady("USGcnr_wanted") and exports.USGcnr_wanted:getPlayerWantedLevel(localPlayer) or 0
     if(wantedlvl > 0) then  
-        dxSetAspectRatioAdjustmentEnabled(true)
+        --dxSetAspectRatioAdjustmentEnabled(true)
         --dxDrawText(wantedlvl, WANTED_X, WANTED_Y, WANTED_END_X, WANTED_END_Y, tocolor(180,0,0),2,"pricedown","right","top")  -- Text will be drawn just below HUD money, with any aspect ratio
         --dxDrawImage(WANTED_STAR_X, WANTED_STAR_Y, 32, 32,"wanted-star.png")
 
@@ -116,7 +116,7 @@ function renderHUD()
 
         dxDrawImage(0.924375*screenWidth, 0.23333333333333*screenHeight, 0.02*screenWidth, 0.035555555555556*screenHeight, "wanted-star.png")
         dxDrawText(wantedlvl, 0.8875*screenWidth, 0.23333333333333*screenHeight, 0.924375*screenWidth, 0.26888888888889*screenHeight,tocolor(180,0,0),2,"pricedown","right","top")
-        dxSetAspectRatioAdjustmentEnabled(false)
+        --dxSetAspectRatioAdjustmentEnabled(false)
     end
     -- 
     --drawPlayers() -- disabled in favor of default mta nametag
