@@ -105,8 +105,14 @@ function renderHUD()
     local wantedlvl = isResourceReady("USGcnr_wanted") and exports.USGcnr_wanted:getPlayerWantedLevel(localPlayer) or 0
     if(wantedlvl > 0) then  
         dxSetAspectRatioAdjustmentEnabled(true)
-        dxDrawText(wantedlvl, WANTED_X, WANTED_Y, WANTED_END_X, WANTED_END_Y, tocolor(180,0,0),2,"pricedown","right","top")  -- Text will be drawn just below HUD money, with any aspect ratio
-        dxDrawImage(WANTED_STAR_X, WANTED_STAR_Y, 32, 32,"wanted-star.png")
+        --dxDrawText(wantedlvl, WANTED_X, WANTED_Y, WANTED_END_X, WANTED_END_Y, tocolor(180,0,0),2,"pricedown","right","top")  -- Text will be drawn just below HUD money, with any aspect ratio
+        --dxDrawImage(WANTED_STAR_X, WANTED_STAR_Y, 32, 32,"wanted-star.png")
+
+        --dxDrawImage(1479, 210, 32, 32, ":USGGUI/skins/abc/window_title_corner.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        --dxDrawText("", 1420, 210, 1479, 242, tocolor(255, 255, 255, 255), 1.00, "default", "left", "top", false, false, false, false, false)
+        
+        dxDrawText(wantedlvl, screenW * 0.8875, screenH * 0.2333, screenW * 0.9244, screenH * 0.2689, tocolor(255, 255, 255, 255), 1.00, "default", "left", "top", false, false, false, false, false)
+        dxDrawImage(screenW * 0.9244, screenH * 0.2333, screenW * 0.0200, screenH * 0.0356, "wanted-star.png")
         dxSetAspectRatioAdjustmentEnabled(false)
     end
     -- 
