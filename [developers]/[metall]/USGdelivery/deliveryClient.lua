@@ -1,7 +1,7 @@
 -- Object ID: 1271 & 3798
 
-function testObjects(plr)
-	local px, py, pz = getElementPosition(plr)
-	testObj = createObject(1271, x, y, z)
+function testObjects()
+	local px, py, pz = getElementPosition(localPlayer)
+	createObject(1271, px, py, pz)
 end
 addCommandHandler("testobj", testObjects)
