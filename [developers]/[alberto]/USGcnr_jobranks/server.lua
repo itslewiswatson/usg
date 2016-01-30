@@ -6,7 +6,7 @@ local jobExpTable = {}
 --Job ranks table
 --Job name needs to be the jobID
 ------------------------------------------------------------
-local jobRanks = { 
+--[[local jobRanks = { 
 	["pilot"] = {
 		--syntax:
 		--[exp needed] = {rankName = the rank name},
@@ -68,7 +68,159 @@ local jobRanks = {
 		[75000] = {rankName = "Geologist II"},
 		[100000] = {rankName = "King of the Quarry"},
 	},
-} 
+
+	["Mechanic"] = {
+		[0] = {rankName = "Trainee Mechanic"},
+		[1000] = {rankName = "General Mechanic"},
+		[2500] = {rankName = "Skilled Mechanic"},
+		[5000] = {rankName = "Elite Mechanic"},
+		[10000] = {rankName = "Vehicle Engineer I"},
+		[15000] = {rankName = "Vehicle Engineer II"},
+		[25000] = {rankName = "Vehicle Engineer III"},
+		[50000] = {rankName = "Legendary Mechanic"},
+		[100000] = {rankName = "Master of Engines"},
+	},
+
+	["Pizza Delivery"] = {
+		[0] = {rankName = "Newbie Pizzaboy"},
+		[1000] = {rankName = "Dominos Pizzaboy"},
+		[2500] = {rankName = "Pizza Hut Pizzaboy"},
+		[5000] = {rankName = "Enthusiast Pizzaboy"},
+		[10000] = {rankname = "Skilled Pizzaboy"},
+		[15000] = {rankName = "Professional Pizzaboy"},
+		[25000] = {rankName = "Elite Pizzaboy"},
+		[50000] = {rankName = "Legendary Pizzaboy"},
+		[100000] = {rankName = "Master of Pizzas"},
+	},
+
+	["Fisherman"] = {
+		[0] = {rankName = "Newbie Fisherman"},
+		[1000] = {rankName = "Local Fisherman"},
+		[5000] = {rankName = "Skilled Fisherman"},
+		[10000] = {rankName = "Professional Fisherman"},
+		[25000] = {rankName = "Elite Fisherman"},
+		[50000] = {rankName = "Legendary Fisherman"},
+		[100000] = {rankName = "King of the Ocean"},
+	},
+
+	["Street Cleaner"] = {
+		[0] = {rankName = "Trainee Cleaner"},
+		[1000] = {rankName = "Enthusiast Cleaner"},
+		[5000] = {rankName = "Skilled Cleaner"},
+		[10000] = {rankName = "Professional Cleaner"},
+		[15000] = {rankName = "Elite Cleaner"},
+		[25000] = {rankName = "Master Cleaner"},
+		[50000] = {rankName = "Legendary Cleaner"},
+		[100000] = {rankName = "Mr Shine"},
+	},
+} ]]
+
+local jobRanks = {
+		["pilot"] = {
+		{expNeeded = 0, rankName = "Junior Flight Officer"},
+		{expNeeded = 1000, rankName = "Flight Officer"},
+		{expNeeded = 2500, rankName = "First Officer"},
+		{expNeeded = 5000, rankName = "Captain"},
+		{expNeeded = 7500, rankName = "Senior Captain"},
+		{expNeeded = 10000, rankName = "Commercial First Officer"},
+		{expNeeded = 12500, rankName = "Commercial Captain"},
+		{expNeeded = 15000, rankName = "Commercial Senior Captain"},
+		{expNeeded = 17500, rankName = "Commercial Commander"},
+		{expNeeded = 20000, rankName = "Commercial Senior Commander"},
+		{expNeeded = 25000, rankName = "ATP First Officer"},
+		{expNeeded = 30000, rankName = "ATP Captain"},
+		{expNeeded = 50000, rankName = "ATP Senior Captain"},
+		{expNeeded = 75000, rankName = "ATP Commander"},
+		{expNeeded = 100000, rankName = "ATP Senior Commander"},
+	},
+
+	["trucker"] = {
+		{expNeeded = 0, rankName = "Trainee Trucker"},
+		{expNeeded = 1000, rankName = "Local Trucker"},
+		{expNeeded = 2500, rankName = "FedEx Trucker"},
+		{expNeeded = 5000, rankName = "UPS Trucker"},
+		{expNeeded = 7500, rankName = "Regular Trucker"},
+		{expNeeded = 10000, rankName = "Experienced Trucker"},
+		{expNeeded = 15000, rankName = "Respected Trucker"},
+		{expNeeded = 25000, rankName = "State Trucker"},
+		{expNeeded = 50000, rankName = "SA Transportation Trucker"},
+		{expNeeded = 75000, rankName = "King of the Road"},
+		{expNeeded = 100000, rankName = "Trucking Tycoon"},
+	},
+
+	["medic"] = {
+		{expNeeded = 0, rankName = "Medical Student"},
+		{expNeeded = 1000, rankName = "Cleveland Clinic Doctor"},
+		{expNeeded = 2500, rankName = "General Practitioner"},
+		{expNeeded = 5000, rankName = "Foundation Medic"},
+		{expNeeded = 7500, rankName = "Assistant Doctor"},
+		{expNeeded = 10000, rankName = "Consultant"},
+		{expNeeded = 25000, rankName = "Middle-grade Doctor"},
+		{expNeeded = 50000, rankName = "Specialist"},
+		{expNeeded = 75000, rankName = "Surgeon"},
+		{expNeeded = 100000, rankName = "Elite Doctor"},
+	},
+
+	["quarryMiner"] = {
+		{expNeeded = 0, rankName = "Trainee Quarry Miner"},
+		{expNeeded = 1000, rankName = "Field Operator I"},
+		{expNeeded = 2500, rankName = "Field Operator II"},
+		{expNeeded = 5000, rankName = "Field Operator III"},
+		{expNeeded = 7500, rankName = "Field Operator IV"},
+		{expNeeded = 10000, rankName = "Mine Engineer I"},
+		{expNeeded = 15000, rankName = "Mine Engineer II"},
+		{expNeeded = 20000, rankName = "Mine Engineer III"},
+		{expNeeded = 25000, rankName = "Mine Engineer IV"},
+		{expNeeded = 50000, rankName = "Geologist I"},
+		{expNeeded = 75000, rankName = "Geologist II"},
+		{expNeeded = 100000, rankName = "King of the Quarry"},
+	},
+
+	["Mechanic"] = {
+		{expNeeded = 0, rankName = "Trainee Mechanic"},
+		{expNeeded = 1000, rankName = "General Mechanic"},
+		{expNeeded = 2500, rankName = "Skilled Mechanic"},
+		{expNeeded = 5000, rankName = "Elite Mechanic"},
+		{expNeeded = 10000, rankName = "Vehicle Engineer I"},
+		{expNeeded = 15000, rankName = "Vehicle Engineer II"},
+		{expNeeded = 25000, rankName = "Vehicle Engineer III"},
+		{expNeeded = 50000, rankName = "Legendary Mechanic"},
+		{expNeeded = 100000, rankName = "Master of Engines"},
+	},
+
+	["Pizza Delivery"] = {
+		{expNeeded = 0, rankName = "Newbie Pizzaboy"},
+		{expNeeded = 1000, rankName = "Dominos Pizzaboy"},
+		{expNeeded = 2500, rankName = "Pizza Hut Pizzaboy"},
+		{expNeeded = 5000, rankName = "Enthusiast Pizzaboy"},
+		{expNeeded = 10000, rankName = "Skilled Pizzaboy"},
+		{expNeeded = 15000, rankName = "Professional Pizzaboy"},
+		{expNeeded = 25000, rankName = "Elite Pizzaboy"},
+		{expNeeded = 50000, rankName = "Legendary Pizzaboy"},
+		{expNeeded = 100000, rankName = "Master of Pizzas"},
+	},
+
+	["Fisherman"] = {
+		{expNeeded = 0, rankName = "Newbie Fisherman"},
+		{expNeeded = 1000, rankName = "Local Fisherman"},
+		{expNeeded = 5000, rankName = "Skilled Fisherman"},
+		{expNeeded = 10000, rankName = "Professional Fisherman"},
+		{expNeeded = 25000, rankName = "Elite Fisherman"},
+		{expNeeded = 50000, rankName = "Legendary Fisherman"},
+		{expNeeded = 100000, rankName = "King of the Ocean"},
+	},
+
+	["Street Cleaner"] = {
+		{expNeeded = 0, rankName = "Trainee Cleaner"},
+		{expNeeded = 1000, rankName = "Enthusiast Cleaner"},
+		{expNeeded = 5000, rankName = "Skilled Cleaner"},
+		{expNeeded = 10000, rankName = "Professional Cleaner"},
+		{expNeeded = 15000, rankName = "Elite Cleaner"},
+		{expNeeded = 25000, rankName = "Master Cleaner"},
+		{expNeeded = 50000, rankName = "Legendary Cleaner"},
+		{expNeeded = 100000, rankName = "Mr Shine"},
+	},
+}
 
 ----------------------------------------------------------------------------------------------
 --Job bonuses table which stores the given bonus amount for a rank when a player ranks up
@@ -136,6 +288,51 @@ local jobRankReward = {
 		["Surgeon"] = 50000,
 		["Elite Doctor"] = 100000,
 	},
+
+	["Mechanic"] = {
+		["Trainee Mechanic"] = 0,
+		["General Mechanic"] = 1000,
+		["Skilled Mechanic"] = 2500,
+		["Elite Mechanic"] = 5000,
+		["Vehicle Engineer I"] = 10000,
+		["Vehicle Engineer II"] = 15000,
+		["Vehicle Engineer III"] = 25000,
+		["Legendary Mechanic"] = 50000,
+		["Master of Engines"] = 100000,
+	},
+
+	["Pizza Delivery"] = {
+		["Newbie Pizzaboy"] = 0,
+		["Dominos Pizzaboy"] = 1000,
+		["Pizza Hut Pizzaboy"] = 2500,
+		["Enthusiast Pizzaboy"] = 5000,
+		["Skilled Pizzaboy"] = 10000,
+		["Professional Pizzaboy"] = 15000,
+		["Elite Pizzaboy"] = 25000,
+		["Legendary Pizzaboy"] = 50000,
+		["Master of Pizzas"] = 100000,
+	},
+
+	["Fisherman"] = {
+		["Newbie Fisherman"] = 0,
+		["Local Fisherman"] = 1000,
+		["Skilled Fisherman"] = 5000,
+		["Professional Fisherman"] = 10000,
+		["Elite Fisherman"] = 25000,
+		["Legendary Fisherman"] = 50000,
+		["King of the Ocean"] = 100000,
+	},
+
+	["Street Cleaner"] = {
+		["Trainee Cleaner"] = 0,
+		["Enthusiast Cleaner"] = 1000,
+		["Skilled Cleaner"] = 5000,
+		["Professional Cleaner"] = 10000,
+		["Elite Cleaner"] = 15000,
+		["Master Cleaner"] = 25000,
+		["Legendary Cleaner"] = 50000,
+		["Mr Shine"] = 100000,
+	},
 }
 
 local jobBonus = {
@@ -197,6 +394,51 @@ local jobBonus = {
 		["Surgeon"] = 600,
 		["Elite Doctor"] = 900,
 	},
+
+	["Mechanic"] = {
+		["Trainee Mechanic"] = 0,
+		["General Mechanic"] = 100,
+		["Skilled Mechanic"] = 150,
+		["Elite Mechanic"] = 200,
+		["Vehicle Engineer I"] = 300,
+		["Vehicle Engineer II"] = 350,
+		["Vehicle Engineer III"] = 400,
+		["Legendary Mechanic"] = 500,
+		["Master of Engines"] = 750,
+	},
+
+	["Pizza Delivery"] = {
+		["Newbie Pizzaboy"] = 0,
+		["Dominos Pizzaboy"] = 100,
+		["Pizza Hut Pizzaboy"] = 150,
+		["Enthusiast Pizzaboy"] = 200,
+		["Skilled Pizzaboy"] = 250,
+		["Professional Pizzaboy"] = 350,
+		["Elite Pizzaboy"] = 450,
+		["Legendary Pizzaboy"] = 600,
+		["Master of Pizzas"] = 750,
+	},
+
+	["Fisherman"] = {
+		["Newbie Fisherman"] = 0,
+		["Local Fisherman"] = 100,
+		["Skilled Fisherman"] = 150,
+		["Professional Fisherman"] = 250,
+		["Elite Fisherman"] = 350,
+		["Legendary Fisherman"] = 500,
+		["King of the Ocean"] = 750,
+	},
+
+	["Street Cleaner"] = {
+		["Trainee Cleaner"] = 0,
+		["Enthusiast Cleaner"] = 100,
+		["Skilled Cleaner"] = 150,
+		["Professional Cleaner"] = 200,
+		["Elite Cleaner"] = 250,
+		["Master Cleaner"] = 350,
+		["Legendary Cleaner"] = 500,
+		["Mr Shine"] = 750,
+	},
 }
 
 ------------------------------------------------------------
@@ -210,6 +452,9 @@ local dataNameFromJobName = {
 	["Quarry Miner"] = "quarryMiner",
 	["Trucker"] = "trucker",
 	["Mechanic"] = "Mechanic",
+	["Pizza Delivery"] = "Pizza Delivery",
+	["Fisherman"] = "Fisherman",
+	["Street Cleaner"] = "Street Cleaner",
 }
 
 local jobNameFromDataName = {
@@ -220,6 +465,9 @@ local jobNameFromDataName = {
 	["quarryMiner"] = "Quarry Miner",
 	["trucker"] = "Trucker",
 	["Mechanic"] = "Mechanic",
+	["Pizza Delivery"] = "Pizza Delivery",
+	["Fisherman"] = "Fisherman",
+	["Street Cleaner"] = "Street Cleaner",
 }
 
 ------------------------------------------------------------
@@ -233,6 +481,9 @@ local jobIDs = {
 	["Mechanic"] = true,
 	["criminal"] = true,
 	["quarryMiner"] = true,
+	["Pizza Delivery"] = true,
+	["Fisherman"] = true,
+	["Street Cleaner"] = true,
 }
 
 -----------------------------------------------------------------
@@ -270,7 +521,7 @@ function getPlayerJobRank(player, jobName)
 			for k,v in pairs(jobRanks[jobName]) do
 				if (not rank) then
 					rank = v.rankName
-				elseif (jobExp >= k) then
+				elseif (jobExp >= v.expNeeded) then
 					rank = v.rankName
 				else
 					break
@@ -514,6 +765,24 @@ addCommandHandler("checkjobexp",
 		if (jobName) then
 			local exp = getPlayerJobExp(player, jobName)
 			outputChatBox(jobName .. ", " .. exp, player)
+		end
+	end
+)
+
+addCommandHandler("checkjobrank",
+	function(player, cmd, jobName)
+		if (jobName) then
+			local rankname = getPlayerJobRank(player, jobName)
+
+			outputChatBox(jobName .. ", " .. rankname, player)
+		end
+	end
+)
+
+addCommandHandler("testmaxexp", 
+	function(player, cmd, jobName)
+		if (jobName) then
+			givePlayerJobExp(player, jobName, 100000)
 		end
 	end
 )

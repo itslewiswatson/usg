@@ -68,6 +68,51 @@ local jobRankNamesTable = {
 		{expNeeded = 75000, rankName = "Geologist II"},
 		{expNeeded = 100000, rankName = "King of the Quarry"},
 	},
+
+	["Mechanic"] = {
+		{expNeeded = 0, rankName = "Trainee Mechanic"},
+		{expNeeded = 1000, rankName = "General Mechanic"},
+		{expNeeded = 2500, rankName = "Skilled Mechanic"},
+		{expNeeded = 5000, rankName = "Elite Mechanic"},
+		{expNeeded = 10000, rankName = "Vehicle Engineer I"},
+		{expNeeded = 15000, rankName = "Vehicle Engineer II"},
+		{expNeeded = 25000, rankName = "Vehicle Engineer III"},
+		{expNeeded = 50000, rankName = "Legendary Mechanic"},
+		{expNeeded = 100000, rankName = "Master of Engines"},
+	},
+
+	["Pizza Delivery"] = {
+		{expNeeded = 0, rankName = "Newbie Pizzaboy"},
+		{expNeeded = 1000, rankName = "Dominos Pizzaboy"},
+		{expNeeded = 2500, rankName = "Pizza Hut Pizzaboy"},
+		{expNeeded = 5000, rankName = "Enthusiast Pizzaboy"},
+		{expNeeded = 10000, rankName = "Skilled Pizzaboy"},
+		{expNeeded = 15000, rankName = "Professional Pizzaboy"},
+		{expNeeded = 25000, rankName = "Elite Pizzaboy"},
+		{expNeeded = 50000, rankName = "Legendary Pizzaboy"},
+		{expNeeded = 100000, rankName = "Master of Pizzas"},
+	},
+
+	["Fisherman"] = {
+		{expNeeded = 0, rankName = "Newbie Fisherman"},
+		{expNeeded = 1000, rankName = "Local Fisherman"},
+		{expNeeded = 5000, rankName = "Skilled Fisherman"},
+		{expNeeded = 10000, rankName = "Professional Fisherman"},
+		{expNeeded = 25000, rankName = "Elite Fisherman"},
+		{expNeeded = 50000, rankName = "Legendary Fisherman"},
+		{expNeeded = 100000, rankName = "King of the Ocean"},
+	},
+
+	["Street Cleaner"] = {
+		{expNeeded = 0, rankName = "Trainee Cleaner"},
+		{expNeeded = 1000, rankName = "Enthusiast Cleaner"},
+		{expNeeded = 5000, rankName = "Skilled Cleaner"},
+		{expNeeded = 10000, rankName = "Professional Cleaner"},
+		{expNeeded = 15000, rankName = "Elite Cleaner"},
+		{expNeeded = 25000, rankName = "Master Cleaner"},
+		{expNeeded = 50000, rankName = "Legendary Cleaner"},
+		{expNeeded = 100000, rankName = "Mr Shine"},
+	},
 }
 
 local jobNameFromDataName = {
@@ -78,6 +123,9 @@ local jobNameFromDataName = {
 	["quarryMiner"] = "Quarry Miner",
 	["trucker"] = "Trucker",
 	["Mechanic"] = "Mechanic",
+	["Pizza Delivery"] = "Pizza Delivery",
+	["Fisherman"] = "Fisherman",
+	["Street Cleaner"] = "Street Cleaner",
 }
 
 -- -------------------------------
@@ -171,10 +219,20 @@ function clientData(currentPlrJobName, currentPlrExp, jobRanksTable, currentPlrR
 
 			for k,v in pairs(jobRankNamesTable[currentPlrJobName]) do
 				if (v.rankName == currentPlrRankName) then
-					guiSetText(expProBarLabel, currentJobExp .. "/" .. jobRankNamesTable[currentPlrJobName][k+1].expNeeded .. " exp")
-					guiSetText(currentRankDetailsLabel, "Current Rank: L" .. k .. " - " .. currentPlrRankName .. "\n\nNext Rank: L" .. tostring(k+1) .. " - " .. jobRankNamesTable[currentPlrJobName][k+1].rankName)
+					local nextRankText = ""
+
+					if (jobRankNamesTable[currentPlrJobName][k+1]) then
+						nextRankText = jobRankNamesTable[currentPlrJobName][k+1].rankName
+						nextRankExp = jobRankNamesTable[currentPlrJobName][k+1].expNeeded
+					else
+						nextRankText = "Max rank reached"
+						nextRankExp = 0
+					end
+
+					guiSetText(expProBarLabel, exports.USGmisc:convertNumber(currentJobExp) .. "/" .. exports.USGmisc:convertNumber(nextRankExp) .. " exp")
+					guiSetText(currentRankDetailsLabel, "Current Rank: L" .. k .. " - " .. currentPlrRankName .. "\n\nNext Rank: L" .. tostring(k+1) .. " - " .. nextRankText)
 					
-					local progressValue = currentJobExp / jobRankNamesTable[currentPlrJobName][k+1].expNeeded * 100
+					local progressValue = currentJobExp / nextRankExp * 100
 					guiProgressBarSetProgress(expProgBar, progressValue)
 
 					break

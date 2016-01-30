@@ -59,8 +59,13 @@ addEventHandler("USGpizzadelivery.do", root, do22)
 function givePayment(player)
 	alreadyGiven[player] = nil
 	local pay = math.random(800, 1400)
-	givePlayerMoney(player, pay)
-	exports.USGmsg:msg(player, "You have delivered the pizza, here's your payment $"..pay, 0, 255, 0)
+	local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(player, "Pizza Delivery")
+	local rankBonus = exports.USGcnr_jobranks:getPlayerJobBonus(player, "Pizza Delivery", currentJobRank)
+	local expAmount = math.floor(pay/6)
+
+	givePlayerMoney(player, pay + rankBonus)
+	exports.USGcnr_jobranks:givePlayerJobExp(player, "Pizza Delivery", expAmount)
+	exports.USGmsg:msg(player, "You have delivered the pizza, here's your payment: $"..pay..", " .. expAmount .. " exp", 0, 255, 0)
 	newDelivery(player, 1)
 end
 addEvent("USGpizzadelivery.givePayment", true)

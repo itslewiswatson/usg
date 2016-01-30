@@ -74,7 +74,14 @@ end
 addEventHandler("onVehicleExit", root, onExit)
 
 function payme()
-	givePlayerMoney(source, 1000)
+	local currentJobRank = exports.USGcnr_jobranks:getPlayerJobRank(client, "Street Cleaner")
+	local rankBonus = exports.USGcnr_jobranks:getPlayerJobBonus(client, "Street Cleaner", currentJobRank)
+	local payment = 100
+	local expAmount = payment/2
+
+	givePlayerMoney(source, payment + rankBonus)
+	exports.USGcnr_jobranks:givePlayerJobExp(client, "Street Cleaner", expAmount)
+	
 	if (#garbageSpots == tonumber(getElementData(source, "garbageUnits"))) then
 		setElementData(source, "garbageUnits", tonumber(getElementData(source, "garbageUnits")) + 1)
 	end
