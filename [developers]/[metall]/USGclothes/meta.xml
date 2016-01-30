@@ -1,4 +1,4 @@
 <meta>
 	<script src="storeClient.lua" type="client" />
-	<script src="settings.lua" type="client" />
+	<script src="settings.lua" type="shared" />
 </meta>

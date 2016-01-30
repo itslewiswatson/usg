@@ -35,6 +35,23 @@ cuIds = {
 	["16"] = "cj_ped_head",
 }
 
+function getCurrentPlayerClothes(element)
+	guiGridListClear(currentGrid)
+	for i = 0, 17 do
+		if (not blackListed[i]) then
+			local txd, dff = getPedClothes(element, i)
+			if (type(txd) ~= "boolean" and type(dff) ~= "boolean") then
+				for k, item in ipairs(clothes) do
+					if (string.match(item.texture, txd) and string.match(item.model, dff)) then
+						local row = guiGridListAddRow(currentGrid)
+						guiGridListSetItemText(currentGrid, row, 1, "$"..item.price.." | "..item.name, false, false)
+					end
+				end
+			end
+		end
+	end
+end
+
 function initializeWindow()
 	local x, y = 711, 466
 
@@ -72,7 +89,7 @@ end
 
 function applyClothes(player, txd, model, id, sid, custom, path)
 	if (getElementType(player) == "ped") then
-		previewClothingItem(txd, mdl, id)
+		previewItem(txd, mdl, id)
 	else
 		addPedClothes(player, txd, md1, md)
 	end
@@ -186,6 +203,27 @@ function test()
 	showCursor(true)
 end
 addCommandHandler("testcloth", test)
+
+function previewItem(txd, dff, id)
+	if (txd and dff and id) then
+		local ctxd, cdff = getPedClothes(clothPed, id)
+		if (ctxd and cdff) then
+			if (string.match(ctxd, txd) and string.match(cdff, dff)) then
+				getCurrentPlayerClothes(clothPed, txd, dff)
+			else
+				if (isElement(clothPed)) then
+					addPedClothes(clothPed, txd, dff, id)
+					getCurrentPlayerClothes(clothPed, txd, dff)
+				end
+			end
+		else
+			if (isElement(clothPed)) then
+				addPedClothes(clothPed, txd, dff, id)
+				getCurrentPlayerClothes(clothPed, txd, dff)
+			end
+		end
+	end
+end
 
 function findClothes(ctype, idex)
 	if (ctype == 0) then
