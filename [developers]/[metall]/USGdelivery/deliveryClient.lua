@@ -4,4 +4,4 @@ function testObjects(plr)
 	local px, py, pz = getElementPosition(plr)
 	testObj = createObject(1271, x, y, z)
 end
-addCommandHandler("testObj", testObjects)
+addCommandHandler("testobj", testObjects)
