@@ -82,7 +82,7 @@ local trucks = {403, 514, 515}
 
 function onLocationMarkerHit(hitElement, dimensions)
 	if(hitElement ~= localPlayer or not dimensions) then return end
-	if (not getElementModel(hitElement) == trucks[#trucks]) then return end
+	if (not inVeh(hitElement)) then return end
 	if(not isPedInVehicle(hitElement) or getVehicleController(getPedOccupiedVehicle(hitElement)) ~= localPlayer) then
 		exports.USGmsg:msg("You have to be in your truck to use this marker.", 255,0,0)
 		return
@@ -91,6 +91,19 @@ function onLocationMarkerHit(hitElement, dimensions)
 		onDestinationHit()
 	else
 		openLocationGUI(source)
+	end
+end
+
+function inVeh(element)
+	if (element and isElement(element)) then
+		local veh = getPedOccupiedVehicle(element)
+		local state = getElementModel(veh)
+		if (state == 403 or state == 514 or state == 515) then
+			return true
+		else
+			return false
+		end
+		return false
 	end
 end
 
