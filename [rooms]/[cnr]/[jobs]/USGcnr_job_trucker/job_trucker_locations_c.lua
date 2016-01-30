@@ -82,7 +82,7 @@ local trucks = {403, 514, 515}
 
 function onLocationMarkerHit(hitElement, dimensions)
 	if(hitElement ~= localPlayer or not dimensions) then return end
-	if (not getElementModel(getPedOccupiedVehicle(hitElement) == trucks[#trucks])) then return end
+	if (not getElementModel(hitElement) == trucks[#trucks]) then return end
 	if(not isPedInVehicle(hitElement) or getVehicleController(getPedOccupiedVehicle(hitElement)) ~= localPlayer) then
 		exports.USGmsg:msg("You have to be in your truck to use this marker.", 255,0,0)
 		return
