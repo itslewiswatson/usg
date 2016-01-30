@@ -5,7 +5,7 @@ function testObjects()
 	
 	outputChatBox("Spawned a crate", 0, 255, 0)
 	obj = createObject(1271, px, py, pz)
-	marker = createMarker(px, py, pz, "arrow", 1, 0, 255, 0, 200)
+	marker = createMarker(px, py, pz + 0.2, "arrow", 0.5, 0, 255, 0, 200)
 	attachElements(marker, obj)
 end
 addCommandHandler("testobj", testObjects)
