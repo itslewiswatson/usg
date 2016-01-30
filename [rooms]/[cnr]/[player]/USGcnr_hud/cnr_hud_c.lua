@@ -114,8 +114,8 @@ function renderHUD()
         --dxDrawText(wantedlvl, screenWidth * 0.8875, screenHeight * 0.2333, screenWidth * 0.9244, screenHeight * 0.2689, tocolor(180,0,0),2,"pricedown","right","top")
         --dxDrawImage(screenWidth * 0.9244, screenHeight * 0.2333, 32, 32, "wanted-star.png")
 
-        dxDrawImage((1479 / 1600) * screenWidth, (210 / 900) * screenHeight, (32 / 1600) * screenWidth, (32 / 900) * screenHeight, "wanted-star.png")
-        dxDrawText(wantedlvl, (1420 / 1600) * screenWidth, (210 / 900) * screenHeight, (1479 / 1600) * screenWidth, (242 / 900) * screenHeight, tocolor(180,0,0),2,"pricedown","right","top")
+        dxDrawImage(screenWidth * 1479, screenHeight * 210, screenWidth * 32, screenHeight * 32, "wanted-star.png")
+        dxDrawText(wantedlvl, screenWidth * 1420, screenHeight * 210, screenWidth * 1479, screenHeight * 242,tocolor(180,0,0),2,"pricedown","right","top")
         dxSetAspectRatioAdjustmentEnabled(false)
     end
     -- 
