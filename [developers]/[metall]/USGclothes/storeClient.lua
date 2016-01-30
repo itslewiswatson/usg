@@ -5,6 +5,10 @@ local storeLocations = {
 	{1223.0185546875, -955.0712890625, 42.9375, 0, 0, "Random"},
 }
 
+pedX, pedY, pedZ = 1482.879, -2325.162, 12.547
+mX, mY, mZ, mLX, mLY, mLZ = 1481.767, -2328.280, 14.022, 1479.178, -2229.386, -0.582
+viewingDim = 10
+
 categories = {
 	{"Shirts", 0},
 	{"Hair", 1},
@@ -92,7 +96,6 @@ function setupPed(state, element)
 	if (state) then
 		if (isElement(element)) then
 			if (not isElement(clothPed)) then
-				local pedX, pedY, pedZ = getElementPosition(element)
 				clothPed = createPed(0, pedX, pedY, pedZ + 1)
 				setElementDimension(clothPed, viewingDim)
 			end
