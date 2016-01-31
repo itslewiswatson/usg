@@ -321,10 +321,10 @@ function createNewLocation()
 			exports.USGmsg:msg("Go to the #FF0000marker #FFFFFFand plant an explosive.", 255, 255, 255)
 			addEventHandler("onClientMarkerHit", blowMarker, blowUp)
 		else
-			outputChatBox("Nope 2")
+			exports.USGmsg:msg("This vehicle is not a Dozer!", 255, 0, 0)
 		end
 	else
-		outputChatBox("Nope 1")
+		exports.USGmsg:msg("Please re-enter your Dozer or get inside a Dozer.", 255, 0, 0)
 	end
 end
 
