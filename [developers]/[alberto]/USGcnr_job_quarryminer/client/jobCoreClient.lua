@@ -320,7 +320,11 @@ function createNewLocation()
 			blowBlip = createBlipAttachedTo(blowMarker, 0, 2, 255, 0, 0)
 			exports.USGmsg:msg("Go to the #FF0000marker #FFFFFFand plant an explosive.", 255, 255, 255)
 			addEventHandler("onClientMarkerHit", blowMarker, blowUp)
+		else
+			outputChatBox("Nope 2")
 		end
+	else
+		outputChatBox("Nope 1")
 	end
 end
 
