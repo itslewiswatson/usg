@@ -1,0 +1,31 @@
+<meta>
+  <script src="system_s.lua" type="server" />
+  <!-- Loading System -->
+  <script src="loading/loading_s.lua" type="server" />
+  <script src="loading/loading_c.lua" type="client" />
+  <!-- Timing System -->
+  <script src="time/time.lua" type="server" />
+  <!--Logging System-->
+  <script src="logging/server.lua" type="server" />
+  <!-- Images -->
+  <img src="loading/images/line.png" />
+  <img src="loading/images/load_icon.png" />
+  <!-- Exports -->
+  <!-- Loading Exports -->
+  <export function="showLoadingScreen" type="server" />
+  <export function="showLoadingScreen" type="client" />
+  <!-- Timing Exports -->
+  <export function="getCurrentTime" type="server" />
+  <export function="getDatabaseDate" type="server" />
+  <export function="getUptime" type="server" />
+  <!-- System Exports -->
+  <export function="getGamemodeVersion" type="server" />
+  <!-- Logging -->
+  <export function="logNotice" />
+  <export function="logWarning" />
+  <export function="logError" />
+  <export function="log" />
+  <!-- END OF EXPORTS -->
+  <!--<include resource="mysql"/> was causing bugs maybe -->
+  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000" />
+</meta>

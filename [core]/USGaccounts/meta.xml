@@ -1,0 +1,29 @@
+<meta>
+  <script src="account_shared_exports.luac" type="server" />
+  <script src="account_shared_exports.luac" type="client" />
+  <script src="account_c.luac" type="client" />
+  <script src="account_c_h.luac" type="client" />
+  <script src="account_handler.lua" type="client" />
+  <script src="account_c_exports.lua" type="client" />
+  <script src="account_s.lua" type="server" />
+  <script src="account_s_exports.lua" type="server" />
+  <script src="accounts_misc_s.lua" type="server" />
+  <file src="images\disc.png" />
+  <file src="images\disc-logo.png" />
+  <file src="images\logo.png" />
+  <file src="images\news.png" />
+  <file src="images\staff.png" />
+  <file src="images\login.png" />
+  <file src="images\login_2.png" />
+  <file src="images\login_3.png" />
+  <file src="images\register.png" />
+  <file src="images\about.png" />
+  <export function="hash" />
+  <export function="getPlayerAccount" />
+  <export function="isPlayerLoggedIn" />
+  <export function="getPlayerFromAccount" />
+  <export function="getPlayerAccount" type="client" />
+  <export function="isPlayerLoggedIn" type="client" />
+  <export function="getPlayerFromAccount" type="client" />
+  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000" />
+</meta>

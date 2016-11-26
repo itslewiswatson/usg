@@ -1,0 +1,38 @@
+<meta>
+  <script src="USG_chatzones.lua" />
+  <script src="USG_chatzones.lua" type="client" />
+  <script src="USG_exports_shared.lua" />
+  <script src="USG_exports_shared.lua" type="client" />
+  <script src="USG_exports_server.lua" />
+  <script src="USG_s.lua" />
+  <!--<script src="USG_exports_client.lua" type="client" />-->
+  <export function="getPlayerChatZone" type="server" />
+  <export function="getPlayerChatZone" type="client" />
+  <export function="getPlayerTeamColor" type="server" />
+  <export function="getPlayerTeamColor" type="client" />
+  <export function="getPlayerColoredName" type="server" />
+  <export function="getPlayerColoredName" type="client" />
+  <export function="getPedMaxHealth" type="server" />
+  <export function="getPedMaxHealth" type="client" />
+  <export function="validateMarkerZ" type="server" />
+  <export function="validateMarkerZ" type="client" />
+  <export function="convertRGBToHEX" type="server" />
+  <export function="convertRGBToHEX" type="client" />
+  <export function="convertHSVToRGB" type="server" />
+  <export function="convertHSVToRGB" type="client" />
+  <export function="convertRGBToHSV" type="server" />
+  <export function="convertRGBToHSV" type="client" />
+  <export function="formatMoney" type="server" />
+  <export function="formatMoney" type="client" />
+  <export function="getDateTimeString" type="server" />
+  <export function="getDateTimeString" type="client" />
+  <export function="getDateString" type="server" />
+  <export function="getDateString" type="client" />
+  <export function="getTimeString" type="server" />
+  <export function="getTimeString" type="client" />
+  <export function="escapeString" type="server" />
+  <export function="escapeString" type="client" />
+  <export function="trimString" type="server" />
+  <export function="trimString" type="client" />
+  <min_mta_version client="1.3.4-0.00000" server="1.3.4-0.00000" />
+</meta>

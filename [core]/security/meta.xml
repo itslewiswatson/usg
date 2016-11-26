@@ -1,0 +1,5 @@
+<meta>
+  <info author="Jack" name="Security" version="1.0" />
+  <script src="security.lua" type="server" />
+  <export function="stringEncryption" type="server" />
+</meta>
